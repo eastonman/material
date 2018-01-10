@@ -92,7 +92,8 @@ function themeConfig($form)
     $commentis = new Typecho_Widget_Helper_Form_Element_Radio('commentis',
         array(
             '0' => _t('使用原生评论 &emsp;'),
-            '1' => _t('使用多说评论 &emsp;')
+            '1' => _t('使用多说评论 &emsp;'),
+            '2' => _t('使用wildfire &emsp;')
         ),
 
         '0', _t('文章评论'), _t("默认使用原生评论, 如果使用多说评论, 在 <b>'多说二级域名 (short_name)'</b> 中填入多说 short_name")
@@ -184,25 +185,25 @@ function themeConfig($form)
 
     $WeiboURL = new Typecho_Widget_Helper_Form_Element_Text('WeiboURL', null, null, _t('新浪微博地址'), null);
     $form->addInput($WeiboURL);
-    
+
     $InstagramURL = new Typecho_Widget_Helper_Form_Element_Text('InstagramURL', null, null, _t('Instagram 地址'), null);
     $form->addInput($InstagramURL);
-    
+
     $GithubURL = new Typecho_Widget_Helper_Form_Element_Text('GithubURL', null, null, _t('Github 地址'), null);
     $form->addInput($GithubURL);
-    
+
     $TumblrURL = new Typecho_Widget_Helper_Form_Element_Text('TumblrURL', null, null, _t('Tumblr 地址'), null);
     $form->addInput($TumblrURL);
-    
+
     $BilibiliURL = new Typecho_Widget_Helper_Form_Element_Text('BilibiliURL', null, null, _t('Bilibili 地址'), null);
     $form->addInput($BilibiliURL);
-    
+
     $TelegramURL = new Typecho_Widget_Helper_Form_Element_Text('TelegramURL', null, null, _t('Telegram 地址'), null);
     $form->addInput($TelegramURL);
-    
+
     $ZhihuURL = new Typecho_Widget_Helper_Form_Element_Text('ZhihuURL', null, null, _t('Zhihu 地址'), null);
     $form->addInput($ZhihuURL);
-    
+
     $LinkedinURL = new Typecho_Widget_Helper_Form_Element_Text('LinkedinURL', null, null, _t('Linkedin 地址'), null);
     $form->addInput($LinkedinURL);
 
@@ -296,9 +297,9 @@ function compressHtml($html_source) {
                     $chars = preg_split('//', $tmp, -1, PREG_SPLIT_NO_EMPTY);
                     $is_quot = $is_apos = false;
                     foreach ($chars as $key => $char) {
-                        if ($char == '"' && $chars[$key - 1] != '\\' && !$is_apos) {
+                        if ($char == '"' && $chars[$key + 1] != '\\' && !$is_apos) {
                             $is_quot = !$is_quot;
-                        } else if ($char == '\'' && $chars[$key - 1] != '\\' && !$is_quot) {
+                        } else if ($char == '\'' && $chars[$key + 1] != '\\' && !$is_quot) {
                             $is_apos = !$is_apos;
                         } else if ($char == '/' && $chars[$key + 1] == '/' && !$is_quot && !$is_apos) {
                             $tmp = substr($tmp, 0, $key);
@@ -318,3 +319,4 @@ function compressHtml($html_source) {
     }
     return $compress;
 }
+
