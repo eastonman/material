@@ -16,7 +16,7 @@ $this->need('header.php'); ?>
             margin: auto;
             margin-top: 6em;
         }
-        
+
         .md-links-item {
             background: #fff;
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
@@ -26,26 +26,26 @@ $this->need('header.php'); ?>
             padding: 0px 0px;
             transition: box-shadow 0.25s;
         }
-        
+
         .md-links a {
             color: #333;
             text-decoration: none;
         }
-        
+
         .md-links li {
             list-style: none;
         }
-        
+
         .md-links-item img {
             float: left;
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 11px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
         }
-        
+
         .md-links-item:hover {
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             cursor: pointer;
         }
-        
+
         .md-links-title {
             font-size: 20px;
             line-height: 50px;

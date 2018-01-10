@@ -109,7 +109,7 @@
 </style>
 
 <!-- 使用原生评论 -->
-<?php else: ?>
+<?php elseif ($this->options->commentis == '0' ): ?>
 
 <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
 
@@ -209,11 +209,12 @@
 
     <?php endif; ?>
 </div>
-<?php endif; ?>
+<?php //endif; ?>
 
 
-<?php if ($this->options->commentis == '2'): ?>
+<?php elseif ($this->options->commentis == '2'): ?>
 
+<script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
 <div class="wildfire_thread"></div>
 <script>
   // 你可以自定义一些配置
@@ -235,10 +236,9 @@
         storageBucket: "chengkang-me.appspot.com",
         messagingSenderId: "1040071529318"
     },
-    theme: 'dark',
+    theme: 'light',
     locale: 'zh-CN',
     defaultAvatarURL: 'https://image.flaticon.com/icons/svg/621/621863.svg'
   })
 </script>
-<script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
 <?php endif; ?>
