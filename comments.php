@@ -209,10 +209,10 @@
 
     <?php endif; ?>
 </div>
-<?php //endif; ?>
+<?php endif; ?>
 
 
-<?php elseif ($this->options->commentis == '2'): ?>
+<?php if ($this->options->commentis == '2'): ?>
 
 <script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
 <div class="wildfire_thread"></div>
