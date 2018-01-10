@@ -299,7 +299,7 @@ function compressHtml($html_source) {
                     foreach ($chars as $key => $char) {
                         if ($char == '"' && $chars[$key + 1] != '\\' && !$is_apos) {
                             $is_quot = !$is_quot;
-                        } else if ($char == '\'' && $chars[$key + 1] != '\\' && !$is_quot) {
+                        } else if ($char == '\'' && $chars[$key] != '\\' && !$is_quot) {
                             $is_apos = !$is_apos;
                         } else if ($char == '/' && $chars[$key + 1] == '/' && !$is_quot && !$is_apos) {
                             $tmp = substr($tmp, 0, $key);
