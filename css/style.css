@@ -1740,7 +1740,7 @@ blockquote {
     .MD-burger-icon {
         background: rgba(255, 255, 255, 0);
         border-radius: 0;
-        border: 1px solid rgba(51,51,51,0.3);
+        border: 0px solid rgba(51,51,51,0.3);
     }
 }
 
