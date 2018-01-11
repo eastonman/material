@@ -122,6 +122,9 @@ function themeConfig($form)
     );
     $form->addInput($langis);
 
+    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, 'status', null);
+    $form->addInput($Status);
+
     $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', null, null, '置顶文章 1 ID', null);
     $form->addInput($sticky_1->addRule('isInteger', '请填入数字'));
 

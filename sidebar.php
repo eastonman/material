@@ -180,7 +180,7 @@
                 '); ?>
                 </ul>
             </li>
-            
+
             <!-- categories -->
             <li class="dropdown">
                 <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
@@ -201,7 +201,7 @@
                     <?php endwhile; ?>
                 </ul>
             </li>
-            
+
             <!-- divider -->
             <li class="divider"></li>
             <!-- Pages  -->
@@ -209,7 +209,7 @@
                 <?php while ($pages->next()): ?>
                 <li>
                     <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>" tabindex="-1">
-                        <?php $pages->title(); ?>
+                            <?php $pages->title(); ?>
                     </a>
                 </li>
             <?php endwhile; ?>
@@ -230,12 +230,21 @@
                     <span class="sidebar-badge"><?php echo $stat->publishedPostsNum;?></span>
                 </a>
             </li>
-        </ul>        
-        
+        </ul>
+
         <!-- Sidebar divider -->
         <div class="sidebar-divider"></div>
 
         <!-- Sidebar bottom text -->
+        <a href="<?php $this->options->Status(); ?>" target="_blank" class="sidebar-footer-text-a">
+            <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
+                <?php if ($this->options->langis == '0'): ?>Status
+                <?php elseif ($this->options->langis == '1'): ?>状态
+                <?php endif; ?>
+                <span class="sidebar-badge badge-circle">i</span>
+            </div>
+        </a>
+
         <a href="https://github.com/viosey/typecho-theme-material" target="_blank" class="sidebar-footer-text-a">
             <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
                 <?php if ($this->options->langis == '0'): ?> Theme - Material
@@ -244,6 +253,7 @@
                 <span class="sidebar-badge badge-circle">i</span>
             </div>
         </a>
+
 
         <?php if (!empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch)) : ?>
         <div id="upyun-logo">
