@@ -228,13 +228,14 @@
   var wildfireConfig = () => ({
     databaseProvider: 'firebase',
     databaseConfig: {
-        apiKey: "AIzaSyA962a46AZyKFhyhEvBy3L2sjaNmwN5a2Q",
-        authDomain: "chengkang-me.firebaseapp.com",
-        databaseURL: "https://chengkang-me.firebaseio.com",
-        projectId: "chengkang-me",
-        storageBucket: "chengkang-me.appspot.com",
-        messagingSenderId: "1040071529318"
-    },
+
+            apiKey: "AIzaSyDytiiZP6ZrNoDiN-jLpcD3AwEbSWvyajQ",
+            authDomain: "blog-935c8.firebaseapp.com",
+            databaseURL: "https://blog-935c8.firebaseio.com",
+            projectId: "blog-935c8",
+            storageBucket: "blog-935c8.appspot.com",
+            messagingSenderId: "177420131835"
+             },
     theme: 'light',
     locale: 'zh-CN',
     defaultAvatarURL: 'https://image.flaticon.com/icons/svg/621/621863.svg'
