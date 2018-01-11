@@ -103,7 +103,7 @@ function themeConfig($form)
     $DSshortname = new Typecho_Widget_Helper_Form_Element_Text('DSshortname', null, null, '多说二级域名 (short_name)', '要使用多说评论, 在这里填入多说的 short_name, 即二级域名.');
     $form->addInput($DSshortname);
 
-    $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire configuration', null, null, _t('wildfire的配置'), _t('填入wildfire的配置'));
+    $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('wildfire的配置'), _t('填入wildfire的配置'));
     $form->addInput($wildfire);
 
     $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', null, null, _t('CDN 地址'), _t("
