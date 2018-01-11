@@ -103,6 +103,9 @@ function themeConfig($form)
     $DSshortname = new Typecho_Widget_Helper_Form_Element_Text('DSshortname', null, null, '多说二级域名 (short_name)', '要使用多说评论, 在这里填入多说的 short_name, 即二级域名.');
     $form->addInput($DSshortname);
 
+    $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire configuration', null, null, _t('wildfire的配置'), _t('填入wildfire的配置'));
+    $form->addInput($wildfire);
+
     $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', null, null, _t('CDN 地址'), _t("
     新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
     填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b>"));

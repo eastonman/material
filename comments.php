@@ -228,13 +228,7 @@
   var wildfireConfig = () => ({
     databaseProvider: 'firebase',
     databaseConfig: {
-
-            apiKey: "AIzaSyDytiiZP6ZrNoDiN-jLpcD3AwEbSWvyajQ",
-            authDomain: "blog-935c8.firebaseapp.com",
-            databaseURL: "https://blog-935c8.firebaseio.com",
-            projectId: "blog-935c8",
-            storageBucket: "blog-935c8.appspot.com",
-            messagingSenderId: "177420131835"
+            <?php $this->options->wildfire(); ?>
              },
     theme: 'light',
     locale: 'zh-CN',
