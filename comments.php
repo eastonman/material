@@ -214,7 +214,6 @@
 
 <?php if ($this->options->commentis == '2'): ?>
 
-<script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
 <div class="wildfire_thread"></div>
 <script>
   // 你可以自定义一些配置
@@ -241,4 +240,5 @@
     defaultAvatarURL: 'https://image.flaticon.com/icons/svg/621/621863.svg'
   })
 </script>
+<script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
 <?php endif; ?>
