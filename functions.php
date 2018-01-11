@@ -86,7 +86,7 @@ function themeConfig($form)
     $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', null, _t('#FFF'), _t('缩略图为纯色时的颜色'), _t('填入颜色代码'));
     $form->addInput($TitleColor);
 
-    $RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', null, _t('19'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
+    $RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', null, _t('27'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
     $form->addInput($RandomPicAmnt);
 
     $commentis = new Typecho_Widget_Helper_Form_Element_Radio('commentis',
