@@ -92,12 +92,16 @@ function themeConfig($form)
     $commentis = new Typecho_Widget_Helper_Form_Element_Radio('commentis',
         array(
             '0' => _t('使用原生评论 &emsp;'),
+            '1' => _t('使用hypercomment &emsp;'),
             '2' => _t('使用wildfire &emsp;')
         ),
 
         '0', _t('文章评论'), _t("默认使用原生评论, 如果使用多说评论, 在 <b>'多说二级域名 (short_name)'</b> 中填入多说 short_name")
     );
     $form->addInput($commentis);
+
+    $HyperID = new Typecho_Widget_Helper_Form_Element_Text('HyperID', null, null, _t('hypercomment'), _t('hypercomment'));
+    $form->addInput($HyperID);
 
     $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('wildfire配置'), _t('填入wildfire的配置(config项的内容)'));
     $form->addInput($wildfire);

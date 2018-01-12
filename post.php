@@ -65,7 +65,7 @@
                             </button>
                     <ul id="article-functions-viewtags-ul" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
                         <li class="mdl-menu__item">
-                            <?php $this->tags('<li class="mdl-menu__item"> ', true, ''); ?></li>
+                            <?php $this->tags('<li class="mdl-menu__item"> ', true, '本文暂无标签'); ?></li>
                     </ul>
                     <!-- share -->
                     <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
@@ -88,7 +88,7 @@
                                 <li class="mdl-menu__item">编辑</li>
                         </a>
                         <?php endif;?>
-                        <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->permalink(); ?>">                                        
+                        <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->permalink(); ?>">
                             <li class="mdl-menu__item">
                                 <?php if ($this->options->langis == '0'): ?> Share to Facebook
                                 <?php else: ?> 分享到 Facebook
