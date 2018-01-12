@@ -92,7 +92,6 @@ function themeConfig($form)
     $commentis = new Typecho_Widget_Helper_Form_Element_Radio('commentis',
         array(
             '0' => _t('使用原生评论 &emsp;'),
-            '1' => _t('使用多说评论 &emsp;'),
             '2' => _t('使用wildfire &emsp;')
         ),
 
@@ -100,10 +99,7 @@ function themeConfig($form)
     );
     $form->addInput($commentis);
 
-    $DSshortname = new Typecho_Widget_Helper_Form_Element_Text('DSshortname', null, null, '多说二级域名 (short_name)', '要使用多说评论, 在这里填入多说的 short_name, 即二级域名.');
-    $form->addInput($DSshortname);
-
-    $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('wildfire的配置'), _t('填入wildfire的配置'));
+    $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('wildfire配置'), _t('填入wildfire的配置(config项的内容)'));
     $form->addInput($wildfire);
 
     $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', null, null, _t('CDN 地址'), _t("
@@ -122,7 +118,7 @@ function themeConfig($form)
     );
     $form->addInput($langis);
 
-    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, 'status', null);
+    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, 'status', 'Status page link , you can generate yours by uptimerobot');
     $form->addInput($Status);
 
     $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', null, null, '置顶文章 1 ID', null);

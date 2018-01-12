@@ -100,7 +100,7 @@ $this->need('header.php');?>
                                     </a>
                                     <?php endwhile; ?>
                                 </ul>
-                                                                
+
                                 <!--  Menu button-->
                                 <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                     <i class="material-icons" role="presentation">more_vert</i>
@@ -116,7 +116,7 @@ $this->need('header.php');?>
                                         </li>
                                     </a>
                                     <!-- 文章的RSS地址连接 -->
-                                    <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->siteUrl(); ?>">                                        
+                                    <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->siteUrl(); ?>">
                                         <li class="mdl-menu__item">
                                             <?php if ($this->options->langis == '0'): ?> Share to Facebook
                                             <?php else: ?> 分享到 Facebook
@@ -247,14 +247,15 @@ $this->need('header.php');?>
                                     <div id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
                                         <?php $this->category(', '); ?> |
                                         <a href="<?php $this->permalink() ?>">
-                                            <!-- 使用多说评论 -->
-                                            <?php if ($this->options->commentis == '1'): ?><span class="ds-thread-count" data-thread-key="<?php echo $this->cid;?>" data-count-type="comments"></span>
                                             <!-- 使用原生评论 -->
-                                            <?php else: ?>
+                                            <?php if ($this->options->commentis == '0'): ?>
+
                                             <?php $this->commentsNum('%d 评论'); ?>
+                                            <!-- 使用wildfire评论 -->
+                                            <?php else: ?>
                                             <?php endif; ?>
                                         </a>
-                                        
+
                                     </div>
 
                                 </div>

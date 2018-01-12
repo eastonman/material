@@ -107,57 +107,6 @@
                 </a>
             </li>
 
-            <!-- 使用多说评论 -->
-            <?php if ($this->options->commentis == '1'): ?>
-            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-            <script type="text/javascript">
-              var duoshuoQuery = {
-              short_name: "<?php $this->options->DSshortname() ?>"
-              }; //每个用户的独有标签
-              (function() {
-                var ds = document.createElement('script');
-                ds.type = 'text/javascript';
-                ds.async = true;
-                // ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                <?php if (!empty($this->options->CDNURL)): ?>
-                ds.src = '<?php $this->options->CDNURL() ?>/MaterialCDN/js/dsembed.js';
-                <?php else: ?>
-                ds.src = '<?php $this->options->themeUrl('js/dsembed.js') ?>';
-                <?php endif; ?>
-                ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0] ||
-                document.getElementsByTagName('body')[0]).appendChild(ds);
-                })();
-                </script>
-                <!-- 多说公共JS代码 end -->
-
-                <style>
-                  .ds-recent-comments {
-                    padding: 0;
-                  }
-
-                  .ds-recent-comments .ds-meta {
-                    display: none;
-                  }
-
-                  #ds-recent-comments li.ds-comment {
-                    padding: 0 !important;
-                    height: 48px;
-                    line-height: 48px;
-                  }
-
-                  #ds-recent-comments li.ds-comment a {
-                    padding-top: 16px;
-                    padding-bottom: 16px;
-                    padding-right: 70px;
-                    background: rgba(0, 0, 0, 0);
-                  }
-
-                  #ds-recent-comments li.ds-comment:hover {
-                    background-color: #cecece;
-                  }
-                </style>
-            <?php endif; ?>
 
             <!-- Archives  -->
             <li class="dropdown">
