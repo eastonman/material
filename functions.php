@@ -93,18 +93,35 @@ function themeConfig($form)
         array(
             '0' => _t('使用原生评论 &emsp;'),
             '1' => _t('使用hypercomment &emsp;'),
-            '2' => _t('使用wildfire &emsp;')
+            '2' => _t('使用wildfire &emsp;'),
+            '3' => _t('使用Gittalk &emsp;')
         ),
 
         '0', _t('文章评论'), _t("默认使用原生评论, 如果使用多说评论, 在 <b>'多说二级域名 (short_name)'</b> 中填入多说 short_name")
     );
     $form->addInput($commentis);
 
+
+
     $HyperID = new Typecho_Widget_Helper_Form_Element_Text('HyperID', null, null, _t('hypercomment'), _t('hypercomment'));
     $form->addInput($HyperID);
 
     $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('wildfire配置'), _t('填入wildfire的配置(config项的内容)'));
     $form->addInput($wildfire);
+
+    $GittalkClientID = new Typecho_Widget_Helper_Form_Element_Text('GittalkClientID', null, null, _t('Gittalk'), _t('ClientID'));
+    $form->addInput($GittalkClientID);
+
+    $GittalkClientSecret = new Typecho_Widget_Helper_Form_Element_Text('GittalkClientSecret', null, null, _t('Gittalk'), _t('ClientSecret'));
+    $form->addInput($GittalkClientSecret);
+
+    $GittalkRepo = new Typecho_Widget_Helper_Form_Element_Text('GittalkRepo', null, null, _t('Gittalk'), _t('Repo'));
+    $form->addInput($GittalkRepo);
+
+    $GittalkOwner = new Typecho_Widget_Helper_Form_Element_Text('GittalkOwner', null, null, _t('Gittalk'), _t('Owner'));
+    $form->addInput($GittalkOwner);
+
+
 
     $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', null, null, _t('CDN 地址'), _t("
     新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
