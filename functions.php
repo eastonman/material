@@ -8,9 +8,9 @@ function themeConfig($form)
     margin-bottom: 10px;
     margin-top: 10px;
     font-size: 16px;">感谢您使用 Material 主题</span>
-        <span style="margin-bottom:10px;display:block">请关注 <a href="https://github.com/viosey/typecho-theme-material" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">Github-Material</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持</span></span>
-        <a href="mailto:viosey@outlook.com" >帮助&支持</a> &nbsp;
-    <a href="https://github.com/viosey/typecho-theme-material/issues" target="_blank">建议&反馈</a>
+        <span style="margin-bottom:10px;display:block">请关注 <a href="https://github.com/manyang901/material" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">Github-Material</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持</span></span>
+        <a href="mailto:my@kucloud.win" >帮助&支持</a> &nbsp;
+    <a href="https://github.com/manyang901/material/issues" target="_blank">建议&反馈</a>
         </p>';
 
     $switch = new Typecho_Widget_Helper_Form_Element_Checkbox('switch',
@@ -97,28 +97,28 @@ function themeConfig($form)
             '3' => _t('使用Gitalk &emsp;')
         ),
 
-        '0', _t('文章评论'), _t("默认使用原生评论, 如果使用多说评论, 在 <b>'多说二级域名 (short_name)'</b> 中填入多说 short_name")
+        '0', _t('文章评论'), _t("默认使用原生评论,如使用其他评论，请自己添加相应配置项")
     );
     $form->addInput($commentis);
 
 
 
-    $HyperID = new Typecho_Widget_Helper_Form_Element_Text('HyperID', null, null, _t('hypercomment'), _t('hypercomment'));
+    $HyperID = new Typecho_Widget_Helper_Form_Element_Text('HyperID', null, null, _t('HyperComment Config'), _t('HyperComment Widgt ID'));
     $form->addInput($HyperID);
 
-    $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('wildfire配置'), _t('填入wildfire的配置(config项的内容)'));
+    $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('Wildfire Config'), _t('填入wildfire的配置(config项的内容)'));
     $form->addInput($wildfire);
 
-    $GitalkClientID = new Typecho_Widget_Helper_Form_Element_Text('GitalkClientID', null, null, _t('Gitalk'), _t('ClientID'));
+    $GitalkClientID = new Typecho_Widget_Helper_Form_Element_Text('GitalkClientID', null, null, _t('Gitalk Config'), _t('填入github app申请到的ClientID'));
     $form->addInput($GitalkClientID);
 
-    $GitalkClientSecret = new Typecho_Widget_Helper_Form_Element_Text('GitalkClientSecret', null, null, _t('Gitalk'), _t('ClientSecret'));
+    $GitalkClientSecret = new Typecho_Widget_Helper_Form_Element_Text('GitalkClientSecret', null, null, _t('Gitalk Config'), _t('github app对应的ClientSecret'));
     $form->addInput($GitalkClientSecret);
 
-    $GitalkRepo = new Typecho_Widget_Helper_Form_Element_Text('GitalkRepo', null, null, _t('Gitalk'), _t('Repo'));
+    $GitalkRepo = new Typecho_Widget_Helper_Form_Element_Text('GitalkRepo', null, null, _t('Gitalk Config'), _t('用于放置评论的repo名，注意不是repo的链接'));
     $form->addInput($GitalkRepo);
 
-    $GitalkOwner = new Typecho_Widget_Helper_Form_Element_Text('GitalkOwner', null, null, _t('Gitalk'), _t('Owner'));
+    $GitalkOwner = new Typecho_Widget_Helper_Form_Element_Text('GitalkOwner', null, null, _t('Gitalk Config'), _t('拥有向repo写权限的用户名'));
     $form->addInput($GitalkOwner);
 
 
@@ -139,7 +139,7 @@ function themeConfig($form)
     );
     $form->addInput($langis);
 
-    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, 'status', 'Status page link , you can generate yours by uptimerobot');
+    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, 'Status Page', 'Status page link , you can generate yours by uptimerobot');
     $form->addInput($Status);
 
     $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', null, null, '置顶文章 1 ID', null);
