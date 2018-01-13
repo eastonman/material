@@ -252,3 +252,28 @@ s.parentNode.insertBefore(hcc, s.nextSibling);
 </script>
 <script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
 <?php endif; ?>
+
+
+
+
+
+<?php if ($this->options->commentis == '3'): ?>
+ <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" ></div>
+
+<script type="text/javascript">
+
+var gitalk = new Gitalk({
+    clientID:  '<?php $this->options->GittalkClientID(); ?>' ,
+    clientSecret: '<?php $this->options->GittalkClientSecret(); ?>',
+  repo: 'material',
+  owner: 'manyang901',
+  admin: ['manyang901'],
+  // facebook-like distraction free mode
+  distractionFreeMode: false
+});
+    gitalk.render('gitalk-container');
+</script>
+<?php endif; ?>
