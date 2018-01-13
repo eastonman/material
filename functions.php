@@ -97,13 +97,13 @@ function themeConfig($form)
             '3' => _t('使用Gittalk &emsp;')
         ),
 
-        '0', _t('文章评论'), _t("默认使用原生评论, 如果使用多说评论, 在 <b>'多说二级域名 (short_name)'</b> 中填入多说 short_name")
+        '0', _t('文章评论'), _t("默认使用原生评论,如使用其他评论，请自己填好配置项")
     );
     $form->addInput($commentis);
 
 
 
-    $HyperID = new Typecho_Widget_Helper_Form_Element_Text('HyperID', null, null, _t('hypercomment'), _t('hypercomment'));
+    $HyperID = new Typecho_Widget_Helper_Form_Element_Text('HyperID', null, null, _t('hypercomment'), _t('Input your HyperComment widgt Id , you can get it from hypercomment console'));
     $form->addInput($HyperID);
 
     $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('wildfire配置'), _t('填入wildfire的配置(config项的内容)'));
@@ -139,7 +139,7 @@ function themeConfig($form)
     );
     $form->addInput($langis);
 
-    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, 'status', 'Status page link , you can generate yours by uptimerobot');
+    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, 'Status Page', 'Status page link , you can generate your own status page  by uptimerobot');
     $form->addInput($Status);
 
     $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', null, null, '置顶文章 1 ID', null);
