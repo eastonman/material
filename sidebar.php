@@ -119,8 +119,8 @@
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
-                ->parse('
+<?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
+->parse('
                 <li>
                     <a href="{permalink}" tabindex="-1">
                         {date}
@@ -169,6 +169,17 @@
               Typecho_Widget::widget('Widget_Stat')->to($stat);
             ?>
 
+        <!-- Status Page -->
+        <?php if (!($this->options->Status == '')): ?>
+        <li>
+        <a href="<?php $this->options->Status(); ?>">
+                <?php if ($this->options->langis == '0'): ?>Status
+                <?php elseif ($this->options->langis == '1'): ?>状态
+                <?php endif; ?>
+        </a>
+        </li>
+        <?php endif; ?>
+
             <!-- Article Numebr  -->
             <li>
                 <a href="#">
@@ -185,14 +196,7 @@
         <div class="sidebar-divider"></div>
 
         <!-- Sidebar bottom text -->
-        <a href="<?php $this->options->Status(); ?>" target="_blank" class="sidebar-footer-text-a">
-            <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
-                <?php if ($this->options->langis == '0'): ?>Status
-                <?php elseif ($this->options->langis == '1'): ?>状态
-                <?php endif; ?>
-                <span class="sidebar-badge badge-circle">i</span>
-            </div>
-        </a>
+
 
         <a href="https://github.com/viosey/typecho-theme-material" target="_blank" class="sidebar-footer-text-a">
             <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
