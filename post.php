@@ -132,7 +132,7 @@
                 </div>
 
                 <!-- Article comments -->
-                <?php include('comments.php'); ?>
+                <?php $this->need('comments.php'); ?>
             </div>
 
             <!-- theNext thePrev button -->
