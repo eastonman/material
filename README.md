@@ -19,9 +19,10 @@
 
 ## General 概括
 
-- Author 作者：Viosey
-- Version 版本：3.0.0 Final
-- Compatibility 兼容：PHP 5.4+, MySQL, Typecho 1.0、1.1
+- Author 作者：Manyang901
+- Original Author 原作者：Viosey
+- Version 版本：1.0.0
+- Compatibility 兼容：PHP 5.4+, MySQL, Typecho 1.0、1.1（其余数据库未测试）
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 
@@ -31,9 +32,9 @@
 - 极其丰富的自定义设置
 - 自带中英文界面语言
 - 自带多种功能与特效
-- pjax 无刷新跳转
+- pjax 无刷新跳转（？待确认）
 - PanGu.js 中英文之间自动添加空格（可选）
-- [wildfire](https://github.com/cheng-kang/wildfire) 野火评论
+- [wildfire](https://github.com/cheng-kang/wildfire) 野火评论、HyperComment评论、基于Github Issue的Gitalk评论。
 
 ## Demo 演示
 
@@ -77,6 +78,9 @@ Experience the Material theme in live: [typecho-theme-material Demo](https://blo
 参见wildfire官方文档
 其中把config字段的值填入typecho后台'设置外观'的对应项中
 
+### HyperComment评论
+前往hypercomment注册账号
+来自俄罗斯的评论服务，免费账号支持一个网站一个widgt，界面干净，个人网站用足矣。
 
 
 ## Contributing 贡献
@@ -93,5 +97,5 @@ Open sourced under the GPL v3.0 license.
 根据 GPL V3.0 许可证开源。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MTIxMjI0MF19
+eyJoaXN0b3J5IjpbNDczOTg1OTg5XX0=
 -->
