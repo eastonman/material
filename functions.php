@@ -4,14 +4,14 @@
 function themeConfig($form)
 {
     echo '<p style="font-size:14px;" id="use-intro">
-    <span style="display: block;
+        <span style="display: block;
     margin-bottom: 10px;
     margin-top: 10px;
     font-size: 16px;">感谢您使用 Material 主题</span>
-    <span style="margin-bottom:10px;display:block">请关注 <a href="https://github.com/viosey/typecho-theme-material" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">Github-Material</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持</span></span>
-    <a href="mailto:viosey@outlook.com" >帮助&支持</a> &nbsp;
+        <span style="margin-bottom:10px;display:block">请关注 <a href="https://github.com/viosey/typecho-theme-material" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">Github-Material</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持</span></span>
+        <a href="mailto:viosey@outlook.com" >帮助&支持</a> &nbsp;
     <a href="https://github.com/viosey/typecho-theme-material/issues" target="_blank">建议&反馈</a>
-    </p>';
+        </p>';
 
     $switch = new Typecho_Widget_Helper_Form_Element_Checkbox('switch',
         array(
@@ -50,7 +50,7 @@ function themeConfig($form)
     $form->addInput($BGtype);
 
     $bgcolor = new Typecho_Widget_Helper_Form_Element_Text('bgcolor', null, null, _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
-    不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/bg.jpg'));
+        不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/bg.jpg'));
     $form->addInput($bgcolor);
 
     $GradientType = new Typecho_Widget_Helper_Form_Element_Radio('GradientType',
@@ -124,8 +124,8 @@ function themeConfig($form)
 
 
     $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', null, null, _t('CDN 地址'), _t("
-    新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
-    填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b>"));
+        新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
+        填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b>"));
     $form->addInput($CDNURL);
 
     $langis = new Typecho_Widget_Helper_Form_Element_Radio('langis',
@@ -180,20 +180,14 @@ function themeConfig($form)
 
     $footersns = new Typecho_Widget_Helper_Form_Element_Checkbox('footersns',
         array(
-            'ShowTwitter' => _t('显示 Twitter 图标 &emsp;'),
-            'ShowFacebook' => _t('显示 Facebook 图标 &emsp;'),
-            'ShowGooglePlus' => _t('显示 Google+ 图标 &emsp;'),
-            'ShowWeibo' => _t('显示新浪微博图标 &emsp;'),
-            'ShowInstagram' => _t('显示 Instagram 图标 &emsp;'),
-            'ShowGithub' => _t('显示 Github 图标 &emsp;'),
-            'ShowTumblr' => _t('显示 Tumblr 图标 &emsp;'),
-            'ShowBilibili' => _t('显示 Bilibili 图标 &emsp;'),
-            'ShowTelegram' => _t('显示 Telegram 图标 &emsp;'),
-            'ShowZhihu' => _t('显示 Zhihu 图标 &emsp;'),
-            'ShowLinkedin' => _t('显示 Linkedin 图标 &emsp;'),
+            'ShowTwitter' => _t('显示 Twitter 图标 <br>'),
+            'ShowFacebook' => _t('显示 Facebook 图标 <br>'),
+            'ShowGithub' => _t('显示 Github 图标 <br>'),
+            'ShowTelegram' => _t('显示 Telegram 图标 <br>'),
+            'ShowLinkedin' => _t('显示 Linkedin 图标 <br>'),
         ),
 
-        array('ShowTwitter','ShowFacebook','ShowGooglePlus'), _t('页脚 SNS 图标按钮显示设置'), _t('开启后, 按钮显示于博客页脚位置')
+        array('ShowTwitter','ShowFacebook','ShowGithub'), _t('页脚 SNS 图标按钮显示设置'), _t('开启后, 按钮显示于博客页脚位置')
     );
     $form->addInput($footersns);
 
@@ -203,29 +197,11 @@ function themeConfig($form)
     $FacebookURL = new Typecho_Widget_Helper_Form_Element_Text('FacebookURL', null, _t('NULL'), _t('Facebook 地址'), null);
     $form->addInput($FacebookURL);
 
-    $GooglePlusURL = new Typecho_Widget_Helper_Form_Element_Text('GooglePlusURL', null, _t('NULL'), _t('Google+ 地址'), null);
-    $form->addInput($GooglePlusURL);
-
-    $WeiboURL = new Typecho_Widget_Helper_Form_Element_Text('WeiboURL', null, null, _t('新浪微博地址'), null);
-    $form->addInput($WeiboURL);
-
-    $InstagramURL = new Typecho_Widget_Helper_Form_Element_Text('InstagramURL', null, null, _t('Instagram 地址'), null);
-    $form->addInput($InstagramURL);
-
     $GithubURL = new Typecho_Widget_Helper_Form_Element_Text('GithubURL', null, null, _t('Github 地址'), null);
     $form->addInput($GithubURL);
 
-    $TumblrURL = new Typecho_Widget_Helper_Form_Element_Text('TumblrURL', null, null, _t('Tumblr 地址'), null);
-    $form->addInput($TumblrURL);
-
-    $BilibiliURL = new Typecho_Widget_Helper_Form_Element_Text('BilibiliURL', null, null, _t('Bilibili 地址'), null);
-    $form->addInput($BilibiliURL);
-
     $TelegramURL = new Typecho_Widget_Helper_Form_Element_Text('TelegramURL', null, null, _t('Telegram 地址'), null);
     $form->addInput($TelegramURL);
-
-    $ZhihuURL = new Typecho_Widget_Helper_Form_Element_Text('ZhihuURL', null, null, _t('Zhihu 地址'), null);
-    $form->addInput($ZhihuURL);
 
     $LinkedinURL = new Typecho_Widget_Helper_Form_Element_Text('LinkedinURL', null, null, _t('Linkedin 地址'), null);
     $form->addInput($LinkedinURL);
@@ -234,13 +210,13 @@ function themeConfig($form)
     $form->addInput($CustomFonts);
 
     $RobotoSource = new Typecho_Widget_Helper_Form_Element_Radio('RobotoSource',
-    array(
-        '0' => _t('调用 Google fonts (使用 https://lug.ustc.edu.cn 中科大 https 镜像加速)<br />'),
-        '1' => _t('调用主题文件夹自带的 Roboto &emsp;'),
-        '2' => _t('使用自定义字体源 (在上方"网站统计代码 + 自定义字体源"填入)')
-    ),
+        array(
+            '0' => _t('调用 Google fonts (使用 https://lug.ustc.edu.cn 中科大 https 镜像加速)<br />'),
+            '1' => _t('调用主题文件夹自带的 Roboto &emsp;'),
+            '2' => _t('使用自定义字体源 (在上方"网站统计代码 + 自定义字体源"填入)')
+        ),
 
-    '1', _t('Roboto 字体使用来源'), null);
+        '1', _t('Roboto 字体使用来源'), null);
     $form->addInput($RobotoSource);
 }
 
