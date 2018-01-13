@@ -28,7 +28,7 @@
                     </p>
                 </div>
 
-                <!-- Articli info -->
+                <!-- Article info -->
                 <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
                     <!-- Author avatar -->
                     <div id="author-avatar">
@@ -42,7 +42,7 @@
                     <div>
                         <!-- Author name -->
                         <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
-                        <!-- Articel date -->
+                        <!-- Article date -->
                         <span>
                                     <?php if ($this->options->langis == '0'): ?>
                                         <?php $this->date('F j, Y'); ?>
@@ -52,11 +52,20 @@
                                 </span>
                     </div>
                     <div class="section-spacer"></div>
+
+
                     <!-- favorite -->
-                    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like" data-cid="<?php $this->cid();?>" data-num="<?php $this->likesNum();?>">
-                                <i class="material-icons mdl-badge mdl-badge--overlap" role="presentation" data-badge="<?php $this->likesNum();?>">favorite</i>
-                                <span class="visuallyhidden">favorites</span>
-                            </button>
+
+                    <?php $allplugin = Typecho_Plugin::export(); ?>
+                        <?php if (array_key_exists('TeStat', $allplugin['activated'])): ?>
+                        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like" data-cid="<?php $this->cid();?>" data-num="<?php $this->likesNum();?>">
+                                    <i class="material-icons mdl-badge mdl-badge--overlap" role="presentation" data-badge="<?php $this->likesNum();?>">favorite</i>
+                                    <span class="visuallyhidden">favorites</span>
+                                </button>
+
+                        <?php endif; ?>
+
+
                     <!-- share -->
                     <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
@@ -67,14 +76,14 @@
                         <?php if (class_exists("TeStat_Plugin")): ?>
                         <a class="md-menu-list-a" href="#">
                             <li class="mdl-menu__item">
-                                <?php ($q=$this->viewsNum); if (($q%2)!=0) {
-    echo($q-1)/2;
-} else {
-    echo $q/2;
-} ?> 浏览</li>
+<?php ($q=$this->viewsNum); if (($q%2)!=0) {
+echo($q-1)/2;
+                                    } else {
+                                        echo $q/2;
+                                    } ?> 浏览</li>
                         </a>
                         <?php endif; ?>
-                        <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->permalink(); ?>">                                        
+                        <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->permalink(); ?>">
                             <li class="mdl-menu__item">
                                 <?php if ($this->options->langis == '0'): ?> Share to Facebook
                                 <?php else: ?> 分享到 Facebook
@@ -112,7 +121,7 @@
                     </ul>
                 </div>
 
-                <!-- Articel content -->
+                <!-- Article content -->
                 <div id="article-content-div" class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content <?php if (!empty($this->options->switch) && in_array('ShowLoadingLine', $this->options->switch)): ?>fade out<?php endif; ?>">
                     <?php $this->content(); ?>
                 </div>
@@ -123,15 +132,15 @@
 
             <!-- theNext thePrev button -->
             <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-                <?php $this->theNext('%s', null, array('title' => '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                            <!-- For modern browsers. -->
-                            <i class="material-icons">arrow_back</i>
-                        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newer', 'tagClass' => 'prev-content')); ?>
+<?php $this->theNext('%s', null, array('title' => '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+<!-- For modern browsers. -->
+<i class="material-icons">arrow_back</i>
+</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newer', 'tagClass' => 'prev-content')); ?>
                 <div class="section-spacer"></div>
-                <?php $this->thePrev('%s', null, array('title' => 'Older&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                            <!-- For modern browsers. -->
-                            <i class="material-icons">arrow_forward</i>
-                        </button>', 'tagClass' => 'prev-content')); ?>
+<?php $this->thePrev('%s', null, array('title' => 'Older&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+<!-- For modern browsers. -->
+<i class="material-icons">arrow_forward</i>
+</button>', 'tagClass' => 'prev-content')); ?>
             </nav>
         </div>
 

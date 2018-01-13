@@ -52,11 +52,20 @@
                                 </span>
                     </div>
                     <div class="section-spacer"></div>
+
+
+
                     <!-- favorite -->
+
+
+                    <?php $allplugin = Typecho_Plugin::export(); ?>
+                    <?php if (array_key_exists('TeStat', $allplugin['activated'])): ?>
                     <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like" data-cid="<?php $this->cid();?>" data-num="<?php $this->likesNum();?>">
                                 <i class="material-icons mdl-badge mdl-badge--overlap" role="presentation" data-badge="<?php $this->likesNum();?>">favorite</i>
                                 <span class="visuallyhidden">favorites</span>
                             </button>
+                    <?php endif; ?>
+
                     <!-- view tags -->
                     <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
@@ -72,15 +81,17 @@
                                 <i class="material-icons" role="presentation">share</i>
                                 <span class="visuallyhidden">share</span>
                             </button>
+
+
                     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-                        <?php if (class_exists("TeStat_Plugin")): ?>
+                    <?php if (array_key_exists('TeStat', $allplugin['activated'])): ?>
                         <a class="md-menu-list-a" href="#">
                             <li class="mdl-menu__item">
-                                <?php ($q=$this->viewsNum); if (($q%2)!=0) {
-    echo($q-1)/2;
-} else {
-    echo $q/2;
-} ?> 浏览</li>
+<?php ($q=$this->viewsNum); if (($q%2)!=0) {
+echo($q-1)/2;
+                    } else {
+                        echo $q/2;
+                    } ?> 浏览</li>
                         </a>
                         <?php endif; ?>
                         <?php if ($this->user->hasLogin()):?>
@@ -137,14 +148,14 @@
 
             <!-- theNext thePrev button -->
             <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-                <?php $this->theNext('%s', null, array('title' => '
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                            <i class="material-icons">arrow_back</i>
-                        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newer', 'tagClass' => 'prev-content')); ?>
+<?php $this->theNext('%s', null, array('title' => '
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+<i class="material-icons">arrow_back</i>
+</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newer', 'tagClass' => 'prev-content')); ?>
                 <div class="section-spacer"></div>
-                <?php $this->thePrev('%s', null, array('title' => 'Older&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                            <i class="material-icons">arrow_forward</i>
-                        </button>', 'tagClass' => 'prev-content')); ?>
+<?php $this->thePrev('%s', null, array('title' => 'Older&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+<i class="material-icons">arrow_forward</i>
+</button>', 'tagClass' => 'prev-content')); ?>
             </nav>
         </div>
 
