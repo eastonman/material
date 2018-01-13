@@ -4,7 +4,7 @@
     $commentClass = '';
     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';  //评论层数大于0为子级，否则是父级
 ?>
-<div id="li-<?php $comments->theId(); ?>" class="comment mdl-color-text--grey-700 comment-body<?php
+    <div id="li-<?php $comments->theId(); ?>" class="comment mdl-color-text--grey-700 comment-body<?php
     if ($comments->_levels > 0) {
         echo ' comment-child';
         $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
@@ -49,10 +49,10 @@
                 <span class="visuallyhidden">dislike comment</span>
             </button>
         <!-- reply -->
-        <?php $comments->reply('<button id="comment-reply-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">forum</i>
-            <span class="visuallyhidden">reply comment</span>
-            </button>'); ?>
+<?php $comments->reply('<button id="comment-reply-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+<i class="material-icons" role="presentation">forum</i>
+<span class="visuallyhidden">reply comment</span>
+</button>'); ?>
         <!-- share -->
         <button id="comment-share-<?php $comments->theId(); ?>-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                 <i class="material-icons" role="presentation">share</i>
@@ -73,15 +73,15 @@
 
     <!-- Comment answers -->
     <div class="comment__answers">
-        <?php if ($comments->children) {
-        ?>
+<?php if ($comments->children) {
+?>
         <!--是否嵌套评论判断开始-->
         <div class="comment-children">
             <?php $comments->threadedComments($options); ?>
             <!--嵌套评论所有内容-->
         </div>
-        <?php
-    } ?>
+<?php
+} ?>
         <!--是否嵌套评论判断结束-->
     </div>
 
@@ -173,7 +173,7 @@
             </div>
 
             <!-- Submit comment content button -->
-            <?php $comments->reply('
+<?php $comments->reply('
                     <button id="comment-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                         <i class="material-icons" role="presentation">check</i><span class="visuallyhidden">add comment</span>
                     </button>'); ?>
@@ -205,17 +205,17 @@
 <script type="text/javascript">
 _hcwp = window._hcwp || [];
 _hcwp.push({widget:"Stream", widget_id:';
-    $b = $this->options->HyperID;
-    $c= '});
+$b = $this->options->HyperID;
+$c= '});
 (function() {
-if("HC_LOAD_INIT" in window)return;
-HC_LOAD_INIT = true;
-var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/"+"';
+    if("HC_LOAD_INIT" in window)return;
+    HC_LOAD_INIT = true;
+    var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+    var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+    hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/"+"';
     $d= '"+"/"+lang+"/widget.js";
-var s = document.getElementsByTagName("script")[0];
-s.parentNode.insertBefore(hcc, s.nextSibling);
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hcc, s.nextSibling);
 })();
 </script>
 <a href="http://hypercomments.com" class="hc-link" title="comments widget">comments powered by HyperComments</a>';
@@ -230,28 +230,33 @@ s.parentNode.insertBefore(hcc, s.nextSibling);
 
 <?php if ($this->options->commentis == '2'): ?>
     <?php if ($this->allow('comment')): ?>
-
-<div class="wildfire_thread"></div>
+<style>
+#commentfix {
+        max-width: 90%;
+        max-height: 100%;
+    }
+</style>
+<div id="commentfix" class="wildfire_thread"></div>
 <script>
-  // 你可以自定义一些配置
-  //
-  // databaseProvider: 必须为 'wilddog' 或者 'firebase'
-  // databaseConfig: 请从你的数据库控制台复制过来。
-  // pageURL(可选): 默认为当前页面的 URL。
-  // pageTitle(可选): 默认为当前页面的 title。
-  // theme(可选): 'light'（默认）或者 'dark'。
-  // locale(可选): 'en'（默认）或者 'zh-CN'
-  // defaultAvatarURL(可选): 默认头像是一个可爱的消防员 :-D
-  var wildfireConfig = () => ({
-    databaseProvider: 'firebase',
+// 你可以自定义一些配置
+//
+// databaseProvider: 必须为 'wilddog' 或者 'firebase'
+// databaseConfig: 请从你的数据库控制台复制过来。
+// pageURL(可选): 默认为当前页面的 URL。
+// pageTitle(可选): 默认为当前页面的 title。
+// theme(可选): 'light'（默认）或者 'dark'。
+// locale(可选): 'en'（默认）或者 'zh-CN'
+// defaultAvatarURL(可选): 默认头像是一个可爱的消防员 :-D
+var wildfireConfig = () => ({
+databaseProvider: 'firebase',
     databaseConfig: {
-            <?php $this->options->wildfire(); ?>
-             },
-    theme: 'light',
-    locale: 'zh-CN',
-    defaultAvatarURL: 'https://image.flaticon.com/icons/svg/621/621863.svg'
-  })
-</script>
+    <?php $this->options->wildfire(); ?>
+    },
+        theme: 'light',
+        locale: 'zh-CN',
+defaultAvatarURL: 'https://image.flaticon.com/icons/svg/621/621863.svg'
+    })
+        </script>
 <script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
 <?php endif; ?>
 <?php endif; ?>
@@ -265,20 +270,27 @@ s.parentNode.insertBefore(hcc, s.nextSibling);
  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 
-<div id="gitalk-container" ></div>
+<style>
+.commentfix {
+        max-width: 85%;
+        max-height: 100%;
+    }
+</style>
+
+<div id="gitalk-container"></div>
 
 <script type="text/javascript">
 
 var gitalk = new Gitalk({
-    clientID:  '<?php $this->options->GitalkClientID(); ?>' ,
+clientID:  '<?php $this->options->GitalkClientID(); ?>' ,
     clientSecret: '<?php $this->options->GitalkClientSecret(); ?>',
     repo: '<?php $this->options->GitalkRepo(); ?>',
     owner: '<?php $this->options->GitalkOwner(); ?>',
     admin: ['<?php $this->options->GitalkOwner(); ?>'],
-  // facebook-like distraction free mode
-  distractionFreeMode: false
-});
-    gitalk.render('gitalk-container');
+    // facebook-like distraction free mode
+    distractionFreeMode: true
+    });
+gitalk.render('gitalk-container');
 </script>
 <?php endif; ?>
 <?php endif; ?>

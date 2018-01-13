@@ -74,7 +74,7 @@
                             </button>
                     <ul id="article-functions-viewtags-ul" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
                         <li class="mdl-menu__item">
-                            <?php $this->tags('<li class="mdl-menu__item"> ', true, '本文暂无标签'); ?></li>
+                            <?php $this->tags('<li class="mdl-menu__item"> ', true, '&emsp; 本文暂无标签'); ?></li>
                     </ul>
                     <!-- share -->
                     <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
