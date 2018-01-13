@@ -94,7 +94,7 @@ function themeConfig($form)
             '0' => _t('使用原生评论 &emsp;'),
             '1' => _t('使用hypercomment &emsp;'),
             '2' => _t('使用wildfire &emsp;'),
-            '3' => _t('使用Gittalk &emsp;')
+            '3' => _t('使用Gitalk &emsp;')
         ),
 
         '0', _t('文章评论'), _t("默认使用原生评论, 如果使用多说评论, 在 <b>'多说二级域名 (short_name)'</b> 中填入多说 short_name")
@@ -109,17 +109,17 @@ function themeConfig($form)
     $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('wildfire配置'), _t('填入wildfire的配置(config项的内容)'));
     $form->addInput($wildfire);
 
-    $GittalkClientID = new Typecho_Widget_Helper_Form_Element_Text('GittalkClientID', null, null, _t('Gittalk'), _t('ClientID'));
-    $form->addInput($GittalkClientID);
+    $GitalkClientID = new Typecho_Widget_Helper_Form_Element_Text('GitalkClientID', null, null, _t('Gitalk'), _t('ClientID'));
+    $form->addInput($GitalkClientID);
 
-    $GittalkClientSecret = new Typecho_Widget_Helper_Form_Element_Text('GittalkClientSecret', null, null, _t('Gittalk'), _t('ClientSecret'));
-    $form->addInput($GittalkClientSecret);
+    $GitalkClientSecret = new Typecho_Widget_Helper_Form_Element_Text('GitalkClientSecret', null, null, _t('Gitalk'), _t('ClientSecret'));
+    $form->addInput($GitalkClientSecret);
 
-    $GittalkRepo = new Typecho_Widget_Helper_Form_Element_Text('GittalkRepo', null, null, _t('Gittalk'), _t('Repo'));
-    $form->addInput($GittalkRepo);
+    $GitalkRepo = new Typecho_Widget_Helper_Form_Element_Text('GitalkRepo', null, null, _t('Gitalk'), _t('Repo'));
+    $form->addInput($GitalkRepo);
 
-    $GittalkOwner = new Typecho_Widget_Helper_Form_Element_Text('GittalkOwner', null, null, _t('Gittalk'), _t('Owner'));
-    $form->addInput($GittalkOwner);
+    $GitalkOwner = new Typecho_Widget_Helper_Form_Element_Text('GitalkOwner', null, null, _t('Gitalk'), _t('Owner'));
+    $form->addInput($GitalkOwner);
 
 
 

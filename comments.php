@@ -199,7 +199,7 @@
 <!--使用hypercomment评论-->
 
 <?php if ($this->options->commentis == '1'): ?>
-
+<?php if ($this->allow('comment')): ?>
 <?php
     $a='<div id="hypercomments_widget"></div>
 <script type="text/javascript">
@@ -222,12 +222,14 @@ s.parentNode.insertBefore(hcc, s.nextSibling);
     echo $a.$b.$c.$b.$d;
 ?>
 <?php endif; ?>
+<?php endif; ?>
 
 
 
 <!--使用wildfire评论-->
 
 <?php if ($this->options->commentis == '2'): ?>
+    <?php if ($this->allow('comment')): ?>
 
 <div class="wildfire_thread"></div>
 <script>
@@ -252,12 +254,14 @@ s.parentNode.insertBefore(hcc, s.nextSibling);
 </script>
 <script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
 <?php endif; ?>
+<?php endif; ?>
 
 
 
 
 
 <?php if ($this->options->commentis == '3'): ?>
+    <?php if ($this->allow('comment')): ?>
  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 
@@ -266,14 +270,15 @@ s.parentNode.insertBefore(hcc, s.nextSibling);
 <script type="text/javascript">
 
 var gitalk = new Gitalk({
-    clientID:  '<?php $this->options->GittalkClientID(); ?>' ,
-    clientSecret: '<?php $this->options->GittalkClientSecret(); ?>',
-  repo: 'material',
-  owner: 'manyang901',
-  admin: ['manyang901'],
+    clientID:  '<?php $this->options->GitalkClientID(); ?>' ,
+    clientSecret: '<?php $this->options->GitalkClientSecret(); ?>',
+    repo: '<?php $this->options->GitalkRepo(); ?>',
+    owner: '<?php $this->options->GitalkOwner(); ?>',
+    admin: ['<?php $this->options->GitalkOwner(); ?>'],
   // facebook-like distraction free mode
   distractionFreeMode: false
 });
     gitalk.render('gitalk-container');
 </script>
+<?php endif; ?>
 <?php endif; ?>
