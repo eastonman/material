@@ -97,13 +97,13 @@ function themeConfig($form)
             '3' => _t('使用Gitalk &emsp;')
         ),
 
-        '0', _t('文章评论'), _t("默认使用原生评论,如使用其他评论，请自己填好配置项")
+        '0', _t('文章评论'), _t("默认使用原生评论, 如果使用多说评论, 在 <b>'多说二级域名 (short_name)'</b> 中填入多说 short_name")
     );
     $form->addInput($commentis);
 
 
 
-    $HyperID = new Typecho_Widget_Helper_Form_Element_Text('HyperID', null, null, _t('hypercomment'), _t('Input your HyperComment widgt Id , you can get it from hypercomment console'));
+    $HyperID = new Typecho_Widget_Helper_Form_Element_Text('HyperID', null, null, _t('hypercomment'), _t('hypercomment'));
     $form->addInput($HyperID);
 
     $wildfire = new Typecho_Widget_Helper_Form_Element_Textarea('wildfire', null, null, _t('wildfire配置'), _t('填入wildfire的配置(config项的内容)'));
@@ -139,7 +139,7 @@ function themeConfig($form)
     );
     $form->addInput($langis);
 
-    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, 'Status Page', 'Status page link , you can generate your own status page  by uptimerobot');
+    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, 'status', 'Status page link , you can generate yours by uptimerobot');
     $form->addInput($Status);
 
     $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', null, null, '置顶文章 1 ID', null);
@@ -183,8 +183,13 @@ function themeConfig($form)
             'ShowTwitter' => _t('显示 Twitter 图标 &emsp;'),
             'ShowFacebook' => _t('显示 Facebook 图标 &emsp;'),
             'ShowGooglePlus' => _t('显示 Google+ 图标 &emsp;'),
+            'ShowWeibo' => _t('显示新浪微博图标 &emsp;'),
+            'ShowInstagram' => _t('显示 Instagram 图标 &emsp;'),
             'ShowGithub' => _t('显示 Github 图标 &emsp;'),
+            'ShowTumblr' => _t('显示 Tumblr 图标 &emsp;'),
+            'ShowBilibili' => _t('显示 Bilibili 图标 &emsp;'),
             'ShowTelegram' => _t('显示 Telegram 图标 &emsp;'),
+            'ShowZhihu' => _t('显示 Zhihu 图标 &emsp;'),
             'ShowLinkedin' => _t('显示 Linkedin 图标 &emsp;'),
         ),
 
@@ -201,11 +206,26 @@ function themeConfig($form)
     $GooglePlusURL = new Typecho_Widget_Helper_Form_Element_Text('GooglePlusURL', null, _t('NULL'), _t('Google+ 地址'), null);
     $form->addInput($GooglePlusURL);
 
+    $WeiboURL = new Typecho_Widget_Helper_Form_Element_Text('WeiboURL', null, null, _t('新浪微博地址'), null);
+    $form->addInput($WeiboURL);
+
+    $InstagramURL = new Typecho_Widget_Helper_Form_Element_Text('InstagramURL', null, null, _t('Instagram 地址'), null);
+    $form->addInput($InstagramURL);
+
     $GithubURL = new Typecho_Widget_Helper_Form_Element_Text('GithubURL', null, null, _t('Github 地址'), null);
     $form->addInput($GithubURL);
 
+    $TumblrURL = new Typecho_Widget_Helper_Form_Element_Text('TumblrURL', null, null, _t('Tumblr 地址'), null);
+    $form->addInput($TumblrURL);
+
+    $BilibiliURL = new Typecho_Widget_Helper_Form_Element_Text('BilibiliURL', null, null, _t('Bilibili 地址'), null);
+    $form->addInput($BilibiliURL);
+
     $TelegramURL = new Typecho_Widget_Helper_Form_Element_Text('TelegramURL', null, null, _t('Telegram 地址'), null);
     $form->addInput($TelegramURL);
+
+    $ZhihuURL = new Typecho_Widget_Helper_Form_Element_Text('ZhihuURL', null, null, _t('Zhihu 地址'), null);
+    $form->addInput($ZhihuURL);
 
     $LinkedinURL = new Typecho_Widget_Helper_Form_Element_Text('LinkedinURL', null, null, _t('Linkedin 地址'), null);
     $form->addInput($LinkedinURL);

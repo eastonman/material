@@ -25,7 +25,7 @@
                 <i class="material-icons prime-i-add">add</i>
             </a>
         </div>
-
+        
         <!--Footer-->
         <footer class="mdl-mini-footer" id="bottom">
             <!--mdl-mini-footer-left-section-->
@@ -34,7 +34,7 @@
                 <?php if (!empty($this->options->CDNURL)): ?>
                 <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-twitter.png);">
                     <?php else: ?>
-                        <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-twitter.png'); ?>);">
+                        <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-twitter.png'); ?>);">                                            
                             <?php endif; ?>
                             <span class="visuallyhidden">Twitter</span>
                         </button></a>
@@ -59,7 +59,25 @@
                                     </button></a>
                 <?php endif;?>
 
-                <?php if (!empty($this->options->footersns) && in_array('ShowGithub', $this->options->footersns)) : ?>
+                <?php if (!empty($this->options->footersns) && in_array('ShowWeibo', $this->options->footersns)) : ?>
+                <?php if (!empty($this->options->CDNURL)): ?>
+                <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-weibo.png);">
+                                    <?php else: ?>
+                                       <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-weibo.png'); ?>);">
+                                    <?php endif; ?>
+                                        <span class="visuallyhidden">Sina Weibo</span>
+                                    </button></a>
+                <?php endif;?>
+                                                        <?php if (!empty($this->options->footersns) && in_array('ShowInstagram', $this->options->footersns)) : ?>
+                <?php if (!empty($this->options->CDNURL)): ?>
+                <a href="<?php $this->options->InstagramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-instagram.png);">
+                                    <?php else: ?>
+                                       <a href="<?php $this->options->InstagramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-instagram.png'); ?>);">
+                                    <?php endif; ?>
+                                        <span class="visuallyhidden">Instagram</span>
+                                    </button></a>
+                <?php endif;?>
+                                                        <?php if (!empty($this->options->footersns) && in_array('ShowGithub', $this->options->footersns)) : ?>
                 <?php if (!empty($this->options->CDNURL)): ?>
                 <a href="<?php $this->options->GithubURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-github.png);">
                                     <?php else: ?>
@@ -69,7 +87,25 @@
                                     </button></a>
                 <?php endif;?>
                                                         <?php if (!empty($this->options->footersns) && in_array('ShowTumblr', $this->options->footersns)) : ?>
-
+                <?php if (!empty($this->options->CDNURL)): ?>
+                <a href="<?php $this->options->TumblrURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-tumblr.png);">
+                                    <?php else: ?>
+                                       <a href="<?php $this->options->TumblrURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-tumblr.png'); ?>);">
+                                    <?php endif; ?>
+                                        <span class="visuallyhidden">Tumblr</span>
+                                    </button></a>
+                <?php endif;?>
+                
+                <?php if (!empty($this->options->footersns) && in_array('ShowBilibili', $this->options->footersns)) : ?>
+                    <?php if (!empty($this->options->CDNURL)): ?>
+                        <a href="<?php $this->options->BilibiliURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-bilibili.png);">
+                    <?php else: ?>
+                            <a href="<?php $this->options->BilibiliURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-bilibili.png'); ?>);">
+                    <?php endif; ?>
+                <span class="visuallyhidden">Bilibili</span>
+                            </button></a>
+                <?php endif;?>
+                
                 <?php if (!empty($this->options->footersns) && in_array('ShowTelegram', $this->options->footersns)) : ?>
                     <?php if (!empty($this->options->CDNURL)): ?>
                         <a href="<?php $this->options->TelegramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-telegram.png);">
@@ -79,8 +115,17 @@
                 <span class="visuallyhidden">Telegram</span>
                             </button></a>
                 <?php endif;?>
-
-
+                
+                <?php if (!empty($this->options->footersns) && in_array('ShowZhihu', $this->options->footersns)) : ?>
+                    <?php if (!empty($this->options->CDNURL)): ?>
+                        <a href="<?php $this->options->ZhihuURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-zhihu.png);">
+                    <?php else: ?>
+                            <a href="<?php $this->options->ZhihuURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-zhihu.png'); ?>);">
+                    <?php endif; ?>
+                <span class="visuallyhidden">Zhihu</span>
+                            </button></a>
+                <?php endif;?>
+                
                 <?php if (!empty($this->options->footersns) && in_array('ShowLinkedin', $this->options->footersns)) : ?>
                     <?php if (!empty($this->options->CDNURL)): ?>
                         <a href="<?php $this->options->LinkedinURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-linkedin.png);">
@@ -90,15 +135,15 @@
                 <span class="visuallyhidden">Linkedin</span>
                             </button></a>
                 <?php endif;?>
-
+                
             </div>
-
+            
             <!--copyright-->
             <div id="copyright">Copyright &copy;
                 <?php echo date("Y"); ?>
                 <?php $this->options->title(); ?>
             </div>
-
+            
             <?php if (class_exists("Uptime_Plugin")): ?>
                 <div id="copyright">
                     <?php Uptime_Plugin::show(); ?>
