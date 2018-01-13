@@ -106,6 +106,8 @@ $this->need('header.php');?>
                                     <i class="material-icons" role="presentation">more_vert</i>
                                     <span class="visuallyhidden">show menu</span>
                                 </button>
+
+
                                 <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
 
                                     <a href="<?php $this->options->feedUrl(); ?>" class="md-menu-list-a">
