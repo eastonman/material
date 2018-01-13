@@ -12,6 +12,7 @@
 - [Demo 演示](#demo-演示)
 - [Setup 设置](#setup-设置)
 - [Preview 预览](#preview-预览)
+- [Config 自定义功能](#config-自定义功能)
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
 
@@ -69,7 +70,7 @@ Experience the Material theme in live: [typecho-theme-material Demo](https://blo
 
 
 
-## 自定义功能
+## Config 自定义功能
 
 ### wildfire评论
 
@@ -92,5 +93,5 @@ Open sourced under the GPL v3.0 license.
 根据 GPL V3.0 许可证开源。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTc0NzI4ODhdfQ==
+eyJoaXN0b3J5IjpbLTU1MTIxMjI0MF19
 -->
