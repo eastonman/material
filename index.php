@@ -182,6 +182,9 @@ foreach ($sticky_posts as $sticky_posts) {
                     ?>
                             <?php endif; ?>
 
+
+
+
                             <?php while ($this->next()): ?>
 
                             <!-- Article module -->
@@ -189,7 +192,7 @@ foreach ($sticky_posts as $sticky_posts) {
 
                                 <!-- Article link & title -->
                                 <?php if ($this->options->ThumbnailOption == '1'): ?>
-                                <div class="mdl-card__media mdl-color-text--grey-50 " style="background-image:url(<?php showThumbnail($this); ?>)">
+                                <div class="mdl-card__media mdl-color-text--grey-50 lazyload" data-src="<?php showThumbnail($this); ?>">
                                     <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
                                 </div>
                                 <?php elseif ($this->options->ThumbnailOption == '2'): ?>
@@ -201,7 +204,9 @@ foreach ($sticky_posts as $sticky_posts) {
                                     </p>
                                 </div>
                                 <?php elseif ($this->options->ThumbnailOption == '3'): ?>
-                                <div class="mdl-card__media mdl-color-text--grey-50 " style="background-image:url(<?php randomThumbnail($this); ?>)">
+
+
+                                <div class="mdl-card__media mdl-color-text--grey-50 lazyload" data-src="<?php randomThumbnail($this); ?>">
                                     <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
                                 </div>
                                 <?php endif; ?>
@@ -265,6 +270,12 @@ foreach ($sticky_posts as $sticky_posts) {
 
                             <?php endwhile; ?>
 
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.1/lazyload.min.js"></script>
+                                <script>
+                                    var myLazyLoad = new LazyLoad({
+                                        elements_selector: ".lazyload"
+                                        });
+                                </script>
                             <nav class="demo-nav mdl-cell mdl-cell--12-col">
                                 <?php $this->pageLink(
                         '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
