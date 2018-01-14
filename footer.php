@@ -114,23 +114,13 @@
 </body>
 
 <!-- Material js -->
-<?php if (!empty($this->options->CDNURL)): ?>
-<script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/jquery.min.js"></script>
-<script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/js.min.js"></script>
-<script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/jquery.pjax.js"></script>
-<?php else: ?>
-<script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('js/js.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
-<?php endif; ?>
+<script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+<script src="<?php $this->options->themeURL('/js/js.min.js'); ?>"></script>
+<script src="<?php $this->options->themeURL('/js/jquery.pjax.js'); ?>"></script>
 
-
+<!--nprogress js-->
 <?php if (!empty($this->options->switch) && in_array('ShowLoadingLine', $this->options->switch)): ?>
-<?php if (!empty($this->options->CDNURL)): ?>
-<script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/nprogress.js"></script>
-<?php else: ?>
-<script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
-<?php endif; ?>
+<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 
         <script type="text/javascript">
         NProgress.configure({
@@ -152,14 +142,12 @@
             $('.fade').removeClass('out');
         }, <?php $this->options->loadingbuffer(); ?>);
         </script>
+
 <?php endif; ?>
 
+<!--smoothscroll js-->
 <?php if (!empty($this->options->switch) && in_array('SmoothScroll', $this->options->switch)): ?>
-<?php if (!empty($this->options->CDNURL)): ?>
-<script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/smoothscroll.js" async></script>
-<?php else: ?>
-<script src="<?php $this->options->themeUrl('js/smoothscroll.js'); ?>" async></script>
-<?php endif; ?>
+<script src="https://cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.min.js" async></script>
 <?php endif; ?>
 
 <?php if (!empty($this->options->switch) && in_array('atargetblank', $this->options->switch)): ?>
@@ -226,11 +214,7 @@
 
 <!-- Pangu js -->
 <?php if (!empty($this->options->switch) && in_array('Pangu', $this->options->switch)): ?>
-  <?php if (!empty($this->options->CDNURL)): ?>
-      <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/pangu.min.js"></script>
-  <?php else: ?>
-      <script src="<?php $this->options->themeUrl('js/pangu.min.js'); ?>"></script>
-  <?php endif; ?>
+      <script src="https://cdn.bootcss.com/pangu/3.3.0/pangu.min.js"></script>
   <script> pangu.spacingPage(); </script>
 <?php endif; ?>
 <?php $html_source = ob_get_contents(); ob_clean(); print compressHtml($html_source); ob_end_flush(); ?>

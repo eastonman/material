@@ -270,12 +270,6 @@ foreach ($sticky_posts as $sticky_posts) {
 
                             <?php endwhile; ?>
 
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.1/lazyload.min.js"></script>
-                                <script>
-                                    var myLazyLoad = new LazyLoad({
-                                        elements_selector: ".lazyload"
-                                        });
-                                </script>
                             <nav class="demo-nav mdl-cell mdl-cell--12-col">
                                 <?php $this->pageLink(
                         '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
@@ -297,6 +291,18 @@ foreach ($sticky_posts as $sticky_posts) {
                             </nav>
 
                     </div>
+
+
+
+
+                    <!--lazy load js-->
+
+                                <script src="https://cdn.bootcss.com/vanilla-lazyload/10.4.1/lazyload.min.js"></script>
+                                <script>
+                                    var myLazyLoad = new LazyLoad({
+                                        elements_selector: ".lazyload"
+                                        });
+                                </script>
 
                     <?php include('sidebar.php'); ?>
                     <?php include('footer.php'); ?>
