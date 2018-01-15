@@ -312,7 +312,10 @@ foreach ($sticky_posts as $sticky_posts) {
                             </div>
 
                             <?php endwhile; ?>
-
+                            	
+                            
+                            
+                            <!-- Echo Prev & After Page-->
                             <nav class="demo-nav mdl-cell mdl-cell--12-col">
                                 <?php $this->pageLink(
                         '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">

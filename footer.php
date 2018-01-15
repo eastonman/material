@@ -217,7 +217,7 @@
       <script src="https://cdn.bootcss.com/pangu/3.3.0/pangu.min.js"></script>
   <script> pangu.spacingPage(); </script>
 <?php endif; ?>
-<?php $html_source = ob_get_contents(); ob_clean(); print compressHtml($html_source); ob_end_flush(); ?>
+<?php /*$html_source = ob_get_contents(); ob_clean(); print compressHtml($html_source); ob_end_flush();*/ ?>
 <?php $this->footer(); ?>
 
 </html>
