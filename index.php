@@ -5,7 +5,7 @@
  *
  * @package Theme.Material
  * @author viosey&manyang901
- * @version 1.2.0
+ * @version 1.3.0
  * @link https://github.com/manyang901/material
  */
 
@@ -14,13 +14,16 @@ $this->need('header.php');?>
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
 
         <main class="mdl-layout__content" id="main">
-            <div id="top"></div>
+            
+			<div id="top"></div>
+            
             <!-- Sidebar hamburger button -->
             <button class="MD-burger-icon sidebar-toggle">
               <span class="MD-burger-layer"></span>
             </button>
-
-            <div class="demo-blog__posts mdl-grid">
+			<!-- Sidebar Hamburger ButtonEnd -->
+				
+			<div class="demo-blog__posts mdl-grid">
 
                 <!-- Daily Pic -->
                 <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
