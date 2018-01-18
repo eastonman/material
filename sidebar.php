@@ -212,9 +212,9 @@
         <div id="upyun-logo">
             <a href="https://www.upyun.com/" target="_blank">
                 <?php if (!empty($this->options->CDNURL)): ?>
-                <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/upyun_logo_90x45.png" />
+                <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/upyun_logo.jpg" width="103px" height="45px" />
                 <?php else: ?>
-                <img src="<?php $this->options->themeUrl('img/upyun_logo_90x45.png'); ?>" />
+                <img src="<?php $this->options->themeUrl('img/upyun_logo.jpg'); ?>" width="103px" height="45px" />
                 <?php endif; ?>
             </a>
         </div>

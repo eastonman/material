@@ -248,7 +248,7 @@ blockquote {
         margin-bottom: 20px;
     }
     
-    ' .daily-pic {
+    .demo-blog .daily-pic {
         width: calc(66.6666666667% - 16px);
     }
     
