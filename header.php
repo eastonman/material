@@ -329,3 +329,27 @@
     </head>
 
     <body>
+    	
+    
+    <!-- fixed appbar -->
+			 <header class="mdui-appbar mdui-appbar-fixed" >
+    <div class="mdui-toolbar mdui-color-theme" >
+    	
+    
+    
+    <!-- Sidebar hamburger button -->
+            <button class="MD-burger-icon sidebar-toggle">
+              <span class="MD-burger-layer"></span>
+            </button>
+			<!-- Sidebar Hamburger ButtonEnd -->
+				
+				
+     <!-- <span class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#drawer', swipe: true}"><i class="mdui-icon materiality-icons">&#xe900;</i></span> -->
+      <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline" > <?php $this->options->title(); ?></a>
+      
+
+		<div class="section-spacer"></div>
+      
+      
+    </div>
+  </header>

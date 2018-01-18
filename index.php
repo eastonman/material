@@ -15,6 +15,11 @@ $this->need('header.php');?>
 
         <main class="mdl-layout__content" id="main">
 
+		
+			
+			
+  
+  
 			<div id="top"></div>
 
             <!-- Sidebar hamburger button -->
@@ -25,7 +30,7 @@ $this->need('header.php');?>
 
 
 			<!-- Blog Header(picture&avatar&slogan) Began -->
-			<div class="demo-blog__posts mdl-grid">
+			<div class="demo-blog__posts mdl-grid" padding-top="4em" >
 
                 <!-- Main Picture -->
                 <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
