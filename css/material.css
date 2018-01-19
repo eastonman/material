@@ -5860,6 +5860,7 @@ iframe.heightSet {
 
 .mdui-typo-headline,
 .mdui-typo-headline-opacity {
+  width: 100%;
   font-size: 24px;
   font-weight: 400;
 
@@ -5867,7 +5868,7 @@ iframe.heightSet {
 }
 
 .mdui-appbar {
-  z-index: 2;
+  z-index: 980;
   width: 100%;
   -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
           box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
