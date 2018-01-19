@@ -1713,6 +1713,25 @@ blockquote {
 }
 
 
+
+
+
+
+/********appbar********/
+
+#md-appbar {
+	z-index: 980 ;
+
+}
+
+#md-headline {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/****appbar end ***/
+
 /**************************************************************************************************/
 
 
@@ -1728,14 +1747,15 @@ blockquote {
 /**************************************************************************************************/
 
 .MD-burger-icon {
-    margin: 0pc 0px 0px 1pc;
+    margin: 0pc 0px 0px 0px;
     cursor: pointer;
     border: none;
     background: none;
     outline: 0;
-    height: 15px;
-    position: fixed;
-    top: 1pc;
+    left: -2px;
+    float: left;
+    position: relative;
+    vertical-align: center;
     z-index: 997;
     height: 32px;
     width: 32px;

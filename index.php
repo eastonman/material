@@ -22,20 +22,20 @@ $this->need('header.php');?>
   
 			<div id="top"></div>
 			  <!-- fixed appbar -->
-			 <header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide" >
-    <div class="mdui-toolbar mdui-color-theme" z-index=900 >
+			 <header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide" id="md-appbar" >
+    <div class="mdui-toolbar mdui-color-theme mdui-color-white" >
     	
     
     
-    <!-- Sidebar hamburger button -->
+    <!-- Sidebar hamburger button --> 
             <button class="MD-burger-icon sidebar-toggle">
-              <span class="MD-burger-layer"></span>
+               <span class="MD-burger-layer"></span> 
             </button>
 			<!-- Sidebar Hamburger ButtonEnd -->
 				
 				
      <!-- <span class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#drawer', swipe: true}"><i class="mdui-icon materiality-icons">&#xe900;</i></span> -->
-      <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline" > <?php $this->options->title(); ?></a>
+      <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline" id="md-headline" > <?php $this->options->title(); ?></a>
       
 
 		<div class="section-spacer"></div>
@@ -45,15 +45,15 @@ $this->need('header.php');?>
   </header>
   
 
-            <!-- Sidebar hamburger button -->
+            <!-- Sidebar hamburger button 
             <button class="MD-burger-icon sidebar-toggle">
               <span class="MD-burger-layer"></span>
             </button>
-			<!-- Sidebar Hamburger ButtonEnd -->
+			 Sidebar Hamburger ButtonEnd -->
 
 
 			<!-- Blog Header(picture&avatar&slogan) Began -->
-			<div class="demo-blog__posts mdl-grid" padding-top="4em" >
+			<div class="demo-blog__posts mdl-grid mdui-appbar-with-toolbar" >
 
                 <!-- Main Picture -->
                 <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
