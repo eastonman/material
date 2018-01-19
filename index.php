@@ -22,7 +22,7 @@ $this->need('header.php');?>
   
 			<div id="top"></div>
 			  <!-- fixed appbar -->
-			 <header class="mdui-appbar mdui-appbar-fixed" >
+			 <header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide" >
     <div class="mdui-toolbar mdui-color-theme" z-index=900 >
     	
     

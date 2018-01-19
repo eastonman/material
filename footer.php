@@ -117,6 +117,7 @@
 <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
 <script src="<?php $this->options->themeURL('/js/js.min.js'); ?>"></script>
 <script src="<?php $this->options->themeURL('/js/jquery.pjax.js'); ?>"></script>
+<script src="//cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
 
 <!--nprogress js-->
 <?php if (!empty($this->options->switch) && in_array('ShowLoadingLine', $this->options->switch)): ?>
@@ -217,7 +218,9 @@
       <script src="https://cdn.bootcss.com/pangu/3.3.0/pangu.min.js"></script>
   <script> pangu.spacingPage(); </script>
 <?php endif; ?>
+	
 <?php /*$html_source = ob_get_contents(); ob_clean(); print compressHtml($html_source); ob_end_flush();*/ ?>
 <?php $this->footer(); ?>
+	
 
 </html>
