@@ -5867,7 +5867,7 @@ iframe.heightSet {
 }
 
 .mdui-appbar {
-  z-index: 900 ;
+  z-index: 2;
   width: 100%;
   -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
           box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
@@ -6023,8 +6023,8 @@ iframe.heightSet {
 }
 @media (orientation: landscape) and (max-width: 959px) {
   .mdui-appbar .mdui-toolbar {
-    height: 48px;
-    line-height: 48px;
+    height: 4em;
+    line-height: 4em;
   }
   .mdui-appbar .mdui-toolbar > .mdui-btn {
     margin: 0 4px;
