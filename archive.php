@@ -4,10 +4,33 @@
 
     <main class="mdl-layout__content">
         <div id="top"></div>
-        <!-- Sidebar hamburger button -->
+        
+            <!-- fixed appbar -->
+                <header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide" id="md-appbar" >
+                    <div class="mdui-toolbar mdui-color-theme mdui-color-white" >
+
+
+                    <!-- Sidebar hamburger button -->
+                    <button class="MD-burger-icon sidebar-toggle">
+                        <span class="MD-burger-layer"></span>
+                    </button>
+                    <!-- Sidebar Hamburger ButtonEnd -->
+
+                    <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline" id="md-headline" > <?php $this->options->title(); ?></a>
+
+
+                    <div class="section-spacer"></div>
+
+                    </div>
+            </header>
+            
+            
+        <!-- Sidebar hamburger button 
         <button class="MD-burger-icon sidebar-toggle">
                 <span class="MD-burger-layer"></span>
                 </button>
+                
+                -->
         <!-- Top-left-corner home button -->
         <div class="demo-back" id="backhome-div">
             <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onClick="window.history.back();return false;" title="go back" role="button">

@@ -163,14 +163,14 @@ function themeConfig($form)
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', null, null, _t('favicon 地址'), _t('填入博客 favicon 的地址, 默认则不显示'));
     $form->addInput($favicon);
 
-    $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', null, null, _t('首页顶部左边的图片地址'), _t('填入图片地址, 图片显示在首页顶部左边位置'));
-    $form->addInput($dailypic);
+    $MainPic = new Typecho_Widget_Helper_Form_Element_Text('MainPic', null, null, _t('首页顶部左边的图片地址'), _t('填入主页最大的图片地址, 图片显示在首页顶部左边位置'));
+    $form->addInput($MainPic);
 
     $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', null, null, _t('首页顶部右边 LOGO 图片地址'), _t('填入 LOGO 地址, 图片将显示于首页右上角板块'));
     $form->addInput($logo);
 
-    $dailypicLink = new Typecho_Widget_Helper_Form_Element_Text('dailypicLink', null, _t('#'), _t('首页顶部左边图片的点击跳转地址'), _t('点击图片后, 想要跳转网页的地址'));
-    $form->addInput($dailypicLink);
+    $MainPicLink = new Typecho_Widget_Helper_Form_Element_Text('MainPicLink', null, _t('#'), _t('首页顶部左边图片的点击跳转地址'), _t('点击首页大图后, 想要跳转网页的地址'));
+    $form->addInput($MainPicLink);
 
     $logoLink = new Typecho_Widget_Helper_Form_Element_Text('logoLink', null, null, _t('首页顶部右边 LOGO 的点击跳转地址'), _t('点击 LOGO 后, 想要跳转网页的地址'));
     $form->addInput($logoLink);

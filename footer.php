@@ -101,7 +101,7 @@
             <div class="mdl-mini-footer--right-section">
                 <div>
                     <div class="footer-develop-div">Powered by <a href="http://typecho.org" target="_blank" class="footer-develop-a">Typecho</a></div>
-                    <div class="footer-develop-div">Theme by <a href="https://viosey.com" target="_blank" class="footer-develop-a">Viosey</a></div>
+                    <div class="footer-develop-div">Theme by <a href="https://blog.kucloud.win" target="_blank" class="footer-develop-a">Manyang901</a></div>
                 </div>
             </div>
         </footer>
@@ -117,6 +117,7 @@
 <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
 <script src="<?php $this->options->themeURL('/js/js.min.js'); ?>"></script>
 <script src="<?php $this->options->themeURL('/js/jquery.pjax.js'); ?>"></script>
+<script src="//cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
 
 <!--nprogress js-->
 <?php if (!empty($this->options->switch) && in_array('ShowLoadingLine', $this->options->switch)): ?>
@@ -217,7 +218,9 @@
       <script src="https://cdn.bootcss.com/pangu/3.3.0/pangu.min.js"></script>
   <script> pangu.spacingPage(); </script>
 <?php endif; ?>
-<?php $html_source = ob_get_contents(); ob_clean(); print compressHtml($html_source); ob_end_flush(); ?>
+	
+<?php /*$html_source = ob_get_contents(); ob_clean(); print compressHtml($html_source); ob_end_flush();*/ ?>
 <?php $this->footer(); ?>
+	
 
 </html>

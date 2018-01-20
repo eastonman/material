@@ -248,7 +248,7 @@ blockquote {
         margin-bottom: 20px;
     }
     
-    ' .daily-pic {
+    .demo-blog .daily-pic {
         width: calc(66.6666666667% - 16px);
     }
     
@@ -289,6 +289,10 @@ blockquote {
     margin-bottom: 30px;
 }
 
+.demo-blog {
+  padding-top: 4em;
+
+}
 .demo-blog .demo-blog__posts {
     display: flex;
     margin: 0 auto;
@@ -1245,6 +1249,7 @@ blockquote {
 
 #sidebar {
     z-index: 999;
+   
 }
 
 .sidebar {
@@ -1708,6 +1713,25 @@ blockquote {
 }
 
 
+
+
+
+
+/********appbar********/
+
+#md-appbar {
+	z-index: 980 ;
+
+}
+
+#md-headline {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/****appbar end ***/
+
 /**************************************************************************************************/
 
 
@@ -1723,14 +1747,15 @@ blockquote {
 /**************************************************************************************************/
 
 .MD-burger-icon {
-    margin: 0pc 0px 0px 1pc;
+    margin: 0pc 0px 0px 0px;
     cursor: pointer;
     border: none;
     background: none;
     outline: 0;
-    height: 15px;
-    position: fixed;
-    top: 1pc;
+    left: -2px;
+    float: left;
+    position: relative;
+    vertical-align: center;
     z-index: 997;
     height: 32px;
     width: 32px;

@@ -46,6 +46,8 @@
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
         <?php endif; ?>
+        	
+        <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css">
 
         <!--[if lte IE 9]>
             <?php if (!empty($this->options->CDNURL)): ?>
@@ -329,3 +331,4 @@
     </head>
 
     <body>
+    	
