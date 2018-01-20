@@ -15,90 +15,82 @@ $this->need('header.php');?>
 
         <main class="mdl-layout__content" id="main">
 
-		
-			
-			
-  
-  
-			<div id="top"></div>
-			  <!-- fixed appbar -->
-			 <header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide" id="md-appbar" >
-    <div class="mdui-toolbar mdui-color-theme mdui-color-white" >
-    	
-    
-    
-    <!-- Sidebar hamburger button --> 
-            <button class="MD-burger-icon sidebar-toggle">
-               <span class="MD-burger-layer"></span> 
-            </button>
-			<!-- Sidebar Hamburger ButtonEnd -->
-				
-				
-     <!-- <span class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#drawer', swipe: true}"><i class="mdui-icon materiality-icons">&#xe900;</i></span> -->
-      <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline" id="md-headline" > <?php $this->options->title(); ?></a>
-      
+            <div id="top"></div>
 
-		<div class="section-spacer"></div>
-      
-      
-    </div>
-  </header>
-  
+                <!-- fixed appbar -->
+                <header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide" id="md-appbar" >
+                    <div class="mdui-toolbar mdui-color-theme mdui-color-white" >
 
-            <!-- Sidebar hamburger button 
+
+                    <!-- Sidebar hamburger button -->
+                    <button class="MD-burger-icon sidebar-toggle">
+                        <span class="MD-burger-layer"></span>
+                    </button>
+                    <!-- Sidebar Hamburger ButtonEnd -->
+
+                    <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline" id="md-headline" > <?php $this->options->title(); ?></a>
+
+
+                    <div class="section-spacer"></div>
+
+                    </div>
+            </header>
+
+
+            <!-- Sidebar hamburger button
             <button class="MD-burger-icon sidebar-toggle">
               <span class="MD-burger-layer"></span>
             </button>
-			 Sidebar Hamburger ButtonEnd -->
+             Sidebar Hamburger ButtonEnd -->
 
 
-			<!-- Blog Header(picture&avatar&slogan) Began -->
-			<div class="demo-blog__posts mdl-grid mdui-appbar-with-toolbar" >
+            <!-- Blog Header(picture&avatar&slogan) Began -->
+            <div class="demo-blog__posts mdl-grid mdui-appbar-with-toolbar" >
 
                 <!-- Main Picture -->
                 <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
                     <?php if (!empty($this->options->MainPic )): ?>
-                   	 <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->MainPic(); ?>)">
-					<?php else: ?>
-				<!-- If MainPic url haven't set , load default hiyou.jpg-->
+                     <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->MainPic(); ?>)">
+                    <?php else: ?>
+                <!-- If MainPic url haven't set , load default hiyou.jpg-->
 
 
-						<?php if (!empty($this->options->CDNURL)): ?>
-                        	<div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/hiyou.jpg)">
-                    	<?php else: ?>
+                        <?php if (!empty($this->options->CDNURL)): ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/hiyou.jpg)">
+                        <?php else: ?>
                             <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->themeUrl('img/hiyou.jpg') ?>)">
                         <?php endif; ?>
                     <?php endif; ?>
 
-					<!-- Slogan appear on the index page-->
-					<p class="index-top-block-slogan"><a href="<?php $this->options->MainPicLink() ?>"><?php $this->options->slogan() ?></a></p>
+                    <!-- Slogan appear on the index page-->
+                    <p class="index-top-block-slogan"><a href="<?php $this->options->MainPicLink() ?>"><?php $this->options->slogan() ?></a></p>
                 </div>
-				<!-- Main Picture End -->
+                <!-- Main Picture End -->
 
-				<!-- Author avatar&name -->
+                <!-- Author avatar&name -->
                 <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
                 <!-- Avatar -->
-					<div id="author-avatar">
-                    	<?php if (!empty($this->options->avatarURL)): ?>
-                        	<img src="<?php $this->options->avatarURL() ?>" width="32px" height="32px" />
+                    <div id="author-avatar">
+                        <?php if (!empty($this->options->avatarURL)): ?>
+                            <img src="<?php $this->options->avatarURL() ?>" width="32px" height="32px" />
                         <?php else: ?>
                             <?php $this->author->gravatar(32); ?>
                         <?php endif; ?>
                     </div>
                     <!-- Author Name -->
-					<div>
-                    	<span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
+                    <div>
+                        <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
                     </div>
                 </div>
-            	<!-- Author Info End -->
-			</div>
-			<!-- Blog Header End -->
+                <!-- Author Info End -->
+            </div>
+            <!-- Blog Header End -->
 
 
             <!-- Blog info -->
             <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
 
-				<!-- Search -->
+                <!-- Search -->
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
                     <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
                     <!-- For modern browsers. -->
@@ -109,15 +101,15 @@ $this->need('header.php');?>
                         <input class="mdl-textfield__input search-input" type="text" name="s" id="search">
                         <label id="search-form-label" class="mdl-textfield__label" for="search">Enter your query...</label>
                     </form>
-            	</div>
-            	<!-- Search End -->
+                </div>
+                <!-- Search End -->
 
 
                 <!-- LOGO -->
                 <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
 
                     <!-- Load logo -->
-					<?php if (!empty($this->options->logoLink)): ?>
+                    <?php if (!empty($this->options->logoLink)): ?>
                         <a href="<?php $this->options->logoLink() ?>">
                     <?php endif; ?>
                     <?php if (!empty($this->options->logo)): ?>
@@ -134,22 +126,22 @@ $this->need('header.php');?>
 
 
 
-						<!-- Infomation -->
+                        <!-- Infomation -->
                             <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
                                 <div>
                                     <strong><?php $this->options->title();  ?></strong>
                                 </div>
 
 
-								<div class="section-spacer"></div>
+                                <div class="section-spacer"></div>
 
 
                                 <!-- Pages button -->
                                 <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                                	<i class="material-icons" role="presentation">view_carousel</i>
-                                	<span class="visuallyhidden">Pages</span>
-								</button>
-								<!-- Show All the page exist in the system -->
+                                    <i class="material-icons" role="presentation">view_carousel</i>
+                                    <span class="visuallyhidden">Pages</span>
+                                </button>
+                                <!-- Show All the page exist in the system -->
                                 <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
                                     <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                                     <?php while ($pages->next()): ?>
@@ -164,7 +156,7 @@ $this->need('header.php');?>
 
 
 
-								<!-- Show All Availble Actions Including Sharing -->
+                                <!-- Show All Availble Actions Including Sharing -->
                                 <!--  Menu button-->
                                 <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                     <i class="material-icons" role="presentation">more_vert</i>
@@ -180,7 +172,7 @@ $this->need('header.php');?>
                                             <?php endif; ?>
                                         </li>
                                     </a>
-                                    
+
                                     <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->siteUrl(); ?>">
                                         <li class="mdl-menu__item">
                                             <?php if ($this->options->langis == '0'): ?> Share to Facebook
@@ -219,13 +211,13 @@ $this->need('header.php');?>
                                 </ul>
                             </div>
                             <!-- Infomation End-->
-				</div>
-				<!-- Blog Info End-->
-					
-					
-					
-            <!-- Output Top Articles -->            
-			<?php if ($this->is('index')): ?>
+                </div>
+                <!-- Blog Info End-->
+
+
+
+            <!-- Output Top Articles -->
+            <?php if ($this->is('index')): ?>
 <?php
 $db = Typecho_Db::get();
 $prefix = $db->getPrefix();
@@ -256,7 +248,7 @@ foreach ($sticky_posts as $sticky_posts) {
 
 
 
-			<?php while ($this->next()): ?>
+            <?php while ($this->next()): ?>
 
                             <!-- Article module -->
                             <div class="mdl-card mdl-cell mdl-cell--12-col article-module <?php if (!empty($this->options->switch) && in_array('ShowLoadingLine', $this->options->switch)): ?>fade out<?php endif; ?>">
@@ -340,9 +332,9 @@ foreach ($sticky_posts as $sticky_posts) {
                             </div>
 
                             <?php endwhile; ?>
-                            	
-                            
-                            
+
+
+
                             <!-- Echo Prev & After Page-->
                             <nav class="demo-nav mdl-cell mdl-cell--12-col">
                                 <?php $this->pageLink(

@@ -101,7 +101,7 @@
             <div class="mdl-mini-footer--right-section">
                 <div>
                     <div class="footer-develop-div">Powered by <a href="http://typecho.org" target="_blank" class="footer-develop-a">Typecho</a></div>
-                    <div class="footer-develop-div">Theme by <a href="https://viosey.com" target="_blank" class="footer-develop-a">Viosey</a></div>
+                    <div class="footer-develop-div">Theme by <a href="https://blog.kucloud.win" target="_blank" class="footer-develop-a">Manyang901</a></div>
                 </div>
             </div>
         </footer>
