@@ -418,10 +418,10 @@ $this->need('header.php'); ?>
             </header>
             
             
-<!-- Sidebar hamburger button -->
+<!-- Sidebar hamburger button 
 <button class="MD-burger-icon sidebar-toggle">
 <span class="MD-burger-layer"></span>
-</button>
+</button> -->
 
 <section id="md-timeline" class="md-container">
    <?php $this->widget('Widget_Contents_Post_Recent','pageSize=10000')->to($archive); ?>

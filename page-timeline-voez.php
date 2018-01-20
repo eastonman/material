@@ -136,10 +136,10 @@ $this->need('header.php'); ?>
             
             
             
-<!-- Sidebar hamburger button -->
+<!-- Sidebar hamburger button 
 <button class="MD-burger-icon sidebar-toggle">
 <span class="MD-burger-layer"></span>
-</button>
+</button> -->
 
 <ul class="md-timeline">
    <?php $this->widget('Widget_Contents_Post_Recent','pageSize=10000')->to($archive); ?>
