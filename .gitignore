@@ -2,4 +2,6 @@ js/dsembed.js
 
 .DS_Store
 
+*.bak
+
 push.sh
