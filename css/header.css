@@ -30,3 +30,92 @@
 .header-center-title {
 	margin: 0 auto;
 }
+
+
+
+
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*-------------------- SideBar CSS ---------------------*/
+/*------------------------------------------------------*/
+/* -----------------------------------------------------*/
+
+
+
+/* SideBar Overlay (Also Responsive) */
+
+@media screen and (min-with:768px) {
+
+	.sidebar-overlay {
+		visibility: visible;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	width: 100px;
+    	opacity: 1;
+    	background: #000;
+    	z-index: 398;
+    	-webkit-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    	-moz-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    	transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    	-webkit-transform: translateZ(0);
+    	-moz-transform: translateZ(0);
+    	-ms-transform: translateZ(0);
+    	-o-transform: translateZ(0);
+    	transform: translateZ(0);
+	}
+
+	.sidebar2 {
+    	display: table-cell;
+	    vertical-align: top;
+	}
+
+	/* -- Sidebar style ------------------------------- */
+
+	#sidebar2 {
+ 	   z-index: 399;
+   
+	}
+
+	.sidebar2 {
+   	 position: relative;
+ 	   display: block;
+	    min-height: 100%;
+	    overflow-y: hidden;
+	    overflow-x: hidden;
+	    border: none;
+	    -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+ 	   -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+	    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+	}
+	
+	.sidebar-colored {
+    	background-color: #fff;
+	}
+
+	.sidebar-fixed-left {
+	    position: fixed;
+	    top: 0;
+	    bottom: 0;
+	    z-index: 1035;
+	}
+
+	.sidebar-fixed-left {
+ 	   left: 0;
+	    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);
+ 	   -webkit-box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);
+	}
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+	
+	.drawer-mod {
+		max-width: 240px;
+	}
+
+}

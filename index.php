@@ -24,7 +24,7 @@ $this->need('inc/header.php'); ?>
 
 </head>
 
-<body>
+<body class="mdui-drawer-body-left" >
 
 	<div>
 
@@ -35,6 +35,7 @@ $this->need('inc/header.php'); ?>
 				<div class="mdui-toolbar mdui-color-theme mdui-color-white" >
 
 					<!--<div class="mdui-toolbar-spacer"></div>-->
+					<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
 
                     <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline header-center-title"  >
 						<?php $this->options->title(); ?>
@@ -46,8 +47,42 @@ $this->need('inc/header.php'); ?>
 			<!-- Header & Appbar & Title End -->
 
 
+			<!-- Blog Header(picture&avatar&slogan) Began -->
+            <div class="mdui-appbar-with-toolbar" >
 
-			<?php include('include/sidebar.php'); ?>
-			<?php include('include/footer.php'); ?>
+                <!-- Main Picture -->
+                <div class="">
+                	<div class="mdui-grid-tile">
+						<a href="#"><img src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" /></a>
+						<div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
+   						 <div class="mdui-grid-tile-text">
+    							<div class="mdui-grid-tile-title">Halcyon Days</div>
+    						</div>
+  				  	</div>
+					</div>
+                    <?php if (!empty($this->options->MainPic )): ?>
+                     <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->MainPic(); ?>)">
+                    <?php else: ?>
+                <!-- If MainPic url haven't set , load default hiyou.jpg-->
+
+
+                        <?php if (!empty($this->options->CDNURL)): ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/hiyou.jpg)">
+                        <?php else: ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->themeUrl('img/hiyou.jpg') ?>)">
+                        <?php endif; ?>
+                    <?php endif; ?>
+
+                    <!-- Slogan appear on the index page-->
+                    <p class="index-top-block-slogan"><a href="<?php $this->options->MainPicLink() ?>"><?php $this->options->slogan() ?></a></p>
+                </div>
+                <!-- Main Picture End -->
+
+
+
+
+
+			<?php $this->need('inc/sidebar.php'); ?>
+			<?php $this->need('inc/footer.php'); ?>
 
 
