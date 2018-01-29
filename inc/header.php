@@ -34,20 +34,21 @@
         
         <!-- EXTERNAL CSS BEGIN -->
         <!-- Material css -->
-        <?php if (!empty($this->options->CDNUrl)): ?>
+        <!--<?php if (!empty($this->options->CDNUrl)): ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/material.min.css" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/style.min.css" />
         <?php else: ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.css'); ?>" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/header.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
-        <?php endif; ?>
+        <?php endif; ?>-->
         	
         <!-- MDUI css-->
         <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css" />
 		<!--EXTERNAL CSS END-->
 			
 		<!--Roboto Font Begin-->
-		<?php if ($this->options->FontSource == '0'): ?>
+		<!-- Deprecated Becase using mdui and bootcdn for roboto fonts -->
+		<!-- <?php if ($this->options->FontSource == '0'): ?>
 			<link href='https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css' />
 		<?php elseif ($this->options->FontSource == '1'): ?>
         	<style>
@@ -74,7 +75,7 @@
                 <?php endif; ?>
             </style>
             
-		<?php endif; ?>
+		<?php endif; ?> -->
 		<!--Roboto Font End-->
        
 		<!-- Style Setting Begin-->
@@ -170,9 +171,9 @@
                         background-image: url(<?php $this->options->BgContent(); ?>);
                     <?php else: ?>
                         <?php if (!empty($this->options->CDNUrl)): ?>
-                            background-image: url(<?php $this->options->CDNUrl() ?>/MaterialCDN/images/Background.jpg);
+                            background-image: url(<?php $this->options->CDNUrl() ?>/MaterialCDN/img/Background.jpg);
                         <?php else: ?>
-                            background-image: url(<?php $this->options->themeUrl('images/Background.jpg'); ?>);
+                            background-image: url(<?php $this->options->themeUrl('img/Background.jpg'); ?>);
                         <?php endif; ?>
                     <?php endif; ?>
                 }
@@ -180,6 +181,5 @@
         <?php endif; ?>
         	
         <!--Background Settings End-->
-        	
-   </head>     
+        	   
 	

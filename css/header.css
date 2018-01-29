@@ -1,0 +1,32 @@
+/*
+*Share css for all pages
+*
+*
+*
+*/
+
+/*Responsive CSS For Appbar*/
+@media screen and (min-width:768px) {
+	
+	.header-responsive {
+		display: none;
+		
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+	.header-responsive {
+		display: block;
+	}
+
+
+}
+/*Responsive Appbat End*/
+
+
+/*Title On Appbar Align to center*/
+.header-center-title {
+	margin: 0 auto;
+}

@@ -48,3 +48,5 @@ function themeConfig($form)
         '1', _t('背景设置'), _t("选择背景方案, 对应填写下方的 '<b>背景颜色 / 图片</b>' 或选择 '<b>渐变样式</b>', 这里默认使用图片背景.")
     );
     $form->addInput($BackgroundType);
+    
+}
