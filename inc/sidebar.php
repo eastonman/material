@@ -95,7 +95,7 @@
             </a>
         </li>
 
-        <!--Archiive Dropdown Begin-->
+        <!--Archive Dropdown Begin-->
         <div class="mdui-collapse" mdui-collapse="{ accordion: true}">
             <div class="mdui-collapse-item">
                 <li class="mdui-collapse-item-header mdui-list-item">
@@ -105,7 +105,7 @@
                         <?php elseif ($this->options->langis == '1'): ?> 归档
                         <?php elseif ($this->options->langis == '2'): ?> 過往
                         <?php endif; ?>
-                        <i class="mdui-collapse-item-arrow mdui-icon material-icons mdui-ripple"  >keyboard_arrow_down</i>
+                        <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-ripple"  >keyboard_arrow_down</i>
                     </a>
                 </li>
 
@@ -135,7 +135,7 @@
                             <?php if ($this->options->langis == '0'): ?> Categories
                             <?php elseif ($this->options->langis == '1'): ?> 分类
                             <?php endif; ?>
-                        <i class="mdui-collapse-item-arrow mdui-icon material-icons mdui-ripple"  >keyboard_arrow_down</i>
+                        <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-ripple"  >keyboard_arrow_down</i>
                     </a>
                 </li>
 
@@ -143,8 +143,8 @@
                     <ul class="mdui-list" for="show-category-button">
                         <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
                         <?php while ($category->next()): ?>
-                            <li>
-                                <a href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>">
+                            <li class="mdui-list-item">
+                                <a href="<?php $category->permalink(); ?>" class="mdui-list-itemc-content" title="<?php $category->name(); ?>">
                                     <?php $category->name(); ?>
                                 </a>
                             </li>
@@ -155,10 +155,74 @@
         </div>
         <!--Category Dropdown End -->
 
+        <li class="mdui-divider"></li>
 
-    </ul>
+		<!-- Show Page Quantity  -->
+        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+        <?php while ($pages->next()): ?>
+            <li class="mdui-list-item">
+                <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>" class="mdui-list-item-content" tabindex="-1">
+                    <?php $pages->title(); ?>
+                </a>
+            </li>
+        <?php endwhile; ?>
+
+        <?php if (!defined('__TYPECHO_ROOT_DIR__')) {exit;}
+              Typecho_Widget::widget('Widget_Stat')->to($stat);
+            ?>
+
+        <!-- Status Page -->
+        <?php if (!($this->options->Status == '')): ?>
+            <li class="mdui-list-item">
+                <a href="<?php $this->options->Status(); ?>" class="mdui-list-item-content">
+                <?php if ($this->options->langis == '0'): ?>Status
+                <?php elseif ($this->options->langis == '1'): ?>状态
+                <?php endif; ?>
+                </a>
+            </li>
+        <?php endif; ?>
 
 
+        <!-- Article Numebr  -->
+            <li class="mdui-list-item">
+                <a href="#" class="mdui-list-item-content">
+                    <?php if ($this->options->langis == '0'): ?> Article Number
+                    <?php elseif ($this->options->langis == '1'): ?> 文章总数
+                    <?php elseif ($this->options->langis == '2'): ?> 文章總數
+                    <?php endif; ?>
+                    <span class="sidebar-badge"><?php echo $stat->publishedPostsNum;?></span>
+                </a>
+            </li>
+
+
+		<li class="mdui-divider"></li>
+
+	</ul>
+
+		<!-- Sidebar bottom text -->
+
+
+        <a href="https://github.com/viosey/typecho-theme-material" target="_blank" class="sidebar-footer-text-a">
+            <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
+                <?php if ($this->options->langis == '0'): ?> Theme - Material
+                <?php elseif ($this->options->langis == '1'): ?> 主题 - Material
+                <?php endif; ?>
+                <span class="sidebar-badge badge-circle">i</span>
+            </div>
+        </a>
+
+
+        <?php if (!empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch)) : ?>
+        <div id="upyun-logo">
+            <a href="https://www.upyun.com/" target="_blank">
+                <?php if (!empty($this->options->CDNURL)): ?>
+                <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/upyun_logo.jpg" width="103px" height="45px" />
+                <?php else: ?>
+                <img src="<?php $this->options->themeUrl('img/upyun_logo.jpg'); ?>" width="103px" height="45px" />
+                <?php endif; ?>
+            </a>
+        </div>
+        <?php endif; ?>
 
 
 </div>
