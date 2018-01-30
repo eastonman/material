@@ -6,7 +6,7 @@
 */
 
 /*Responsive CSS For Appbar*/
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
 	
 	.header-responsive {
 		display: none;
@@ -15,7 +15,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 
 	.header-responsive {
 		display: block;
@@ -115,7 +115,83 @@
 @media screen and (max-width: 600px) {
 	
 	.drawer-mod {
-		max-width: 240px;
+		max-width: 240px !important;
 	}
 
+}
+
+.mdui-drawer .sidebar-header {
+    position: relative;
+    height: 157.5px;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.mdui-drawer .sidebar-header.header-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size:100%
+    /*background-size: cover;*/
+}
+
+.sidebar .sidebar-image img {
+    width: 54px;
+    height: 54px;
+    margin: 16px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .2);
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar .sidebar-brand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    padding: 0;
+    padding-left: 16px;
+    padding-right: 56px;
+    text-decoration: none;
+    clear: both;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar .sidebar-brand:hover,
+.sidebar .sidebar-brand:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.sidebar .sidebar-brand .caret {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+
+.sidebar .sidebar-brand .sidebar-badge {
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}
+
+.sidebar .sidebar-brand:hover,
+.sidebar .sidebar-brand:focus {
+    text-decoration: none;
 }

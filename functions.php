@@ -31,6 +31,17 @@ function themeConfig($form)
         '1', _t('Roboto 字体使用来源'), null);
     $form->addInput($FontSource);
     
+    $langis = new Typecho_Widget_Helper_Form_Element_Radio('langis',
+        array(
+            '0' => _t('English <br />'),
+            '1' => _t('简体中文 <br />'),
+            '2' => _t('繁体中文 <br />')
+        ),
+
+        '0', _t('界面语言设置'), _t("默认使用英文")
+    );
+    $form->addInput($langis);
+    
     $CustomFonts = new Typecho_Widget_Helper_Form_Element_Text('CustomFonts', null, _t("Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif"), _t('自定义字体'), null);
     $form->addInput($CustomFonts);
     
