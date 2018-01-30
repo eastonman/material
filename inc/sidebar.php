@@ -7,18 +7,31 @@
 
 </aside>-->
 <!-- SideBar Using MDUI Begin-->
+
+
 <div class="mdui-drawer mdui-drawer-full-height drawer-mod sidebar" id="sidebar">
+	<!--SideBar Header Begin-->
 	<div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl() ?>img/sidebarheader.jpg );">
 
-		<div class="mdui-collapse" mdui-collapse="{accordion: true}">
-			<div class="mdui-collapse-item" >
-				<div class="mdui-collapse-item-header sidebar-brand">
-					<i class="mdui-collapse-item-arrow mdui-icon material-icons mdui-ripple">arrow_drop_down</i>
-				</div>
+
+		<i class="sidebar-brand mdui-collapse-item-arrow mdui-icon material-icons mdui-ripple" id="sidebar-header-collapse-controller" >arrow_drop_down</i>
+		
+
+
+	</div>
+	<!--SideBar Header End-->
+
+	<!-- Sidebar Dropdown Menu Begin -->
+		
+		<div class="mdui-collapse"  id="sidebar-header-collapse" >
+			<div class="mdui-collapse-item"  id="sidebar-header-collapse-item" >
+				<!--<div class="mdui-collapse-item-header sidebar-brand">
+					
+				</div>-->
 
 				<!--Content Show When Clicking Arrow On the SideBar Header-->
-				<li class="mdui-collapse-item-body drop">
-					<ul>
+				<div class="mdui-collapse-item-body">
+					<ul class="mdui-list" >
 					<?php if ($this->user->hasLogin()): ?>
                     <li>
                         <a href="<?php $this->options->adminUrl(); ?>" tabindex="-1">
@@ -49,7 +62,7 @@
                     </li>
                     <?php else: ?>
                     <li class="mdui-list-item mdui-ripple" >
-                        <a href="<?php $this->options->loginUrl(); ?>" class="md-menu-list-a" tabindex="-1">
+                        <a href="<?php $this->options->loginUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
                             <i class="mdui-icon material-icons">fingerprint</i>
 
                             <?php if ($this->options->langis == '0'): ?> Login
@@ -59,7 +72,7 @@
                         </a>
                     </li>
                     <li class="mdui-list-item mdui-ripple" >
-                        <a href="<?php $this->options->adminUrl('register.php'); ?>" class="md-menu-list-a" tabindex="-1">
+                        <a href="<?php $this->options->adminUrl('register.php'); ?>" class="mdui-list-item-content" tabindex="-1">
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">person_add</i>
                             <?php if ($this->options->langis == '0'): ?> Register
                             <?php elseif ($this->options->langis == '1'): ?> 用户注册
@@ -70,18 +83,11 @@
                     <?php endif; ?>
 
 				</ul>
-				</li>
-  </div>
-</div>
-
-
-	</div>
-	<!-- User dropdown  -->
-            <li class="dropdown">
-                <ul id="settings-dropdown" class="dropdown-menu">
-
-                </ul>
-            </li>
+				</div>
+			</div>
+		</div>
+           
+           
 
   <ul class="mdui-list">
   <li class="mdui-list-item mdui-ripple">
