@@ -64,6 +64,7 @@
 }
 
 
+
 @media screen and (min-width:600px) {
 
 	.mdui-drawer .sidebar-header {
@@ -79,6 +80,8 @@
 
 /*SideBar Overlay End*/
 
+
+/*Sidebar Header Begin*/
 .mdui-drawer .sidebar-header.header-cover {
     background-repeat: no-repeat;
     background-position: center center;
@@ -92,12 +95,31 @@
 .sidebar .sidebar-image img {
     width: 54px;
     height: 54px;
-    margin: 16px;
+    margin: 40px 16px 16px 16px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, .2);
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+}
+
+
+
+/*SideBar Dropdown Arrow Layout */
+
+@media screen and (max-width: 600px) {
+	.sidebar .sidebar-brand {
+		padding-left: 200px;
+
+	}
+
+}
+
+@media screen and (min-width: 600px) {
+
+	.sidebar .sidebar-brand {
+		padding-left: 280px;
+	}
 }
 
 .sidebar .sidebar-brand {
@@ -108,9 +130,6 @@
     display: block;
     height: 48px;
     line-height: 48px;
-    padding: 0;
-    padding-left: 16px;
-    padding-right: 56px;
     text-decoration: none;
     clear: both;
     overflow: hidden;
@@ -129,19 +148,10 @@
     outline: none;
 }
 
-.sidebar .sidebar-brand .caret {
-    position: absolute;
-    right: 24px;
-    top: 24px;
-}
-
-.sidebar .sidebar-brand .sidebar-badge {
-    position: absolute;
-    right: 16px;
-    top: 12px;
-}
 
 .sidebar .sidebar-brand:hover,
 .sidebar .sidebar-brand:focus {
     text-decoration: none;
 }
+
+/*Sidebar Dropdown Arrow Layout End*/

@@ -4,8 +4,27 @@
     <!--SideBar Header Begin-->
     <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl() ?>img/sidebarheader.jpg );">
 
+            <!-- Sidebar brand image -->
+            <div class="sidebar-image">
+                <?php if (!empty($this->options->avatarURL)): ?>
+                <img src="<?php $this->options->avatarURL() ?>">
+                <?php else: ?>
+                <?php if (!empty($this->options->logo)): ?>
+                <img src="<?php $this->options->logo() ?>">
+                <?php else: ?>
+                <?php if (!empty($this->options->CDNURL)): ?>
+                <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/Gravatar.png">
+                <?php else: ?>
+                <img src="<?php $this->options->themeUrl('img/Gravatar.png') ?>">
+                <?php endif; ?>
+                <?php endif; ?>
+                <?php endif; ?>
+            </div>
 
-        <i class="sidebar-brand mdui-collapse-item-arrow mdui-icon material-icons mdui-ripple" id="sidebar-header-collapse-controller" >arrow_drop_down</i>
+
+
+
+        <i class="sidebar-brand mdui-collapse-item-arrow mdui-icon material-icons mdui-ripple mdui-text-color-white-icon" id="sidebar-header-collapse-controller" >arrow_drop_down</i>
 
 
 
@@ -86,27 +105,31 @@
     <ul class="mdui-list mdui-list-dense">
         <!-- Homepage -->
         <li class="mdui-list-item" >
-            <a href="<?php $this->options->siteUrl(); ?>" class="mdui-list-item-content" target="_self">
-                <i class="mdui-icon material-icons">home</i>
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content" >
+                	<a href="<?php $this->options->siteUrl(); ?>" >
                     <?php if ($this->options->langis == '0'): ?> Homepage
                     <?php elseif ($this->options->langis == '1'): ?> 主页
                     <?php elseif ($this->options->langis == '2'): ?> 首頁
                     <?php endif; ?>
-            </a>
+                    </a>
+                </div>
         </li>
 
         <!--Archive Dropdown Begin-->
         <div class="mdui-collapse" mdui-collapse="{ accordion: true}">
             <div class="mdui-collapse-item">
                 <li class="mdui-collapse-item-header mdui-list-item">
-                    <a href="#" class="mdui-list-item-content mdui-ripple" >
-                        <i class="mdui-icon material-icons">inbox</i>
+                    
+                        <i class="mdui-list-item-icon mdui-icon material-icons">inbox</i>
+                        <div class="mdui-list-item-content" >
                         <?php if ($this->options->langis == '0'): ?> Archives
                         <?php elseif ($this->options->langis == '1'): ?> 归档
                         <?php elseif ($this->options->langis == '2'): ?> 過往
                         <?php endif; ?>
+                        </div>
                         <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-ripple"  >keyboard_arrow_down</i>
-                    </a>
+                    
                 </li>
 
                 <div class="mdui-collapse-item-body">
@@ -130,13 +153,15 @@
         <div class="mdui-collapse" mdui-collapse="{ accordion: true}">
             <div class="mdui-collapse-item">
                 <li class="mdui-collapse-item-header mdui-list-item">
-                    <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                        <i class="mdui-icon material-icons">apps</i>
+      
+                        <i class="mdui-list-item-icon mdui-icon material-icons">apps</i>
+                        <div class="mdui-list-item-content" >
                             <?php if ($this->options->langis == '0'): ?> Categories
                             <?php elseif ($this->options->langis == '1'): ?> 分类
                             <?php endif; ?>
+                        </div>
                         <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-ripple"  >keyboard_arrow_down</i>
-                    </a>
+                
                 </li>
 
                 <div class="mdui-collapse-item-body">
@@ -202,8 +227,8 @@
 		<!-- Sidebar bottom text -->
 
 
-        <a href="https://github.com/viosey/typecho-theme-material" target="_blank" class="sidebar-footer-text-a">
-            <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
+        <a href="https://github.com/manyang901/material" target="_blank" class="mdui-list mdui-list-item">
+            <div class="mdui-list-item-content">
                 <?php if ($this->options->langis == '0'): ?> Theme - Material
                 <?php elseif ($this->options->langis == '1'): ?> 主题 - Material
                 <?php endif; ?>
