@@ -110,8 +110,10 @@
 
 
 
-/*SideBar Dropdown Arrow Layout */
 
+/*******SideBar Dropdown Arrow Layout ********/
+
+/*Sidebar Dropdown Arrow Padding*/
 @media screen and (max-width: 600px) {
 	.sidebar .sidebar-brand {
 		padding-left: 200px;
@@ -134,6 +136,9 @@
 	}
 
 }
+/*Padding End*/
+
+
 .sidebar .sidebar-brand {
     position: absolute;
     bottom: 0;
