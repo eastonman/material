@@ -51,6 +51,11 @@
 	.drawer-mod {
 		max-width: 240px !important;
 	}
+	.drawer-mod::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	
+	}
 
 	.mdui-drawer .sidebar-header {
 	    position: relative;
@@ -115,13 +120,20 @@
 
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
 
 	.sidebar .sidebar-brand {
 		padding-left: 280px;
 	}
 }
 
+@media screen and (min-width: 1024px) {
+	.sidebar .sidebar-brand {
+		padding-left: 180px;
+
+	}
+
+}
 .sidebar .sidebar-brand {
     position: absolute;
     bottom: 0;
