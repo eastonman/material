@@ -53,7 +53,7 @@ $this->need('inc/header.php'); ?>
 
 				<div class="mdui-row">
                 	<!-- Main Picture -->
-	                <div class="mdui-col-xs-12 mdui-col-sm-8">
+	                <div class="mdui-col-xs-12 mdui-col-md-7 mdui-col-offset-md-1">
 						<div class="mdui-card top-card">
 							<div class="mdui-card-media" >
 							<a href="#"><img class="main-pic" src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" /></a>
@@ -63,7 +63,7 @@ $this->need('inc/header.php'); ?>
                 	<!-- Main Picture End -->
                 	
                 	<!--Blog Info-->
-                	<div class="mdui-col-xs-12 mdui-col-sm-4" >
+                	<div class="mdui-col-xs-12 mdui-col-md-3" >
                 		<div class="mdui-card top-card" >
                 			<div class="mdui-card-media" >
                 				<img class="main-logo" src="<?php $this->options->themeUrl('img/Gravatar.png') ?>" >
@@ -77,6 +77,104 @@ $this->need('inc/header.php'); ?>
                 	
             	</div>
             </div>
+            
+            
+            
+            
+            <!--Blog Posts Output Begin-->
+            <div class="mdui-container" >	
+
+            	<?php while ($this->next()): ?>
+						<div class="mdui-row" >
+                            <!-- Article module -->
+                            <div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1" >
+
+                                <!-- Article link & title -->
+                                <?php if ($this->options->ThumbnailOption == '1'): ?>
+                                <div class="mdui-card">
+									<div class="mdui-card-media" >
+										<img src="<?php showThumbnail($this); ?>" >
+									</div>
+                                    <div class="mdui-card-primary" >
+										<p class="mdui-card-primary-title"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
+									</div>
+                                </div>
+                                <?php elseif ($this->options->ThumbnailOption == '2'): ?>
+                                <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?> !important;color:#757575 !important;">
+                                    <p class="article-headline-p-nopic">
+                                        <a href="<?php $this->permalink() ?>" target="_self">
+                                        “</br><?php $this->title() ?></br>”
+                                    </a>
+                                    </p>
+                                </div>
+                                <?php elseif ($this->options->ThumbnailOption == '3'): ?>
+
+
+                                <div class="mdl-card__media mdl-color-text--grey-50 lazyload" data-src="<?php randomThumbnail($this); ?>">
+                                    <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
+                                </div>
+                                <?php endif; ?>
+
+                                <!-- Article content -->
+                                <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
+                                    <!--  $this->content('Continue Reading...');  -->
+                                    <?php $this->excerpt(80, '...'); ?> &nbsp;&nbsp;&nbsp;
+                                    <span>
+                                <a href="<?php $this->permalink(); ?>" target="_self">
+                                    <?php if ($this->options->langis == '0'): ?>
+                                        Continue Reading
+                                    <?php elseif ($this->options->langis == '1'): ?>
+                                        继续阅读
+                                    <?php elseif ($this->options->langis == '2'): ?>
+                                        繼續閱讀
+                                    <?php endif; ?>
+                                </a>
+                            </span>
+                                </div>
+
+                                <!-- Article info-->
+                                <div id="article-info">
+                                    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
+                                        <!-- Author avatar -->
+                                        <div id="author-avatar">
+                                            <?php if (!empty($this->options->avatarURL)): ?>
+                                            <img src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                            <?php else: ?>
+                                            <?php $this->author->gravatar(44); ?>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div>
+                                            <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
+                                            <span>
+                                        <?php if ($this->options->langis == '0'): ?>
+                                            <?php $this->date('F j, Y'); ?>
+                                        <?php else: ?>
+                                            <?php $this->dateWord(); ?>
+                                        <?php endif; ?>
+                                    </span>
+                                        </div>
+                                    </div>
+                                    <div id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
+                                        <?php $this->category(', '); ?>
+                                        <a href="<?php $this->permalink() ?>">
+                                            <!-- 使用原生评论 -->
+                                            <?php if ($this->options->commentis == '0'): ?>
+                                            <?php echo '|'; ?>
+                                            <?php $this->commentsNum('%d 评论'); ?>
+                                            <!-- 使用wildfire评论 -->
+                                            <?php else: ?>
+                                            <?php endif; ?>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+						</div>
+				<?php endwhile; ?>
+			</div>
+
 
 
 

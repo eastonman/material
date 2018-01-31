@@ -9,3 +9,10 @@
 	height: 50%;
 	width: 50%;
 }
+
+.mdui-row > [class*="mdui-col-"] {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+
+}
