@@ -1,0 +1,11 @@
+.main-pic {
+	height: 360px;
+	object-fit: cover;
+}
+.top-card {
+	height:360px;
+}
+.main-logo {
+	height: 50%;
+	width: 50%;
+}

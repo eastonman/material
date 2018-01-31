@@ -51,6 +51,11 @@
 	.drawer-mod {
 		max-width: 240px !important;
 	}
+	.drawer-mod::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	
+	}
 
 	.mdui-drawer .sidebar-header {
 	    position: relative;
@@ -105,8 +110,10 @@
 
 
 
-/*SideBar Dropdown Arrow Layout */
 
+/*******SideBar Dropdown Arrow Layout ********/
+
+/*Sidebar Dropdown Arrow Padding*/
 @media screen and (max-width: 600px) {
 	.sidebar .sidebar-brand {
 		padding-left: 200px;
@@ -115,12 +122,22 @@
 
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
 
 	.sidebar .sidebar-brand {
 		padding-left: 280px;
 	}
 }
+
+@media screen and (min-width: 1024px) {
+	.sidebar .sidebar-brand {
+		padding-left: 180px;
+
+	}
+
+}
+/*Padding End*/
+
 
 .sidebar .sidebar-brand {
     position: absolute;

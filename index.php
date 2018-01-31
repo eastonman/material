@@ -11,7 +11,7 @@
 
 $this->need('inc/header.php'); ?>
 
-<!-- Standalone Css Calling For Index -->
+<!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/material.min.css" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/style.min.css" />
@@ -48,35 +48,35 @@ $this->need('inc/header.php'); ?>
 
 
 			<!-- Blog Header(picture&avatar&slogan) Began -->
-            <div class="mdui-appbar-with-toolbar" >
+            <div class="mdui-container mdui-appbar-with-toolbar" >
 
-                <!-- Main Picture -->
-                <div class="">
-                	<div class="mdui-grid-tile">
-						<a href="#"><img src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" /></a>
-						<div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
-   						 <div class="mdui-grid-tile-text">
-    							<div class="mdui-grid-tile-title">Halcyon Days</div>
-    						</div>
-  				  	</div>
+
+				<div class="mdui-row">
+                	<!-- Main Picture -->
+	                <div class="mdui-col-xs-12 mdui-col-sm-8">
+						<div class="mdui-card top-card">
+							<div class="mdui-card-media" >
+							<a href="#"><img class="main-pic" src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" /></a>
+							</div>
+						</div>
 					</div>
-                    <?php if (!empty($this->options->MainPic )): ?>
-                     <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->MainPic(); ?>)">
-                    <?php else: ?>
-                <!-- If MainPic url haven't set , load default hiyou.jpg-->
-
-
-                        <?php if (!empty($this->options->CDNURL)): ?>
-                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/hiyou.jpg)">
-                        <?php else: ?>
-                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->themeUrl('img/hiyou.jpg') ?>)">
-                        <?php endif; ?>
-                    <?php endif; ?>
-
-                    <!-- Slogan appear on the index page-->
-                    <p class="index-top-block-slogan"><a href="<?php $this->options->MainPicLink() ?>"><?php $this->options->slogan() ?></a></p>
-                </div>
-                <!-- Main Picture End -->
+                	<!-- Main Picture End -->
+                	
+                	<!--Blog Info-->
+                	<div class="mdui-col-xs-12 mdui-col-sm-4" >
+                		<div class="mdui-card top-card" >
+                			<div class="mdui-card-media" >
+                				<img class="main-logo" src="<?php $this->options->themeUrl('img/Gravatar.png') ?>" >
+                			</div>
+                	
+                
+                		</div>
+                
+                	</div>
+                	<!--Blog Info End-->
+                	
+            	</div>
+            </div>
 
 
 
