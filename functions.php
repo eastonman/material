@@ -75,6 +75,19 @@ function themeConfig($form)
 	$RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', null, _t('27'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
     $form->addInput($RandomPicAmnt);
     
+    $footersns = new Typecho_Widget_Helper_Form_Element_Checkbox('footersns',
+        array(
+            'ShowTwitter' => _t('显示 Twitter 图标 <br>'),
+            'ShowFacebook' => _t('显示 Facebook 图标 <br>'),
+            'ShowGithub' => _t('显示 Github 图标 <br>'),
+            'ShowTelegram' => _t('显示 Telegram 图标 <br>'),
+            'ShowLinkedin' => _t('显示 Linkedin 图标 <br>'),
+        ),
+
+        array('ShowTwitter','ShowFacebook','ShowGithub'), _t('页脚 SNS 图标按钮显示设置'), _t('开启后, 按钮显示于博客页脚位置')
+    );
+    $form->addInput($footersns);
+    
 }
 
 

@@ -37,7 +37,7 @@ $this->need('inc/header.php'); ?>
 					<!--<div class="mdui-toolbar-spacer"></div>-->
 					<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
 
-                    <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline header-center-title"  >
+                    <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline mdui-center"  >
 						<?php $this->options->title(); ?>
 					</a>
 
@@ -135,7 +135,8 @@ $this->need('inc/header.php'); ?>
                             		</span>
                                 </div>
                             
-
+								<div class="mdui-divider"></div>
+								
                                 <!-- Article info-->
                                 <div id="article-info">
                                     <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
@@ -144,12 +145,12 @@ $this->need('inc/header.php'); ?>
                                             <?php if (!empty($this->options->avatarURL)): ?>
                                             <img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                             <?php else: ?>
-                                            <div class="mdui-card-header-avatar" ><?php $this->author->gravatar(44); ?></div>
+                                            <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
                                             <?php endif; ?>
-                                        </div>
-                                        <div>
-                                            <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
-                                            <span>
+                                     
+                                        
+                                            <span class="mdui-card-header-title mdui-typo"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
+                                            <span class="mdui-card-header-subtitle" >
                                         <?php if ($this->options->langis == '0'): ?>
                                             <?php $this->date('F j, Y'); ?>
                                         <?php else: ?>
@@ -164,7 +165,7 @@ $this->need('inc/header.php'); ?>
                                     
                                     
                                     
-                                    <div id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
+                                	<div class="mdui-typo mdui-float-right" id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
                                         <?php $this->category(', '); ?>
                                         <a href="<?php $this->permalink() ?>">
                                             <!-- 使用原生评论 -->
