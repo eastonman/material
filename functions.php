@@ -72,6 +72,8 @@ function themeConfig($form)
     );
     $form->addInput($ThumbnailOption);
 
+	$RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', null, _t('27'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
+    $form->addInput($RandomPicAmnt);
     
 }
 
@@ -80,7 +82,12 @@ function themeConfig($form)
 function showThumbnail($widget)
 {
     //If article no include picture, display random default picture
-    $rand = rand(1, $widget->widget('Widget_Options')->RandomPicAmnt); //Random number
+    if (empty($widget->widget('Widget_Options')->RandomPicAmnt)) { 
+		$RandPicAmnt = 27;
+	} else {
+		$RandPicAmnt = $widget->widget('Widget_Options')->RandomPicAmnt;
+	}
+    $rand = rand(1,$RandPicAmnt); //Random number
 
     if (!empty($widget->widget('Widget_Options')->CDNURL)) {
         $random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/material-' . $rand . '.png';

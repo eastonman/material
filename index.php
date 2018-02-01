@@ -61,86 +61,90 @@ $this->need('inc/header.php'); ?>
 						</div>
 					</div>
                 	<!-- Main Picture End -->
-                	
+
                 	<!--Blog Info-->
                 	<div class="mdui-col-xs-12 mdui-col-md-3" >
                 		<div class="mdui-card top-card" >
                 			<div class="mdui-card-media" >
                 				<img class="main-logo" src="<?php $this->options->themeUrl('img/Gravatar.png') ?>" >
                 			</div>
-                	
-                
+
+
                 		</div>
-                
+
                 	</div>
                 	<!--Blog Info End-->
-                	
+
             	</div>
             </div>
-            
-            
-            
-            
+
+
+
+
             <!--Blog Posts Output Begin-->
-            <div class="mdui-container" >	
+            <div class="mdui-container" >
 
             	<?php while ($this->next()): ?>
 						<div class="mdui-row" >
                             <!-- Article module -->
                             <div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1" >
 
+								<div class="mdui-card">
                                 <!-- Article link & title -->
-                                <?php if ($this->options->ThumbnailOption == '1'): ?>
-                                <div class="mdui-card">
-									<div class="mdui-card-media" >
-										<img src="<?php showThumbnail($this); ?>" >
-									</div>
-                                    <div class="mdui-card-primary" >
-										<p class="mdui-card-primary-title"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
-									</div>
-                                </div>
-                                <?php elseif ($this->options->ThumbnailOption == '2'): ?>
-                                <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?> !important;color:#757575 !important;">
-                                    <p class="article-headline-p-nopic">
-                                        <a href="<?php $this->permalink() ?>" target="_self">
-                                        “</br><?php $this->title() ?></br>”
-                                    </a>
-                                    </p>
-                                </div>
-                                <?php elseif ($this->options->ThumbnailOption == '3'): ?>
+                                	<?php if ($this->options->ThumbnailOption == '1'): ?>
+    									<div class="mdui-card-media index-post-card-media" >
+	    									<img src="<?php showThumbnail($this); ?>" >
+											
+                                        	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
+                                        		<div class="mdui-card-primary mdui-typo" >
+				    								<a class="mdui-card-primary-title mdui-text-color-white" href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a>
+												</div>
+					    					</div>
+		    							</div>
+                                        
+
+                                    <?php elseif ($this->options->ThumbnailOption == '2'): ?>
+                                        <p class="article-headline-p-nopic">
+                                            <a href="<?php $this->permalink() ?>" target="_self">
+                                            “</br><?php $this->title() ?></br>”
+                                        </a>
+                                        </p>
+
+                                    <?php elseif ($this->options->ThumbnailOption == '3'): ?>
 
 
-                                <div class="mdl-card__media mdl-color-text--grey-50 lazyload" data-src="<?php randomThumbnail($this); ?>">
-                                    <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
-                                </div>
-                                <?php endif; ?>
+                                        <div class="mdl-card__media mdl-color-text--grey-50 lazyload" data-src="<?php randomThumbnail($this); ?>">
+                                            <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
+                                        </div>
+                                    <?php endif; ?>
 
                                 <!-- Article content -->
-                                <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
+                                <div class="mdui-card-content">
                                     <!--  $this->content('Continue Reading...');  -->
                                     <?php $this->excerpt(80, '...'); ?> &nbsp;&nbsp;&nbsp;
-                                    <span>
-                                <a href="<?php $this->permalink(); ?>" target="_self">
-                                    <?php if ($this->options->langis == '0'): ?>
-                                        Continue Reading
-                                    <?php elseif ($this->options->langis == '1'): ?>
-                                        继续阅读
-                                    <?php elseif ($this->options->langis == '2'): ?>
-                                        繼續閱讀
-                                    <?php endif; ?>
-                                </a>
-                            </span>
+                                    <span class="mdui-typo" >
+                                		<a href="<?php $this->permalink(); ?>" target="_self">
+                                    	<?php if ($this->options->langis == '0'): ?>
+                                        	Continue Reading
+                                    	<?php elseif ($this->options->langis == '1'): ?>
+                                        	继续阅读
+                                    	<?php elseif ($this->options->langis == '2'): ?>
+                                     	   繼續閱讀
+                                    	<?php endif; ?>
+                                		</a>
+                            		</span>
                                 </div>
+                            
 
                                 <!-- Article info-->
                                 <div id="article-info">
                                     <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
                                         <!-- Author avatar -->
-                                        <div id="author-avatar">
+                                        <div class="mdui-card-header" >
                                             <?php if (!empty($this->options->avatarURL)): ?>
-                                            <img src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                            <img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                             <?php else: ?>
-                                            <?php $this->author->gravatar(44); ?>
+                                            <div class="mdui-card-header-avatar" ><?php $this->author->gravatar(44); ?></div>
                                             <?php endif; ?>
                                         </div>
                                         <div>
@@ -151,9 +155,15 @@ $this->need('inc/header.php'); ?>
                                         <?php else: ?>
                                             <?php $this->dateWord(); ?>
                                         <?php endif; ?>
-                                    </span>
-                                        </div>
-                                    </div>
+                                    		</span>
+                                    	</div>
+                                	</div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
                                     <div id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
                                         <?php $this->category(', '); ?>
                                         <a href="<?php $this->permalink() ?>">
@@ -169,6 +179,8 @@ $this->need('inc/header.php'); ?>
                                     </div>
 
                                 </div>
+                                
+                            </div>
 
                             </div>
 						</div>
