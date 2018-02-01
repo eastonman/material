@@ -279,6 +279,7 @@ foreach ($sticky_posts as $sticky_posts) {
                                     <!--  $this->content('Continue Reading...');  -->
                                     <?php $this->excerpt(80, '...'); ?> &nbsp;&nbsp;&nbsp;
                                     <span>
+                                    
                                 <a href="<?php $this->permalink(); ?>" target="_self">
                                     <?php if ($this->options->langis == '0'): ?>
                                         Continue Reading
@@ -314,8 +315,22 @@ foreach ($sticky_posts as $sticky_posts) {
                                         </div>
                                     </div>
                                     <div id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
+                                    	
+                                    
+                                    
+                                    <?php $allplugin = Typecho_Plugin::export(); ?>
+                                        	<?php if (array_key_exists('TeStat', $allplugin['activated'])): ?>
+<?php ($q=$this->viewsNum); if (($q%2)!=0) {
+echo($q-1)/2;
+                    } else {
+                        echo $q/2;
+                    } ?> 浏览 |
+                        
+                        <?php endif; ?>
                                         <?php $this->category(', '); ?>
                                         <a href="<?php $this->permalink() ?>">
+                                        	
+                                        
                                             <!-- 使用原生评论 -->
                                             <?php if ($this->options->commentis == '0'): ?>
                                             <?php echo '|'; ?>
