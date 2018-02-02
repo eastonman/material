@@ -122,7 +122,7 @@ $this->need('inc/header.php'); ?>
                                 <div class="mdui-card-content">
                                     <!--  $this->content('Continue Reading...');  -->
                                     <?php $this->excerpt(80, '...'); ?> &nbsp;&nbsp;&nbsp;
-                                    <span class="mdui-typo" >
+                                    <span class="mdui-typo mdui-float-right" >
                                 		<a href="<?php $this->permalink(); ?>" target="_self">
                                     	<?php if ($this->options->langis == '0'): ?>
                                         	Continue Reading
@@ -140,6 +140,7 @@ $this->need('inc/header.php'); ?>
                                 <!-- Article info-->
                                 <div id="article-info">
                                     <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
+                                    	
                                         <!-- Author avatar -->
                                         <div class="mdui-card-header" >
                                             <?php if (!empty($this->options->avatarURL)): ?>
@@ -156,16 +157,8 @@ $this->need('inc/header.php'); ?>
                                         <?php else: ?>
                                             <?php $this->dateWord(); ?>
                                         <?php endif; ?>
-                                    		</span>
-                                    	</div>
-                                	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                	<div class="mdui-typo mdui-float-right" id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
+                                    		
+                                    		<div class="mdui-typo mdui-float-right mdui-valign" id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
                                         <?php $this->category(', '); ?>
                                         <a href="<?php $this->permalink() ?>">
                                             <!-- 使用原生评论 -->
@@ -177,7 +170,17 @@ $this->need('inc/header.php'); ?>
                                             <?php endif; ?>
                                         </a>
 
-                                    </div>
+                                    	</div>
+                                    	</span>
+                                    	</div>
+                                	</div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                	
 
                                 </div>
                                 
