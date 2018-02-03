@@ -36,13 +36,22 @@
 			<!-- Header & Appbar & Title End -->
 				
 				
-			<div class="mdui-container-fluid" >
+			<div class="mdui-container-fluid mdui-appbar-with-toolbar" >
 				<div class="mdui-row" >
 					<div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1">
 						<!--Post Content Md Card Begin-->
 						<div class="mdui-card" >
 							
-							<div class="mdui-card-content">
+							<div class="mdui-card-media post-card-media" >
+								<img src="<?php showThumbnail($this); ?>">
+								<div class="mdui-card-primary mdui-card-media-covered mdui-card-media-covered-gradient" >
+									<div clas="mdui-card-primary-title mdui-typo">
+										<h1><?php $this->title() ?></h1>
+									</div>
+								</div>
+							</div>
+							
+							<div class="mdui-card-content mdui-typo">
 								<?php $this->content(); ?>
 							</div>
 				
