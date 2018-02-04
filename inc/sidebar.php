@@ -1,6 +1,6 @@
 <!-- SideBar Using MDUI Begin-->
 
-<div class="mdui-drawer mdui-drawer-full-height drawer-mod sidebar" id="sidebar">
+<div class="mdui-drawer mdui-drawer-full-height mdui-color-white drawer-mod sidebar" id="sidebar">
     <!--SideBar Header Begin-->
     <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl() ?>img/sidebarheader.jpg );">
 
