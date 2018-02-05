@@ -51,6 +51,15 @@
 								</div>
 							</div>
 							
+							<div class="mdui-card-header" >
+                                        <?php if (!empty($this->options->avatarURL)): ?>
+                                            <img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                        <?php else: ?>
+                                            <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
+                                        <?php endif; ?>
+
+                            </div>
+							
 							<div class="mdui-card-content mdui-typo">
 								<?php $this->content(); ?>
 							</div>
