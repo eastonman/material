@@ -24,9 +24,19 @@ $this->need('inc/header.php'); ?>
 
 </head>
 
+<!-- Html Head End-->
+
+
+
+
+<!-- Html Body Start-->
+
 <body class="mdui-drawer-body-left" >
 
 	<div>
+
+
+        <!--Conten Of Index Page Begin-->
 
 		<main>
 
@@ -47,12 +57,15 @@ $this->need('inc/header.php'); ?>
 			<!-- Header & Appbar & Title End -->
 
 
+
+
 			<!-- Blog Header(picture&avatar&slogan) Began -->
             <div class="mdui-container mdui-appbar-with-toolbar" >
 
+                <!--First Row Of Content-->
+                <div class="mdui-row">
 
-				<div class="mdui-row">
-                	<!-- Main Picture -->
+                	<!-- Left Main Picture -->
 	                <div class="mdui-col-xs-12 mdui-col-md-7 mdui-col-offset-md-1">
 						<div class="mdui-card top-card">
 							<div class="mdui-card-media" >
@@ -62,7 +75,7 @@ $this->need('inc/header.php'); ?>
 					</div>
                 	<!-- Main Picture End -->
 
-                	<!--Blog Info-->
+                	<!--Right Part(Blog Info) Begin-->
                 	<div class="mdui-col-xs-12 mdui-col-md-3" >
                 		<div class="mdui-card top-card" >
                 			<div class="mdui-card-media" >
@@ -75,120 +88,152 @@ $this->need('inc/header.php'); ?>
                 	</div>
                 	<!--Blog Info End-->
 
-            	</div>
+                </div>
+                <!--First Row Of content End-->
             </div>
-
+            <!--Blog Header End-->
 
 
 
             <!--Blog Posts Output Begin-->
             <div class="mdui-container" >
 
-            	<?php while ($this->next()): ?>
+                <?php while ($this->next()): ?>
+
+                        <!-- Each Post Occupy One MD Row-->
 						<div class="mdui-row" >
-                            <!-- Article module -->
+                            <!-- Article Location -->
                             <div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1" >
 
+                                <!--Md Card Used to Contain Post Info Begin-->
 								<div class="mdui-card">
-                                <!-- Article link & title -->
+                                    <!-- Article link & title -->
                                 	<?php if ($this->options->ThumbnailOption == '1'): ?>
-    									<div class="mdui-card-media index-post-card-media" >
+                                        <div class="mdui-card-media index-post-card-media" >
+
+                                            <!--Article ThumbNail-->
 	    									<img src="<?php showThumbnail($this); ?>" >
-											
+											<!--Article Title Displays Above ThumbNail-->
                                         	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
                                         		<div class="mdui-card-primary mdui-typo" >
 				    								<a class="mdui-card-primary-title mdui-text-color-white" href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a>
 												</div>
-					    					</div>
+                                            </div>
+                                            <!--Article Title End-->
 		    							</div>
-                                        
+
 
                                     <?php elseif ($this->options->ThumbnailOption == '2'): ?>
-                                        <p class="article-headline-p-nopic">
-                                            <a href="<?php $this->permalink() ?>" target="_self">
-                                            “</br><?php $this->title() ?></br>”
-                                        </a>
-                                        </p>
 
+                                        <div class="mdui-card-media index-post-card-media" >
+
+                                            <!--Article ThumbNail-->
+	    									<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0NDQ0ODQ4QEA4UFhMWFB4bGRkbHi0gIiAiIC1EKjIqKjIqRDxJOzc7STxsVUtLVWx9aWNpfZeHh5e+tb75+f8BDQ0NDQ4NDhAQDhQWExYUHhsZGRseLSAiICIgLUQqMioqMipEPEk7NztJPGxVS0tVbH1pY2l9l4eHl761vvn5///CABEIA+gGQAMBIgACEQEDEQH/xAAVAAEBAAAAAAAAAAAAAAAAAAAAA//aAAgBAQAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//xAAVAQEBAAAAAAAAAAAAAAAAAAAABv/aAAgBAhAAAAClAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//xAAVAQEBAAAAAAAAAAAAAAAAAAAABv/aAAgBAxAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAADg/9oACAEBAAE/AENR/8QAFBEBAAAAAAAAAAAAAAAAAAAAwP/aAAgBAgEBPwBE5//EABQRAQAAAAAAAAAAAAAAAAAAAMD/2gAIAQMBAT8AROf/2Q==" >
+											<!--Article Title Displays Above ThumbNail-->
+                                        	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
+                                        		<div class="mdui-card-primary mdui-typo" >
+				    								<a class="mdui-card-primary-title mdui-text-color-white" href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a>
+												</div>
+                                            </div>
+                                            <!--Article Title End-->
+		    							</div>
                                     <?php elseif ($this->options->ThumbnailOption == '3'): ?>
 
+                                        <div class="mdui-card-media index-post-card-media" >
 
-                                        <div class="mdl-card__media mdl-color-text--grey-50 lazyload" data-src="<?php randomThumbnail($this); ?>">
-                                            <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
-                                        </div>
+                                            <!--Article ThumbNail-->
+	    									<img src="<?php showThumbnail($this); ?>" >
+											<!--Article Title Displays Above ThumbNail-->
+                                        	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
+                                        		<div class="mdui-card-primary mdui-typo" >
+				    								<a class="mdui-card-primary-title mdui-text-color-white" href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a>
+												</div>
+                                            </div>
+                                            <!--Article Title End-->
+		    							</div>
+
                                     <?php endif; ?>
 
-                                <!-- Article content -->
-                                <div class="mdui-card-content">
-                                    <!--  $this->content('Continue Reading...');  -->
-                                    <?php $this->excerpt(80, '...'); ?> &nbsp;&nbsp;&nbsp;
-                                    <span class="mdui-typo mdui-float-right" >
-                                		<a href="<?php $this->permalink(); ?>" target="_self">
-                                    	<?php if ($this->options->langis == '0'): ?>
-                                        	Continue Reading
-                                    	<?php elseif ($this->options->langis == '1'): ?>
-                                        	继续阅读
-                                    	<?php elseif ($this->options->langis == '2'): ?>
-                                     	   繼續閱讀
-                                    	<?php endif; ?>
-                                		</a>
-                            		</span>
-                                </div>
-                            
-								<div class="mdui-divider"></div>
-								
-                                <!-- Article info-->
-                                <div id="article-info">
-                                    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
-                                    	
-                                        <!-- Author avatar -->
-                                        <div class="mdui-card-header" >
-                                            <?php if (!empty($this->options->avatarURL)): ?>
+
+                                    <!-- Article content -->
+                                    <div class="mdui-card-content">
+                                        <!--  -->
+                                        <?php $this->excerpt(80, '...'); ?> &nbsp;&nbsp;&nbsp;
+
+
+                                        <span class="mdui-typo mdui-float-right" >
+                                    		<a  href="<?php $this->permalink(); ?>" target="_self">
+                                            	<?php if ($this->options->langis == '0'): ?>
+                                                	Continue Reading
+                                            	<?php elseif ($this->options->langis == '1'): ?>
+                                                	继续阅读
+                                            	<?php elseif ($this->options->langis == '2'): ?>
+                                             	   繼續閱讀
+                                            	<?php endif; ?>
+                                    		</a>
+                                        </span>
+
+                                    </div>
+                                    <!--Article Content End-->
+
+	    							<div class="mdui-divider"></div>
+
+                                    <!-- Article info-->
+
+                                    <!-- Author avatar -->
+                                    <div class="mdui-card-header" >
+                                        <?php if (!empty($this->options->avatarURL)): ?>
                                             <img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
-                                            <?php else: ?>
-                                            <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
-                                            <?php endif; ?>
-                                     
-                                        
-                                            <span class="mdui-card-header-title mdui-typo"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
-                                            <span class="mdui-card-header-subtitle" >
-                                        <?php if ($this->options->langis == '0'): ?>
-                                            <?php $this->date('F j, Y'); ?>
                                         <?php else: ?>
-                                            <?php $this->dateWord(); ?>
+                                            <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
                                         <?php endif; ?>
-                                    		
-                                    		<div class="mdui-typo mdui-float-right mdui-valign" id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
-                                        <?php $this->category(', '); ?>
-                                        <a href="<?php $this->permalink() ?>">
-                                            <!-- 使用原生评论 -->
-                                            <?php if ($this->options->commentis == '0'): ?>
-                                            <?php echo '|'; ?>
-                                            <?php $this->commentsNum('%d 评论'); ?>
-                                            <!-- 使用wildfire评论 -->
-                                            <?php else: ?>
-                                            <?php endif; ?>
-                                        </a>
 
-                                    	</div>
-                                    	</span>
-                                    	</div>
-                                	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                	
+                                        <!--Author Name-->
+                                        <span class="mdui-card-header-title mdui-typo"><a  href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
+
+                                        <span class="mdui-card-header-subtitle" >
+                                            <?php if ($this->options->langis == '0'): ?>
+                                                <?php $this->date('F j, Y'); ?>
+                                            <?php else: ?>
+                                                <?php $this->dateWord(); ?>
+                                            <?php endif; ?>
+
+                                            <!--Right Part Of Md Card Header(Under) -->
+                                    		<div class="mdui-typo mdui-float-right mdui-valign" id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
+                                                <div class="mdui-text-color-pink-accent" >
+                                                    <?php $this->category(', '); ?>
+                                                </div>
+
+
+                                                <a href="<?php $this->permalink() ?>">
+                                                    <!-- 使用原生评论 -->
+                                                    <?php if ($this->options->commentis == '0'): ?>
+                                                    <?php echo '|'; ?>
+                                                    <?php $this->commentsNum('%d 评论'); ?>
+                                                    <!-- 使用wildfire评论 -->
+                                                    <?php else: ?>
+                                                    <?php endif; ?>
+                                                </a>
+
+                                        	</div>
+                                            <!--Right Part Of Md Card Header End-->
+                                        </span>
+                                        <!--Row Of Subtitle End-->
+
+                                    </div>
+                                    <!--Md Card Header End-->
 
                                 </div>
-                                
-                            </div>
+                                <!--Md Card Of Article End-->
+
 
                             </div>
 						</div>
-				<?php endwhile; ?>
+                <?php endwhile; ?>
+                <!--Article Md Cards Output End-->
+
+
+
 			</div>
 
 

@@ -1,4 +1,4 @@
-<div class="mdui-container-fuild">
+<div class="mdui-container-fluid">
 	 <!--Footer-->
         <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
             <!--mdl-mini-footer-left-section
