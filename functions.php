@@ -88,6 +88,10 @@ function themeConfig($form)
     );
     $form->addInput($footersns);
     
+    $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', null, null, _t('网站统计代码 + 自定义字体源'), _t('填入如 Google Analysis 的第三方统计代码或字体源'));
+    $form->addInput($analysis);
+
+    
 }
 
 
