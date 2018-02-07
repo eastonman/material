@@ -181,5 +181,8 @@
         <?php endif; ?>
         	
         <!--Background Settings End-->
+        	
+        <!--Analysis code-->
+		<?php $this->options->analysis(); ?>
         	   
 	
