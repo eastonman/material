@@ -1,4 +1,4 @@
-<?php $this->need('header.php'); ?>
+<?php $this->need('inc/header.php'); ?>
 
 <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
