@@ -1,6 +1,6 @@
 <?php $this->need('inc/header.php'); ?>
 
-<!-- Standalone CSS Calling For Index -->
+<!-- Standalone CSS Calling For Page -->
         <?php if (!empty($this->options->CDNUrl)): ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/material.min.css" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/style.min.css" />
@@ -12,6 +12,8 @@
 <!-- Standalone CSS END-->
 
 </head>
+
+
 
 <body class="mdui-drawer-body-left" >
 
@@ -61,5 +63,6 @@
 				</div>
 			</div>
 
-        <?php include('inc/sidebar.php'); ?>
-        <?php include('inc/footer.php'); ?>
+
+<?php include('inc/sidebar.php'); ?>
+<?php include('inc/footer.php'); ?>
