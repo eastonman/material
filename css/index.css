@@ -1,0 +1,23 @@
+.main-pic {
+	height: 360px;
+	object-fit: cover;
+}
+.top-card {
+	height:360px;
+}
+.main-logo {
+	height: 50%;
+	width: 50%;
+}
+
+.mdui-row > [class*="mdui-col-"] {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+
+}
+.index-post-card-media > img {
+
+	height: 250px;
+	object-fit: cover;
+}

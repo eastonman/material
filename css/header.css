@@ -1,0 +1,185 @@
+/*
+*Share css for all pages
+*
+*
+*
+*/
+
+/*Responsive CSS For Appbar*/
+@media screen and (min-width:1024px) {
+	
+	.header-responsive {
+		display: none;
+		
+	}
+
+}
+
+@media screen and (max-width: 1024px) {
+
+	.header-responsive {
+		display: block;
+	}
+
+
+}
+/*Responsive Appbat End*/
+
+
+/*Title On Appbar Align to center*/
+.header-center-title {
+	margin: 0 auto;
+}
+
+
+
+
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*-------------------- SideBar CSS ---------------------*/
+/*------------------------------------------------------*/
+/* -----------------------------------------------------*/
+
+
+
+/* SideBar Overlay (Also Responsive) */
+
+
+
+@media screen and (max-width: 600px) {
+	
+	.drawer-mod {
+		max-width: 240px !important;
+	}
+	.drawer-mod::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	
+	}
+
+	.mdui-drawer .sidebar-header {
+	    position: relative;
+ 	   height: 140px;
+    	overflow: hidden;
+	    -webkit-transition: all 0.2s ease-in-out;
+ 	   -o-transition: all 0.2s ease-in-out;
+	    transition: all 0.2s ease-in-out;
+	}
+
+}
+
+
+
+@media screen and (min-width:600px) {
+
+	.mdui-drawer .sidebar-header {
+	    position: relative;
+	    height: 157.5px;
+	    overflow: hidden;
+	    -webkit-transition: all 0.2s ease-in-out;
+	    -o-transition: all 0.2s ease-in-out;
+	    transition: all 0.2s ease-in-out;
+	}
+
+}
+
+/*SideBar Overlay End*/
+
+
+/*Sidebar Header Begin*/
+.mdui-drawer .sidebar-header.header-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size:100%
+    /*background-size: cover;*/
+}
+
+.sidebar .sidebar-image img {
+    width: 54px;
+    height: 54px;
+    margin: 40px 16px 16px 16px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .2);
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+/*******SideBar Dropdown Arrow Layout ********/
+
+/*Sidebar Dropdown Arrow Padding*/
+@media screen and (max-width: 600px) {
+	.sidebar .sidebar-brand {
+		padding-left: 200px;
+
+	}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+	.sidebar .sidebar-brand {
+		padding-left: 280px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.sidebar .sidebar-brand {
+		padding-left: 180px;
+
+	}
+
+}
+/*Padding End*/
+
+
+.sidebar .sidebar-brand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    text-decoration: none;
+    clear: both;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar .sidebar-brand:hover,
+.sidebar .sidebar-brand:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+
+.sidebar .sidebar-brand:hover,
+.sidebar .sidebar-brand:focus {
+    text-decoration: none;
+}
+
+/*Sidebar Dropdown Arrow Layout End*/
+
+
+
+/*Footer MDUI row Padding*/
+
+#bottom {
+	padding-top: 30px;
+
+
+
+}
