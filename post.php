@@ -70,5 +70,6 @@
 				</div>
 			</div>
 
+		<?php $this->need('inc/comments.php'); ?>
         <?php include('inc/sidebar.php'); ?>
         <?php include('inc/footer.php'); ?>
