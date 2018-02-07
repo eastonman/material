@@ -232,16 +232,15 @@ $this->need('inc/header.php'); ?>
                 <?php endwhile; ?>
                 <!--Article Md Cards Output End-->
 
-
-
 			</div>
+            <!--Blog Post Output End-->
 
 
 
 
 
 
-			<?php $this->need('inc/sidebar.php'); ?>
-			<?php $this->need('inc/footer.php'); ?>
+<?php $this->need('inc/sidebar.php'); ?>
+<?php $this->need('inc/footer.php'); ?>
 
 
