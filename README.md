@@ -2,7 +2,7 @@
 
 New Material 是一款 Typecho 的主题
 
-功能尚不完善，若需要完整的功能请下载stable版或deprecated分支
+功能尚不完善，若需要完整的功能请下载stable版或deprecated分支(有很多bug）
 
 ## Contents 目录
 
