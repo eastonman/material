@@ -16,7 +16,7 @@
                 
                     	
                 <!-- FaceBook Icon --> 
-                <?php if (!empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns)) : ?>                
+                <?php if (!empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns)) : ?>             
                 	<a href="<?php $this->options->FacebookURL() ?>" class="mdui-color-white" target="view_window">
                 		<i class="mdui-icon icon-facebook" > </i>&nbsp; &nbsp;
                 	</a>
@@ -42,7 +42,7 @@
                 <!-- Linkedin Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowLinkedin', $this->options->footersns)) : ?>
 					<a href="<?php $this->options->LinkedinURL() ?>" class="mdui-color-white" target="view_window">
-						<i class="mdui-icon icon-linked" ></i>
+						<i class="mdui-icon icon-linkedin" ></i>
                     </a>
                 <?php endif;?>
 
