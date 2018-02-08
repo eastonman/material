@@ -34,14 +34,14 @@
 
 			</header>
 			<!-- Header & Appbar & Title End -->
-				
-				
+
+
 			<div class="mdui-container-fluid mdui-appbar-with-toolbar" >
 				<div class="mdui-row" >
 					<div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1">
 						<!--Post Content Md Card Begin-->
 						<div class="mdui-card" >
-							
+
 							<div class="mdui-card-media post-card-media" >
 								<img src="<?php showThumbnail($this); ?>">
 								<div class="mdui-card-primary mdui-card-media-covered mdui-card-media-covered-gradient" >
@@ -50,7 +50,7 @@
 									</div>
 								</div>
 							</div>
-							
+
 							<div class="mdui-card-header" >
                                         <?php if (!empty($this->options->avatarURL)): ?>
                                             <img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
@@ -59,11 +59,11 @@
                                         <?php endif; ?>
 
                             </div>
-							
+
 							<div class="mdui-card-content mdui-typo">
 								<?php $this->content(); ?>
 							</div>
-				
+
 						</div>
 						<!--Post Content MD Card End -->
 					</div>
