@@ -32,16 +32,12 @@
         <!--Using Default SEO Info Output By Typecho Itself-->
         <?php $this->header(); ?>
         
+        
+
+
         <!-- EXTERNAL CSS BEGIN -->
-        <!-- Material css -->
-        <!--<?php if (!empty($this->options->CDNUrl)): ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/material.min.css" />
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/style.min.css" />
-        <?php else: ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/header.css'); ?>" />
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
-        <?php endif; ?>-->
-        	
+        <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('img/fontcustom/fontcustom.css'); ?>">
+
         <!-- MDUI css-->
         <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css" />
 		<!--EXTERNAL CSS END-->
