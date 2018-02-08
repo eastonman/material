@@ -1,17 +1,22 @@
+<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('img/fontcustom/fontcustom.css'); ?>">
+
+
 <div class="mdui-container-fluid">
 	 <!--Footer-->
         <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
-            <!--mdl-mini-footer-left-section
+            <!--mdl-mini-footer-left-section-->
             <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center">
                 <?php if (!empty($this->options->footersns) && in_array('ShowTwitter', $this->options->footersns)) : ?>
                 <?php if (!empty($this->options->CDNURL)): ?>
                 <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdui-icon" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-twitter.png);">
                     <?php else: ?>
-                        <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdui-icon  social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-twitter.png'); ?>);">
+                        <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><i class="mdui-icon icon-twitter "></i>
                             <?php endif; ?>
-                            <span class="visuallyhidden">Twitter</span>
-                        </button></a>
+                            <span class="mdui-hidden">Twitter</span>
+                        </a>
                     <?php endif;?>
+                    	
+                    
                     <?php if (!empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns)) : ?>
                 <?php if (!empty($this->options->CDNURL)): ?>
                 <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdui-icon" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-facebook.png);">
@@ -56,7 +61,7 @@
                             </button></a>
                 <?php endif;?>
 
-            </div> -->
+            </div> 
 
             <!--copyright-->
             <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center" id="copyright">Copyright &copy;
