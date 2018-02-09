@@ -235,14 +235,14 @@ $this->need('inc/header.php'); ?>
 				<!-- Echo Prev & After Page-->
 					<div class="mdui-row" >
                             <nav class="">
-                                <div class="mdui-col-xs-1">
+                                <div class="mdui-col-xs-2">
 									<?php $this->pageLink(
-                        '<button class=" mdui-float-left">
-                            <i class="mdui-icon mdui-btn-icon material-icons mdui-ripple mdui-color-white" role="presentation">arrow_back</i>
-                        </button>'); ?>
+                        '<div class=" mdui-float-left">
+                            <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple mdui-color-white" >arrow_back</i>
+                        </div>'); ?>
                         		</div>
                                 
-                                <div class="mdui-text-center mdui-col-xs-10">page
+                                <div class="mdui-text-center mdui-col-xs-8 mdui-m-y-3">page
                                 <?php if ($this->_currentPage>1) {
                             echo $this->_currentPage;
                         } else {
@@ -250,14 +250,17 @@ $this->need('inc/header.php'); ?>
                         }?> of
                                 <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
                                 </div>
-                              
+                            	
+                            	<div class="mdui-col-xs-2" >
                                 <?php $this->pageLink(
-                        '<button class="mdui-float-right ">
-                            <i class="mdui-icon mdui-btn-icon material-icons mdui-color-white mdui-ripple" role="presentation">arrow_forward</i>
-                        </button>', 'next'); ?>
+                        '<div class="mdui-float-right ">
+                            <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple" >arrow_forward</i>
+                        </div>', 'next'); ?>
+                        		</div>
                             </nav>
 
-						</div>
+					</div>
+					<!-- Echo Navigation Icon End-->
 
 
 			</div>
