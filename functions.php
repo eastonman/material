@@ -43,11 +43,7 @@ function themeConfig($form)
     $form->addInput($langis);
     
     $CustomFonts = new Typecho_Widget_Helper_Form_Element_Text('CustomFonts', null, _t("Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif"), _t('自定义字体'), null);
-    $form->addInput($CustomFonts);
-    
-    $BgContent = new Typecho_Widget_Helper_Form_Element_Text('BgContent', null, null, _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
-        不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/bg.jpg'));
-    $form->addInput($BgContent);
+    $form->addInput($CustomFonts); 
 
 	$BackgroundType = new Typecho_Widget_Helper_Form_Element_Radio('BackgroundType',
         array(
@@ -60,11 +56,15 @@ function themeConfig($form)
     );
     $form->addInput($BackgroundType);
     
+    $BgContent = new Typecho_Widget_Helper_Form_Element_Text('BgContent', null, null, _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
+        不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/bg.jpg'));
+    $form->addInput($BgContent);
+    
     $ThumbnailOption = new Typecho_Widget_Helper_Form_Element_Radio('ThumbnailOption',
         array(
             '1' => _t('显示文章内第一张图片 (若无图片则显示随机图片)<br />'),
             '2' => _t('只显示纯色 &emsp;'),
-            '3' => _t('只显示随机图片'),
+            '3' => _t('只显示随机图片')
         ),
 
         //Default choose
@@ -77,16 +77,43 @@ function themeConfig($form)
     
     $footersns = new Typecho_Widget_Helper_Form_Element_Checkbox('footersns',
         array(
-            'ShowTwitter' => _t('显示 Twitter 图标 <br>'),
-            'ShowFacebook' => _t('显示 Facebook 图标 <br>'),
-            'ShowGithub' => _t('显示 Github 图标 <br>'),
-            'ShowTelegram' => _t('显示 Telegram 图标 <br>'),
-            'ShowLinkedin' => _t('显示 Linkedin 图标 <br>'),
+            'ShowTwitter' => _t('Twitter'),
+            'ShowFacebook' => _t('Facebook'),
+            'ShowGithub' => _t('Github'),
+            'ShowTelegram' => _t('Telegram'),
+            'ShowLinkedin' => _t('Linkedin'),
+            'ShowSteam' => _t('Steam'),
+            'ShowNiconico' => _t('Niconico'),
+            'ShowYoutube' => _t('Youtube')
         ),
 
         array('ShowTwitter','ShowFacebook','ShowGithub'), _t('页脚 SNS 图标按钮显示设置'), _t('开启后, 按钮显示于博客页脚位置')
     );
     $form->addInput($footersns);
+    
+    $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('TwitterURL', null, _t('NULL'), _t('Twitter 地址'), null);
+    $form->addInput($TwitterURL);
+
+    $FacebookURL = new Typecho_Widget_Helper_Form_Element_Text('FacebookURL', null, _t('NULL'), _t('Facebook 地址'), null);
+    $form->addInput($FacebookURL);
+
+    $GithubURL = new Typecho_Widget_Helper_Form_Element_Text('GithubURL', null, null, _t('Github 地址'), null);
+    $form->addInput($GithubURL);
+
+    $TelegramURL = new Typecho_Widget_Helper_Form_Element_Text('TelegramURL', null, null, _t('Telegram 地址'), null);
+    $form->addInput($TelegramURL);
+
+    $LinkedinURL = new Typecho_Widget_Helper_Form_Element_Text('LinkedinURL', null, null, _t('Linkedin 地址'), null);
+    $form->addInput($LinkedinURL);
+    
+    $NiconicoURL = new Typecho_Widget_Helper_Form_Element_Text('NiconicoURL', null, null, _t('Niconico 地址'), null);
+    $form->addInput($NiconicoURL);
+    
+    $SteamURL = new Typecho_Widget_Helper_Form_Element_Text('SteamURL', null, null, _t('Steam 地址'), null);
+    $form->addInput($SteamURL);
+    
+    $YoutubeURL = new Typecho_Widget_Helper_Form_Element_Text('YoutubeURL', null, null, _t('Youtube 地址'), null);
+    $form->addInput($YoutubeURL);
     
     $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', null, null, _t('网站统计代码 + 自定义字体源'), _t('填入如 Google Analysis 的第三方统计代码或字体源'));
     $form->addInput($analysis);
