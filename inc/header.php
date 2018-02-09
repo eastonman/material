@@ -37,7 +37,8 @@
 
         <!-- EXTERNAL CSS BEGIN -->
         <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('img/fontcustom/fontcustom.css'); ?>">
-
+		<link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
+		
         <!-- MDUI css-->
         <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css" />
 		<!--EXTERNAL CSS END-->
