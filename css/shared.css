@@ -179,7 +179,13 @@
 
 #bottom {
 	padding-top: 30px;
+}
 
 
+/*Footer SNS herf no underline */
 
+.footer-sns > a {
+	text-decoration: none;
+	margin-left: 5px;
+	margin-right: 5px;
 }

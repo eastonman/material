@@ -16,7 +16,7 @@ $this->need('inc/header.php'); ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/material.min.css" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/style.min.css" />
         <?php else: ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/header.css'); ?>" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/index.css'); ?>" />
         <?php endif; ?>
@@ -263,11 +263,15 @@ $this->need('inc/header.php'); ?>
 			</div>
 			<!-- Posts Output MD Container End-->
 
+		</div>
+        <!--Blog Post Output End-->
 
 
 
 
-			<?php $this->need('inc/sidebar.php'); ?>
-			<?php $this->need('inc/footer.php'); ?>
+
+
+<?php $this->need('inc/sidebar.php'); ?>
+<?php $this->need('inc/footer.php'); ?>
 
 

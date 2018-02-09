@@ -1,74 +1,83 @@
+
+
 <div class="mdui-container-fluid">
-	 <!--Footer-->
+		<!--Footer-->
         <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
-            <!--mdl-mini-footer-left-section
-            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center">
+            
+            <!--Footer Left SNS Icons Begin-->            
+            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center footer-sns">
+        		<!--Twitter Icon-->
                 <?php if (!empty($this->options->footersns) && in_array('ShowTwitter', $this->options->footersns)) : ?>
-                <?php if (!empty($this->options->CDNURL)): ?>
-                <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdui-icon" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-twitter.png);">
-                    <?php else: ?>
-                        <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdui-icon  social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-twitter.png'); ?>);">
-                            <?php endif; ?>
-                            <span class="visuallyhidden">Twitter</span>
-                        </button></a>
-                    <?php endif;?>
-                    <?php if (!empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns)) : ?>
-                <?php if (!empty($this->options->CDNURL)): ?>
-                <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdui-icon" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-facebook.png);">
-                                    <?php else: ?>
-                                       <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-facebook.png'); ?>);">
-                                    <?php endif; ?>
-                                        <span class="visuallyhidden">Facebook</span>
-                                    </button></a>
+                    <a href="<?php $this->options->TwitterURL() ?>" class="mdui-color-white" target="view_window">
+                    	<i class="mdui-icon icon-twitter_10 "></i>                    	
+                    </a>
+                <?php else: ?>
+                <?php endif; ?>
+                
+                    	
+                <!-- FaceBook Icon --> 
+                <?php if (!empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns)) : ?>             
+                	<a href="<?php $this->options->FacebookURL() ?>" class="mdui-color-white" target="view_window">
+                		<i class="mdui-icon icon-facebook_6" > </i>
+                	</a>
+                <?php else: ?>
+                <?php endif; ?>
+
+                <!-- Github Icon -->
+                <?php if (!empty($this->options->footersns) && in_array('ShowGithub', $this->options->footersns)) : ?>               
+                    <a href="<?php $this->options->GithubURL() ?>" class="mdui-color-white" target="view_window">
+                    	<i class="mdui-icon icon-github" ></i>
+                    </a>
+                <?php else: ?>
                 <?php endif;?>
 
 
-                <?php if (!empty($this->options->footersns) && in_array('ShowGithub', $this->options->footersns)) : ?>
-                <?php if (!empty($this->options->CDNURL)): ?>
-                <a href="<?php $this->options->GithubURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-github.png);">
-                                    <?php else: ?>
-                                       <a href="<?php $this->options->GithubURL() ?>" target="view_window"><button class="mdui-icon" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-github.png'); ?>);">
-                                    <?php endif; ?>
-                                        <span class="visuallyhidden">Github</span>
-                                    </button></a>
+                <!--Telegram Icon-->
+                <?php if (!empty($this->options->footersns) && in_array('ShowTelegram', $this->options->footersns)) : ?>                  
+                    <a href="<?php $this->options->TelegramURL() ?>" class="mdui-color-white" target="view_window">
+                        <i class="mdui-icon icon-telegram" ></i>
+                    </a>
                 <?php endif;?>
 
-
-
-                <?php if (!empty($this->options->footersns) && in_array('ShowTelegram', $this->options->footersns)) : ?>
-                    <?php if (!empty($this->options->CDNURL)): ?>
-                        <a href="<?php $this->options->TelegramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-telegram.png);">
-                    <?php else: ?>
-                            <a href="<?php $this->options->TelegramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-telegram.png'); ?>);">
-                    <?php endif; ?>
-                <span class="visuallyhidden">Telegram</span>
-                            </button></a>
-                <?php endif;?>
-
-
+                <!-- Linkedin Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowLinkedin', $this->options->footersns)) : ?>
-                    <?php if (!empty($this->options->CDNURL)): ?>
-                        <a href="<?php $this->options->LinkedinURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-linkedin.png);">
-                    <?php else: ?>
-                            <a href="<?php $this->options->LinkedinURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-linkedin.png'); ?>);">
-                    <?php endif; ?>
-                <span class="visuallyhidden">Linkedin</span>
-                            </button></a>
+					<a href="<?php $this->options->LinkedinURL() ?>" class="mdui-color-white" target="view_window">
+						<i class="mdui-icon icon-linkedin" ></i>
+                    </a>
                 <?php endif;?>
 
-            </div> -->
+				<!-- Youtube Icon -->
+                <?php if (!empty($this->options->footersns) && in_array('ShowYoutube', $this->options->footersns)) : ?>
+					<a href="<?php $this->options->YoutubeURL() ?>" class="mdui-color-white" target="view_window">
+						<i class="mdui-icon icon-youtube" ></i>
+                    </a>
+                <?php endif;?>
+                	
+                <!-- Steam Icon -->
+                <?php if (!empty($this->options->footersns) && in_array('ShowSteam', $this->options->footersns)) : ?>
+					<a href="<?php $this->options->SteamURL() ?>" class="mdui-color-white" target="view_window">
+						<i class="mdui-icon icon-steam" ></i>
+                    </a>
+                <?php endif;?>
+                	
+                <!-- Niconico Icon -->
+                <?php if (!empty($this->options->footersns) && in_array('ShowNiconico', $this->options->footersns)) : ?>
+					<a href="<?php $this->options->NiconicoURL() ?>" class="mdui-color-white" target="view_window">
+						<i class="mdui-icon icon-niconico" ></i>
+                    </a>
+                <?php endif;?>
+
+            </div>
+            <!--Footer Left SNS END--> 
 
             <!--copyright-->
-            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center" id="copyright">Copyright &copy;
+            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center" id="copyright">
+
+            	Copyright &copy;
+
                 <?php echo date("Y"); ?>
                 <?php $this->options->title(); ?>
             </div>
-
-            <?php if (class_exists("Uptime_Plugin")): ?>
-                <div id="copyright">
-                    <?php Uptime_Plugin::show(); ?>
-                </div>
-            <?php endif; ?>
 
             <!--mdl-mini-footer-right-section-->
             <div class="mdui-col-xs-12 mdui-col-md-4 mdui-float-right mdui-text-center">
