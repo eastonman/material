@@ -48,21 +48,21 @@
 
 				<!-- Youtube Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowYoutube', $this->options->footersns)) : ?>
-					<a href="<?php $this->options->LinkedinURL() ?>" class="mdui-color-white" target="view_window">
+					<a href="<?php $this->options->YoutubeURL() ?>" class="mdui-color-white" target="view_window">
 						<i class="mdui-icon icon-youtube" ></i>
                     </a>
                 <?php endif;?>
                 	
                 <!-- Steam Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowSteam', $this->options->footersns)) : ?>
-					<a href="<?php $this->options->LinkedinURL() ?>" class="mdui-color-white" target="view_window">
+					<a href="<?php $this->options->SteamURL() ?>" class="mdui-color-white" target="view_window">
 						<i class="mdui-icon icon-steam" ></i>
                     </a>
                 <?php endif;?>
                 	
                 <!-- Niconico Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowNiconico', $this->options->footersns)) : ?>
-					<a href="<?php $this->options->LinkedinURL() ?>" class="mdui-color-white" target="view_window">
+					<a href="<?php $this->options->NiconicoURL() ?>" class="mdui-color-white" target="view_window">
 						<i class="mdui-icon icon-niconico" ></i>
                     </a>
                 <?php endif;?>

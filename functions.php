@@ -106,6 +106,15 @@ function themeConfig($form)
     $LinkedinURL = new Typecho_Widget_Helper_Form_Element_Text('LinkedinURL', null, null, _t('Linkedin 地址'), null);
     $form->addInput($LinkedinURL);
     
+    $NiconicoURL = new Typecho_Widget_Helper_Form_Element_Text('NiconicoURL', null, null, _t('Niconico 地址'), null);
+    $form->addInput($NiconicoURL);
+    
+    $SteamURL = new Typecho_Widget_Helper_Form_Element_Text('SteamURL', null, null, _t('Steam 地址'), null);
+    $form->addInput($SteamURL);
+    
+    $YoutubeURL = new Typecho_Widget_Helper_Form_Element_Text('YoutubeURL', null, null, _t('Youtube 地址'), null);
+    $form->addInput($YoutubeURL);
+    
     $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', null, null, _t('网站统计代码 + 自定义字体源'), _t('填入如 Google Analysis 的第三方统计代码或字体源'));
     $form->addInput($analysis);
 
