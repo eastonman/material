@@ -15,21 +15,21 @@
     echo $commentClass; ?>">
 
     <!-- Comment info -->
-    <header class="comment header mdui-card-header">
+    <div class="comment header mdui-card-header">
 
         <!-- Comment avatar -->
-        <div id="comment__avatar">
-            <?php $comments->gravatar(52); ?>
-        </div>
+        
+            <?php $comments->gravatar(52,'X',NULL,"mdui-card-header-avatar"); ?>
+        
 
         <!-- Comment author -->
         <div class="comment__author">
             <!--Commenter name -->
-            <span class="visitor-name-span"><?php $comments->author(); ?>&nbsp;</span>
+            <div class="mdui-card-header-title"><?php $comments->author(); ?>&nbsp;</div>
             <!--Comment date -->
-            <span><?php $comments->date('Y-m-d, H:i'); ?></span>
+            <div class="mdui-card-header-subtitle"><?php $comments->date('Y-m-d, H:i'); ?></div>
         </div>
-    </header>
+    </div>
 
     <!-- Comment content -->
     <div class="comment__text">
