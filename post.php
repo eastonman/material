@@ -71,5 +71,24 @@
 			</div>
 
 		<?php $this->need('inc/comments.php'); ?>
+		
+			<!-- theNext thePrev button -->
+			<div class="mdui-container mdui-m-b-2">
+            <nav class="mdui-row">
+<?php $this->theNext('%s', null, array('title' => '
+<div class="mdui-col-xs-4">
+<button class="mdui-btn mdui-btn-icon mdui-ripple  mdui-text-color-black" role="presentation">
+<i class="mdui-icon material-icons">arrow_back</i>
+</button>&nbsp;&nbsp;&nbsp;Newer
+</div> ', 'tagClass' => 'prev-content')); ?>
+                <div class="mdui-col-xs-4"></div>
+<?php $this->thePrev('%s', null, array('title' => '
+<div class="mdui-col-xs-4 mdui-text-right">Older&nbsp;&nbsp;&nbsp;
+<button class="mdui-btn mdui-btn-icon  mdui-ripple mdui-text-color-black" role="presentation">
+<i class="mdui-icon material-icons">arrow_forward</i>
+</button>
+</div>', 'tagClass' => 'prev-content')); ?>
+            </nav>
+            </div>
         <?php include('inc/sidebar.php'); ?>
         <?php include('inc/footer.php'); ?>

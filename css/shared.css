@@ -189,3 +189,11 @@
 	margin-left: 5px;
 	margin-right: 5px;
 }
+
+
+/*Comment List No Margin*/
+.comments > .comment-list {
+	margin: 0;
+	padding-bottom: 50px;
+	-webkit-padding-start: 0;
+}

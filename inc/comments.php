@@ -8,7 +8,7 @@
     <div 
     	id="li-<?php $comments->theId(); ?>"
     	style="overflow: visible;"
-    	class="comment  mdui-card comment-body 
+    	class="comment mdui-card comment-body 
     		<?php
     			if ($comments->_levels > 0) {
         			echo ' comment-child';
@@ -119,8 +119,10 @@
 <div class="mdui-container comments">
 
     <?php if ($this->allow('comment')): ?>
+    	
+    <?php $comments->listComments(); ?>
 
-    <div id="<?php $this->respondId(); ?>" class="respond">
+    <div id="<?php $this->respondId(); ?>" class="respond mdui-card mdui-p-a-5 mdui-m-b-5">
 
         <!-- Input form start -->
         <form method="post" action="<?php $this->commentUrl() ?>">
@@ -201,15 +203,15 @@
 
             <!-- Submit comment content button -->
 			<?php $comments->reply('
-                    <button id="comment-button" class="mdui-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                        <i class="material-icons mdui-icon" role="presentation">check</i><span class="visuallyhidden">add comment</span>
+                    <button id="comment-button" class="mdui-btn mdui-btn-icon mdui-ripple mdui-float-right">
+                        <i class="material-icons mdui-icon  mdui-text-color-black" role="presentation">check</i><span class="mdui-hidden">add comment</span>
                     </button>'); ?>
             <div class="mdui-tooltip" for="comment-button">Submit</div>
 
         </form>
     </div>
 
-    <?php $comments->listComments(); ?>
+    
     <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
 
     <?php else: ?>
