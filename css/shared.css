@@ -178,7 +178,7 @@
 /*Footer MDUI row Padding*/
 
 #bottom {
-	padding-top: 30px;
+	padding-top: 50px;
 }
 
 
@@ -188,4 +188,12 @@
 	text-decoration: none;
 	margin-left: 5px;
 	margin-right: 5px;
+}
+
+
+/*Comment List No Margin*/
+.comments > .comment-list {
+	margin: 0;
+	padding-bottom: 50px;
+	-webkit-padding-start: 0;
 }

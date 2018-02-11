@@ -16,7 +16,7 @@ $this->need('inc/header.php'); ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/material.min.css" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/style.min.css" />
         <?php else: ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/header.css'); ?>" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/index.css'); ?>" />
         <?php endif; ?>
@@ -232,8 +232,42 @@ $this->need('inc/header.php'); ?>
                 <?php endwhile; ?>
                 <!--Article Md Cards Output End-->
 
+				<!-- Echo Prev & After Page-->
+					<div class="mdui-row" >
+                            <nav class="">
+                                <div class="mdui-col-xs-2">
+									<?php $this->pageLink(
+                        '<div class=" mdui-float-left">
+                            <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple mdui-color-white" >arrow_back</i>
+                        </div>'); ?>
+                        		</div>
+                                
+                                <div class="mdui-text-center mdui-col-xs-8 mdui-m-y-3">page
+                                <?php if ($this->_currentPage>1) {
+                            echo $this->_currentPage;
+                        } else {
+                            echo 1;
+                        }?> of
+                                <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
+                                </div>
+                            	
+                            	<div class="mdui-col-xs-2" >
+                                <?php $this->pageLink(
+                        '<div class="mdui-float-right ">
+                            <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple" >arrow_forward</i>
+                        </div>', 'next'); ?>
+                        		</div>
+                            </nav>
+
+					</div>
+					<!-- Echo Navigation Icon End-->
+
+
 			</div>
-            <!--Blog Post Output End-->
+			<!-- Posts Output MD Container End-->
+
+		</div>
+        <!--Blog Post Output End-->
 
 
 
