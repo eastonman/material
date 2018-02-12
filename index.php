@@ -156,7 +156,7 @@ $this->need('inc/header.php'); ?>
 
 
                                     <!-- Article content -->
-                                    <div class="mdui-card-content">
+                                    <div class="mdui-card-content mdui-clearfix">
                                         <!--  -->
                                         <?php $this->excerpt(80, '...'); ?> &nbsp;&nbsp;&nbsp;
 
@@ -241,7 +241,7 @@ $this->need('inc/header.php'); ?>
                             <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple mdui-color-white" >arrow_back</i>
                         </div>'); ?>
                         		</div>
-                                
+
                                 <div class="mdui-text-center mdui-col-xs-8 mdui-m-y-3">page
                                 <?php if ($this->_currentPage>1) {
                             echo $this->_currentPage;
@@ -250,7 +250,7 @@ $this->need('inc/header.php'); ?>
                         }?> of
                                 <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
                                 </div>
-                            	
+
                             	<div class="mdui-col-xs-2" >
                                 <?php $this->pageLink(
                         '<div class="mdui-float-right ">
