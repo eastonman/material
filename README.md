@@ -4,12 +4,15 @@ New Material 是一款 Typecho 的主题
 
 功能尚不完善，若需要完整的功能请下载stable版或deprecated分支(有很多bug）
 
+![](https://ww2.sinaimg.cn/large/a15b4afegy1fof5zmd07rj20uk0i20zl.jpg)
+
 ## Contents 目录
 
 - [General 概括](#general-概括)
 - [Feature 特性](#feature-特性)
 - [Demo 演示](#demo-演示)
 - [Setup 设置](#setup-设置)
+- [Preview 预览](#preview-预览)
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
 
@@ -40,6 +43,10 @@ New Material 是一款 Typecho 的主题
 - 下载最新文件 然后覆盖原文件即可更新主题, 部分新增加的功能需要到后台开启才会生效 (建议更新后先切换为其他主题, 再切换回该主题)。否则有可能会导致莫名其妙的 bug...
 - 在 "设置外观" 中打造一个属于你自己的博客
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符 `<!-- more -->` 控制输出。
+
+## Preview 预览
+
+![](https://ww2.sinaimg.cn/large/a15b4afegy1fof6j1mfrgj20xe0otdiu.jpg)
 
 ## Contributing 贡献
 

@@ -26,9 +26,15 @@
 /*Responsive Appbat End*/
 
 
-/*Title On Appbar Align to center*/
+/* Appbar Title Align to center*/
 .header-center-title {
 	margin: 0 auto;
+}
+
+/******** Appbar Burger Icon ******/
+/*absolute postion*/
+.mdui-toolbar > .mdui-btn {
+	position: absolute;
 }
 
 
@@ -172,6 +178,19 @@
 }
 
 /*Sidebar Dropdown Arrow Layout End*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
