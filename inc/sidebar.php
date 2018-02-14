@@ -102,7 +102,7 @@
     <!--SideBar Dropdown Menu End-->
 
     <!--Sidebar Main Content Begin -->
-    <ul class="mdui-list mdui-list-dense">
+    <ul class="mdui-list mdui-list">
         <!-- Homepage -->
         <li class="mdui-list-item" >
                 <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
@@ -228,11 +228,10 @@
 
 
         <a href="https://github.com/manyang901/material" target="_blank" class="mdui-list mdui-list-item">
-            <div class="mdui-list-item-content">
+            <div class="mdui-list-item-content mdui-text-color-indigo">
                 <?php if ($this->options->langis == '0'): ?> Theme - Material
                 <?php elseif ($this->options->langis == '1'): ?> 主题 - Material
                 <?php endif; ?>
-                <span class="sidebar-badge badge-circle">i</span>
             </div>
         </a>
 
