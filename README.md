@@ -23,6 +23,7 @@ New Material 是一款 Typecho 的主题
 - Original Author 原作者：Viosey
 - Version 版本：2.0.0
 - Compatibility 兼容：PHP 5.4+, MySQL, Typecho 1.0、1.1（其余数据库未测试）
+- Browser Compatibility 浏览器兼容性: Google Chrome 56+ , Firefox latest , Opera latest ,Internet explorer 11, Microsoft Edge 14+
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ## Feature 特性
