@@ -30,7 +30,7 @@ $this->need('inc/header.php'); ?>
 
 <!-- Html Body Start-->
 
-<body class="mdui-drawer-body-left" >
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>" >
 
 	<div>
 
@@ -68,7 +68,13 @@ $this->need('inc/header.php'); ?>
 	                <div class="mdui-col-xs-12 mdui-col-md-7 mdui-col-offset-md-1">
 						<div class="mdui-card top-card">
 							<div class="mdui-card-media" >
-							<a href="#"><img class="main-pic" src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" /></a>
+                                <a href="<?php $this->options->MainPicHref(); ?>">
+                                    <?php if (!empty($this->options->MainPic )): ?>
+                                        <img src="<?php $this->options->MainPic(); ?>">
+                                    <?php else: ?>
+                                        <img class="main-pic" src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
+                                    <?php endif; ?>
+                                </a>
 							</div>
 						</div>
 					</div>
@@ -78,7 +84,13 @@ $this->need('inc/header.php'); ?>
                 	<div class="mdui-col-xs-12 mdui-col-md-3" >
                 		<div class="mdui-card top-card mdui-valign" >
                 			<div class="mdui-card-media mdui-center" >
-                				<img class="main-logo" src="<?php $this->options->themeUrl('img/Gravatar.png') ?>" >
+                                <a href="<?php $this->options->LogoHref(); ?>">
+                                    <?php if (!empty($this->options->Logo )): ?>
+                                        <img src="<?php $this->options->Logo(); ?>">
+                                    <?php else: ?>
+                				        <img class="main-logo" src="<?php $this->options->themeUrl('img/Gravatar.png') ?>" >
+                                    <?php endif; ?>
+                                </a>
                 			</div>
 
 

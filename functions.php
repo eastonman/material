@@ -22,14 +22,6 @@ function themeConfig($form)
         填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b>"));
     $form->addInput($CDNUrl);
     
-    $FontSource = new Typecho_Widget_Helper_Form_Element_Radio('FontSource',
-        array(
-            '0' => _t('调用 Google fonts (使用 https://fonts.proxy.ustclug.org (中科大 https 镜像加速)<br />'),
-            '1' => _t('调用主题文件夹自带的 Roboto &emsp;'),
-        ),
-
-        '1', _t('Roboto 字体使用来源'), null);
-    $form->addInput($FontSource);
     
     $langis = new Typecho_Widget_Helper_Form_Element_Radio('langis',
         array(
@@ -55,10 +47,34 @@ function themeConfig($form)
         '1', _t('背景设置'), _t("选择背景方案, 对应填写下方的 '<b>背景颜色 / 图片</b>' 或选择 '<b>渐变样式</b>', 这里默认使用图片背景.")
     );
     $form->addInput($BackgroundType);
+
+    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', null, _t('indigo'), _t('主题颜色'), _t('填入md颜色类别（如indigo）'));
+    $form->addInput($ThemeColor);
+
+    $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', null, _t('#039BE5'), _t('Android Chrome 地址栏颜色'), null);
+    $form->addInput($ChromeThemeColor);
     
     $BgContent = new Typecho_Widget_Helper_Form_Element_Text('BgContent', null, null, _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
         不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/bg.jpg'));
     $form->addInput($BgContent);
+
+    $avatarURL = new Typecho_Widget_Helper_Form_Element_Text('avatarURL', null, null, '个人头像地址', '填入头像的地址, 如不填写则使用默认头像');
+    $form->addInput($avatarURL);
+
+    $MainPic = new Typecho_Widget_Helper_Form_Element_Text('MainPic', null, null, _t('首页顶部左边的图片地址'), _t('填入主页最大的图片地址, 图片显示在首页顶部左边位置'));
+    $form->addInput($MainPic);
+
+    $Logo = new Typecho_Widget_Helper_Form_Element_Text('logo', null, null, _t('首页顶部右边 LOGO 图片地址'), _t('填入 LOGO 地址, 图片将显示于首页右上角板块'));
+    $form->addInput($Logo);
+
+    $MainPicHref = new Typecho_Widget_Helper_Form_Element_Text('MainPicHref', null, _t('#'), _t('首页顶部左边图片的点击跳转地址'), _t('点击首页大图后, 想要跳转网页的地址'));
+    $form->addInput($MainPicHref);
+
+    $LogoHref = new Typecho_Widget_Helper_Form_Element_Text('LogoHref', null, null, _t('首页顶部右边 LOGO 的点击跳转地址'), _t('点击 LOGO 后, 想要跳转网页的地址'));
+    $form->addInput($LogoHref);
+
+    $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', null, _t('Nice to meet you'), _t('首页顶部左边的标语'), _t('填入自定义文字, 显示于首页顶部左边的图片上'));
+    $form->addInput($slogan);
     
     $ThumbnailOption = new Typecho_Widget_Helper_Form_Element_Radio('ThumbnailOption',
         array(

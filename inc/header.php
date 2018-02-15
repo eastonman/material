@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" />
         <meta name="description" content=" " />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="theme-color" content="<?php $this->options->ChromeThemeColor(); ?>" />
         
         <!-- Add to homescreen for Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes" />
@@ -43,37 +43,6 @@
         <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css" />
 		<!--EXTERNAL CSS END-->
 			
-		<!--Roboto Font Begin-->
-		<!-- Deprecated Becase using mdui and bootcdn for roboto fonts -->
-		<!-- <?php if ($this->options->FontSource == '0'): ?>
-			<link href='https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css' />
-		<?php elseif ($this->options->FontSource == '1'): ?>
-        	<style>
-            	<?php if (!empty($this->options->CDNUrl)): ?>
-                	@font-face {
-                        font-family: Roboto;
-                        src: url('<?php $this->options->CDNUrl(); ?>/MaterialCDN/fonts/Roboto.ttf');
-                    }
-                    @font-face {
-                        font-family: Roboto;
-                        font-weight: 700;
-                        src: url('<?php $this->options->CDNUrl(); ?>/MaterialCDN/fonts/Roboto-700.ttf');
-                    }
-                <?php else: ?>
-                    @font-face {
-                        font-family: Roboto;
-                        src: url('<?php $this->options->themeUrl('fonts/Roboto.ttf'); ?>');
-                    }
-                    @font-face {
-                        font-family: Roboto;
-                        font-weight: 700;
-                        src: url('<?php $this->options->themeUrl('fonts/Roboto-700.ttf'); ?>');
-                    }
-                <?php endif; ?>
-            </style>
-            
-		<?php endif; ?> -->
-		<!--Roboto Font End-->
        
 		<!-- Style Setting Begin-->
 		<!-- Predefined Customize Style Setting-->
