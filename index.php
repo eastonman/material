@@ -88,7 +88,7 @@ $this->need('inc/header.php'); ?>
                                     <?php if (!empty($this->options->Logo )): ?>
                                         <img src="<?php $this->options->Logo(); ?>">
                                     <?php else: ?>
-                				        <img class="main-logo" src="<?php $this->options->themeUrl('img/Gravatar.png') ?>" >
+                				        <img class="main-logo" src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
                                     <?php endif; ?>
                                 </a>
                 			</div>
