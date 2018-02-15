@@ -17,7 +17,6 @@ $this->need('inc/header.php'); ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/style.min.css" />
         <?php else: ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/index.css'); ?>" />
         <?php endif; ?>
 <!-- Standalone CSS END-->
@@ -77,8 +76,8 @@ $this->need('inc/header.php'); ?>
 
                 	<!--Right Part(Blog Info) Begin-->
                 	<div class="mdui-col-xs-12 mdui-col-md-3" >
-                		<div class="mdui-card top-card" >
-                			<div class="mdui-card-media" >
+                		<div class="mdui-card top-card mdui-valign" >
+                			<div class="mdui-card-media mdui-center" >
                 				<img class="main-logo" src="<?php $this->options->themeUrl('img/Gravatar.png') ?>" >
                 			</div>
 
@@ -181,7 +180,7 @@ $this->need('inc/header.php'); ?>
                                     <!-- Article info-->
 
                                     <!-- Author avatar -->
-                                    <div class="mdui-card-header" >
+                                    <div class="mdui-card-header mdui-float-left" >
                                         <?php if (!empty($this->options->avatarURL)): ?>
                                             <img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                         <?php else: ?>
@@ -189,7 +188,9 @@ $this->need('inc/header.php'); ?>
                                         <?php endif; ?>
 
                                         <!--Author Name-->
-                                        <span class="mdui-card-header-title mdui-typo"><a  href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
+                                        <span class="mdui-card-header-title mdui-typo"><a  href="<?php $this->author->permalink(); ?>">
+                                            <?php $this->author(); ?></a>
+                                        </span>
 
                                         <span class="mdui-card-header-subtitle" >
                                             <?php if ($this->options->langis == '0'): ?>
@@ -198,30 +199,35 @@ $this->need('inc/header.php'); ?>
                                                 <?php $this->dateWord(); ?>
                                             <?php endif; ?>
 
-                                            <!--Right Part Of Md Card Header(Under) -->
-                                    		<div class="mdui-typo mdui-float-right mdui-valign" id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
-                                                <div class="mdui-text-color-pink-accent" >
-                                                    <?php $this->category(', '); ?>
-                                                </div>
-
-
-                                                <a href="<?php $this->permalink() ?>">
-                                                    <!-- 使用原生评论 -->
-                                                    <?php if ($this->options->commentis == '0'): ?>
-                                                    <?php echo '|'; ?>
-                                                    <?php $this->commentsNum('%d 评论'); ?>
-                                                    <!-- 使用wildfire评论 -->
-                                                    <?php else: ?>
-                                                    <?php endif; ?>
-                                                </a>
-
-                                        	</div>
-                                            <!--Right Part Of Md Card Header End-->
+                                            
                                         </span>
                                         <!--Row Of Subtitle End-->
 
                                     </div>
                                     <!--Md Card Header End-->
+
+
+                                    <!--Right Part Of Md Card Header(Under) -->
+                                    <div class="mdui-typo mdui-float-right index-post-card-header-rightinfo" id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
+
+                                        <div class="mdui-text-color-pink-accent" >
+                                            <?php $this->category(', '); ?>
+                                        </div>
+
+
+                                        <a href="<?php $this->permalink() ?>">
+                                            <!-- 使用原生评论 -->
+                                            <?php if ($this->options->commentis == '0'): ?>
+                                                <?php echo '|'; ?>
+                                                <?php $this->commentsNum('%d 评论'); ?>
+                                            <!-- 使用wildfire评论 -->
+                                            <?php else: ?>
+
+                                            <?php endif; ?>
+                                        </a>
+
+                                    </div>
+                                    <!--Right Part Of Md Card Header End-->
 
                                 </div>
                                 <!--Md Card Of Article End-->
