@@ -12,8 +12,17 @@ function themeConfig($form)
         <a href="mailto:my@kucloud.win" >帮助&支持</a> &nbsp;
     <a href="https://github.com/manyang901/material/issues" target="_blank">建议&反馈</a>
         </p>';
-        
-    
+
+    $FuncitonSwitch = new Typecho_Widget_Helper_Form_Element_Checkbox('FuncitonSwitch',
+        array(
+            'LazyLoad' => _t('LazyLoad')
+        ),
+
+        //Default choose
+        array('LazyLoad'), _t('功能开关')
+    );
+    $form->addInput($FuncitonSwitch->multiMode());
+
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', null, null, _t('favicon 地址'), _t('填入博客 favicon 的地址, 默认则不显示'));
     $form->addInput($favicon);
     
@@ -22,6 +31,11 @@ function themeConfig($form)
         填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b>"));
     $form->addInput($CDNUrl);
     
+    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', null, _t('indigo'), _t('主题颜色'), _t('填入md颜色类别（如indigo）'));
+    $form->addInput($ThemeColor);
+
+    $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', null, _t('#039BE5'), _t('Android Chrome 地址栏颜色'), null);
+    $form->addInput($ChromeThemeColor);
     
     $langis = new Typecho_Widget_Helper_Form_Element_Radio('langis',
         array(
@@ -37,7 +51,7 @@ function themeConfig($form)
     $CustomFonts = new Typecho_Widget_Helper_Form_Element_Text('CustomFonts', null, _t("Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif"), _t('自定义字体'), null);
     $form->addInput($CustomFonts); 
 
-	$BackgroundType = new Typecho_Widget_Helper_Form_Element_Radio('BackgroundType',
+    $BackgroundType = new Typecho_Widget_Helper_Form_Element_Radio('BackgroundType',
         array(
             '0' => _t('纯色背景 &emsp;'),
             '1' => _t('图片背景 &emsp;')
@@ -48,12 +62,7 @@ function themeConfig($form)
     );
     $form->addInput($BackgroundType);
 
-    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', null, _t('indigo'), _t('主题颜色'), _t('填入md颜色类别（如indigo）'));
-    $form->addInput($ThemeColor);
 
-    $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', null, _t('#039BE5'), _t('Android Chrome 地址栏颜色'), null);
-    $form->addInput($ChromeThemeColor);
-    
     $BgContent = new Typecho_Widget_Helper_Form_Element_Text('BgContent', null, null, _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
         不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/bg.jpg'));
     $form->addInput($BgContent);

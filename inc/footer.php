@@ -99,6 +99,20 @@
 
 <script src="//cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
 <script src="<?php $this->options->themeUrl('js/sidebar.js'); ?>"></script>
+<!--Register Service Worker-->
+        <script>
+            // Register the service worker
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('<?php $this->options->siteUrl('/serviceworker.js'); ?>', {scope: '<?php $this->options->siteUrl(''); ?>'} ).then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+
+                }).catch(function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            }
+        </script>
 </body>
 
 </html>

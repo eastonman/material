@@ -153,7 +153,13 @@ $this->need('inc/header.php'); ?>
                                         <div class="mdui-card-media index-post-card-media" >
 
                                             <!--Article ThumbNail-->
-	    									<img src="<?php showThumbnail($this); ?>" >
+                                            <picture>
+
+                                                <source srcset="./usr/themes/typecho-theme-material/img/random/material-1.png" type="image/jpeg">
+                                                <img src="./usr/themes/typecho-theme-material/img/random/material-1.png" >
+
+                                            </picture>
+
 											<!--Article Title Displays Above ThumbNail-->
                                         	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
                                         		<div class="mdui-card-primary mdui-typo" >

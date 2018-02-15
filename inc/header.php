@@ -107,7 +107,7 @@
         <?php endif; ?>
         <!-- nprogress Loading Line End-->
         	
-        <!--Backgroung Settings Begin-->
+        <!--Background Settings Begin-->
         <?php if ($this->options->BackgroundType =='0') : ?>
             <style>
                 body{
@@ -147,6 +147,9 @@
         <?php endif; ?>
         	
         <!--Background Settings End-->
+
+
+        
         	
         <!--Analysis code-->
 		<?php $this->options->analysis(); ?>
