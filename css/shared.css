@@ -98,6 +98,16 @@
 	.drawer-mod {
 		
 	}
+
+
+	.mdui-drawer .sidebar-header {
+	    position: relative;
+	    height: 157.5px;
+	    overflow: hidden;
+	    -webkit-transition: all 0.2s ease-in-out;
+	    -o-transition: all 0.2s ease-in-out;
+	    transition: all 0.2s ease-in-out;
+	}
 }
 
 /*SideBar Overlay End*/
@@ -148,7 +158,7 @@
 
 @media screen and (min-width: 1024px) {
 	.sidebar .sidebar-brand {
-		padding-left: 180px;
+		padding-left: 200px;
 
 	}
 

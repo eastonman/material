@@ -16,7 +16,8 @@
 	
 
 }
-.index-post-card-media > img {
+
+.index-post-card-media > picture > img {
 
 	max-height: 250px;
 	height: 250px;
