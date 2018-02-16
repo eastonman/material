@@ -23,13 +23,15 @@ New Material 是一款 Typecho 的主题
 - Original Author 原作者：Viosey
 - Version 版本：2.0.0
 - Compatibility 兼容：PHP 5.4+, MySQL, Typecho 1.0、1.1（其余数据库未测试）
-- Browser Compatibility 浏览器兼容性: Google Chrome 56+ , Firefox latest , Opera latest ,Internet explorer 11, Microsoft Edge 14+
+- Browser Compatibility 浏览器兼容性: Google Chrome 56+ , Firefox latest , Opera latest ,Internet explorer 11, Microsoft Edge 14+(Lazyload不支持IE和edge)
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ## Feature 特性
 
 - 遵循Google Material Design标准
 - 响应式设计，根据访问设备分辨率的不同显示不同的样式
+- Vanilla-Lazyload 首页缩略图“懒加载”
+- Webp图片优化，根据访问设备是否支持Webp格式的图片返回自适应的图片，节省70%的流量(需要在网站根目录下放置serviceworker.js，详见)
 
 
 项目重构中，特性正不断添加
@@ -44,6 +46,7 @@ New Material 是一款 Typecho 的主题
 - 下载最新文件 然后覆盖原文件即可更新主题, 部分新增加的功能需要到后台开启才会生效 (建议更新后先切换为其他主题, 再切换回该主题)。否则有可能会导致莫名其妙的 bug...
 - 在 "设置外观" 中打造一个属于你自己的博客
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符 `<!-- more -->` 控制输出。
+- 若要使用Webp自适应图片，需要将解压出文件中serviceworker.js复制到网站的根目录(这是由于serviceworker作用范围的限制和typecho主题结构的特殊性)，不使用则所有设备全部返回png格式的图片
 
 ## Preview 预览
 
