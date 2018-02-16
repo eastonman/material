@@ -98,7 +98,10 @@
 </main>
 
 <script src="//cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
+<script async src="https://cdn.bootcss.com/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
 <script src="<?php $this->options->themeUrl('js/sidebar.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/lazyload.js'); ?>"></script>
+
 <!--Register Service Worker-->
         <script>
             // Register the service worker

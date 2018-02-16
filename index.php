@@ -13,8 +13,8 @@ $this->need('inc/header.php'); ?>
 
 <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/material.min.css" />
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/style.min.css" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/shared.css" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/index.css" />
         <?php else: ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/index.css'); ?>" />
@@ -155,8 +155,8 @@ $this->need('inc/header.php'); ?>
                                             <!--Article ThumbNail-->
                                             <picture>
 
-                                                <source srcset="./usr/themes/typecho-theme-material/img/random/material-1.png" type="image/jpeg">
-                                                <img src="./usr/themes/typecho-theme-material/img/random/material-1.png" >
+                                                <source media="(min-width: 1024px)" data-srcset="<?php showThumbnail($this); ?>" type="image/jpeg">
+                                                <img alt="ThumbNail" data-src="<?php showThumbnail($this); ?>" >
 
                                             </picture>
 
