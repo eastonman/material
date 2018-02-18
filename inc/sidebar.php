@@ -13,9 +13,9 @@
                 <img src="<?php $this->options->logo() ?>">
                 <?php else: ?>
                 <?php if (!empty($this->options->CDNURL)): ?>
-                <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/Avatar.png">
+                <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/Avatar.jpg">
                 <?php else: ?>
-                <img src="<?php $this->options->themeUrl('img/Avatar.png') ?>">
+                <img src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>">
                 <?php endif; ?>
                 <?php endif; ?>
                 <?php endif; ?>

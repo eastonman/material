@@ -30,3 +30,38 @@ self.addEventListener('fetch', function(event) {
     }
   }
 });
+
+
+
+//Workbox Cache. for lwa supprot begin
+
+// workbox 3.x 开始是将 workbox 核心 lib 放在 CDN 维护
+// 当然也可以挪到自己的 CDN 维护
+importScripts('https://cdn.jsdelivr.net/npm/workbox-sw@3.0.0-beta.0/build/workbox-sw.min.js');
+
+if (workbox) {
+    console.log(`Yay! workbox is loaded 🎉`);
+}
+else {
+    console.log(`Boo! workbox didn't load 😬`);
+}
+
+const fileManifest = [
+    {
+        'url': './',
+        'revision': '1'
+    },
+    {
+        'url': 'https://cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css',
+        'revision': '1'
+    }
+];
+
+
+workbox.precaching.precacheAndRoute(fileManifest);
+
+
+workbox.routing.registerRoute(
+    './',
+    workbox.strategies.networkFirst()
+);
