@@ -9,7 +9,7 @@
 
         <!-- Add to homescreen for Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes" />
-		<link rel="manifest" href="<?php $this->options->themeUrl('manifest.json'); ?>">
+		<link rel="manifest" href="<?php $this->options->siteUrl('manifest.json'); ?>">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="application-name" content="PolyQY">
         <meta name="apple-mobile-web-app-title" content="PolyQY">

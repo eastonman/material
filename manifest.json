@@ -1,9 +1,12 @@
 {
-  "name": "PolyQY",
+"name": "PolyQY",
   "short_name": "PolyQY",
   "lang": "en-US",
-  "start_url": "/",
+  "start_url": "https://devtest.kucloud.win:12043/index.php",
   "display": "standalone",
+  "theme_color": "#009688",
+  "background_color": "#fff",
+  "scope": "/",
   "icons": [
     {
       "src": "./img/icon/android-icon-192x192.png",

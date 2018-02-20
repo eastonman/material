@@ -7,7 +7,7 @@ self.addEventListener('fetch', function(event) {
   var req = event.request.clone();
 
     // Check if the image is a jpeg
-    if (/\.jpg$|.png$/.test(event.request.url)) {
+    if (/\.jpg$|^material/.test(event.request.url)) {
 
       // Get all of the headers
       let headers = Array.from(req.headers.entries());
