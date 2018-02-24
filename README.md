@@ -29,7 +29,7 @@ New Material 是一款 Typecho 的主题
 - 遵循Google Material Design标准
 - 响应式设计，根据访问设备分辨率的不同显示不同的样式
 - Vanilla-Lazyload 首页缩略图“懒加载”
-- Webp图片优化，根据访问设备是否支持Webp格式的图片返回自适应的图片，节省70%的流量(需要在网站根目录下放置serviceworker.js，详见)
+- Webp图片优化，根据访问设备是否支持Webp格式的图片返回自适应的图片，节省70%的流量(需要在网站根目录下放置serviceworker.js，详见Setup-设置部分)
 - ServiceWorker 缓存控制
 - PWA 支持(需自行添加manifest.json到网站根目录)
 
