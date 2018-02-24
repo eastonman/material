@@ -5,3 +5,4 @@ js/dsembed.js
 *.bak
 manifest.json
 push.sh
+*.sh
