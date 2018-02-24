@@ -4,8 +4,6 @@ New Material 是一款 Typecho 的主题
 
 ![](https://ww2.sinaimg.cn/large/a15b4afegy1fof5zmd07rj20uk0i20zl.jpg)
 
-![](https://ww2.sinaimg.cn/large/a15b4afegy1fof5zmd07rj20uk0i20zl.jpg)
-
 ## Contents 目录
 
 - [General 概括](#general-概括)
@@ -51,10 +49,6 @@ New Material 是一款 Typecho 的主题
 - 若要使用Webp自适应图片，需要将解压出文件中serviceworker.js复制到网站的根目录(这是由于serviceworker作用范围的限制和typecho主题结构的特殊性)，不使用则所有设备全部返回png格式的图片，注意，现有策略是全部替换请求中的.png为.webp，这意味着若png图没有对应的webp图像则会返回404
 - 若需使用PWA，请自行在网站根目录加入manifest.json文件，也可以在线生成
 
-
-## Preview 预览
-
-![](https://ww2.sinaimg.cn/large/a15b4afegy1fof6j1mfrgj20xe0otdiu.jpg)
 
 ## Preview 预览
 
