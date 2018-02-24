@@ -99,8 +99,25 @@
 
 <script src="//cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
 <script src="https://cdn.bootcss.com/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
 <script src="<?php $this->options->themeUrl('js/sidebar.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('js/lazyload.js'); ?>"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+<script>
+//lazyload
+var myLazyLoad = new LazyLoad();
+</script>
+
+<!--PJAX Js Event-->
+<script>
+new Pjax({
+  elements: "a", // default is "a[href], form[action]"
+  selectors: ["main"]
+});
+
+	document.addEventListener('pjax:send', function() { NProgress.start(); });
+	document.addEventListener('pjax:complete',   function() { NProgress.done();  });
+</script>
 
 <!--Register Service Worker-->
         <script>
