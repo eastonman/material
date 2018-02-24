@@ -8,7 +8,7 @@ function themeConfig($form)
     margin-bottom: 10px;
     margin-top: 10px;
     font-size: 16px;">感谢您使用 Material 主题</span>
-        <span style="margin-bottom:10px;display:block">请关注 <a href="https://github.com/manyang901/material" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">Github-Material</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持</span></span>
+        <span style="margin-bottom:10px;display:block">请关注 <a href="https://github.com/manyang901/material" target="_blank" style="color:#009688;font-weight:bold;text-decoration:underline">Github-Material</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持</span></span>
         <a href="mailto:my@kucloud.win" >帮助&支持</a> &nbsp;
     <a href="https://github.com/manyang901/material/issues" target="_blank">建议&反馈</a>
         </p>';
@@ -23,8 +23,8 @@ function themeConfig($form)
     );
     $form->addInput($FuncitonSwitch->multiMode());
 
-    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', null, null, _t('favicon 地址'), _t('填入博客 favicon 的地址, 默认则不显示'));
-    $form->addInput($favicon);
+    $IconUrl = new Typecho_Widget_Helper_Form_Element_Text('IconUrl', null, null, _t('Icon 地址'), _t('填入博客所有icon 的地址，必须包含目录img/icon并且有相应的png文件, 默认显示主题目录下img/icon中的图标'));
+    $form->addInput($IconUrl);
     
     $CDNUrl = new Typecho_Widget_Helper_Form_Element_Text('CDNUrl', null, null, _t('CDN 地址'), _t("
         新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
