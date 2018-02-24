@@ -65,3 +65,9 @@ workbox.routing.registerRoute(
     './',
     workbox.strategies.networkFirst()
 );
+
+
+workbox.routing.registerRoute(
+    'https://cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css',
+    workbox.strategies.cacheFirst()
+);
