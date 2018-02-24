@@ -5,7 +5,7 @@
  *
  * @package Theme.Material
  * @author Viosey&manyang901
- * @version 2.0.0
+ * @version 2.1.0
  * @link https://github.com/manyang901/material
  */
 
@@ -155,8 +155,8 @@ $this->need('inc/header.php'); ?>
                                             <!--Article ThumbNail-->
                                             <picture>
 
-                                                <source media="(min-width: 1024px)" data-srcset="<?php showThumbnail($this); ?>" type="image/jpeg">
-                                                <img alt="ThumbNail" data-src="<?php showThumbnail($this); ?>" >
+                                                <source media="(min-width: 1024px)" data-srcset="<?php randomThumbnail($this); ?>" type="image/jpeg">
+                                                <img alt="ThumbNail" data-src="<?php randomThumbnail($this); ?>" >
 
                                             </picture>
 

@@ -25,18 +25,18 @@ function themeConfig($form)
 
     $IconUrl = new Typecho_Widget_Helper_Form_Element_Text('IconUrl', null, null, _t('Icon 地址'), _t('填入博客所有icon 的地址，必须包含目录img/icon并且有相应的png文件, 默认显示主题目录下img/icon中的图标'));
     $form->addInput($IconUrl);
-    
+
     $CDNUrl = new Typecho_Widget_Helper_Form_Element_Text('CDNUrl', null, null, _t('CDN 地址'), _t("
         新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
         填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b>"));
     $form->addInput($CDNUrl);
-    
+
     $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', null, _t('indigo'), _t('主题颜色'), _t('填入md颜色类别（如indigo）'));
     $form->addInput($ThemeColor);
 
     $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', null, _t('#039BE5'), _t('Android Chrome 地址栏颜色'), null);
     $form->addInput($ChromeThemeColor);
-    
+
     $langis = new Typecho_Widget_Helper_Form_Element_Radio('langis',
         array(
             '0' => _t('English <br />'),
@@ -47,9 +47,9 @@ function themeConfig($form)
         '0', _t('界面语言设置'), _t("默认使用英文")
     );
     $form->addInput($langis);
-    
+
     $CustomFonts = new Typecho_Widget_Helper_Form_Element_Text('CustomFonts', null, _t("Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif"), _t('自定义字体'), null);
-    $form->addInput($CustomFonts); 
+    $form->addInput($CustomFonts);
 
     $BackgroundType = new Typecho_Widget_Helper_Form_Element_Radio('BackgroundType',
         array(
@@ -84,7 +84,7 @@ function themeConfig($form)
 
     $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', null, _t('Nice to meet you'), _t('首页顶部左边的标语'), _t('填入自定义文字, 显示于首页顶部左边的图片上'));
     $form->addInput($slogan);
-    
+
     $ThumbnailOption = new Typecho_Widget_Helper_Form_Element_Radio('ThumbnailOption',
         array(
             '1' => _t('显示文章内第一张图片 (若无图片则显示随机图片)<br />'),
@@ -99,7 +99,7 @@ function themeConfig($form)
 
 	$RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', null, _t('27'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
     $form->addInput($RandomPicAmnt);
-    
+
     $footersns = new Typecho_Widget_Helper_Form_Element_Checkbox('footersns',
         array(
             'ShowTwitter' => _t('Twitter'),
@@ -115,7 +115,7 @@ function themeConfig($form)
         array('ShowTwitter','ShowFacebook','ShowGithub'), _t('页脚 SNS 图标按钮显示设置'), _t('开启后, 按钮显示于博客页脚位置')
     );
     $form->addInput($footersns);
-    
+
     $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('TwitterURL', null, _t('NULL'), _t('Twitter 地址'), null);
     $form->addInput($TwitterURL);
 
@@ -130,20 +130,20 @@ function themeConfig($form)
 
     $LinkedinURL = new Typecho_Widget_Helper_Form_Element_Text('LinkedinURL', null, null, _t('Linkedin 地址'), null);
     $form->addInput($LinkedinURL);
-    
+
     $NiconicoURL = new Typecho_Widget_Helper_Form_Element_Text('NiconicoURL', null, null, _t('Niconico 地址'), null);
     $form->addInput($NiconicoURL);
-    
+
     $SteamURL = new Typecho_Widget_Helper_Form_Element_Text('SteamURL', null, null, _t('Steam 地址'), null);
     $form->addInput($SteamURL);
-    
+
     $YoutubeURL = new Typecho_Widget_Helper_Form_Element_Text('YoutubeURL', null, null, _t('Youtube 地址'), null);
     $form->addInput($YoutubeURL);
-    
+
     $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', null, null, _t('网站统计代码 + 自定义字体源'), _t('填入如 Google Analysis 的第三方统计代码或字体源'));
     $form->addInput($analysis);
 
-    
+
 }
 
 
@@ -151,7 +151,7 @@ function themeConfig($form)
 function showThumbnail($widget)
 {
     //If article no include picture, display random default picture
-    if (empty($widget->widget('Widget_Options')->RandomPicAmnt)) { 
+    if (empty($widget->widget('Widget_Options')->RandomPicAmnt)) {
 		$RandPicAmnt = 27;
 	} else {
 		$RandPicAmnt = $widget->widget('Widget_Options')->RandomPicAmnt;
@@ -168,16 +168,45 @@ function showThumbnail($widget)
     // If only one random default picture, delete the following "//"
     //$random = $widget->widget('Widget_Options')->themeUrl . '/img/random.jpg';
 
+    $cai = '';
     $attach = $widget->attachments(1)->attachment;
     $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
+    $patternMD = '/\!\[.*?\]\((http(s)?:\/\/.*?(jpg|png))/i';
+    $patternMDfoot = '/\[.*?\]:\s*(http(s)?:\/\/.*?(jpg|png))/i';
 
-    //if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
-    //    echo $thumbUrl[1][0];
-   // } elseif ($attach->isImage) {
+    if ($attach && $attach->isImage) {
+        $ctu = $attach->url.$cai;
+    } //调用第一个图片附件
+    elseif (preg_match_all($pattern, $widget->content, $thumbUrl)) {
+        //下面是调用文章第一个图片
+        $ctu = $thumbUrl[1][0].$cai;
+    }
+    //如果是内联式markdown格式的图片
+    elseif (preg_match_all($patternMD, $widget->content, $thumbUrl)) {
+        $ctu = $thumbUrl[1][0].$cai;
+    }
+    //如果是脚注式markdown格式的图片
+    elseif (preg_match_all($patternMDfoot, $widget->content, $thumbUrl)) {
+            $ctu = $thumbUrl[1][0].$cai;
+    }
+    //以上都不符合，即随机输出图片
+
+    else {
+        $ctu = $random;
+    }
+    echo $ctu;
+
+
+//    $attach = $widget->attachments(1)->attachment;
+//    $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
+
+//    if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
+//        echo $thumbUrl[1][0];
+//    } elseif ($attach->isImage) {
 //        echo $attach->url;
 //    } else {
-        echo $random;
-//    }
+//        echo $random;
+//	}
 }
 
 //Random thumbnail
