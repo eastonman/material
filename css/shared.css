@@ -48,15 +48,16 @@
 
 
 
-/* SideBar Overlay (Also Responsive) */
+/* SideBar  Responsive */
 
 
 
 @media screen and (max-width: 600px) {
-	
+
 	.drawer-mod {
 		max-width: 240px !important;
 	}
+	
 	.drawer-mod::-webkit-scrollbar {
 		width: 0;
 		height: 0;
@@ -76,7 +77,28 @@
 
 
 
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+	.drawer-mod {
+		max-width: 240px !important;
+	}
+
+	.mdui-drawer .sidebar-header {
+	    position: relative;
+	    height: 140px;
+	    overflow: hidden;
+	    -webkit-transition: all 0.2s ease-in-out;
+	    -o-transition: all 0.2s ease-in-out;
+	    transition: all 0.2s ease-in-out;
+	}
+
+}
+
+@media screen and (min-width: 1024px) {
+	.drawer-mod {
+		
+	}
+
 
 	.mdui-drawer .sidebar-header {
 	    position: relative;
@@ -86,7 +108,6 @@
 	    -o-transition: all 0.2s ease-in-out;
 	    transition: all 0.2s ease-in-out;
 	}
-
 }
 
 /*SideBar Overlay End*/
@@ -114,7 +135,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-
+/*Sidebar Header End*/
 
 
 /*******SideBar Dropdown Arrow Layout ********/
@@ -131,13 +152,13 @@
 @media screen and (min-width: 600px) and (max-width: 1024px) {
 
 	.sidebar .sidebar-brand {
-		padding-left: 280px;
+		padding-left: 200px;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	.sidebar .sidebar-brand {
-		padding-left: 180px;
+		padding-left: 200px;
 
 	}
 
@@ -186,7 +207,11 @@
 
 
 
-
+/********************************************************************/
+/*************************                     *********************/
+/*************************   Sidebar CSS END   **********************/
+/*************************                     **********************/
+/********************************************************************/
 
 
 

@@ -3,5 +3,5 @@ js/dsembed.js
 .DS_Store
 
 *.bak
-
+manifest.json
 push.sh

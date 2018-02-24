@@ -6,18 +6,25 @@
 	height:360px;
 }
 .main-logo {
-	height: 50%;
-	width: 50%;
+	height: 200px !important;
+	width: 200px !important;
 }
 
 .mdui-row > [class*="mdui-col-"] {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 0;
+	padding-bottom: 25px;
 	
 
 }
-.index-post-card-media > img {
 
+.index-post-card-media > picture > img {
+
+	max-height: 250px;
 	height: 250px;
 	object-fit: cover;
+}
+
+.index-post-card-header-rightinfo {
+	margin-top: 15px;
+	padding: 1em;
 }
