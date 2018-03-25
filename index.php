@@ -59,7 +59,7 @@ $this->need('inc/header.php'); ?>
 
 
 			<!-- Blog Header(picture&avatar&slogan) Began -->
-            <div class="mdui-container mdui-appbar-with-toolbar" >
+            <div class="mdui-container mdui-appbar-with-toolbar pjax-load" >
 
                 <!--First Row Of Content-->
                 <div class="mdui-row">

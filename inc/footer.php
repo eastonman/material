@@ -111,8 +111,8 @@ var myLazyLoad = new LazyLoad();
 <!--PJAX Js Event-->
 <script>
 new Pjax({
-  elements: "a", // default is "a[href], form[action]"
-  selectors: ["main"]
+  elements: "a[href]", // default is "a[href], form[action]"
+  selectors: [".pjax-load"]
 });
 
 	document.addEventListener('pjax:send', function() { NProgress.start(); });
