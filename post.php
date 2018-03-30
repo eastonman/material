@@ -36,7 +36,7 @@
 			<!-- Header & Appbar & Title End -->
 
 
-			<div class="mdui-container-fluid mdui-appbar-with-toolbar" >
+			<div class="mdui-container-fluid mdui-appbar-with-toolbar pjax-load" >
 				<div class="mdui-row" >
 					<div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1">
 						<!--Post Content Md Card Begin-->
@@ -73,7 +73,7 @@
 		<?php $this->need('inc/comments.php'); ?>
 		
 			<!-- theNext thePrev button -->
-			<div class="mdui-container mdui-m-b-2">
+			<div class="mdui-container mdui-m-b-2 pjax-load">
             <nav class="mdui-row">
 <?php $this->theNext('%s', null, array('title' => '
 <div class="mdui-col-xs-4">

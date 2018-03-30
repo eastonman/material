@@ -107,7 +107,7 @@ $this->need('inc/header.php'); ?>
 
 
             <!--Blog Posts Output Begin-->
-            <div class="mdui-container" >
+            <div class="mdui-container pjax-load" >
 
                 <?php while ($this->next()): ?>
 
