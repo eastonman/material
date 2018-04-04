@@ -1,32 +1,28 @@
 <!-- SideBar Using MDUI Begin-->
 
 <div class="mdui-drawer mdui-drawer-full-height mdui-color-white drawer-mod sidebar" id="sidebar">
+
     <!--SideBar Header Begin-->
     <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl() ?>img/sidebarheader.jpg );">
 
-            <!-- Sidebar brand image -->
-            <div class="sidebar-image">
-                <?php if (!empty($this->options->avatarURL)): ?>
-                <img src="<?php $this->options->avatarURL() ?>">
-                <?php else: ?>
+        <!-- Sidebar brand image -->
+        <div class="sidebar-image">
+            <?php if (!empty($this->options->avatarURL)): ?>
+                    <img src="<?php $this->options->avatarURL() ?>">
+            <?php else: ?>
                 <?php if (!empty($this->options->logo)): ?>
-                <img src="<?php $this->options->logo() ?>">
+                    <img src="<?php $this->options->logo() ?>">
                 <?php else: ?>
-                <?php if (!empty($this->options->CDNURL)): ?>
-                <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/Avatar.jpg">
-                <?php else: ?>
-                <img src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>">
+                    <?php if (!empty($this->options->CDNURL)): ?>
+                        <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/Avatar.jpg">
+                    <?php else: ?>
+                        <img src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>">
+                    <?php endif; ?>
                 <?php endif; ?>
-                <?php endif; ?>
-                <?php endif; ?>
-            </div>
-
-
-
+            <?php endif; ?>
+        </div>
 
         <i class="sidebar-brand mdui-collapse-item-arrow mdui-icon material-icons mdui-ripple mdui-text-color-white-icon" id="sidebar-header-collapse-controller" >arrow_drop_down</i>
-
-
 
     </div>
     <!--SideBar Header End-->
@@ -40,59 +36,62 @@
             <!--Content Show When Clicking Arrow On the SideBar Header-->
             <div class="mdui-collapse-item-body">
                 <ul class="mdui-list mdui-list-dense" >
-                <?php if ($this->user->hasLogin()): ?>
-                    <li class="mdui-list-item mdui-ripple" >
-                        <a href="<?php $this->options->adminUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
-                            <i class="mdui-icon material-icons">account_circle</i>
-                            <?php if ($this->options->langis == '0'): ?> Profile
-                            <?php elseif ($this->options->langis == '1'): ?> 用户概要
-                            <?php elseif ($this->options->langis == '2'): ?> 使用者概要
-                            <?php endif; ?>
-                        </a>
-                    </li>
 
-                    <li class="mdui-list-item mdui-ripple" >
-                        <a href="<?php $this->options->adminUrl('options-theme.php'); ?>" class="mdui-list-item-content" tabindex="-1">
-                            <i class="mdui-icon material-icons">settings</i>
-                            <?php if ($this->options->langis == '0'): ?> Settings
-                            <?php elseif ($this->options->langis == '1'): ?> 设置外观
-                            <?php elseif ($this->options->langis == '2'): ?> 設置外觀
-                            <?php endif; ?>
-                        </a>
-                    </li>
+                    <?php if ($this->user->hasLogin()): ?>
 
-                    <li class="mdui-list-item mdui-ripple" >
-                        <a href="<?php $this->options->logoutUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
-                            <i class="mdui-icon material-icons">exit_to_app</i>
-                            <?php if ($this->options->langis == '0'): ?> Exit
-                            <?php elseif ($this->options->langis == '1'): ?> 退出登录
-                            <?php elseif ($this->options->langis == '2'): ?> 退出登錄
-                            <?php endif; ?>
-                        </a>
-                    </li>
+                        <li class="mdui-list-item mdui-ripple" >
+                            <a href="<?php $this->options->adminUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
+                                <i class="mdui-icon material-icons">account_circle</i>
+                                <?php if ($this->options->langis == '0'): ?> Profile
+                                <?php elseif ($this->options->langis == '1'): ?> 用户概要
+                                <?php elseif ($this->options->langis == '2'): ?> 使用者概要
+                                <?php endif; ?>
+                            </a>
+                        </li>
 
-                    <?php else: ?>
+                        <li class="mdui-list-item mdui-ripple" >
+                            <a href="<?php $this->options->adminUrl('options-theme.php'); ?>" class="mdui-list-item-content" tabindex="-1">
+                                <i class="mdui-icon material-icons">settings</i>
+                                <?php if ($this->options->langis == '0'): ?> Settings
+                                <?php elseif ($this->options->langis == '1'): ?> 设置外观
+                                <?php elseif ($this->options->langis == '2'): ?> 設置外觀
+                                <?php endif; ?>
+                            </a>
+                        </li>
 
-                    <li class="mdui-list-item mdui-ripple" >
-                        <a href="<?php $this->options->loginUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
-                            <i class="mdui-icon material-icons">fingerprint</i>
+                        <li class="mdui-list-item mdui-ripple" >
+                            <a href="<?php $this->options->logoutUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
+                                <i class="mdui-icon material-icons">exit_to_app</i>
+                                <?php if ($this->options->langis == '0'): ?> Exit
+                                <?php elseif ($this->options->langis == '1'): ?> 退出登录
+                                <?php elseif ($this->options->langis == '2'): ?> 退出登錄
+                                <?php endif; ?>
+                            </a>
+                        </li>
 
-                            <?php if ($this->options->langis == '0'): ?> Login
-                            <?php elseif ($this->options->langis == '1'): ?> 用户登录
-                            <?php elseif ($this->options->langis == '2'): ?> 使用者登錄
-                            <?php endif; ?>
-                        </a>
-                    </li>
+                        <?php else: ?>
 
-                    <li class="mdui-list-item mdui-ripple" >
-                        <a href="<?php $this->options->adminUrl('register.php'); ?>" class="mdui-list-item-content" tabindex="-1">
-                            <i class="mdui-icon material-icons">person_add</i>
-                            <?php if ($this->options->langis == '0'): ?> Register
-                            <?php elseif ($this->options->langis == '1'): ?> 用户注册
-                            <?php elseif ($this->options->langis == '2'): ?> 使用者註冊
-                            <?php endif; ?>
-                        </a>
-                    </li>
+                        <li class="mdui-list-item mdui-ripple" >
+                            <a href="<?php $this->options->loginUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
+                                <i class="mdui-icon material-icons">fingerprint</i>
+
+                                <?php if ($this->options->langis == '0'): ?> Login
+                                <?php elseif ($this->options->langis == '1'): ?> 用户登录
+                                <?php elseif ($this->options->langis == '2'): ?> 使用者登錄
+                                <?php endif; ?>
+                            </a>
+                        </li>
+
+                        <li class="mdui-list-item mdui-ripple" >
+                            <a href="<?php $this->options->adminUrl('register.php'); ?>" class="mdui-list-item-content" tabindex="-1">
+                                <i class="mdui-icon material-icons">person_add</i>
+                                <?php if ($this->options->langis == '0'): ?> Register
+                                <?php elseif ($this->options->langis == '1'): ?> 用户注册
+                                <?php elseif ($this->options->langis == '2'): ?> 使用者註冊
+                                <?php endif; ?>
+                            </a>
+                        </li>
+
                     <?php endif; ?>
 
                 </ul>
@@ -224,19 +223,18 @@
 
 	</ul>
 
-		<!-- Sidebar bottom text -->
+
+	<!-- Sidebar bottom text -->
+    <a href="https://github.com/manyang901/material" target="_blank" class="mdui-list mdui-list-item">
+        <div class="mdui-list-item-content mdui-text-color-indigo">
+            <?php if ($this->options->langis == '0'): ?> Theme - Material
+            <?php elseif ($this->options->langis == '1'): ?> 主题 - Material
+            <?php endif; ?>
+        </div>
+    </a>
 
 
-        <a href="https://github.com/manyang901/material" target="_blank" class="mdui-list mdui-list-item">
-            <div class="mdui-list-item-content mdui-text-color-indigo">
-                <?php if ($this->options->langis == '0'): ?> Theme - Material
-                <?php elseif ($this->options->langis == '1'): ?> 主题 - Material
-                <?php endif; ?>
-            </div>
-        </a>
-
-
-        <?php if (!empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch)) : ?>
+    <?php if (!empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch)) : ?>
         <div id="upyun-logo">
             <a href="https://www.upyun.com/" target="_blank">
                 <?php if (!empty($this->options->CDNURL)): ?>
@@ -246,7 +244,7 @@
                 <?php endif; ?>
             </a>
         </div>
-        <?php endif; ?>
+    <?php endif; ?>
 
 
 </div>

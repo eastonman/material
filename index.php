@@ -32,10 +32,7 @@ $this->need('inc/header.php'); ?>
 
 <body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>" >
 
-	<div>
-
-
-        <!--Conten Of Index Page Begin-->
+        <!--Content Of Index Page Begin-->
 
 		<main>
 
@@ -49,7 +46,7 @@ $this->need('inc/header.php'); ?>
                     <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline mdui-center"  >
 						<?php $this->options->title(); ?>
 					</a>
-
+                    
 				</div>
 
 			</header>
@@ -288,14 +285,11 @@ $this->need('inc/header.php'); ?>
                             </nav>
 
 					</div>
-					<!-- Echo Navigation Icon End-->
+				<!-- Echo Navigation Icon End-->
 
 
 			</div>
 			<!-- Posts Output MD Container End-->
-
-		</div>
-        <!--Blog Post Output End-->
 
 
 
