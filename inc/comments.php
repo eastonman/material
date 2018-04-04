@@ -113,7 +113,7 @@
 
 <!-- 使用原生评论 -->
 
-<div class="mdui-container ">
+<div class="mdui-container pjax-load ">
 
     <?php if ($this->allow('comment')): ?>
     	

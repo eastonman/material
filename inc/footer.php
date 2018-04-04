@@ -1,6 +1,6 @@
 
 
-<div class="mdui-container-fluid">
+<div class="mdui-container-fluid pjax-load">
 		<!--Footer-->
         <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
 
@@ -112,7 +112,7 @@ var myLazyLoad = new LazyLoad();
 <script>
 new Pjax({
   elements: "a", // default is "a[href], form[action]"
-  selectors: ["main"]
+  selectors: ["title",".pjax-load"]
 });
 
 	document.addEventListener('pjax:send', function() { NProgress.start(); });
