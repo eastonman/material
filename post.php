@@ -3,7 +3,7 @@
 <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/shared.css" />
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>//MaterialCDN/css/post.css" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/post.css" />
         <?php else: ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/post.css'); ?>" />
@@ -12,8 +12,8 @@
 
 </head>
 
-<body class="mdui-drawer-body-left" >
-
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>"
+>
 	<div>
 
 		<main>
@@ -70,7 +70,7 @@
 			</div>
 
 		<?php $this->need('inc/comments.php'); ?>
-		
+
 			<!-- theNext thePrev button -->
 			<div class="mdui-container mdui-m-b-2 pjax-load">
             <nav class="mdui-row">
