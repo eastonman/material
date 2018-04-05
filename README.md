@@ -2,6 +2,10 @@
 
 New Material 是一款 Typecho 的主题
 
+![https://github.com/manyang901/material/releases](https://img.shields.io/github/downloads/manyang901/material/total.svg)
+![](https://img.shields.io/github/license/manyang901/material.svg)
+![](https://img.shields.io/badge/PR-welcome-blue.svg)
+
 ![](https://ww2.sinaimg.cn/large/a15b4afegy1fof5zmd07rj20uk0i20zl.jpg)
 
 ## Contents 目录
