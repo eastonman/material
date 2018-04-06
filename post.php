@@ -51,11 +51,20 @@
 							</div>
 
 							<div class="mdui-card-header" >
-                                        <?php if (!empty($this->options->avatarURL)): ?>
-                                            <img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
-                                        <?php else: ?>
-                                            <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
-                                        <?php endif; ?>
+                            	<?php if (!empty($this->options->avatarURL)): ?>
+                                	<img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                <?php else: ?>
+                                    <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
+                                <?php endif; ?>
+                                        	
+                                <!-- favorite -->
+								<?php $allplugin = Typecho_Plugin::export(); ?>
+								<?php if (array_key_exists('TeStat', $allplugin['activated'])): ?>
+									<button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like" data-cid="<?php $this->cid();?>" data-num="<?php $this->likesNum();?>">
+                                		<i class="material-icons mdl-badge mdl-badge--overlap" role="presentation" data-badge="<?php $this->likesNum();?>">favorite</i>
+                                		<span class="visuallyhidden">favorites</span>
+                            		</button>
+                    			<?php endif; ?>
 
                             </div>
 
@@ -70,6 +79,7 @@
 			</div>
 
 		<?php $this->need('inc/comments.php'); ?>
+		<?php getViewsStr($this); ?>
 
 			<!-- theNext thePrev button -->
 			<div class="mdui-container mdui-m-b-2 pjax-load">

@@ -230,7 +230,8 @@ $this->need('inc/header.php'); ?>
                                     <div class="mdui-typo mdui-float-right index-post-card-header-rightinfo" id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
 
                                         <div class="mdui-text-color-pink-accent" >
-                                            <?php $this->category(', '); ?>
+                                            <?php $this->category(', '); ?> |
+                                            <?php _e(getViewsStr($this)); ?>
                                         </div>
 
 
