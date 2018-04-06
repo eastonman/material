@@ -79,7 +79,7 @@
 			</div>
 
 		<?php $this->need('inc/comments.php'); ?>
-		<?php getViewsStr($this); ?>
+		
 
 			<!-- theNext thePrev button -->
 			<div class="mdui-container mdui-m-b-2 pjax-load">
@@ -101,3 +101,8 @@
             </div>
         <?php include('inc/sidebar.php'); ?>
         <?php include('inc/footer.php'); ?>
+        
+        <!-- Execute getViewsStr one time to let $views++ -->
+        <?php if (in_array('ViewCount',$this->options->FunctionSwitch)): ?>
+        	<?php getViewsStr($this); ?>
+        <?php endif; ?>

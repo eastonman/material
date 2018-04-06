@@ -13,15 +13,16 @@ function themeConfig($form)
     <a href="https://github.com/manyang901/material/issues" target="_blank">建议&反馈</a>
         </p>';
 
-    $FuncitonSwitch = new Typecho_Widget_Helper_Form_Element_Checkbox('FuncitonSwitch',
+    $FunctionSwitch = new Typecho_Widget_Helper_Form_Element_Checkbox('FunctionSwitch',
         array(
-            'LazyLoad' => _t('LazyLoad')
+            'LazyLoad' => _t('LazyLoad'),
+            'ViewCount' => _t('无插件访客统计')
         ),
 
         //Default choose
-        array('LazyLoad'), _t('功能开关')
+        array('LazyLoad', 'ViewCount'), _t('功能开关')
     );
-    $form->addInput($FuncitonSwitch->multiMode());
+    $form->addInput($FunctionSwitch->multiMode());
 
     $IconUrl = new Typecho_Widget_Helper_Form_Element_Text('IconUrl', null, null, _t('Icon 地址'), _t('填入博客所有icon 的地址，必须包含目录img/icon并且有相应的png文件, 默认显示主题目录下img/icon中的图标'));
     $form->addInput($IconUrl);
