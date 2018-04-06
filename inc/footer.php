@@ -116,7 +116,11 @@ new Pjax({
 });
 
 	document.addEventListener('pjax:send', function() { NProgress.start(); });
-	document.addEventListener('pjax:complete',   function() { NProgress.done();  });
+	document.addEventListener('pjax:complete',
+		function() { NProgress.done();
+		var inst = new mdui.Drawer('#sidebar');
+		inst.close();
+	});
 </script>
 
 <!--Register Service Worker-->
