@@ -11,7 +11,7 @@
 
 $this->need('inc/header.php'); ?>
 
-<!-- Standalone CSS Calling For Index -->
+    <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/shared.css" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/index.css" />
@@ -19,7 +19,7 @@ $this->need('inc/header.php'); ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/index.css'); ?>" />
         <?php endif; ?>
-<!-- Standalone CSS END-->
+    <!-- Standalone CSS END-->
 
 </head>
 
@@ -32,18 +32,18 @@ $this->need('inc/header.php'); ?>
 
 <body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>" >
 
-        <!--Content Of Index Page Begin-->
+        <!-- Content Of Index Page Begin -->
 
 		<main>
 
 			<!-- Header & Appbar & Title -->
 			<header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide header-responsive" >
+
 				<div class="mdui-toolbar mdui-color-theme mdui-color-white" >
 
-					<!--<div class="mdui-toolbar-spacer"></div>-->
 					<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
 
-                    <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline mdui-center"  >
+                    <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline mdui-center">
 						<?php $this->options->title(); ?>
 					</a>
                     
@@ -89,15 +89,13 @@ $this->need('inc/header.php'); ?>
                                     <?php endif; ?>
                                 </a>
                 			</div>
-
-
                 		</div>
-
                 	</div>
                 	<!--Blog Info End-->
 
                 </div>
                 <!--First Row Of content End-->
+
             </div>
             <!--Blog Header End-->
 
@@ -110,6 +108,7 @@ $this->need('inc/header.php'); ?>
 
                         <!-- Each Post Occupy One MD Row-->
 						<div class="mdui-row" >
+
                             <!-- Article Location -->
                             <div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1" >
 
@@ -117,6 +116,7 @@ $this->need('inc/header.php'); ?>
 								<div class="mdui-card">
                                     <!-- Article link & title -->
                                 	<?php if ($this->options->ThumbnailOption == '1'): ?>
+
                                         <div class="mdui-card-media index-post-card-media" >
 
                                             <!--Article ThumbNail-->
@@ -131,7 +131,6 @@ $this->need('inc/header.php'); ?>
                                             </div>
                                             <!--Article Title End-->
 		    							</div>
-
 
                                     <?php elseif ($this->options->ThumbnailOption == '2'): ?>
 
@@ -149,6 +148,7 @@ $this->need('inc/header.php'); ?>
                                             </div>
                                             <!--Article Title End-->
 		    							</div>
+
                                     <?php elseif ($this->options->ThumbnailOption == '3'): ?>
 
                                         <div class="mdui-card-media index-post-card-media" >
@@ -175,10 +175,10 @@ $this->need('inc/header.php'); ?>
 
                                     <!-- Article content -->
                                     <div class="mdui-card-content mdui-clearfix">
-                                        <!--  -->
+                                        <!-- Control Output Length -->
                                         <?php $this->excerpt(80, '...'); ?> &nbsp;&nbsp;&nbsp;
 
-
+                                        <!-- Show Additional parts -->
                                         <span class="mdui-typo mdui-float-right" >
                                     		<a  href="<?php $this->permalink(); ?>" target="_self">
                                             	<?php if ($this->options->langis == '0'): ?>
