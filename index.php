@@ -186,7 +186,7 @@ $this->need('inc/header.php'); ?>
                                             	<?php elseif ($this->options->langis == '1'): ?>
                                                 	继续阅读
                                             	<?php elseif ($this->options->langis == '2'): ?>
-                                             	   繼續閱讀
+                                             	    繼續閱讀
                                             	<?php endif; ?>
                                     		</a>
                                         </span>
@@ -217,8 +217,6 @@ $this->need('inc/header.php'); ?>
                                             <?php else: ?>
                                                 <?php $this->dateWord(); ?>
                                             <?php endif; ?>
-
-
                                         </span>
                                         <!--Row Of Subtitle End-->
 
@@ -234,21 +232,12 @@ $this->need('inc/header.php'); ?>
                                             	
                                             <!-- Statistic of Views -->
                                             <?php if (in_array('ViewCount',$this->options->FunctionSwitch)): ?>
-                                            	| <?php _e(getViewsStr($this)); ?>
+                                                <a href="<?php $this->permalink() ?>">
+                                                    <?php echo '|'; ?>
+                                                    <?php _e(getViewsStr($this)); ?>
+                                                </a>
                                             <?php endif; ?>
                                         </div>
-
-
-                                        <a href="<?php $this->permalink() ?>">
-                                            <!-- 使用原生评论 -->
-                                            <?php if ($this->options->commentis == '0'): ?>
-                                                <?php echo '|'; ?>
-                                                <?php $this->commentsNum('%d 评论'); ?>
-                                            <!-- 使用wildfire评论 -->
-                                            <?php else: ?>
-
-                                            <?php endif; ?>
-                                        </a>
 
                                     </div>
                                     <!--Right Part Of Md Card Header End-->
@@ -295,9 +284,6 @@ $this->need('inc/header.php'); ?>
 
 			</div>
 			<!-- Posts Output MD Container End-->
-
-
-
 
 
 

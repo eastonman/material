@@ -2,7 +2,11 @@ js/dsembed.js
 
 .DS_Store
 
+# back up files
 *.bak
+
+# website config
 manifest.json
-push.sh
+
+# All develop using bash script
 *.sh
