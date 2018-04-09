@@ -119,7 +119,7 @@
     <?php if ($this->allow('comment')): ?>
     	
     	<div class="mdui-row">
-    		<div class="mdui-col-xs-12 mdui-col-md-10 comments">
+    		<div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1 comments">
     			<?php $comments->listComments(); ?>
     		</div>
 		</div>

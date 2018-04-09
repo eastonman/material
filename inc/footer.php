@@ -128,7 +128,15 @@
 	document.addEventListener('pjax:complete',
 		function() { NProgress.done();
 		var inst = new mdui.Drawer('#sidebar');
-		inst.close();
+            if (document.documentElement.clientWidth < 1024) {
+                inst.close();
+            }
+
+        // Sidebar JS reload
+        var SideBarDropdown = new mdui.Collapse('#sidebar-header-collapse');
+        document.getElementById('sidebar-header-collapse-controller').addEventListener('click' , function() {
+	        SideBarDropdown.toggle('#sidebar-header-collapse-item');
+        });
 	});
 </script>
 
