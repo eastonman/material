@@ -1,4 +1,6 @@
 <?php $this->comments()->to($comments); ?>
+
+
 <?php function threadedComments($comments, $options)
 {
     $commentClass = '';
@@ -19,8 +21,7 @@
     			$comments->alt(' comment-odd', ' comment-even');
     			echo $commentClass; 
     		?>
-    	"
-    >
+    ">
 
     <!-- Comment info -->
     <div class="comment header mdui-card-header">
@@ -117,104 +118,105 @@
 
     <?php if ($this->allow('comment')): ?>
     	
-    
-    
     	<div class="mdui-row">
-    		<div class="mdui-col-xs-12 mdui-col-md-10 comments">
+    		<div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1 comments">
     			<?php $comments->listComments(); ?>
     		</div>
 		</div>
-    		<div id="<?php $this->respondId(); ?>" class="respond mdui-card mdui-p-a-5 mdui-m-b-5">
 
-        	<!-- Input form start -->
+    	<div id="<?php $this->respondId(); ?>" class="respond mdui-card mdui-p-a-5 mdui-m-b-5">
+
+            <!-- Input form start -->
         	<form method="post" action="<?php $this->commentUrl() ?>">
 
-            <!-- If user has login -->
-            <?php if ($this->user->hasLogin()): ?>
+                <!-- If user has login -->
+                <?php if ($this->user->hasLogin()): ?>
 
-            	<!-- Display user name & logout -->
-            	<p style="color:#8A8A8A;" class="mdui-typo">Logged in as
-                	<a href="<?php $this->options->adminUrl(); ?>" style="font-weight:400"><?php $this->user->screenName(); ?></a>.
-                	<a href="<?php $this->options->logoutUrl(); ?>" title="Logout" style="font-weight:400">Logout &raquo;</a>
-            	</p>
+            	    <!-- Display user name & logout -->
+            	    <p style="color:#8A8A8A;" class="mdui-typo">Logged in as
+                	    <a href="<?php $this->options->adminUrl(); ?>" style="font-weight:400"><?php $this->user->screenName(); ?></a>.
+                	    <a href="<?php $this->options->logoutUrl(); ?>" title="Logout" style="font-weight:400">Logout &raquo;</a>
+            	    </p>
 
-            <!-- If user didn't login -->
-            <?php else: ?>
+                <!-- If user didn't login -->
+                <?php else: ?>
 
-            	<!-- Input name -->
-            	<div class="login-form-group">
-                	<div class="mdui-textfield mdui-textfield-floating-label">
-                    	<label for="author" class="mdui-textfield-label">
-                                    <?php if ($this->options->langis == '0'): ?>
-                                        Name*
-                                    <?php elseif ($this->options->langis == '1'): ?>
-                                        昵称*
-                                    <?php endif; ?>
-                        </label>
-                        <input type="text" name="author" class="mdui-textfield-input" />
+            	    <!-- Input name -->
+            	    <div class="login-form-group">
+                	    <div class="mdui-textfield mdui-textfield-floating-label">
+                    	    <label for="author" class="mdui-textfield-label">
+                                <?php if ($this->options->langis == '0'): ?>
+                                    Name*
+                                <?php elseif ($this->options->langis == '1'): ?>
+                                    昵称*
+                                <?php endif; ?>
+                            </label>
+
+                            <input type="text" name="author" class="mdui-textfield-input" />
+                	    </div>
+            	    </div>
+
+            	    <!-- Input email -->
+            	    <div class="login-form-group">
+                	    <div class="mdui-textfield mdui-textfield-floating-label">
+                    	    <label for="mail" class="mdui-textfield-label">
+                                <?php if ($this->options->langis == '0'): ?>
+                                    Email*
+                                <?php elseif ($this->options->langis == '1'): ?>
+                                    邮箱*
+                                <?php endif; ?>
+                            </label>
+
+                            <input type="email" name="mail" class="mdui-textfield-input" />
+                	    </div>
+            	    </div>
+
+            	    <!-- Input website -->
+            	    <div class="login-form-group">
+                	    <div class="mdui-textfield mdui-textfield-floating-label">
                     	
-                	</div>
-            	</div>
+                    	    <!--  placeholder="http://"-->
+                    	    <label for="url" class="mdui-textfield-label">
+                                <?php if ($this->options->langis == '0'): ?>
+                                    Website
+                                <?php elseif ($this->options->langis == '1'): ?>
+                                    网站
+                                <?php endif; ?>
+                            </label>
 
-            	<!-- Input email -->
-            	<div class="login-form-group">
-                	<div class="mdui-textfield mdui-textfield-floating-label">
-                    	
-                    	<label for="mail" class="mdui-textfield-label">
-                                    <?php if ($this->options->langis == '0'): ?>
-                                        Email*
-                                    <?php elseif ($this->options->langis == '1'): ?>
-                                        邮箱*
-                                    <?php endif; ?>
-                        </label>
-                        <input type="email" name="mail" class="mdui-textfield-input" />
-                	</div>
-            	</div>
+                            <input type="url" name="url" id="visitor-url" class="mdui-textfield-input " />
+                    	</div>
+            	    </div>
 
-            	<!-- Input website -->
-            	<div class="login-form-group">
-                	<div class="mdui-textfield mdui-textfield-floating-label">
-                    	
-                    	<!--  placeholder="http://"-->
-                    	<label for="url" class="mdui-textfield-label">
-                                    <?php if ($this->options->langis == '0'): ?>
-                                        Website
-                                    <?php elseif ($this->options->langis == '1'): ?>
-                                        网站
-                                    <?php endif; ?>
-                        </label>
-                        <input type="url" name="url" id="visitor-url" class="mdui-textfield-input " />
-                	</div>
-            	</div>
+                <?php endif; ?>
 
-            <?php endif; ?>
+                <!-- Input comment content -->
+                <div class="mdui-textfield mdui-textfield-floating-label" id="comment-input-div">
+                    <label for="comment" class="mdui-textfield-label">
+                        <?php if ($this->options->langis == '0'): ?>
+                            Join the discussion
+                        <?php elseif ($this->options->langis == '1'): ?>
+                            加入讨论吧...
+                        <?php endif; ?>
+                    </label>
 
+                    <textarea name="text"  id="comment" class="mdui-textfield-input"></textarea>
+                </div>
 
-            <!-- Input comment content -->
-            <div class="mdui-textfield mdui-textfield-floating-label" id="comment-input-div">
-                
-                <label for="comment" class="mdui-textfield-label">
-                            <?php if ($this->options->langis == '0'): ?>
-                                Join the discussion
-                            <?php elseif ($this->options->langis == '1'): ?>
-                                加入讨论吧...
-                            <?php endif; ?>
-                </label>
-                <textarea name="text"  id="comment" class="mdui-textfield-input"></textarea>
-            </div>
+                <!-- Submit comment content button -->
+			    <?php $comments->reply('
+                        <button id="comment-button" class="mdui-btn mdui-btn-icon mdui-ripple mdui-float-right">
+                            <i class="material-icons mdui-icon  mdui-text-color-black" role="presentation">check</i><span class="mdui-hidden">add comment</span>
+                        </button>'); ?>
+                <div class="mdui-tooltip" for="comment-button">Submit</div>
 
-            <!-- Submit comment content button -->
-			<?php $comments->reply('
-                    <button id="comment-button" class="mdui-btn mdui-btn-icon mdui-ripple mdui-float-right">
-                        <i class="material-icons mdui-icon  mdui-text-color-black" role="presentation">check</i><span class="mdui-hidden">add comment</span>
-                    </button>'); ?>
-            <div class="mdui-tooltip" for="comment-button">Submit</div>
+            </form>
+            <!-- Input form END -->
 
-        </form>
-    </div>
+        </div>
 
     
-    <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+        <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
 
     <?php else: ?>
 

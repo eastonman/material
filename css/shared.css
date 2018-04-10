@@ -95,11 +95,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.drawer-mod {
-		
-	}
-
-
+	
 	.mdui-drawer .sidebar-header {
 	    position: relative;
 	    height: 157.5px;
@@ -120,8 +116,8 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    -ms-background-size:100%
-    /*background-size: cover;*/
+    -ms-background-size:100%;
+    background-size: cover;
 }
 
 .sidebar .sidebar-image img {

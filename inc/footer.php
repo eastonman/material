@@ -98,41 +98,64 @@
 </main>
 
 <script src="//cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
-<script src="https://cdn.bootcss.com/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
-<script src="<?php $this->options->themeUrl('js/sidebar.js'); ?>"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
+<script src="//cdn.bootcss.com/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
 <script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
 <script>
-//lazyload
-var myLazyLoad = new LazyLoad();
+    //js used to toggle sidebar
+    var SideBarDropdown = new mdui.Collapse('#sidebar-header-collapse');
+
+    document.getElementById('sidebar-header-collapse-controller').addEventListener('click' , function() {
+	    SideBarDropdown.toggle('#sidebar-header-collapse-item');
+    });
+</script>
+<script>
+    //lazyload
+    var myLazyLoad = new LazyLoad();
 </script>
 
 <!--PJAX Js Event-->
 <script>
-new Pjax({
-  elements: "a", // default is "a[href], form[action]"
-  selectors: ["title",".pjax-load"]
-});
+    new Pjax({
+        elements: "a", // default is "a[href], form[action]"
+        selectors: ["title",".pjax-load"]
+    });
 
 	document.addEventListener('pjax:send', function() { NProgress.start(); });
-	document.addEventListener('pjax:complete',   function() { NProgress.done();  });
+	document.addEventListener('pjax:complete',
+		function() { NProgress.done();
+		var inst = new mdui.Drawer('#sidebar');
+            if (document.documentElement.clientWidth < 1024) {
+                inst.close();
+            }
+
+        // Sidebar JS reload
+        var SideBarDropdown = new mdui.Collapse('#sidebar-header-collapse');
+        document.getElementById('sidebar-header-collapse-controller').addEventListener('click' , function() {
+	        SideBarDropdown.toggle('#sidebar-header-collapse-item');
+        });
+	});
 </script>
 
 <!--Register Service Worker-->
-        <script>
-            // Register the service worker
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('<?php $this->options->siteUrl('/serviceworker.js'); ?>', {scope: '<?php $this->options->siteUrl(''); ?>'} ).then(function(registration) {
-                    // Registration was successful
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+<script>
+        // Register the service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('<?php $this->options->siteUrl('/serviceworker.js'); ?>', {scope: '<?php $this->options->siteUrl(''); ?>'} ).then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
 
-                }).catch(function(err) {
-                    // registration failed :(
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            }
-        </script>
+            }).catch(function(err) {
+                // registration failed :(
+                 console.log('ServiceWorker registration failed: ', err);
+            });
+        }
+</script>
+
+
 </body>
 
 </html>

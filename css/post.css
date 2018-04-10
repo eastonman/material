@@ -1,12 +1,9 @@
 .mdui-row > [class*="mdui-col-"] {
 	padding-top: 0;
 	padding-bottom: 30px;
-	
-
 }
 
 .post-card-media > img {
-
 	height: 280px;
 	object-fit: cover;
 }
