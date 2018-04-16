@@ -76,7 +76,9 @@
             	Copyright &copy;
 
                 <?php echo date("Y"); ?>
-                <?php $this->options->title(); ?>
+                <?php $this->options->title(); ?><br>
+                博客建立于
+                <?php echo timesince($this->options->FoundDate); ?>
             </div>
 
             <!--mdl-mini-footer-right-section-->
