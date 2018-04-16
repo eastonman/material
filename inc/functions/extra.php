@@ -22,5 +22,3 @@ function timesince($older_date,$comment_date = false) {
     $output = $count.$name.'前';
     return $output;
 }
-
-echo timesince('2017-09-23');
