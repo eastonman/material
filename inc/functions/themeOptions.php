@@ -1,4 +1,7 @@
-//Appearance setup
+<?php
+/*
+* Theme Config
+*/
 function themeConfig($form)
 {
     echo '<p style="font-size:14px;" id="use-intro">
@@ -21,6 +24,9 @@ function themeConfig($form)
         array('LazyLoad', 'ViewCount'), _t('功能开关')
     );
     $form->addInput($FunctionSwitch->multiMode());
+
+    $FoundDate = new Typecho_Widget_Helper_Form_Element_Text('FoundDate', null, null, _t('博客建立日期'), _t(''));
+    $form->addInput($FoundDate);
 
     $IconUrl = new Typecho_Widget_Helper_Form_Element_Text('IconUrl', null, null, _t('Icon 地址'), _t('填入博客所有icon 的地址，必须包含目录img/icon并且有相应的png文件, 默认显示主题目录下img/icon中的图标'));
     $form->addInput($IconUrl);
