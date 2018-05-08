@@ -1,12 +1,11 @@
 <?php
-/* 
+/*
 * Typecho functions entry point
 */
 
 require_once('inc/functions/themeOptions.php');
 require_once('inc/functions/thumbNail.php');
 require_once('inc/functions/extra.php');
-
 
 
 function is_pjax()
@@ -63,4 +62,35 @@ function compressHtml($html_source) {
         $compress .= $c;
     }
     return $compress;
+}
+
+
+/*
+ * Get views amount
+ */
+function getViewsStr($widget, $format = "{views} 次浏览") {
+    $fields = $widget->fields;
+    if (!empty($fields->views)) {
+        $views = $fields->views;
+    } else {
+        $views = 0;
+        $widget->setField('views', 'int', '0', $widget->cid);
+	}
+
+    //Increase $views counter
+    if ($widget->is('single')) {
+        $vieweds = Typecho_Cookie::get('extend_contents_views');
+        if (empty($vieweds))
+            $vieweds = array();
+        else
+            $vieweds = explode(',', $vieweds);
+        if (!in_array($widget->cid, $vieweds)) {
+        	//Increase Int Field
+            $widget->incrIntField('views', '1', $widget->cid);
+            $vieweds[] = $widget->cid;
+            $vieweds = implode(',', $vieweds);
+            Typecho_Cookie::set("extend_contents_views", $vieweds);
+        }
+    }
+    return str_replace("{views}", $views, $format);
 }
