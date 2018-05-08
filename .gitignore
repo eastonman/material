@@ -6,3 +6,6 @@ js/dsembed.js
 manifest.json
 push.sh
 *.sh
+
+# Sublime text sftp plugin
+sftp-config.json

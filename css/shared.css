@@ -135,6 +135,11 @@
     transition: all 0.2s ease-in-out;
 }
 
+.sidebar .sidebar-title {
+	font-size: 1.6rem;
+	margin-top: 1.5rem;
+}
+
 /*Sidebar Header End*/
 
 
