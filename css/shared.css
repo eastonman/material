@@ -203,8 +203,16 @@
 
 
 
+/************* Sidebar Font Size & List Height Mod **************/
+.mdui-list .mdui-list-item:after {
+	height: 2.75rem !important;
+}
 
+.mdui-list .mdui-list-item {
+	font-size: 0.8rem;
+}
 
+/************* Mod END ***************/
 
 
 
