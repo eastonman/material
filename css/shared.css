@@ -234,6 +234,14 @@
 	padding-top: 50px;
 }
 
+/***** Inherit Bottom part of page & post *******/
+
+.bottom-mod {
+	position: inherit;
+	bottom: 0;
+	right: 0;
+	left: 240px;
+}
 
 /*Footer SNS herf no underline */
 

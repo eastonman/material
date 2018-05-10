@@ -1,6 +1,6 @@
 
 
-<div class="mdui-container-fluid pjax-load">
+<div class="mdui-container-fluid pjax-load bottom-mod">
 		<!--Footer-->
         <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
 
