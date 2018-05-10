@@ -1,0 +1,38 @@
+{
+  "name": "material",
+  "version": "2.1.0",
+  "description": "New Material Theme",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^3.9.4",
+    "gulp-jshint": "^2.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manyang901/material.git"
+  },
+  "keywords": [
+    "material",
+    "typecho",
+    "theme"
+  ],
+  "author": "Manyang901",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/manyang901/material/issues"
+  },
+  "homepage": "https://github.com/manyang901/material#readme"
+}

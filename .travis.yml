@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "lts/*"
+install:
+  - npm install
+  - npm install -g gulp
+  - npm install -g gulp-cli
+script:
+  - gulp minifycss
+  - tar zcf material.tar.gz ./*  --exclude=material.tar.gz
+deploy:
+  provider: releases
+  api_key: ${GH_TOKEN}
+  file: ./material.tar.gz
+  skip_cleanup: true
+  on:
+    tags: true
