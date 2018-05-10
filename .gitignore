@@ -10,3 +10,6 @@ manifest.json
 
 # All develop using bash script
 *.sh
+
+# Sublime text sftp plugin
+sftp-config.json

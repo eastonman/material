@@ -46,30 +46,31 @@
     <!-- Comment actions -->
     <div class="mdui-card-actions">
 
-        <!-- like -->
+        <!-- like 
         <button id="comment-like-button" class="mdui-btn mdui-ripple mdui-btn-icon" >
                 <i class="mdui-icon material-icons mdui-text-color-black" role="presentation">thumb_up</i>
                 <span class="mdui-hidden">like comment</span>
         </button>
 
-        <!-- dislike -->
+         dislike 
         <button id="comment-dislike-button" class="mdui-btn mdui-ripple mdui-btn-icon">
                 <i class="mdui-icon material-icons mdui-text-color-black" role="presentation">thumb_down</i>
                 <span class="mdui-hidden">dislike comment</span>
         </button>
+        -->
         
         
         <!-- reply -->
 		<?php $comments->reply('
 			<button id="comment-reply-button" class="mdui-btn mdui-ripple mdui-btn-icon">
-				<i class="mdui-icon material-icons mdui-text-color-black" role="presentation">forum</i>
+				<i class="mdui-icon material-icons mdui-text-color-black-icon" role="presentation">forum</i>
 				<span class="mdui-hidden">reply comment</span>
 			</button>
 		'); ?>
 
         <!-- share -->
         <button id="comment-share-<?php $comments->theId(); ?>-button" class="mdui-btn mdui-ripple mdui-float-right mdui-btn-icon" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
-                <i class="mdui-icon material-icons mdui-text-color-black" role="presentation">share</i>
+                <i class="mdui-icon material-icons mdui-text-color-black-icon" role="presentation">share</i>
                 <span class="mdui-hidden">share comment</span>
         </button>
 

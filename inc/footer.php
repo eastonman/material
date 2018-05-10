@@ -1,6 +1,6 @@
 
 
-<div class="mdui-container-fluid pjax-load">
+<div class="mdui-container-fluid pjax-load bottom-mod">
 		<!--Footer-->
         <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
 
@@ -9,7 +9,7 @@
         		<!--Twitter Icon-->
                 <?php if (!empty($this->options->footersns) && in_array('ShowTwitter', $this->options->footersns)) : ?>
                     <a href="<?php $this->options->TwitterURL() ?>" class="mdui-color-white" target="view_window">
-                    	<i class="mdui-icon icon-twitter_10 "></i>
+                    	<i class="mdui-icon mdui-text-color-black-icon icon-twitter_10 "></i>
                     </a>
                 <?php else: ?>
                 <?php endif; ?>
@@ -18,7 +18,7 @@
                 <!-- FaceBook Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns)) : ?>
                 	<a href="<?php $this->options->FacebookURL() ?>" class="mdui-color-white" target="view_window">
-                		<i class="mdui-icon icon-facebook_6" > </i>
+                		<i class="mdui-icon mdui-text-color-black-icon icon-facebook_6" > </i>
                 	</a>
                 <?php else: ?>
                 <?php endif; ?>
@@ -26,7 +26,7 @@
                 <!-- Github Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowGithub', $this->options->footersns)) : ?>
                     <a href="<?php $this->options->GithubURL() ?>" class="mdui-color-white" target="view_window">
-                    	<i class="mdui-icon icon-github" ></i>
+                    	<i class="mdui-icon mdui-text-color-black-icon icon-github" ></i>
                     </a>
                 <?php else: ?>
                 <?php endif;?>
@@ -35,35 +35,35 @@
                 <!--Telegram Icon-->
                 <?php if (!empty($this->options->footersns) && in_array('ShowTelegram', $this->options->footersns)) : ?>
                     <a href="<?php $this->options->TelegramURL() ?>" class="mdui-color-white" target="view_window">
-                        <i class="mdui-icon icon-telegram" ></i>
+                        <i class="mdui-icon mdui-text-color-black-icon icon-telegram" ></i>
                     </a>
                 <?php endif;?>
 
                 <!-- Linkedin Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowLinkedin', $this->options->footersns)) : ?>
 					<a href="<?php $this->options->LinkedinURL() ?>" class="mdui-color-white" target="view_window">
-						<i class="mdui-icon icon-linkedin" ></i>
+						<i class="mdui-icon mdui-text-color-black-icon icon-linkedin" ></i>
                     </a>
                 <?php endif;?>
 
 				<!-- Youtube Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowYoutube', $this->options->footersns)) : ?>
 					<a href="<?php $this->options->YoutubeURL() ?>" class="mdui-color-white" target="view_window">
-						<i class="mdui-icon icon-youtube" ></i>
+						<i class="mdui-icon mdui-text-color-black-icon icon-youtube" ></i>
                     </a>
                 <?php endif;?>
 
                 <!-- Steam Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowSteam', $this->options->footersns)) : ?>
 					<a href="<?php $this->options->SteamURL() ?>" class="mdui-color-white" target="view_window">
-						<i class="mdui-icon icon-steam" ></i>
+						<i class="mdui-icon mdui-text-color-black-icon icon-steam" ></i>
                     </a>
                 <?php endif;?>
 
                 <!-- Niconico Icon -->
                 <?php if (!empty($this->options->footersns) && in_array('ShowNiconico', $this->options->footersns)) : ?>
 					<a href="<?php $this->options->NiconicoURL() ?>" class="mdui-color-white" target="view_window">
-						<i class="mdui-icon icon-niconico" ></i>
+						<i class="mdui-icon mdui-text-color-black-icon icon-niconico" ></i>
                     </a>
                 <?php endif;?>
 
@@ -76,7 +76,9 @@
             	Copyright &copy;
 
                 <?php echo date("Y"); ?>
-                <?php $this->options->title(); ?>
+                <?php $this->options->title(); ?><br>
+                博客建立于
+                <?php echo timesince($this->options->FoundDate); ?>
             </div>
 
             <!--mdl-mini-footer-right-section-->
