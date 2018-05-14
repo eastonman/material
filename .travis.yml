@@ -6,8 +6,8 @@ install:
   - npm install -g gulp
   - npm install -g gulp-cli
 script:
-  - gulp build
-  - tar zcf material.tar.gz ./*  --exclude=material.tar.gz
+  - gulp buildp
+  - tar zcf material.tar.gz ./*  --exclude=material.tar.gz --exclude=node_modules
 deploy:
   provider: releases
   api_key: ${GH_TOKEN}
