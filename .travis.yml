@@ -6,7 +6,7 @@ install:
   - npm install -g gulp
   - npm install -g gulp-cli
 script:
-  - gulp minifycss
+  - gulp build
   - tar zcf material.tar.gz ./*  --exclude=material.tar.gz
 deploy:
   provider: releases
