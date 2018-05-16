@@ -1,0 +1,260 @@
+/*
+*Share css for all pages
+*
+*
+*
+*/
+
+/*Responsive CSS For Appbar*/
+@media screen and (min-width:1024px) {
+	
+	.header-responsive {
+		display: none;
+		
+	}
+
+}
+
+@media screen and (max-width: 1024px) {
+
+	.header-responsive {
+		display: block;
+	}
+
+
+}
+/*Responsive Appbat End*/
+
+
+/* Appbar Title Align to center*/
+.header-center-title {
+	margin: 0 auto;
+}
+
+/******** Appbar Burger Icon ******/
+/*absolute postion*/
+.mdui-toolbar > .mdui-btn {
+	position: absolute;
+}
+
+
+
+
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*-------------------- SideBar CSS ---------------------*/
+/*------------------------------------------------------*/
+/* -----------------------------------------------------*/
+
+
+
+/* SideBar  Responsive */
+
+
+
+@media screen and (max-width: 600px) {
+
+	.drawer-mod {
+		max-width: 240px !important;
+	}
+	
+	.drawer-mod::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	
+	}
+
+	.mdui-drawer .sidebar-header {
+	    position: relative;
+ 	   height: 140px;
+    	overflow: hidden;
+	    -webkit-transition: all 0.2s ease-in-out;
+ 	   -o-transition: all 0.2s ease-in-out;
+	    transition: all 0.2s ease-in-out;
+	}
+
+}
+
+
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+	.drawer-mod {
+		max-width: 240px !important;
+	}
+
+	.mdui-drawer .sidebar-header {
+	    position: relative;
+	    height: 140px;
+	    overflow: hidden;
+	    -webkit-transition: all 0.2s ease-in-out;
+	    -o-transition: all 0.2s ease-in-out;
+	    transition: all 0.2s ease-in-out;
+	}
+
+}
+
+@media screen and (min-width: 1024px) {
+	
+	.mdui-drawer .sidebar-header {
+	    position: relative;
+	    height: 157.5px;
+	    overflow: hidden;
+	    -webkit-transition: all 0.2s ease-in-out;
+	    -o-transition: all 0.2s ease-in-out;
+	    transition: all 0.2s ease-in-out;
+	}
+}
+
+/*SideBar Overlay End*/
+
+
+/*Sidebar Header Begin*/
+.mdui-drawer .sidebar-header.header-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size:100%;
+    background-size: cover;
+}
+
+.sidebar .sidebar-image img {
+    width: 54px;
+    height: 54px;
+    margin: 40px 16px 16px 16px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .2);
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar .sidebar-title {
+	font-size: 1.6rem;
+	margin-top: 1.5rem;
+}
+
+/*Sidebar Header End*/
+
+
+/*******SideBar Dropdown Arrow Layout ********/
+
+/*Sidebar Dropdown Arrow Padding*/
+@media screen and (max-width: 600px) {
+	.sidebar .sidebar-brand {
+		padding-left: 200px;
+
+	}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+	.sidebar .sidebar-brand {
+		padding-left: 200px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.sidebar .sidebar-brand {
+		padding-left: 200px;
+
+	}
+
+}
+/*Padding End*/
+
+
+.sidebar .sidebar-brand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    text-decoration: none;
+    clear: both;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar .sidebar-brand:hover,
+.sidebar .sidebar-brand:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+
+.sidebar .sidebar-brand:hover,
+.sidebar .sidebar-brand:focus {
+    text-decoration: none;
+}
+
+/*Sidebar Dropdown Arrow Layout End*/
+
+
+
+/************* Sidebar Font Size & List Height Mod **************/
+.mdui-list .mdui-list-item:after {
+	height: 2.75rem !important;
+}
+
+.mdui-list .mdui-list-item {
+	font-size: 0.8rem;
+}
+
+/************* Mod END ***************/
+
+
+
+/********************************************************************/
+/*************************                     *********************/
+/*************************   Sidebar CSS END   **********************/
+/*************************                     **********************/
+/********************************************************************/
+
+
+
+
+
+
+
+/*Footer MDUI row Padding*/
+
+#bottom {
+	padding-top: 50px;
+}
+
+/***** Inherit Bottom part of page & post *******/
+
+.bottom-mod {
+	position: inherit;
+	bottom: 0;
+	right: 0;
+	left: 240px;
+}
+
+/*Footer SNS herf no underline */
+
+.footer-sns > a {
+	text-decoration: none;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+/*Comment List No Margin*/
+.comments > .comment-list {
+	margin: 0;
+	padding-bottom: 50px;
+	-webkit-padding-start: 0;
+}

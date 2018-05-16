@@ -13,3 +13,7 @@ manifest.json
 
 # Sublime text sftp plugin
 sftp-config.json
+
+# npm & gulp
+node_modules/
+package-lock.json
