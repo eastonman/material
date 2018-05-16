@@ -2,6 +2,7 @@
 
 New Material 是一款遵循 Material Design 的 Typecho 主题
 
+![https://travis-ci.org/manyang901/material](https://img.shields.io/travis/manyang901/material.svg)
 ![https://github.com/manyang901/material/releases](https://img.shields.io/github/downloads/manyang901/material/total.svg)
 ![](https://img.shields.io/github/license/manyang901/material.svg)
 ![](https://img.shields.io/badge/PR-welcome-blue.svg)
@@ -42,7 +43,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 ## Demo 演示
 
-[Manyang901's Blog](https://blog.kucloud.win)
+[PolyQY Blog](https://blog.kucloud.win)
 
 ## Install 安装
 
@@ -70,7 +71,9 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 ## Preview 预览
 
-![](https://ww2.sinaimg.cn/large/a15b4afegy1fof6j1mfrgj20xe0otdiu.jpg)
+<img style="float: left;" width="50%" src="https://i.loli.net/2018/05/16/5afbf7736c26f.png" alt="screenshot_1526462277.png" title="screenshot_1526462277.png" /><img style="float: right;" width="50%" src="https://i.loli.net/2018/05/16/5afbaa4204c6b.png">
+
+![](https://i.loli.net/2018/05/16/5afbaa439d35f.jpg)
 
 ## Contributing 贡献
 
