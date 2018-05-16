@@ -10,3 +10,10 @@ manifest.json
 
 # All develop using bash script
 *.sh
+
+# Sublime text sftp plugin
+sftp-config.json
+
+# npm & gulp
+node_modules/
+package-lock.json
