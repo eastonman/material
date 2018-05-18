@@ -12,6 +12,7 @@ function timesince($older_date,$comment_date = false) {
     );
 
     $newer_date = time();
+    $older_date = strtotime($older_date);
     $since = abs($newer_date - $older_date);
     for ($i = 0, $j = count($chunks); $i < $j; $i++){
         $seconds = $chunks[$i][0];
