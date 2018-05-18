@@ -11,15 +11,21 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 ## Contents 目录
 
+<!-- MarkdownTOC -->
+
 - [General 概括](#general-概括)
 - [Feature 特性](#feature-特性)
 - [Demo 演示](#demo-演示)
 - [Install 安装](#install-安装)
 - [Configure 配置](#configure-配置)
+	- [Function Switch 功能开关](#function-switch-功能开关)
+		- [ViewCount 无插件访客统计](#viewcount-无插件访客统计)
+	- [IconURL Icon地址](#iconurl-icon地址)
 - [Preview 预览](#preview-预览)
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
 
+<!-- /MarkdownTOC -->
 
 ## General 概括
 

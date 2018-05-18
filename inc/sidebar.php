@@ -6,7 +6,7 @@
     <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl() ?>img/sidebarheader.jpg );">
 
         <!-- Sidebar brand image -->
-        <div class="sidebar-image mdui-valign mdui-typo">
+        <div class="sidebar-image mdui-valign">
             <?php if (!empty($this->options->avatarURL)): ?>
                     <img src="<?php $this->options->avatarURL() ?>">
             <?php else: ?>
@@ -17,15 +17,19 @@
                         <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/Avatar.jpg">
                     <?php else: ?>
                         <img src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>">
-                        <a href="" target="_self" class="mdui-typo mdui-text-color-white sidebar-title">
-                            <?php $this->options->title(); ?>
-                        </a>
+                        
                     <?php endif; ?>
                 <?php endif; ?>
             <?php endif; ?>
+
+            <a href="" target="_self" class="mdui-typo mdui-text-color-white sidebar-title">
+                <?php $this->options->title(); ?>
+            </a>
+            
+            <i class="sidebar-brand mdui-collapse-item-arrow mdui-icon material-icons mdui-ripple mdui-text-color-white-icon" id="sidebar-header-collapse-controller" >arrow_drop_down</i>
         </div>
 
-        <i class="sidebar-brand mdui-collapse-item-arrow mdui-icon material-icons mdui-ripple mdui-text-color-white-icon" id="sidebar-header-collapse-controller" >arrow_drop_down</i>
+        
 
     </div>
     <!--SideBar Header End-->

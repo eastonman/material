@@ -95,6 +95,10 @@
 }
 
 @media screen and (min-width: 1024px) {
+
+	.drawer-mod {
+		width: 288px !important;
+	}	
 	
 	.mdui-drawer .sidebar-header {
 	    position: relative;
@@ -132,6 +136,12 @@
 }
 
 .sidebar .sidebar-title {
+	max-width: 10.8rem;
+	text-decoration: none;
+	white-space: normal;
+	word-break: break-all;
+	word-wrap: break-word;
+	display: block;
 	font-size: 1.6rem;
 	margin-top: 1.5rem;
 }
@@ -159,7 +169,7 @@
 
 @media screen and (min-width: 1024px) {
 	.sidebar .sidebar-brand {
-		padding-left: 200px;
+		padding-left: 225px;
 
 	}
 
