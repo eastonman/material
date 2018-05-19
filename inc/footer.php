@@ -71,7 +71,7 @@
             <!--Footer Left SNS END-->
 
             <!--copyright-->
-            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center" id="copyright">
+            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center mdui-typo" id="copyright">
 
             	Copyright &copy;
 

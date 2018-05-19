@@ -98,7 +98,13 @@
 
 	.drawer-mod {
 		width: 288px !important;
-	}	
+	}
+	
+	body.mdui-drawer-body-left {
+
+		    padding-left: 288px !important;
+
+		}
 	
 	.mdui-drawer .sidebar-header {
 	    position: relative;
@@ -246,12 +252,39 @@
 
 /***** Inherit Bottom part of page & post *******/
 
-.bottom-mod {
+@media screen and (max-width: 600px) {
+	.bottom-mod {
 	position: inherit;
 	bottom: 0;
 	right: 0;
 	left: 240px;
 }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+	.bottom-mod {
+	position: inherit;
+	bottom: 0;
+	right: 0;
+	left: 240px;
+}
+
+}
+
+@media screen and (min-width: 1024px) {
+	.bottom-mod {
+	position: inherit;
+	bottom: 0;
+	right: 0;
+	left: 288px;
+}
+
+
+}
+
+
 
 /*Footer SNS herf no underline */
 
