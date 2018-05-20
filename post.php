@@ -13,9 +13,9 @@ $this->need('inc/header.php'); ?>
 
 <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/shared.css" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/post.css" />
         <?php else: ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/post.css'); ?>" />
         <?php endif; ?>
 <!-- Standalone CSS END-->
 

@@ -53,7 +53,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 ## Install 安装
 
-- 在[Github Release](https://github.com/manyang901/material/releases)页面，点击"Download ZIP"下载，解压后将文件夹改名为 "Material"(或其他) 后上传到 `/usr/themes`，并启用主题。
+- 在[Github Release](https://github.com/manyang901/material/releases)页面，点击"material.tar.gz"下载，解压后将文件夹改名为 "Material"(或其他) 后上传到 `/usr/themes`，并启用主题。2.1.0版本引入Travis CI自动压缩css后，不建议直接clone项目，推荐在release界面下载。
 - 下载最新文件 然后覆盖原文件即可更新主题, 部分新增加的功能需要到后台开启才会生效 (建议更新后先切换为其他主题, 再切换回该主题)。否则有可能会导致莫名其妙的 bug...
 - 在 "设置外观" 中打造一个属于你自己的博客，部分配置项参考[配置](#configure-配置)
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符 `<!-- more -->` 控制输出。
@@ -66,6 +66,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 #### ViewCount 无插件访客统计
 勾选此选项即可开始使用，注意此选项关闭时不统计数据。
+此访客统计不会影响数据库结构，Typecho原生备份可以正常使用。
 
 ### IconURL Icon地址
 此项用于设置站点的图标，包括favicon、ios和windows桌面图标。
