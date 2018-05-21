@@ -141,6 +141,14 @@
     transition: all 0.2s ease-in-out;
 }
 
+@media screen and (max-width: 1024px) {
+
+.sidebar .sidebar-title {
+	max-height: 94px;
+}
+
+}
+
 .sidebar .sidebar-title {
 	max-width: 10.8rem;
 	text-decoration: none;
@@ -248,42 +256,28 @@
 
 #bottom {
 	padding-top: 50px;
+	padding-bottom: 5px;
 }
 
 /***** Inherit Bottom part of page & post *******/
 
-@media screen and (max-width: 600px) {
-	.bottom-mod {
-	position: inherit;
+@media screen and (max-width: 1024px) {
+.bottom-mod {
+	position: relative;
+	width: 100%;
 	bottom: 0;
 	right: 0;
-	left: 240px;
 }
-
-}
-
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-
-	.bottom-mod {
-	position: inherit;
-	bottom: 0;
-	right: 0;
-	left: 240px;
-}
-
 }
 
 @media screen and (min-width: 1024px) {
-	.bottom-mod {
-	position: inherit;
+.bottom-mod {
+	position: relative;
+	width: 100% - 288px;
 	bottom: 0;
 	right: 0;
-	left: 288px;
 }
-
-
 }
-
 
 
 /*Footer SNS herf no underline */
