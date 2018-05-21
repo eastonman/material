@@ -31,7 +31,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - Author 作者：Manyang901
 - Original Author 原作者：Viosey
-- Version 版本：2.1.0
+- Version 版本：2.1.1
 - Compatibility 兼容：PHP 5.4+, MySQL, Typecho 1.0、1.1（其余数据库未测试）
 - Browser Compatibility 浏览器兼容性: Google Chrome 56+ , Firefox latest , Opera latest ,Internet explorer 11(部分图片会有格式问题), Microsoft Edge 14+(Lazyload不支持IE和edge)
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
@@ -95,6 +95,6 @@ Formatted code is required , code with comments is strongly recommended. Commit 
 
 ## License 许可证
 
-Open sourced under the GPL v3.0 license.
+Open sourced under the GPL-3.0 license.
 
-根据 GPL V3.0 许可证开源。
+根据 GPL-3.0 许可证开源。
