@@ -5,7 +5,7 @@
  *
  * @package Theme.Material
  * @author Viosey&manyang901
- * @version 2.1.0
+ * @version 2.1.1
  * @link https://github.com/manyang901/material
  */
 
@@ -13,7 +13,7 @@ $this->need('inc/header.php'); ?>
 
 
 
-<body class="mdui-drawer-body-left" >
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>" >
 
 	<div>
 

@@ -99,7 +99,7 @@
 
 </main>
 
-<script src="//cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
+<script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
 <script src="//cdn.bootcss.com/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">

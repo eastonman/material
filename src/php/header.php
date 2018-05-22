@@ -82,7 +82,7 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
 
         <!-- MDUI css-->
-        <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css" />
+        <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.1/css/mdui.min.css" />
 		<!--EXTERNAL CSS END-->
 
 
