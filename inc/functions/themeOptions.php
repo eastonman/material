@@ -90,6 +90,9 @@ function themeConfig($form)
     $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', null, _t('Nice to meet you'), _t('首页顶部左边的标语'), _t('填入自定义文字, 显示于首页顶部左边的图片上'));
     $form->addInput($slogan);
 
+    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, _t('Status Page'), _t('insert status page'));
+    $form->addInput($Status);
+
     $ThumbnailOption = new Typecho_Widget_Helper_Form_Element_Radio('ThumbnailOption',
         array(
             '1' => _t('显示文章内第一张图片 (若无图片则显示随机图片)<br />'),
