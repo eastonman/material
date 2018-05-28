@@ -1,5 +1,13 @@
 <!DOCTYPE HTML>
-<html>
+<html <?php if ($this->options->langis == '0') {
+                echo "lang=\"en\"";
+            } elseif ($this->options->langis == '1') {
+                echo "lang=\"zh-Hans\"";
+            } elseif ($this->options->langis == '2') {
+                echo "lang=\"zh-TW\"";
+            } else {
+                echo "lang=\"en\"";
+            } ?> >
     <head>
     	<meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" />

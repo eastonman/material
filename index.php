@@ -65,9 +65,9 @@ $this->need('inc/header.php'); ?>
 							<div class="mdui-card-media" >
                                 <a href="<?php $this->options->MainPicHref(); ?>">
                                     <?php if (!empty($this->options->MainPic )): ?>
-                                        <img src="<?php $this->options->MainPic(); ?>">
+                                        <img class="main-pic" alt="main-pic" src="<?php $this->options->MainPic(); ?>">
                                     <?php else: ?>
-                                        <img class="main-pic" src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
+                                        <img class="main-pic" alt="main-pic" src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
                                     <?php endif; ?>
                                 </a>
 							</div>
@@ -81,9 +81,9 @@ $this->need('inc/header.php'); ?>
                 			<div class="mdui-card-media mdui-center" >
                                 <a href="<?php $this->options->LogoHref(); ?>">
                                     <?php if (!empty($this->options->Logo )): ?>
-                                        <img src="<?php $this->options->Logo(); ?>">
+                                        <img class="main-logo" alt="main-logo" src="<?php $this->options->Logo(); ?>">
                                     <?php else: ?>
-                				        <img class="main-logo" src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
+                				        <img class="main-logo" alt="main-logo" src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
                                     <?php endif; ?>
                                 </a>
                 			</div>
@@ -119,8 +119,10 @@ $this->need('inc/header.php'); ?>
 
                                             <!--Article ThumbNail-->
                                             <picture>
-	    									    <img src="<?php showThumbnail($this); ?>" >
+	    									    <img alt="ThumbNail" src="<?php showThumbnail($this); ?>" >
                                             </picture>
+                                            <!--Article ThumbNail END-->
+
 											<!--Article Title Displays Above ThumbNail-->
                                         	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
                                         		<div class="mdui-card-primary mdui-typo" >
@@ -128,6 +130,7 @@ $this->need('inc/header.php'); ?>
 												</div>
                                             </div>
                                             <!--Article Title End-->
+
 		    							</div>
 
                                     <?php elseif ($this->options->ThumbnailOption == '2'): ?>

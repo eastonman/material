@@ -84,8 +84,8 @@
             <!--mdl-mini-footer-right-section-->
             <div class="mdui-col-xs-12 mdui-col-md-4 mdui-float-right mdui-text-center">
                 <div>
-                    <div class="mdui-typo">Powered by <a href="http://typecho.org" target="_blank" class="footer-develop-a">Typecho</a></div>
-                    <div class="mdui-typo">Theme by <a href="https://kucloud.win" target="_blank" class="footer-develop-a">Manyang901</a></div>
+                    <div class="mdui-typo">Powered by <a href="http://typecho.org" target="_blank" rel="noopener" class="footer-develop-a">Typecho</a></div>
+                    <div class="mdui-typo">Theme by <a href="https://kucloud.win" target="_blank" rel="noopener" class="footer-develop-a">Manyang901</a></div>
                 </div>
             </div>
         </footer>
