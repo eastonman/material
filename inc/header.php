@@ -82,6 +82,11 @@
         <!--Using Default SEO Info Output By Typecho Itself-->
         <?php $this->header(); ?>
 
+        <!-- DNS prefetch-->
+        <link rel="dns-prefetch" href="//cdn.bootcss.com" />
+        <link rel="dns-prefetch" href="//cdn.jsdelivr.com" />
+        <link rel="preconnect" href="//secure.gravatar.com" crossorigin="anonymous" />
+
 
 
 
