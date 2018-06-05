@@ -5,7 +5,7 @@
  *
  * @package Theme.Material
  * @author Viosey&manyang901
- * @version 2.1.1
+ * @version 2.2.0
  * @link https://github.com/manyang901/material
  */
 

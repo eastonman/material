@@ -42,14 +42,14 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - 响应式设计，根据访问设备分辨率的不同显示不同的样式
 - Vanilla-Lazyload 首页缩略图“懒加载”
 - 非插件实现访客数量统计，使用cookies验证，使用自定义字段储存计数器，不修改数据库，高解耦。
-- Webp图片优化，根据访问设备是否支持Webp格式的图片返回自适应的图片，节省70%的流量(需要在网站根目录下放置serviceworker.js，详见Setup-设置部分)
+- Webp图片优化，根据访问设备是否支持Webp格式的图片返回自适应的图片，节省70%的流量(需要在网站根目录下放置serviceworker.js，详见Install-安装部分)
 - ServiceWorker 缓存控制
 - PWA 支持(需自行添加manifest.json到网站根目录)
 
 
 ## Demo 演示
 
-[PolyQY Blog](https://blog.kucloud.win)
+[PolyQY Blog](https://kucloud.win)
 
 ## Install 安装
 
@@ -59,6 +59,8 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符 `<!-- more -->` 控制输出。
 - 若要使用Webp自适应图片，需要将解压出文件中serviceworker.js复制到网站的根目录(这是由于serviceworker作用范围的限制和typecho主题结构的特殊性)，不使用则所有设备全部返回png格式的图片，注意，现有策略是全部替换请求中的.png为.webp，这意味着若png图没有对应的webp图像则会返回404
 - 若需使用PWA，请自行在网站根目录加入manifest.json文件，也可以在线生成
+- 请确保已经安装php-curl扩展，否则可能出错或无法收集错误信息，通常可以使用apt install php-curl等安装扩展
+
 
 ## Configure 配置
 
