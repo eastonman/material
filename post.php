@@ -1,11 +1,11 @@
-<?php 
+<?php
 /**
  * 这是由Viosey 基于 Google Material Design 开发的 Typecho 主题
  * 由Manyang901继续维护和更新
  *
  * @package Theme.Material
  * @author Viosey&manyang901
- * @version 2.1.1
+ * @version 2.2.0
  * @link https://github.com/manyang901/material
  */
 
@@ -21,8 +21,8 @@ $this->need('inc/header.php'); ?>
 
 </head>
 
-<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>"
->
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>">
+
 	<div>
 
 		<main>
@@ -61,12 +61,26 @@ $this->need('inc/header.php'); ?>
 
 							<div class="mdui-card-header" >
                             	<?php if (!empty($this->options->avatarURL)): ?>
-                                	<img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                	<img class="mdui-card-header-avatar" src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                 <?php else: ?>
                                     <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
                                 <?php endif; ?>
-                                        	
-                                <!-- favorite 
+
+                                <!--Author Name-->
+                                        <span class="mdui-card-header-title mdui-typo"><a  href="<?php $this->author->permalink(); ?>">
+                                            <?php $this->author(); ?></a>
+                                        </span>
+
+                                        <span class="mdui-card-header-subtitle" >
+                                            <?php if ($this->options->langis == '0'): ?>
+                                                <?php $this->date('F j, Y'); ?>
+                                            <?php else: ?>
+                                                <?php $this->dateWord(); ?>
+                                            <?php endif; ?>
+                                        </span>
+                                        <!--Row Of Subtitle End-->
+
+                                <!-- favorite
 								<?php $allplugin = Typecho_Plugin::export(); ?>
 								<?php if (array_key_exists('TeStat', $allplugin['activated'])): ?>
 									<button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like" data-cid="<?php $this->cid();?>" data-num="<?php $this->likesNum();?>">
@@ -88,7 +102,7 @@ $this->need('inc/header.php'); ?>
 			</div>
 
 		<?php $this->need('inc/comments.php'); ?>
-		
+
 
 			<!-- theNext thePrev button -->
 			<div class="mdui-container mdui-m-b-2 pjax-load">
@@ -110,7 +124,7 @@ $this->need('inc/header.php'); ?>
             </div>
         <?php include('inc/sidebar.php'); ?>
         <?php include('inc/footer.php'); ?>
-        
+
         <!-- Execute getViewsStr one time to let $views++ -->
         <?php if (in_array('ViewCount',$this->options->FunctionSwitch)): ?>
         	<?php getViewsStr($this); ?>

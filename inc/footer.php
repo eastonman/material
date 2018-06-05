@@ -84,8 +84,8 @@
             <!--mdl-mini-footer-right-section-->
             <div class="mdui-col-xs-12 mdui-col-md-4 mdui-float-right mdui-text-center">
                 <div>
-                    <div class="mdui-typo">Powered by <a href="http://typecho.org" target="_blank" class="footer-develop-a">Typecho</a></div>
-                    <div class="mdui-typo">Theme by <a href="https://kucloud.win" target="_blank" class="footer-develop-a">Manyang901</a></div>
+                    <div class="mdui-typo">Powered by <a href="http://typecho.org" target="_blank" rel="noopener" class="footer-develop-a">Typecho</a></div>
+                    <div class="mdui-typo">Theme by <a href="https://kucloud.win" target="_blank" rel="noopener" class="footer-develop-a">Manyang901</a></div>
                 </div>
             </div>
         </footer>
@@ -100,7 +100,7 @@
 </main>
 
 <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
-<script src="//cdn.bootcss.com/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
+
 <script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
 <script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
@@ -114,12 +114,17 @@
 	    SideBarDropdown.toggle('#sidebar-header-collapse-item');
     });
 </script>
+
+<?php if (in_array('LazyLoad' ,$this->options->FunctionSwitch)): ?>
+<script src="//cdn.bootcss.com/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
+<!--PJAX Js Event-->
 <script>
     //lazyload
     var myLazyLoad = new LazyLoad();
 </script>
+<?php endif; ?>
 
-<!--PJAX Js Event-->
+
 <script>
     new Pjax({
         elements: "a", // default is "a[href], form[action]"
@@ -133,6 +138,7 @@
             if (document.documentElement.clientWidth < 1024) {
                 inst.close();
             }
+        mdui.mutation();
 
         // Sidebar JS reload
         var SideBarDropdown = new mdui.Collapse('#sidebar-header-collapse');
@@ -141,6 +147,7 @@
         });
 	});
 </script>
+
 
 <!--Register Service Worker-->
 <script>

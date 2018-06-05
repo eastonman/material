@@ -22,7 +22,7 @@
                 <?php endif; ?>
             <?php endif; ?>
 
-            <a href="" target="_self" class="mdui-typo mdui-text-color-white sidebar-title">
+            <a href="<?php $this->options->siteUrl(); ?>" target="_self" class="mdui-typo mdui-text-color-white sidebar-title">
                 <?php $this->options->title(); ?>
             </a>
             
@@ -208,6 +208,7 @@
                 <a href="<?php $this->options->Status(); ?>" class="mdui-list-item-content">
                 <?php if ($this->options->langis == '0'): ?>Status
                 <?php elseif ($this->options->langis == '1'): ?>状态
+                <?php elseif ($this->options->langis == '1'): ?>狀態
                 <?php endif; ?>
                 </a>
             </li>
@@ -232,7 +233,7 @@
 
 
 	<!-- Sidebar bottom text -->
-    <a href="https://github.com/manyang901/material" target="_blank" class="mdui-list mdui-list-item">
+    <a href="https://github.com/manyang901/material" target="_blank" rel="noopener" class="mdui-list mdui-list-item">
         <div class="mdui-list-item-content mdui-text-color-indigo">
             <?php if ($this->options->langis == '0'): ?> Theme - Material
             <?php elseif ($this->options->langis == '1'): ?> 主题 - Material
