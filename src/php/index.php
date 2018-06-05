@@ -204,7 +204,7 @@ $this->need('inc/header.php'); ?>
                                     <!-- Author avatar -->
                                     <div class="mdui-card-header mdui-float-left" >
                                         <?php if (!empty($this->options->avatarURL)): ?>
-                                            <img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                            <img class="mdui-card-header-avatar" src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                         <?php else: ?>
                                             <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
                                         <?php endif; ?>
