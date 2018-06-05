@@ -138,6 +138,7 @@
             if (document.documentElement.clientWidth < 1024) {
                 inst.close();
             }
+        mdui.mutation();
 
         // Sidebar JS reload
         var SideBarDropdown = new mdui.Collapse('#sidebar-header-collapse');
