@@ -56,6 +56,7 @@ $this->need('inc/header.php'); ?>
 			<!-- Blog Header(picture&avatar&slogan) Began -->
             <div class="mdui-container mdui-appbar-with-toolbar pjax-load" >
 
+                <?php if (in_array('ShowMainPic',$this->options->FunctionSwitch)): ?>
                 <!--First Row Of Content-->
                 <div class="mdui-row">
 
@@ -93,6 +94,7 @@ $this->need('inc/header.php'); ?>
 
                 </div>
                 <!--First Row Of content End-->
+                <?php endif; ?>
 
             </div>
             <!--Blog Header End-->

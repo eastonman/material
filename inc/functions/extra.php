@@ -26,9 +26,14 @@ function timesince($older_date,$comment_date = false) {
 
 
 
-require_once(dirname(__FILE__).'/../../lib/Raven/Autoloader.php');
+include_once(dirname(__FILE__).'/../../lib/Raven/Autoloader.php');
 //require_once 'lib/Sentry/Autoloader.php';
-Raven_Autoloader::register();
-$client = new Raven_Client('https://9c54c7b6dcb14b41a4d2833f07b5d821:9345d22fdc7f427e8aea2c2d0810320b@sentry.io/1218923');
-$client->install();
-$client->captureMessage('Success!');
+    Raven_Autoloader::register();
+    $client = new Raven_Client('https://9c54c7b6dcb14b41a4d2833f07b5d821:9345d22fdc7f427e8aea2c2d0810320b@sentry.io/1218923', 
+        array(
+            'curl_method' => 'async',
+            'release' => VERSION
+        ));
+
+        $client->install();
+        $client->captureMessage('Success!');

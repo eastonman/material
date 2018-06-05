@@ -17,7 +17,8 @@ function themeConfig($form)
     $FunctionSwitch = new Typecho_Widget_Helper_Form_Element_Checkbox('FunctionSwitch',
         array(
             'LazyLoad' => _t('LazyLoad'),
-            'ViewCount' => _t('无插件访客统计')
+            'ViewCount' => _t('无插件访客统计'),
+            'ShowMainPic' => _t('显示主页的欢迎图'),
         ),
 
         //Default choose
