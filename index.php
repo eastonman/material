@@ -56,6 +56,7 @@ $this->need('inc/header.php'); ?>
 			<!-- Blog Header(picture&avatar&slogan) Began -->
             <div class="mdui-container mdui-appbar-with-toolbar pjax-load" >
 
+                <?php if (in_array('ShowMainPic',$this->options->FunctionSwitch)): ?>
                 <!--First Row Of Content-->
                 <div class="mdui-row">
 
@@ -65,9 +66,9 @@ $this->need('inc/header.php'); ?>
 							<div class="mdui-card-media" >
                                 <a href="<?php $this->options->MainPicHref(); ?>">
                                     <?php if (!empty($this->options->MainPic )): ?>
-                                        <img src="<?php $this->options->MainPic(); ?>">
+                                        <img class="main-pic" alt="main-pic" src="<?php $this->options->MainPic(); ?>">
                                     <?php else: ?>
-                                        <img class="main-pic" src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
+                                        <img class="main-pic" alt="main-pic" src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
                                     <?php endif; ?>
                                 </a>
 							</div>
@@ -81,9 +82,9 @@ $this->need('inc/header.php'); ?>
                 			<div class="mdui-card-media mdui-center" >
                                 <a href="<?php $this->options->LogoHref(); ?>">
                                     <?php if (!empty($this->options->Logo )): ?>
-                                        <img src="<?php $this->options->Logo(); ?>">
+                                        <img class="main-logo" alt="main-logo" src="<?php $this->options->Logo(); ?>">
                                     <?php else: ?>
-                				        <img class="main-logo" src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
+                				        <img class="main-logo" alt="main-logo" src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
                                     <?php endif; ?>
                                 </a>
                 			</div>
@@ -93,6 +94,7 @@ $this->need('inc/header.php'); ?>
 
                 </div>
                 <!--First Row Of content End-->
+                <?php endif; ?>
 
             </div>
             <!--Blog Header End-->
@@ -119,8 +121,10 @@ $this->need('inc/header.php'); ?>
 
                                             <!--Article ThumbNail-->
                                             <picture>
-	    									    <img src="<?php showThumbnail($this); ?>" >
+	    									    <img alt="ThumbNail" src="<?php showThumbnail($this); ?>" >
                                             </picture>
+                                            <!--Article ThumbNail END-->
+
 											<!--Article Title Displays Above ThumbNail-->
                                         	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
                                         		<div class="mdui-card-primary mdui-typo" >
@@ -128,6 +132,7 @@ $this->need('inc/header.php'); ?>
 												</div>
                                             </div>
                                             <!--Article Title End-->
+
 		    							</div>
 
                                     <?php elseif ($this->options->ThumbnailOption == '2'): ?>
@@ -199,7 +204,7 @@ $this->need('inc/header.php'); ?>
                                     <!-- Author avatar -->
                                     <div class="mdui-card-header mdui-float-left" >
                                         <?php if (!empty($this->options->avatarURL)): ?>
-                                            <img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                            <img class="mdui-card-header-avatar" src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                         <?php else: ?>
                                             <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
                                         <?php endif; ?>

@@ -5,7 +5,7 @@
  *
  * @package Theme.Material
  * @author Viosey&manyang901
- * @version 2.1.0
+ * @version 2.1.1
  * @link https://github.com/manyang901/material
  */
 
@@ -21,8 +21,8 @@ $this->need('inc/header.php'); ?>
 
 </head>
 
-<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>"
->
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>">
+
 	<div>
 
 		<main>
@@ -61,10 +61,24 @@ $this->need('inc/header.php'); ?>
 
 							<div class="mdui-card-header" >
                             	<?php if (!empty($this->options->avatarURL)): ?>
-                                	<img  src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                	<img class="mdui-card-header-avatar" src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                 <?php else: ?>
                                     <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
                                 <?php endif; ?>
+
+                                <!--Author Name-->
+                                        <span class="mdui-card-header-title mdui-typo"><a  href="<?php $this->author->permalink(); ?>">
+                                            <?php $this->author(); ?></a>
+                                        </span>
+
+                                        <span class="mdui-card-header-subtitle" >
+                                            <?php if ($this->options->langis == '0'): ?>
+                                                <?php $this->date('F j, Y'); ?>
+                                            <?php else: ?>
+                                                <?php $this->dateWord(); ?>
+                                            <?php endif; ?>
+                                        </span>
+                                        <!--Row Of Subtitle End-->
                                         	
                                 <!-- favorite 
 								<?php $allplugin = Typecho_Plugin::export(); ?>
