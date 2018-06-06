@@ -5,15 +5,45 @@
 function themeConfig($form)
 {
     echo '<p style="font-size:14px;" id="use-intro">
-        <span style="display: block;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: 16px;">感谢您使用 Material 主题</span>
-        <span style="margin-bottom:10px;display:block">请关注 <a href="https://github.com/manyang901/material" target="_blank" style="color:#009688;font-weight:bold;text-decoration:underline">Github-Material</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持</span></span>
-        <a href="mailto:my@kucloud.win" >帮助&支持</a> &nbsp;
-    <a href="https://github.com/manyang901/material/issues" target="_blank">建议&反馈</a>
-        </p>';
+        <span style="display: block; margin-bottom: 10px; margin-top: 10px; font-size: 16px;">
+            感谢您使用 Material 主题
+        </span>
+        <span style="margin-bottom:10px;display:block">
+            请关注 
+            <a href="https://github.com/manyang901/material" target="_blank" style="color:#009688;font-weight:bold;text-decoration:underline">
+                Github-Material
+            </a>
+            以获得
+            <span style="color:#df3827;font-weight:bold;">
+                最新版本支持
+            </span>
+        </span>
+        <a href="mailto:my@kucloud.win" >
+            帮助&支持
+        </a>
+        &nbsp;
+        <a href="https://github.com/manyang901/material/issues" target="_blank">
+            建议&反馈
+        </a>
+    </p>';
 
+    //Using poor method to get theme_root url
+    //Then provide a entrypoint towards update.php
+    $pageScheme = 'http';
+    if ($_SERVER['HTTPS'] == 'on') { 
+        $pageScheme .= 's';
+    }
+    $pageScheme .='://';
+
+    $theme_path = strchr(strchr(dirname(__FILE__), 'usr/themes/'), 'inc/functions', true);
+
+    $theme_root = $pageScheme.$_SERVER['HTTP_HOST'].'/'.$theme_path;
+    //echo $theme_root;
+    echo '<a href="' . $theme_root . 'update.php">' . '
+    检测更新 Check Update (实验性的 Experimental)
+    </a>';  
+ 
+    
     $FunctionSwitch = new Typecho_Widget_Helper_Form_Element_Checkbox('FunctionSwitch',
         array(
             'LazyLoad' => _t('LazyLoad'),
