@@ -14,8 +14,9 @@ function getLatestReleaseUrl() {
 }
 
 function getFile () {
+    global $theme_root;
     $fileurl = getLatestReleaseUrl();
-    $output = fopen('material.tar.gz', 'w+');
+    $output = fopen($theme_root . '/material.tar.gz', 'w+');
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $fileurl);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -29,10 +30,13 @@ function getFile () {
 
 function update() {
     getFile();
+    global $theme_root;
     $phar = new PharData('material.tar.gz');
-    $phar->extractTo(dirname(__FILE__),null,true);
-    unlink('material.tar.gz');
+    $phar->extractTo($theme_root,null,true);
+    unlink($theme_root . '/material.tar.gz');
     updateVersion();
+    echo 'Update Success!';
+    return true;
 }
 
 function getLatestReleaseTime() {
@@ -49,7 +53,8 @@ function getLatestReleaseTime() {
 }
 
 function checkUpdate() {
-    $version_filename = '.version';
+    global $version_file_path;
+    $version_filename = $version_file_path;
     $f = fopen($version_filename, 'r');
     $version = fgets($f);
     if ($version < getLatestReleaseTime()) {
@@ -60,7 +65,8 @@ function checkUpdate() {
 }
 
 function updateVersion() {
-    $version_filename = '.version';
+    global $version_file_path;  
+    $version_filename = $version_file_path;
     $f = fopen($version_filename, 'w');
     fwrite($f, date('c'));
     fclose($f);

@@ -24,7 +24,7 @@ function timesince($older_date,$comment_date = false) {
     return $output;
 }
 
-$version_filename = '.version';
+$version_filename = dirname(__FILE__).'/../../.version';
 
 if (!file_exists($version_filename)) {
     $file = fopen($version_filename, 'w+');
