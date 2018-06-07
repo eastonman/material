@@ -5,6 +5,11 @@
 *
 */
 
+
+main {
+	min-height: calc(100vh - 166px);
+}
+
 /*Responsive CSS For Appbar*/
 @media screen and (min-width:1024px) {
 	
@@ -259,12 +264,14 @@
 	padding-bottom: 5px;
 }
 
+#copyright {
+	padding-bottom: 30px;
+}
 /***** Inherit Bottom part of page & post *******/
 
 @media screen and (max-width: 1024px) {
 .bottom-mod {
-	position: absolute;
-	width: 100%;
+	position: relative;
 	bottom: 0;
 	right: 0;
 }
@@ -272,8 +279,7 @@
 
 @media screen and (min-width: 1024px) {
 .bottom-mod {
-	position: absolute;
-	width: calc(100% - 288px);
+	position: relative;
 	bottom: 0;
 	right: 0;
 }

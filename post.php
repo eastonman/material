@@ -23,9 +23,7 @@ $this->need('inc/header.php'); ?>
 
 <body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>">
 
-	<div>
-
-		<main>
+		<main id="main">
 
 			<!-- Header & Appbar & Title -->
 			<header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide header-responsive" >
