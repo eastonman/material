@@ -15,8 +15,6 @@ $this->need('inc/header.php'); ?>
 
 <body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>" >
 
-	<div>
-
 		<main>
 
 			<!-- Header & Appbar & Title -->

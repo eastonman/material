@@ -1,5 +1,5 @@
 
-
+</main>
 <div class="mdui-container-fluid pjax-load bottom-mod">
 		<!--Footer-->
         <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
@@ -97,7 +97,7 @@
 
 
 
-</main>
+
 
 <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
 
