@@ -263,7 +263,7 @@
 
 @media screen and (max-width: 1024px) {
 .bottom-mod {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	bottom: 0;
 	right: 0;
@@ -272,8 +272,8 @@
 
 @media screen and (min-width: 1024px) {
 .bottom-mod {
-	position: relative;
-	width: 100% - 288px;
+	position: absolute;
+	width: calc(100% - 288px);
 	bottom: 0;
 	right: 0;
 }

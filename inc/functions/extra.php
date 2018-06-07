@@ -24,7 +24,16 @@ function timesince($older_date,$comment_date = false) {
     return $output;
 }
 
+$version_filename = dirname(__FILE__).'/../../.version';
 
+if (!file_exists($version_filename)) {
+    $file = fopen($version_filename, 'w+');
+    fwrite($file, date('c'));
+    fclose($file);
+}
+
+
+// Install Sentry SDK
 $include_path_append = dirname(__FILE__).'/../../lib';
 set_include_path(get_include_path() . PATH_SEPARATOR . $include_path_append);
 include_once('Raven/Autoloader.php');
