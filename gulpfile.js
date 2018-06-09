@@ -7,18 +7,19 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     replace = require('gulp-replace');
 
-//语法检查
+//check expression
 gulp.task('jshint', function() {
     return gulp.src('./src/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
-//压缩css
+
+//minifying css
 gulp.task('minifycss', function() {
-    return gulp.src('./src/css/*.css') //需要操作的文件
-        .pipe(rename({ suffix: '.min' })) //rename压缩后的文件名
-        .pipe(minifycss()) //执行压缩
-        .pipe(gulp.dest('./css')); //输出文件夹
+    return gulp.src('./src/css/*.css') 
+        .pipe(rename({ suffix: '.min' })) 
+        .pipe(minifycss()) 
+        .pipe(gulp.dest('./css')); 
 });
 
 gulp.task('replace-header', function(){
@@ -44,8 +45,14 @@ gulp.task('build-clean', function() {
     return del(['src']);
 });
 
+gulp.task('dev-clean', function() {
+    // Return the Promise from del()
+    return del(['./css/*.css']);
+});
+
 gulp.task('build', function() {
-    return runSequence('minifycss',
+    return runSequence('dev-clean',
+	'minifycss',
         ['replace-header', 'replace-index','replace-post'],
         'build-clean');
 });
