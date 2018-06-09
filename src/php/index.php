@@ -66,9 +66,9 @@ $this->need('inc/header.php'); ?>
 							<div class="mdui-card-media" >
                                 <a href="<?php $this->options->MainPicHref(); ?>">
                                     <?php if (!empty($this->options->MainPic )): ?>
-                                        <img class="main-pic" alt="main-pic" src="<?php $this->options->MainPic(); ?>">
+                                        <img class="main-pic" alt="main-pic" data-src="<?php $this->options->MainPic(); ?>">
                                     <?php else: ?>
-                                        <img class="main-pic" alt="main-pic" src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
+                                        <img class="main-pic" alt="main-pic" data-src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
                                     <?php endif; ?>
                                 </a>
 							</div>
@@ -82,9 +82,9 @@ $this->need('inc/header.php'); ?>
                 			<div class="mdui-card-media mdui-center" >
                                 <a href="<?php $this->options->LogoHref(); ?>">
                                     <?php if (!empty($this->options->Logo )): ?>
-                                        <img class="main-logo" alt="main-logo" src="<?php $this->options->Logo(); ?>">
+                                        <img class="main-logo" alt="main-logo" data-src="<?php $this->options->Logo(); ?>">
                                     <?php else: ?>
-                				        <img class="main-logo" alt="main-logo" src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
+                				        <img class="main-logo" alt="main-logo" data-src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
                                     <?php endif; ?>
                                 </a>
                 			</div>
@@ -121,7 +121,7 @@ $this->need('inc/header.php'); ?>
 
                                             <!--Article ThumbNail-->
                                             <picture>
-	    									    <img alt="ThumbNail" src="<?php showThumbnail($this); ?>" >
+	    									    <img alt="ThumbNail" data-src="<?php showThumbnail($this); ?>" >
                                             </picture>
                                             <!--Article ThumbNail END-->
 
@@ -204,7 +204,7 @@ $this->need('inc/header.php'); ?>
                                     <!-- Author avatar -->
                                     <div class="mdui-card-header mdui-float-left" >
                                         <?php if (!empty($this->options->avatarURL)): ?>
-                                            <img class="mdui-card-header-avatar" src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                            <img class="mdui-card-header-avatar" data-src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                         <?php else: ?>
                                             <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
                                         <?php endif; ?>
