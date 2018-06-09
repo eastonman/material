@@ -31,7 +31,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - Author 作者：Manyang901
 - Original Author 原作者：Viosey
-- Version 版本：2.1.1
+- Version 版本：2.3.0
 - Compatibility 兼容：PHP 5.4+, MySQL, Typecho 1.0、1.1（其余数据库未测试）
 - Browser Compatibility 浏览器兼容性: Google Chrome 56+ , Firefox latest , Opera latest ,Internet explorer 11(部分图片会有格式问题), Microsoft Edge 14+(Lazyload不支持IE和edge)
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
@@ -45,6 +45,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - Webp图片优化，根据访问设备是否支持Webp格式的图片返回自适应的图片，节省70%的流量(需要在网站根目录下放置serviceworker.js，详见Install-安装部分)
 - ServiceWorker 缓存控制
 - PWA 支持(需自行添加manifest.json到网站根目录)
+- Update Checker 更新检查(实验性功能，谨慎使用，使用前请慎重考虑！)
 
 
 ## Demo 演示
@@ -59,8 +60,9 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符 `<!-- more -->` 控制输出。
 - 若要使用Webp自适应图片，需要将解压出文件中serviceworker.js复制到网站的根目录(这是由于serviceworker作用范围的限制和typecho主题结构的特殊性)，不使用则所有设备全部返回png格式的图片，注意，现有策略是全部替换请求中的.png为.webp，这意味着若png图没有对应的webp图像则会返回404
 - 若需使用PWA，请自行在网站根目录加入manifest.json文件，也可以在线生成
-- 请确保已经安装php-curl扩展，否则可能出错或无法收集错误信息，通常可以使用apt install php-curl等安装扩展
-
+- 请确保已经安装php-curl扩展，否则可能出错或无法收集错误信息，更新检测功能也不能使用(可能会导致严重问题)，通常可以使用apt install php-curl等安装扩展
+- 可以在php交互模式下输入curl_init();以查看是否安装php-curl扩展
+- 更新检测并未加入任何容错和环境检查，请谨慎使用！
 
 ## Configure 配置
 

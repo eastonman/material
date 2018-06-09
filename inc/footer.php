@@ -1,5 +1,5 @@
 
-
+</main>
 <div class="mdui-container-fluid pjax-load bottom-mod">
 		<!--Footer-->
         <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
@@ -97,7 +97,7 @@
 
 
 
-</main>
+
 
 <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
 
@@ -117,14 +117,14 @@
 
 <?php if (in_array('LazyLoad' ,$this->options->FunctionSwitch)): ?>
 <script src="//cdn.bootcss.com/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
-<!--PJAX Js Event-->
+
 <script>
     //lazyload
     var myLazyLoad = new LazyLoad();
 </script>
 <?php endif; ?>
 
-
+<!--PJAX Js Event-->
 <script>
     new Pjax({
         elements: "a", // default is "a[href], form[action]"
@@ -139,6 +139,7 @@
                 inst.close();
             }
         mdui.mutation();
+        myLazyLoad.update();
 
         // Sidebar JS reload
         var SideBarDropdown = new mdui.Collapse('#sidebar-header-collapse');
