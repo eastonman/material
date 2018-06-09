@@ -139,6 +139,7 @@
                 inst.close();
             }
         mdui.mutation();
+        myLazyLoad.update();
 
         // Sidebar JS reload
         var SideBarDropdown = new mdui.Collapse('#sidebar-header-collapse');
