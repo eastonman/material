@@ -32,7 +32,7 @@
         </div>
         
         <!--Commenter name -->
-        <div class="mdui-card-header-title"><?php $comments->author(); ?>&nbsp;</div>
+        <div class="mdui-card-header-title mdui-typo"><?php $comments->author(); ?>&nbsp;</div>
         
         <!--Comment date -->
         <div class="mdui-card-header-subtitle"><?php $comments->date('Y-m-d, H:i'); ?></div>
