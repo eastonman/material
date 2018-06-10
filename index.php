@@ -71,6 +71,16 @@ $this->need('inc/header.php'); ?>
                                         <img class="main-pic" alt="main-pic" data-src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
                                     <?php endif; ?>
                                 </a>
+
+                                <!--Slogan BEGIN-->
+                                <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+                                     <div class="mdui-card-primary">
+                                            <div class="mdui-card-primary-title">
+                                                <?php $this->options->slogan(); ?>
+                                            </div>
+                                    </div>
+                                </div>
+                                <!-- Slogan END-->
 							</div>
 						</div>
 					</div>
