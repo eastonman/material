@@ -10,8 +10,8 @@
             <?php if (!empty($this->options->avatarURL)): ?>
                     <img src="<?php $this->options->avatarURL() ?>">
             <?php else: ?>
-                <?php if (!empty($this->options->logo)): ?>
-                    <img src="<?php $this->options->logo() ?>">
+                <?php if (!empty($this->options->Logo)): ?>
+                    <img src="<?php $this->options->Logo() ?>">
                 <?php else: ?>
                     <?php if (!empty($this->options->CDNURL)): ?>
                         <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/Avatar.jpg">
