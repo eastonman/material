@@ -1,6 +1,9 @@
 <?php
 
 function getLatestReleaseUrl() {
+    if (!function_exists('curl_init')) {
+        throw new Exception('PHP-cURL Extension Not Installed!');
+    }
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'https://api.github.com/repos/manyang901/material/releases/latest');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -15,7 +18,11 @@ function getLatestReleaseUrl() {
 
 function getFile () {
     global $theme_root;
-    $fileurl = getLatestReleaseUrl();
+    try {
+        $fileurl = getLatestReleaseUrl();
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
     $output = fopen($theme_root . '/material.tar.gz', 'w+');
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $fileurl);
@@ -31,6 +38,9 @@ function getFile () {
 function update() {
     getFile();
     global $theme_root;
+    if (!is_writable('material.tar.gz')) {
+        return false;
+    }
     $phar = new PharData('material.tar.gz');
     $phar->extractTo($theme_root,null,true);
     unlink($theme_root . '/material.tar.gz');
@@ -55,6 +65,9 @@ function getLatestReleaseTime() {
 function checkUpdate() {
     global $version_file_path;
     $version_filename = $version_file_path;
+    if (!is_readable($version_file_path)) {
+        throw new  Exception('Version File Not Readable!');
+    }
     $f = fopen($version_filename, 'r');
     $version = fgets($f);
     if ($version < getLatestReleaseTime()) {
@@ -67,6 +80,9 @@ function checkUpdate() {
 function updateVersion() {
     global $version_file_path;  
     $version_filename = $version_file_path;
+    if (!is_readable($version_file_path)) {
+        throw new  Exception('Version File Not Readable!');
+    }
     $f = fopen($version_filename, 'w');
     fwrite($f, date('c'));
     fclose($f);
