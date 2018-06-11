@@ -46,6 +46,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - ServiceWorker 缓存控制
 - PWA 支持(需自行添加manifest.json到网站根目录)
 - Update Checker 更新检查(实验性功能，谨慎使用，使用前请慎重考虑！)
+- 友链模板
 
 
 ## Demo 演示
@@ -63,10 +64,16 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - 请确保已经安装php-curl扩展，否则可能出错或无法收集错误信息，更新检测功能也不能使用(可能会导致严重问题)，通常可以使用apt install php-curl等安装扩展
 - 可以在php交互模式下输入curl_init();以查看是否安装php-curl扩展
 - 更新检测并未加入任何容错和环境检查，请谨慎使用！
+- 友链模板需在管理独立页面中自定义字段设置
+
 
 ## Configure 配置
 
 ### Function Switch 功能开关
+
+- Lazyload 
+- 首页两个欢迎图
+- 无插件访客统计
 
 #### ViewCount 无插件访客统计
 勾选此选项即可开始使用，注意此选项关闭时不统计数据。
@@ -79,6 +86,14 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - 主题将会加载`https://www.google.com/img/icon/`下的图标
 注意！图标文件名必须与默认图标的文件名相同,否则不能加载。
 
+### Template-Links 友链模板
+需要在管理->独立页面中设置自定义字段，分为links, avatar和name
+三者可以有共同后缀
+比如
+- links_hhh => https://php.net
+- avatar_hhh => somewhere
+- name_hhh => PHP is great
+必须有links和avatar, name可没有
 
 ## Preview 预览
 

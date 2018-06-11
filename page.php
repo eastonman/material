@@ -5,7 +5,7 @@
  *
  * @package Theme.Material
  * @author Viosey&manyang901
- * @version 2.3.0
+ * @version 2.4.0
  * @link https://github.com/manyang901/material
  */
 
@@ -44,7 +44,7 @@ $this->need('inc/header.php'); ?>
 								<div clas="mdui-card-primary-title mdui-typo">
 									<h1><?php $this->title() ?></h1>
 								</div>
-								
+
 							</div>
 
 							<div class="mdui-card-content mdui-typo">

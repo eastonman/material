@@ -5,7 +5,7 @@
  *
  * @package Theme.Material
  * @author Viosey&manyang901
- * @version 2.3.0
+ * @version 2.4.0
  * @link https://github.com/manyang901/material
  */
 
@@ -106,7 +106,7 @@ $this->need('inc/header.php'); ?>
                                 <div class="mdui-card-primary-subtitle">
                                     <?php $this->options->title(); ?>
                                 </div>
-                                
+
                             </div>
 
                 		</div>
@@ -227,8 +227,8 @@ $this->need('inc/header.php'); ?>
                                         <?php if (!empty($this->options->avatarURL)): ?>
                                             <img class="mdui-card-header-avatar" data-src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                         <?php else: ?>
-                                            <?php 
-                            
+                                            <?php
+
                                             $this->author->gravatar(64,'X','https://i.loli.net/2018/06/10/5b1d11b5bed74.png',"mdui-card-header-avatar"); ?>
                                         <?php endif; ?>
 
