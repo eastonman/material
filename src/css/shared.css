@@ -231,7 +231,9 @@ main {
 /*Sidebar Dropdown Arrow Layout End*/
 
 
-
+.sidebar .mdui-list .mdui-list-item a {
+	display: block;
+}
 /************* Sidebar Font Size & List Height Mod **************/
 .mdui-list .mdui-list-item:after {
 	height: 2.75rem !important;
