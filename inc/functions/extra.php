@@ -31,7 +31,7 @@ function getFieldLinks($widget) {
             $suffix = substr($key, 4);
             $avatar = 'avatar'.$suffix;
             $name = 'name'.$suffix;
-            if (isset($widget->fields->$avatar)) {
+            if ($widget->fields->$avatar != NULL) {
                 $avatarUrl = $widget->fields->$avatar;
                 $linkUrl = $widget->fields->$key;
                 $nameText = $widget->fields->$name;
