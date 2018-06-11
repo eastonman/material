@@ -2,7 +2,7 @@
 /*
 *
 */
-
+// Used to generate footer time counter
 function timesince($older_date,$comment_date = false) {
     $chunks = array(
         array(86400 , '天'),
@@ -24,6 +24,34 @@ function timesince($older_date,$comment_date = false) {
     return $output;
 }
 
+function getFieldLinks($widget) {
+    $count = 1;
+    foreach ($widget->fields as $key => $value) {
+        if (strpos($key, 'link') !== false) {
+            $suffix = substr($key, 4);
+            $avatar = 'avatar'.$suffix;
+            $name = 'name'.$suffix;
+            if (isset($widget->fields->$avatar)) {
+                $avatarUrl = $widget->fields->$avatar;
+                $linkUrl = $widget->fields->$key;
+                $nameText = $widget->fields->$name;
+                echo "
+                    <li class=\"mdui-list-item mdui-ripple\">
+                        <div class=\"mdui-list-item-avatar\"><img src=\"$avatarUrl\"/></div>
+                        <div class=\"mdui-list-item-content\">
+                            <a href=\"$linkUrl\" style=\"display: block; text-decoration: none;\">
+                                $nameText
+                            </a>
+                        </div>  
+                    </li>
+                    ";
+            }
+        }
+    }
+}
+
+
+//Maintain a version file when first run
 $version_filename = dirname(__FILE__).'/../../.version';
 
 if (!file_exists($version_filename)) {
