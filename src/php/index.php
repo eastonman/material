@@ -88,16 +88,27 @@ $this->need('inc/header.php'); ?>
 
                 	<!--Right Part(Blog Info) Begin-->
                 	<div class="mdui-col-xs-12 mdui-col-md-3" >
-                		<div class="mdui-card top-card mdui-valign" >
+                		<div class="mdui-card top-card" >
                 			<div class="mdui-card-media mdui-center" >
+                                <div style="display: inline;float: left;"></div>
                                 <a href="<?php $this->options->LogoHref(); ?>">
                                     <?php if (!empty($this->options->Logo )): ?>
-                                        <img class="main-logo" alt="main-logo" data-src="<?php $this->options->Logo(); ?>">
+                                        <img class="main-logo" alt=
+                                        "main-logo" data-src="<?php $this->options->Logo(); ?>">
                                     <?php else: ?>
                 				        <img class="main-logo" alt="main-logo" data-src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
                                     <?php endif; ?>
                                 </a>
                 			</div>
+                            <div class="mdui-divider"></div>
+
+                            <div class="mdui-card-primary mdui-clearfix">
+                                <div class="mdui-card-primary-subtitle">
+                                    <?php $this->options->title(); ?>
+                                </div>
+                                
+                            </div>
+
                 		</div>
                 	</div>
                 	<!--Blog Info End-->
