@@ -45,17 +45,9 @@ $this->need('inc/header.php'); ?>
 								
 							</div>
 
-							<div class="mdui-card-content mdui-typo">
+							<div class="mdui-card-content">
 								<ul class="mdui-list">
-									<li class="mdui-list-item mdui-ripple">
-									  	<div class="mdui-list-item-avatar"><img src="avatar1.jpg"/></div>
-									  	<div class="mdui-list-item-content">Brendan Lim</div>
-									</li>
-									<li class="mdui-list-item mdui-ripple">
-									  	<div class="mdui-list-item-avatar"><img src="avatar2.jpg"/></div>
-									  	<div class="mdui-list-item-content">me, Scott, Jennifer</div>
-									</li>
-									  	            	            
+									<?php getFieldLinks($this); ?>        	            
 								</ul>
 							</div>
 
