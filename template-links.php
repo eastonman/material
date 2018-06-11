@@ -1,12 +1,10 @@
 <?php
 /**
- * 这是由Viosey 基于 Google Material Design 开发的 Typecho 主题
- * 由Manyang901继续维护和更新
+ * 友链Links
  *
- * @package Theme.Material
+ * @package custom
  * @author Viosey&manyang901
- * @version 2.4.0
- * @link https://github.com/manyang901/material
+ *
  */
 
 $this->need('inc/header.php'); ?>
@@ -44,11 +42,13 @@ $this->need('inc/header.php'); ?>
 								<div clas="mdui-card-primary-title mdui-typo">
 									<h1><?php $this->title() ?></h1>
 								</div>
-
+								
 							</div>
 
-							<div class="mdui-card-content mdui-typo">
-								<?php $this->content(); ?>
+							<div class="mdui-card-content">
+								<ul class="mdui-list">
+									<?php getFieldLinks($this); ?>        	            
+								</ul>
 							</div>
 
 						</div>

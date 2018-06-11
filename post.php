@@ -5,7 +5,7 @@
  *
  * @package Theme.Material
  * @author Viosey&manyang901
- * @version 2.2.0
+ * @version 2.4.0
  * @link https://github.com/manyang901/material
  */
 
@@ -23,9 +23,7 @@ $this->need('inc/header.php'); ?>
 
 <body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>">
 
-	<div>
-
-		<main>
+		<main id="main">
 
 			<!-- Header & Appbar & Title -->
 			<header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide header-responsive" >

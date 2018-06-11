@@ -5,6 +5,11 @@
 *
 */
 
+
+main {
+	min-height: calc(100vh - 166px);
+}
+
 /*Responsive CSS For Appbar*/
 @media screen and (min-width:1024px) {
 	
@@ -226,7 +231,9 @@
 /*Sidebar Dropdown Arrow Layout End*/
 
 
-
+.sidebar .mdui-list .mdui-list-item a {
+	display: block;
+}
 /************* Sidebar Font Size & List Height Mod **************/
 .mdui-list .mdui-list-item:after {
 	height: 2.75rem !important;
@@ -259,12 +266,14 @@
 	padding-bottom: 5px;
 }
 
+#copyright {
+	padding-bottom: 30px;
+}
 /***** Inherit Bottom part of page & post *******/
 
 @media screen and (max-width: 1024px) {
 .bottom-mod {
 	position: relative;
-	width: 100%;
 	bottom: 0;
 	right: 0;
 }
@@ -273,7 +282,6 @@
 @media screen and (min-width: 1024px) {
 .bottom-mod {
 	position: relative;
-	width: 100% - 288px;
 	bottom: 0;
 	right: 0;
 }

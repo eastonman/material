@@ -102,42 +102,16 @@
 		<!-- Style Setting Begin-->
 		<!-- Predefined Customize Style Setting-->
 		<style>
-			#view-source {
-                position: fixed;
-                display: block;
-                right: 0;
-                bottom: 0;
-                margin-right: 40px;
-                margin-bottom: 40px;
-                z-index: 900;
-            }
-
             body,h1,h2,h3,h4,h5,h6 {
                 font-family: <?php $this->options->CustomFonts(); ?>;
             }
 
             a {
-                color: <?php $this->options->alinkcolor(); ?> ;
+                color: #000 ;
             }
 
-
-            .mdl-card__media,
-            #search-label,
-            #search-form-label:after,
-            .sidebar-colored .sidebar-header,
-            .sidebar-colored .sidebar-badge{
-                background-color: <?php $this->options->ThemeColor(); ?> !important;
-            }
-
-            .sidebar-colored .sidebar-nav li:hover > a,
-            .sidebar-colored .sidebar-nav li:hover > a i,
-            .sidebar-colored .sidebar-nav li > a:hover,
-            .sidebar-colored .sidebar-nav li > a:hover i,
-            .sidebar-colored .sidebar-nav li > a:focus i,
-            .sidebar-colored .sidebar-nav > .open > a,
-            .sidebar-colored .sidebar-nav > .open > a:hover,
-            .sidebar-colored .sidebar-nav > .open > a:focus{
-                color: <?php $this->options->ThemeColor(); ?> !important;
+            h1 {
+                font-weight: 400;
             }
         </style>
 		<!-- Customize Style End-->

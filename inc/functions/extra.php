@@ -2,7 +2,7 @@
 /*
 *
 */
-
+// Used to generate footer time counter
 function timesince($older_date,$comment_date = false) {
     $chunks = array(
         array(86400 , '天'),
@@ -24,13 +24,50 @@ function timesince($older_date,$comment_date = false) {
     return $output;
 }
 
+function getFieldLinks($widget) {
+    $count = 1;
+    foreach ($widget->fields as $key => $value) {
+        if (strpos($key, 'link') !== false) {
+            $suffix = substr($key, 4);
+            $avatar = 'avatar'.$suffix;
+            $name = 'name'.$suffix;
+            if ($widget->fields->$avatar != NULL) {
+                $avatarUrl = $widget->fields->$avatar;
+                $linkUrl = $widget->fields->$key;
+                $nameText = $widget->fields->$name;
+                echo "
+                    <li class=\"mdui-list-item mdui-ripple\">
+                        <div class=\"mdui-list-item-avatar\"><img src=\"$avatarUrl\"/></div>
+                        <div class=\"mdui-list-item-content\">
+                            <a href=\"$linkUrl\" style=\"display: block; text-decoration: none;\">
+                                $nameText
+                            </a>
+                        </div>  
+                    </li>
+                    ";
+            }
+        }
+    }
+}
 
+
+//Maintain a version file when first run
+$version_filename = dirname(__FILE__).'/../../.version';
+
+if (!file_exists($version_filename)) {
+    $file = fopen($version_filename, 'w+');
+    fwrite($file, date('c'));
+    fclose($file);
+}
+
+
+// Install Sentry SDK
 $include_path_append = dirname(__FILE__).'/../../lib';
 set_include_path(get_include_path() . PATH_SEPARATOR . $include_path_append);
 include_once('Raven/Autoloader.php');
 //require_once 'lib/Sentry/Autoloader.php';
     Raven_Autoloader::register();
-    $client = new Raven_Client('https://9c54c7b6dcb14b41a4d2833f07b5d821:9345d22fdc7f427e8aea2c2d0810320b@sentry.io/1218923', 
+    $client = new Raven_Client('https://9c54c7b6dcb14b41a4d2833f07b5d821:9345d22fdc7f427e8aea2c2d0810320b@sentry.io/1218923',
         array(
             'curl_method' => 'async',
             'release' => VERSION

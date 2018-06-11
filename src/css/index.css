@@ -4,10 +4,20 @@
 }
 .top-card {
 	height:360px;
+	background-color: #f5f5f5;
+}
+.top-card > .mdui-card-primary {
+	background-color: #fff;
+	height: 64px;
+}
+.top-card > .mdui-card-primary > .mdui-card-primary-subtitle {
+	font-size: 16px;
 }
 .main-logo {
 	height: 200px !important;
 	width: 200px !important;
+	margin: 46px auto;
+	border-radius: 50%;
 }
 
 .mdui-row > [class*="mdui-col-"] {
