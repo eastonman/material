@@ -134,7 +134,7 @@ $this->need('inc/header.php'); ?>
                             <div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1" >
 
                                 <!--Md Card Used to Contain Post Info Begin-->
-								<div class="mdui-card">
+								<div class="mdui-card mdui-hoverable">
                                     <!-- Article link & title -->
                                 	<?php if ($this->options->ThumbnailOption == '1'): ?>
 

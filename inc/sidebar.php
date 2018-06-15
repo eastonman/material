@@ -111,9 +111,9 @@
     <ul class="mdui-list mdui-list">
         <!-- Homepage -->
         <li class="mdui-list-item" >
-                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-800">home</i>
                 <div class="mdui-list-item-content" >
-                	<a href="<?php $this->options->siteUrl(); ?>" >
+                	<a href="<?php $this->options->siteUrl(); ?>" class="mdui-text-color-grey-800" >
                     <?php if ($this->options->langis == '0'): ?> Homepage
                     <?php elseif ($this->options->langis == '1'): ?> 主页
                     <?php elseif ($this->options->langis == '2'): ?> 首頁
@@ -127,14 +127,14 @@
             <div class="mdui-collapse-item">
                 <li class="mdui-collapse-item-header mdui-list-item">
 
-                        <i class="mdui-list-item-icon mdui-icon material-icons">inbox</i>
-                        <div class="mdui-list-item-content" >
+                        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-800">inbox</i>
+                        <div class="mdui-list-item-content mdui-text-color-grey-800" >
                         <?php if ($this->options->langis == '0'): ?> Archives
                         <?php elseif ($this->options->langis == '1'): ?> 归档
                         <?php elseif ($this->options->langis == '2'): ?> 過往
                         <?php endif; ?>
                         </div>
-                        <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-ripple"  >keyboard_arrow_down</i>
+                        <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-ripple mdui-text-color-grey-800"  >keyboard_arrow_down</i>
 
                 </li>
 
@@ -143,7 +143,7 @@
                         <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
                         ->parse('
                                     <li class="mdui-list-item" >
-                                        <a href="{permalink}" class="mdui-list-item-content" tabindex="-1">
+                                        <a href="{permalink}" class="mdui-list-item-content mdui-text-color-grey-800" tabindex="-1">
                                                 {date}
                                         </a>
                                     </li>
@@ -160,22 +160,22 @@
             <div class="mdui-collapse-item">
                 <li class="mdui-collapse-item-header mdui-list-item">
 
-                        <i class="mdui-list-item-icon mdui-icon material-icons">apps</i>
-                        <div class="mdui-list-item-content" >
+                        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-800">apps</i>
+                        <div class="mdui-list-item-content mdui-text-color-grey-800" >
                             <?php if ($this->options->langis == '0'): ?> Categories
                             <?php elseif ($this->options->langis == '1'): ?> 分类
                             <?php endif; ?>
                         </div>
-                        <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-ripple"  >keyboard_arrow_down</i>
+                        <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-800 mdui-ripple"  >keyboard_arrow_down</i>
 
                 </li>
 
                 <div class="mdui-collapse-item-body">
-                    <ul class="mdui-list" for="show-category-button">
+                    <ul class="mdui-list mdui-list-dense" for="show-category-button">
                         <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
                         <?php while ($category->next()): ?>
                             <li class="mdui-list-item">
-                                <a href="<?php $category->permalink(); ?>" class="mdui-list-itemc-content" title="<?php $category->name(); ?>">
+                                <a href="<?php $category->permalink(); ?>" class="mdui-list-item-content mdui-text-color-grey-800" title="<?php $category->name(); ?>">
                                     <?php $category->name(); ?>
                                 </a>
                             </li>
@@ -188,11 +188,11 @@
 
         <li class="mdui-divider"></li>
 
-		<!-- Show Page Quantity  -->
+		<!-- Show Pages -->
         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
         <?php while ($pages->next()): ?>
             <li class="mdui-list-item">
-                <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>" class="mdui-list-item-content" tabindex="-1">
+                <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>" class="mdui-list-item-content mdui-text-color-grey-800" tabindex="-1">
                     <?php $pages->title(); ?>
                 </a>
             </li>
@@ -205,7 +205,7 @@
         <!-- Status Page -->
         <?php if (!($this->options->Status == '')): ?>
             <li class="mdui-list-item">
-                <a href="<?php $this->options->Status(); ?>" class="mdui-list-item-content">
+                <a href="<?php $this->options->Status(); ?>" class="mdui-list-item-content mdui-text-color-grey-800">
                 <?php if ($this->options->langis == '0'): ?>Status
                 <?php elseif ($this->options->langis == '1'): ?>状态
                 <?php elseif ($this->options->langis == '1'): ?>狀態
@@ -217,7 +217,7 @@
 
         <!-- Article Numebr  -->
             <li class="mdui-list-item">
-                <a href="#" class="mdui-list-item-content">
+                <a href="#" class="mdui-list-item-content mdui-text-color-grey-800">
                     <?php if ($this->options->langis == '0'): ?> Article Number
                     <?php elseif ($this->options->langis == '1'): ?> 文章总数
                     <?php elseif ($this->options->langis == '2'): ?> 文章總數
