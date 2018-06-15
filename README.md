@@ -1,5 +1,7 @@
 # New Material 
 
+ > Material Design
+
 New Material 是一款遵循 Material Design 的 Typecho 主题
 
 ![https://travis-ci.org/manyang901/material](https://img.shields.io/travis/manyang901/material.svg)
@@ -21,6 +23,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 	- [Function Switch 功能开关](#function-switch-功能开关)
 		- [ViewCount 无插件访客统计](#viewcount-无插件访客统计)
 	- [IconURL Icon地址](#iconurl-icon地址)
+	- [Template-Links 友链模板](#template-links-友链模板)
 - [Preview 预览](#preview-预览)
 - [Contributing 贡献](#contributing-贡献)
 - [License 许可证](#license-许可证)
@@ -31,9 +34,9 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - Author 作者：Manyang901
 - Original Author 原作者：Viosey
-- Version 版本：2.3.0
-- Compatibility 兼容：PHP 5.4+, MySQL, Typecho 1.0、1.1（其余数据库未测试）
-- Browser Compatibility 浏览器兼容性: Google Chrome 56+ , Firefox latest , Opera latest ,Internet explorer 11(部分图片会有格式问题), Microsoft Edge 14+(Lazyload不支持IE和edge)
+- Version 版本：2.4.0
+- Compatibility 兼容：PHP 5.2+, MySQL, Sqlite3, Typecho 1.0、1.1、1.1测试版
+- Browser Compatibility 浏览器兼容性: Google Chrome 56+ , Firefox latest , Opera latest ,Internet explorer 11(部分图片会有格式问题), Microsoft Edge 14+(E和edge不支持LazyloadI)
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ## Feature 特性
@@ -41,6 +44,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - 遵循Google Material Design标准
 - 响应式设计，根据访问设备分辨率的不同显示不同的样式
 - Vanilla-Lazyload 首页缩略图“懒加载”
+- PJAX 无刷新技术
 - 非插件实现访客数量统计，使用cookies验证，使用自定义字段储存计数器，不修改数据库，高解耦。
 - Webp图片优化，根据访问设备是否支持Webp格式的图片返回自适应的图片，节省70%的流量(需要在网站根目录下放置serviceworker.js，详见Install-安装部分)
 - ServiceWorker 缓存控制
@@ -57,7 +61,6 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - 在[Github Release](https://github.com/manyang901/material/releases)页面，点击"material.tar.gz"下载，解压后将文件夹改名为 "Material"(或其他) 后上传到 `/usr/themes`，并启用主题。2.1.0版本引入Travis CI自动压缩css后，不建议直接clone项目，推荐在release界面下载。
 - 下载最新文件 然后覆盖原文件即可更新主题, 部分新增加的功能需要到后台开启才会生效 (建议更新后先切换为其他主题, 再切换回该主题)。否则有可能会导致莫名其妙的 bug...
-- 在 "设置外观" 中打造一个属于你自己的博客，部分配置项参考[配置](#configure-配置)
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符 `<!-- more -->` 控制输出。
 - 若要使用Webp自适应图片，需要将解压出文件中serviceworker.js复制到网站的根目录(这是由于serviceworker作用范围的限制和typecho主题结构的特殊性)，不使用则所有设备全部返回png格式的图片，注意，现有策略是全部替换请求中的.png为.webp，这意味着若png图没有对应的webp图像则会返回404
 - 若需使用PWA，请自行在网站根目录加入manifest.json文件，也可以在线生成
