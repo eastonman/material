@@ -133,19 +133,14 @@
 
 	document.addEventListener('pjax:send', function() { NProgress.start(); });
 	document.addEventListener('pjax:complete',
-		function() { NProgress.done();
+		function() { 
+        NProgress.done();
 		var inst = new mdui.Drawer('#sidebar');
             if (document.documentElement.clientWidth < 1024) {
                 inst.close();
             }
         mdui.mutation();
         myLazyLoad.update();
-
-        // Sidebar JS reload
-        var SideBarDropdown = new mdui.Collapse('#sidebar-header-collapse');
-        document.getElementById('sidebar-header-collapse-controller').addEventListener('click' , function() {
-	        SideBarDropdown.toggle('#sidebar-header-collapse-item');
-        });
 	});
 </script>
 
