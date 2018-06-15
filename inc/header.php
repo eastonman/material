@@ -84,7 +84,7 @@
 
         <!-- DNS prefetch-->
         <link rel="dns-prefetch" href="//cdn.bootcss.com" />
-        <link rel="dns-prefetch" href="//cdn.jsdelivr.com" />
+        <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
         <link rel="preconnect" href="//secure.gravatar.com" crossorigin="anonymous" />
 
 
