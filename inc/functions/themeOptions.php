@@ -30,7 +30,7 @@ function themeConfig($form)
     //Using poor method to get theme_root url
     //Then provide a entrypoint towards update.php
     $pageScheme = 'http';
-    if ($_SERVER['HTTPS'] == 'on') { 
+    if (isset($_SERVER['HTTPS']) and ($_SERVER['HTTPS'] == 'on')) { 
         $pageScheme .= 's';
     }
     $pageScheme .='://';
