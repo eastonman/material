@@ -56,21 +56,21 @@ function themeConfig($form)
     );
     $form->addInput($FunctionSwitch->multiMode());
 
-    $FoundDate = new Typecho_Widget_Helper_Form_Element_Text('FoundDate', null, null, _t('博客建立日期'), _t(''));
+    $FoundDate = new Typecho_Widget_Helper_Form_Element_Text('FoundDate', null, null, _t('博客建立日期'), _t('格式为yyyy-mm-dd，如1980-06-01'));
     $form->addInput($FoundDate);
 
-    $IconUrl = new Typecho_Widget_Helper_Form_Element_Text('IconUrl', null, null, _t('Icon 地址'), _t('填入博客所有icon 的地址，必须包含目录img/icon并且有相应的png文件, 默认显示主题目录下img/icon中的图标'));
+    $IconUrl = new Typecho_Widget_Helper_Form_Element_Text('IconUrl', null, null, _t('Icon 目录地址'), _t('填入博客所有icon 的地址，必须包含目录img/icon并且有相应的png文件, 默认显示主题目录下img/icon中的图标'));
     $form->addInput($IconUrl);
 
-    $CDNUrl = new Typecho_Widget_Helper_Form_Element_Text('CDNUrl', null, null, _t('CDN 地址'), _t("
+    $CDNUrl = new Typecho_Widget_Helper_Form_Element_Text('CDNUrl', null, null, _t('静态资源 CDN 地址'), _t("
         新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
-        填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b>"));
+        填入你的 CDN 地址, 支持OSS存储桶，如 <b>http://bucket.b0.upaiyun.com</b>"));
     $form->addInput($CDNUrl);
 
-    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', null, _t('indigo'), _t('主题颜色'), _t('填入md颜色类别（如indigo）'));
+    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', null, _t('blue-grey'), _t('主题颜色'), _t('填入md颜色类别(如indigo)，可选主题色参见<a>https://www.mdui.org/docs/color</a>'));
     $form->addInput($ThemeColor);
 
-    $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', null, _t('#039BE5'), _t('Android Chrome 地址栏颜色'), null);
+    $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', null, _t('#607D8B'), _t('Android Chrome 地址栏颜色'), null);
     $form->addInput($ChromeThemeColor);
 
     $langis = new Typecho_Widget_Helper_Form_Element_Radio('langis',
@@ -94,13 +94,13 @@ function themeConfig($form)
         ),
 
         //Default choose
-        '1', _t('背景设置'), _t("选择背景方案, 对应填写下方的 '<b>背景颜色 / 图片</b>' 或选择 '<b>渐变样式</b>', 这里默认使用图片背景.")
+        '0', _t('背景设置'), _t("选择背景方案, 对应填写下方的 '<b>背景颜色 / 图片</b>', 这里默认使用纯色背景.")
     );
     $form->addInput($BackgroundType);
 
 
-    $BgContent = new Typecho_Widget_Helper_Form_Element_Text('BgContent', null, null, _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
-        不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/bg.jpg'));
+    $BgContent = new Typecho_Widget_Helper_Form_Element_Text('BgContent', null, null, _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br>背景设置如果选择图片背景, 这里就填写图片地址;<br>
+        不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/Background.jpg'));
     $form->addInput($BgContent);
 
     $avatarURL = new Typecho_Widget_Helper_Form_Element_Text('avatarURL', null, null, '个人头像地址', '填入头像的地址, 如不填写则使用默认头像');
@@ -115,7 +115,7 @@ function themeConfig($form)
     $MainPicHref = new Typecho_Widget_Helper_Form_Element_Text('MainPicHref', null, _t('#'), _t('首页顶部左边图片的点击跳转地址'), _t('点击首页大图后, 想要跳转网页的地址'));
     $form->addInput($MainPicHref);
 
-    $LogoHref = new Typecho_Widget_Helper_Form_Element_Text('LogoHref', null, null, _t('首页顶部右边 LOGO 的点击跳转地址'), _t('点击 LOGO 后, 想要跳转网页的地址'));
+    $LogoHref = new Typecho_Widget_Helper_Form_Element_Text('LogoHref', null, _t('#'), _t('首页顶部右边 LOGO 的点击跳转地址'), _t('点击 LOGO 后, 想要跳转网页的地址'));
     $form->addInput($LogoHref);
 
     $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', null, _t('Nice to meet you'), _t('首页顶部左边的标语'), _t('填入自定义文字, 显示于首页顶部左边的图片上'));
@@ -155,10 +155,10 @@ function themeConfig($form)
     );
     $form->addInput($footersns);
 
-    $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('TwitterURL', null, _t('NULL'), _t('Twitter 地址'), null);
+    $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('TwitterURL', null, null, _t('Twitter 地址'), null);
     $form->addInput($TwitterURL);
 
-    $FacebookURL = new Typecho_Widget_Helper_Form_Element_Text('FacebookURL', null, _t('NULL'), _t('Facebook 地址'), null);
+    $FacebookURL = new Typecho_Widget_Helper_Form_Element_Text('FacebookURL', null, null, _t('Facebook 地址'), null);
     $form->addInput($FacebookURL);
 
     $GithubURL = new Typecho_Widget_Helper_Form_Element_Text('GithubURL', null, null, _t('Github 地址'), null);
@@ -179,7 +179,7 @@ function themeConfig($form)
     $YoutubeURL = new Typecho_Widget_Helper_Form_Element_Text('YoutubeURL', null, null, _t('Youtube 地址'), null);
     $form->addInput($YoutubeURL);
 
-    $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', null, null, _t('网站统计代码 + 自定义字体源'), _t('填入如 Google Analysis 的第三方统计代码或字体源'));
+    $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', null, null, _t('网站统计代码和自定义页脚'), _t('填入如 Google Analysis 等的第三方统计代码'));
     $form->addInput($analysis);
 
 

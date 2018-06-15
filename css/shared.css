@@ -1,16 +1,36 @@
 /*
-*Share css for all pages
-*
-*
+*Shared css for all pages
+*Including
+* SideBar General
+* Footer sticky
 *
 */
 
 
-main {
-	min-height: calc(100vh - 166px);
+/* Quite dirty way to make footer stick to bottom*/
+@media screen and (max-width: 600px) {
+	main {
+		min-height: calc(100vh - 209px);
+	}
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+	main {
+		min-height: calc(100vh - 213px);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	main {
+		min-height: calc(100vh - 139px);
+	}
+}
+
+/*Sticky Footer END */
+
+
 /*Responsive CSS For Appbar*/
+/*hide Appbar on devices larger than 1024px*/
 @media screen and (min-width:1024px) {
 	
 	.header-responsive {
@@ -28,7 +48,7 @@ main {
 
 
 }
-/*Responsive Appbat End*/
+/*Responsive Appbar END*/
 
 
 /* Appbar Title Align to center*/
