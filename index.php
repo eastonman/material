@@ -54,7 +54,7 @@ $this->need('inc/header.php'); ?>
 
 
 			<!-- Blog Header(picture&avatar&slogan) Began -->
-            <div class="mdui-container mdui-appbar-with-toolbar pjax-load" >
+            <div class="mdui-container-fluid mdui-appbar-with-toolbar pjax-load" >
 
                 <?php if (in_array('ShowMainPic',$this->options->FunctionSwitch)): ?>
                 <!--First Row Of Content-->
@@ -123,7 +123,7 @@ $this->need('inc/header.php'); ?>
 
 
             <!--Blog Posts Output Begin-->
-            <div class="mdui-container pjax-load" >
+            <div class="mdui-container-fluid pjax-load" >
 
                 <?php while ($this->next()): ?>
 

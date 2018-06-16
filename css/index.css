@@ -21,8 +21,8 @@
 }
 
 .mdui-row > [class*="mdui-col-"] {
-	padding-top: 1rem;
-	padding-bottom: 0.5rem;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	
 
 }
