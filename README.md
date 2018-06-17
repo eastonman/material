@@ -34,7 +34,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - Author 作者：Manyang901
 - Original Author 原作者：Viosey
-- Version 版本：2.4.0
+- Version 版本：2.5.0
 - Compatibility 兼容：PHP 5.2+, MySQL, Sqlite3, Typecho 1.0、1.1、1.1测试版
 - Browser Compatibility 浏览器兼容性: Google Chrome 56+ , Firefox latest , Opera latest ,Internet explorer 11(部分图片会有格式问题), Microsoft Edge 14+(E和edge不支持LazyloadI)
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
@@ -44,7 +44,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - 遵循Google Material Design标准
 - 响应式设计，根据访问设备分辨率的不同显示不同的样式
 - Vanilla-Lazyload 首页缩略图“懒加载”
-- PJAX 无刷新技术
+- 全站 PJAX 无刷新技术
 - 非插件实现访客数量统计，使用cookies验证，使用自定义字段储存计数器，不修改数据库，高解耦。
 - Webp图片优化，根据访问设备是否支持Webp格式的图片返回自适应的图片，节省70%的流量(需要在网站根目录下放置serviceworker.js，详见Install-安装部分)
 - ServiceWorker 缓存控制
