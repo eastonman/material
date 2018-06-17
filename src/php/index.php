@@ -3,9 +3,9 @@
  * 这是由Viosey 基于 Google Material Design 开发的 Typecho 主题
  * 由Manyang901继续维护和更新
  *
- * @package Theme.Material
- * @author Viosey&manyang901
- * @version 2.4.0
+ * @package New.Material
+ * @author Viosey & Manyang901
+ * @version 2.5.0
  * @link https://github.com/manyang901/material
  */
 
@@ -13,11 +13,13 @@ $this->need('inc/header.php'); ?>
 
     <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/index.css" />
+            <link class="pjax-load " rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/index.css" />
         <?php else: ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/index.css'); ?>" />
+            <link class="pjax-load" rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/index.css'); ?>" />
         <?php endif; ?>
     <!-- Standalone CSS END-->
+
+    <link rel="preload" href="<?php $this->options->themeUrl('css/post.css') ?>" as="style">
 
 </head>
 
@@ -54,7 +56,7 @@ $this->need('inc/header.php'); ?>
 
 
 			<!-- Blog Header(picture&avatar&slogan) Began -->
-            <div class="mdui-container mdui-appbar-with-toolbar pjax-load" >
+            <div class="mdui-container-fluid mdui-appbar-with-toolbar pjax-load" >
 
                 <?php if (in_array('ShowMainPic',$this->options->FunctionSwitch)): ?>
                 <!--First Row Of Content-->
@@ -123,7 +125,7 @@ $this->need('inc/header.php'); ?>
 
 
             <!--Blog Posts Output Begin-->
-            <div class="mdui-container pjax-load" >
+            <div class="mdui-container-fluid pjax-load" >
 
                 <?php while ($this->next()): ?>
 
@@ -134,7 +136,7 @@ $this->need('inc/header.php'); ?>
                             <div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1" >
 
                                 <!--Md Card Used to Contain Post Info Begin-->
-								<div class="mdui-card">
+								<div class="mdui-card mdui-hoverable">
                                     <!-- Article link & title -->
                                 	<?php if ($this->options->ThumbnailOption == '1'): ?>
 
@@ -277,15 +279,18 @@ $this->need('inc/header.php'); ?>
                 <?php endwhile; ?>
                 <!--Article Md Cards Output End-->
 
-				<!-- Echo Prev & After Page-->
-					<div class="mdui-row" >
+			</div>
+			<!-- Posts Output MD Container End-->
+
+            <!-- Echo Prev & After Page-->
+                    <div class="mdui-container pjax-load" >
                             <nav class="">
                                 <div class="mdui-col-xs-2">
-									<?php $this->pageLink(
+                                    <?php $this->pageLink(
                         '<div class=" mdui-float-left">
                             <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple mdui-color-white" >arrow_back</i>
                         </div>'); ?>
-                        		</div>
+                                </div>
 
                                 <div class="mdui-text-center mdui-col-xs-8 mdui-m-y-3">page
                                 <?php if ($this->_currentPage>1) {
@@ -296,22 +301,16 @@ $this->need('inc/header.php'); ?>
                                 <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
                                 </div>
 
-                            	<div class="mdui-col-xs-2" >
+                                <div class="mdui-col-xs-2" >
                                 <?php $this->pageLink(
                         '<div class="mdui-float-right ">
                             <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple" >arrow_forward</i>
                         </div>', 'next'); ?>
-                        		</div>
+                                </div>
                             </nav>
 
-					</div>
-				<!-- Echo Navigation Icon End-->
-
-
-			</div>
-			<!-- Posts Output MD Container End-->
-
-
+                    </div>
+                <!-- Echo Navigation Icon End-->
 
 <?php $this->need('inc/sidebar.php'); ?>
 <?php $this->need('inc/footer.php'); ?>

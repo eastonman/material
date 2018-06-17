@@ -3,9 +3,9 @@
  * 这是由Viosey 基于 Google Material Design 开发的 Typecho 主题
  * 由Manyang901继续维护和更新
  *
- * @package Theme.Material
- * @author Viosey&manyang901
- * @version 2.4.0
+ * @package New.Material
+ * @author Viosey & Manyang901
+ * @version 2.5.0
  * @link https://github.com/manyang901/material
  */
 
@@ -13,11 +13,13 @@ $this->need('inc/header.php'); ?>
 
 <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/post.css" />
+            <link class="pjax-load" rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/post.css" />
         <?php else: ?>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/post.css'); ?>" />
+            <link class="pjax-load" rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/post.css'); ?>" />
         <?php endif; ?>
 <!-- Standalone CSS END-->
+
+<link rel="preload" href="<?php $this->options->themeUrl('css/index.css') ?>" as="style">
 
 </head>
 
