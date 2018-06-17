@@ -126,21 +126,22 @@
 
 <!--PJAX Js Event-->
 <script>
-    new Pjax({
+    var pjax = new Pjax({
         elements: "a", // default is "a[href], form[action]"
-        selectors: ["title",".pjax-load"]
+        selectors: ["title", ".pjax-load"]
     });
 
 	document.addEventListener('pjax:send', function() { NProgress.start(); });
 	document.addEventListener('pjax:complete',
 		function() { 
-        NProgress.done();
+        
 		var inst = new mdui.Drawer('#sidebar');
             if (document.documentElement.clientWidth < 1024) {
                 inst.close();
             }
         mdui.mutation();
         myLazyLoad.update();
+        NProgress.done();
 	});
 </script>
 
