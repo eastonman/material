@@ -3,9 +3,9 @@
  * 这是由Viosey 基于 Google Material Design 开发的 Typecho 主题
  * 由Manyang901继续维护和更新
  *
- * @package Theme.Material
- * @author Viosey&manyang901
- * @version 2.4.0
+ * @package New.Material
+ * @author Viosey & Manyang901
+ * @version 2.5.0
  * @link https://github.com/manyang901/material
  */
 
@@ -277,15 +277,18 @@ $this->need('inc/header.php'); ?>
                 <?php endwhile; ?>
                 <!--Article Md Cards Output End-->
 
-				<!-- Echo Prev & After Page-->
-					<div class="mdui-row" >
+			</div>
+			<!-- Posts Output MD Container End-->
+
+            <!-- Echo Prev & After Page-->
+                    <div class="mdui-container pjax-load" >
                             <nav class="">
                                 <div class="mdui-col-xs-2">
-									<?php $this->pageLink(
+                                    <?php $this->pageLink(
                         '<div class=" mdui-float-left">
                             <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple mdui-color-white" >arrow_back</i>
                         </div>'); ?>
-                        		</div>
+                                </div>
 
                                 <div class="mdui-text-center mdui-col-xs-8 mdui-m-y-3">page
                                 <?php if ($this->_currentPage>1) {
@@ -296,22 +299,16 @@ $this->need('inc/header.php'); ?>
                                 <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
                                 </div>
 
-                            	<div class="mdui-col-xs-2" >
+                                <div class="mdui-col-xs-2" >
                                 <?php $this->pageLink(
                         '<div class="mdui-float-right ">
                             <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple" >arrow_forward</i>
                         </div>', 'next'); ?>
-                        		</div>
+                                </div>
                             </nav>
 
-					</div>
-				<!-- Echo Navigation Icon End-->
-
-
-			</div>
-			<!-- Posts Output MD Container End-->
-
-
+                    </div>
+                <!-- Echo Navigation Icon End-->
 
 <?php $this->need('inc/sidebar.php'); ?>
 <?php $this->need('inc/footer.php'); ?>
