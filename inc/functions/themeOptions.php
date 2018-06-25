@@ -70,6 +70,9 @@ function themeConfig($form)
     $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', null, _t('blue-grey'), _t('主题颜色'), _t('填入md颜色类别(如indigo)，可选主题色参见<a>https://www.mdui.org/docs/color</a>'));
     $form->addInput($ThemeColor);
 
+    $AccentColor = new Typecho_Widget_Helper_Form_Element_Text('AccentColor', null, _t('pink'), _t('主题颜色'), _t('填入md颜色类别(如indigo)，可选主题色参见<a>https://www.mdui.org/docs/color</a>'));
+    $form->addInput($AccentColor);
+
     $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', null, _t('#607D8B'), _t('Android Chrome 地址栏颜色'), null);
     $form->addInput($ChromeThemeColor);
 

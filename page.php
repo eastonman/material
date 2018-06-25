@@ -7,21 +7,21 @@
  * @author Viosey & Manyang901
  * @version 2.5.0
  * @link https://github.com/manyang901/material
+ *
  */
 
 $this->need('inc/header.php'); ?>
 
 
 
-<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>" >
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?> mdui-theme-accent-<?php $this->options->AccentColor(); ?>" >
 
 		<main>
 
-			<!-- Header & Appbar & Title -->
+			<!-- Auto Hiding Header & Appbar & Title -->
 			<header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide header-responsive" >
 				<div class="mdui-toolbar mdui-color-theme mdui-color-white" >
 
-					<!--<div class="mdui-toolbar-spacer"></div>-->
 					<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
 
                     <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline mdui-center"  >
@@ -29,9 +29,8 @@ $this->need('inc/header.php'); ?>
 					</a>
 
 				</div>
-
 			</header>
-			<!-- Header & Appbar & Title End -->
+			<!-- Header & Appbar & Title END -->
 
 
 			<div class="mdui-container-fluid mdui-appbar-with-toolbar pjax-load" >

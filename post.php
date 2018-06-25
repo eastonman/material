@@ -23,7 +23,7 @@ $this->need('inc/header.php'); ?>
 
 </head>
 
-<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>">
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?> mdui-theme-accent-<?php $this->options->AccentColor(); ?>">
 
 		<main id="main">
 
