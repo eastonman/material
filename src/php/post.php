@@ -105,18 +105,20 @@ $this->need('inc/header.php'); ?>
 
 
 			<!-- theNext thePrev button -->
-			<div class="mdui-container mdui-m-b-2 pjax-load">
+			<div class="mdui-container mdui-m-b-4 pjax-load">
             <nav class="mdui-row">
 <?php $this->theNext('%s', null, array('title' => '
 <div class="mdui-col-xs-4">
-<button class="mdui-btn mdui-btn-icon mdui-ripple  mdui-text-color-black" role="presentation">
+<button class="mdui-btn mdui-btn-raised mdui-ripple round-btn mdui-color-theme-accent" role="presentation">
 <i class="mdui-icon material-icons">arrow_back</i>
-</button>&nbsp;&nbsp;&nbsp;Newer
+&nbsp;Newer
+</button>
 </div> ', 'tagClass' => 'prev-content')); ?>
                 <div class="mdui-col-xs-4"></div>
 <?php $this->thePrev('%s', null, array('title' => '
-<div class="mdui-col-xs-4 mdui-text-right">Older&nbsp;&nbsp;&nbsp;
-<button class="mdui-btn mdui-btn-icon  mdui-ripple mdui-text-color-black" role="presentation">
+<div class="mdui-col-xs-4 mdui-text-right">
+<button class="mdui-btn mdui-btn-raised mdui-ripple round-btn mdui-color-theme-accent" role="presentation">
+Older&nbsp;&nbsp;
 <i class="mdui-icon material-icons">arrow_forward</i>
 </button>
 </div>', 'tagClass' => 'prev-content')); ?>

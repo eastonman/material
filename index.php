@@ -304,14 +304,16 @@ $this->need('inc/header.php'); ?>
             <!-- Echo Prev & After Page-->
                     <div class="mdui-container pjax-load" >
                             <nav class="">
-                                <div class="mdui-col-xs-2">
+                                <div class="mdui-col-xs-3 mdui-m-y-3">
                                     <?php $this->pageLink(
-                        '<div class=" mdui-float-left">
-                            <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple mdui-color-white" >arrow_back</i>
+                        '<div>
+                            <button class="mdui-btn mdui-btn-raised mdui-color-white mdui-ripple round-btn">
+                                <i class="mdui-icon material-icons">arrow_back</i>
+                            </button>
                         </div>'); ?>
                                 </div>
 
-                                <div class="mdui-text-center mdui-col-xs-8 mdui-m-y-3">page
+                                <div style="line-height: 36px;" class="mdui-text-center mdui-col-xs-6 mdui-m-y-3">page
                                 <?php if ($this->_currentPage>1) {
                             echo $this->_currentPage;
                         } else {
@@ -320,10 +322,12 @@ $this->need('inc/header.php'); ?>
                                 <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
                                 </div>
 
-                                <div class="mdui-col-xs-2" >
+                                <div class="mdui-col-xs-3 mdui-m-y-3" >
                                 <?php $this->pageLink(
-                        '<div class="mdui-float-right ">
-                            <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple" >arrow_forward</i>
+                        '<div>
+                            <button class="mdui-btn mdui-btn-raised mdui-color-white mdui-ripple round-btn">
+                                <i class="mdui-icon material-icons">arrow_forward</i>
+                            </button>
                         </div>', 'next'); ?>
                                 </div>
                             </nav>
