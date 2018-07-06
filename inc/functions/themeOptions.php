@@ -49,6 +49,7 @@ function themeConfig($form)
             'LazyLoad' => _t('LazyLoad'),
             'ViewCount' => _t('无插件访客统计'),
             'ShowMainPic' => _t('显示主页的欢迎图'),
+            'DarkTheme' => _t('暗色主题')
         ),
 
         //Default choose
