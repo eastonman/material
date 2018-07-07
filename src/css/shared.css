@@ -2,31 +2,10 @@
 *Shared css for all pages
 *Including
 * SideBar General
-* Footer sticky
+* Footer
 *
 */
 
-
-/* Quite dirty way to make footer stick to bottom*/
-@media screen and (max-width: 600px) {
-	main {
-		min-height: calc(100vh - 209px);
-	}
-}
-
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-	main {
-		min-height: calc(100vh - 213px);
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	main {
-		min-height: calc(100vh - 139px);
-	}
-}
-
-/*Sticky Footer END */
 
 
 /*Responsive CSS For Appbar*/
@@ -268,34 +247,60 @@
 
 
 /********************************************************************/
-/*************************                     *********************/
+/*************************                     **********************/
 /*************************   Sidebar CSS END   **********************/
 /*************************                     **********************/
 /********************************************************************/
 
 
+
+/********************************************************************/
+/*************************                     **********************/
+/*************************   Footer CSS BEGIN  **********************/
+/*************************                     **********************/
+/********************************************************************/
+
+/* Round Button*/
 .round-btn {
     border-radius: 18px !important;
 }
 
 
+/* Footer Sticky BEGIN */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+}
+
+main {
+    flex: 1;
+}
+
+
+/*Sticky Footer END */
+
 
 
 /*Footer MDUI row Padding*/
 
-#bottom {
-	padding-top: 50px;
-	padding-bottom: 5px;
+.bottom {
+	padding-top: 40px;
+	padding-bottom: 10px;
 }
 
-#copyright {
-	padding-bottom: 30px;
+.copyright {
+	padding-bottom: 20px;
 }
+
 /***** Inherit Bottom part of page & post *******/
 
 @media screen and (max-width: 1024px) {
 .bottom-mod {
-	position: relative;
+    /*Cover mdui default*/
+	margin-right: unset !important;
+    margin-left: unset  !important;
 	bottom: 0;
 	right: 0;
 }
@@ -303,7 +308,9 @@
 
 @media screen and (min-width: 1024px) {
 .bottom-mod {
-	position: relative;
+    /*cover mdui default*/
+	margin-right: unset !important;
+    margin-left: unset  !important;
 	bottom: 0;
 	right: 0;
 }
@@ -311,6 +318,9 @@
 
 
 /*Footer SNS herf no underline */
+.footer-sns {
+    padding-top: 1rem;
+}
 
 .footer-sns > a {
 	text-decoration: none;
@@ -318,10 +328,21 @@
 	margin-right: 5px;
 }
 
+/********************************************************************/
+/*************************                     **********************/
+/*************************   Footer CSS END    **********************/
+/*************************                     **********************/
+/********************************************************************/
+
 
 /*Comment List No Margin*/
-.comments > .comment-list {
+.comment .comment-list {
 	margin: 0;
-	padding-bottom: 50px;
-	-webkit-padding-start: 0;
+	-webkit-padding-start: 0px;
+}
+
+.comments > .comment-list {
+    margin: 0;
+    padding-bottom: 50px;
+    -webkit-padding-start: 0px;
 }

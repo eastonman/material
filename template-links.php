@@ -11,7 +11,7 @@ $this->need('inc/header.php'); ?>
 
 
 
-<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>" >
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?> mdui-theme-accent-<?php $this->options->AccentColor(); ?> <?php if (in_array('DarkTheme', $this->options->FunctionSwitch)) { echo 'mdui-theme-layout-dark'; }?>" >
 
 		<main>
 
@@ -33,7 +33,7 @@ $this->need('inc/header.php'); ?>
 
 
 			<div class="mdui-container-fluid mdui-appbar-with-toolbar pjax-load" >
-				<div class="mdui-row" >
+				<div class="mdui-row mdui-p-b-4" >
 					<div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1">
 						<!--Post Content Md Card Begin-->
 						<div class="mdui-card" >
