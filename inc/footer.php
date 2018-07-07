@@ -2,7 +2,7 @@
 </main>
 <div class="mdui-container-fluid pjax-load bottom-mod">
 		<!--Footer-->
-        <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
+        <footer class="mdui-row mdui-shadow-2 mdui-color-white bottom">
 
             <!--Footer Left SNS Icons Begin-->
             <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center footer-sns">
@@ -71,7 +71,7 @@
             <!--Footer Left SNS END-->
 
             <!--copyright-->
-            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center mdui-typo" id="copyright">
+            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center mdui-typo copyright">
 
             	Copyright &copy;
 

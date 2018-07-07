@@ -16,10 +16,10 @@ gulp.task('jshint', function() {
 
 //minifying css
 gulp.task('minifycss', function() {
-    return gulp.src('./src/css/*.css') 
-        .pipe(rename({ suffix: '.min' })) 
-        .pipe(minifycss()) 
-        .pipe(gulp.dest('./css')); 
+    return gulp.src('./src/css/*.css')
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(minifycss())
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('replace-header', function(){
@@ -31,12 +31,14 @@ gulp.task('replace-header', function(){
 gulp.task('replace-index', function(){
     return gulp.src(['./src/php/index.php'])
         .pipe(replace('index.css', 'index.min.css'))
+        .pipe(replace('post.css', 'post.min.css'))
         .pipe(gulp.dest('./'));
 });
 
 gulp.task('replace-post', function(){
     return gulp.src(['./src/php/post.php'])
         .pipe(replace('post.css', 'post.min.css'))
+        .pipe(replace('index.css', 'index.min.css'))
         .pipe(gulp.dest('./'));
 });
 
@@ -52,12 +54,11 @@ gulp.task('dev-clean', function() {
 
 gulp.task('build', function() {
     return runSequence('dev-clean',
-	'minifycss',
+        'minifycss',
         ['replace-header', 'replace-index','replace-post'],
         'build-clean');
 });
 
 gulp.task('dev', function() {
-    return runSequence('minifycss',
-        ['replace-header', 'replace-index','replace-post']);
+    return runSequence('minifycss');
 });
