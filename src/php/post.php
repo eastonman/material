@@ -63,7 +63,7 @@ $this->need('inc/header.php'); ?>
                             	<?php if (!empty($this->options->avatarURL)): ?>
                                 	<img class="mdui-card-header-avatar" src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                 <?php else: ?>
-                                    <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
+                                    <?php $this->author->gravatar(64,'X','https://i.loli.net/2018/06/10/5b1d11b5bed74.png',"mdui-card-header-avatar"); ?>
                                 <?php endif; ?>
 
                                 <!--Author Name-->
@@ -109,7 +109,7 @@ $this->need('inc/header.php'); ?>
             <nav class="mdui-row">
 <?php $this->theNext('%s', null, array('title' => '
 <div class="mdui-col-xs-4">
-<button class="mdui-btn mdui-btn-raised mdui-ripple round-btn mdui-color-theme-accent" role="presentation">
+<button class="mdui-btn mdui-btn-raised mdui-ripple round-btn mdui-color-white mdui-text-color-theme-accent" role="presentation">
 <i class="mdui-icon material-icons">arrow_back</i>
 &nbsp;Newer
 </button>
@@ -117,7 +117,7 @@ $this->need('inc/header.php'); ?>
                 <div class="mdui-col-xs-4"></div>
 <?php $this->thePrev('%s', null, array('title' => '
 <div class="mdui-col-xs-4 mdui-text-right">
-<button class="mdui-btn mdui-btn-raised mdui-ripple round-btn mdui-color-theme-accent" role="presentation">
+<button class="mdui-btn mdui-btn-raised mdui-ripple round-btn mdui-color-white mdui-text-color-theme-accent" role="presentation">
 Older&nbsp;&nbsp;
 <i class="mdui-icon material-icons">arrow_forward</i>
 </button>

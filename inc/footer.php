@@ -101,6 +101,9 @@
 
 <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
 
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
 <script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
 <script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>

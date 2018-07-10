@@ -96,6 +96,8 @@
 
         <!-- MDUI css-->
         <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.1/css/mdui.min.css" />
+
+        <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/monokai.min.css" rel="stylesheet">
 		<!--EXTERNAL CSS END-->
 
 
