@@ -65,17 +65,17 @@
         <!-- reply -->
 		<?php if (__langis__ == '0'): ?>
                 <?php $comments->reply('
-                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-color-theme-accent">
+                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-text-color-theme-accent">
 				    Reply
                     </button>'); ?>
         <?php elseif (__langis__ == '1'): ?>
                 <?php $comments->reply('
-                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-color-theme-accent">
+                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-text-color-theme-accent">
                     回复
                     </button>'); ?>
         <?php elseif (__langis__ == '2'): ?>
                 <?php $comments->reply('
-                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-color-theme-accent">
+                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-text-color-theme-accent">
                     回復
                     </button>'); ?>
         <?php endif; ?>
@@ -83,15 +83,15 @@
 
         <!-- share -->
         <?php if (__langis__ == '0'): ?>
-            <button id="comment-share-<?php $comments->theId(); ?>-button" class="round-btn mdui-m-r-2 mdui-btn mdui-ripple mdui-float-right mdui-btn-raised mdui-color-theme-accent" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
+            <button id="comment-share-<?php $comments->theId(); ?>-button" class="round-btn mdui-m-r-2 mdui-btn mdui-ripple mdui-float-right mdui-btn-raised mdui-text-color-theme-accent" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
                 Share
             </button>
         <?php elseif (__langis__ == '1'): ?>
-            <button id="comment-share-<?php $comments->theId(); ?>-button" class="round-btn mdui-m-r-2 mdui-btn mdui-ripple mdui-float-right mdui-btn-raised mdui-color-theme-accent" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
+            <button id="comment-share-<?php $comments->theId(); ?>-button" class="round-btn mdui-m-r-2 mdui-btn mdui-ripple mdui-float-right mdui-btn-raised mdui-text-color-theme-accent" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
                 分享
             </button>
         <?php elseif (__langis__ == '2'): ?>
-            <button id="comment-share-<?php $comments->theId(); ?>-button" class="round-btn mdui-m-r-2 mdui-btn mdui-ripple mdui-float-right mdui-btn-raised mdui-color-theme-accent" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
+            <button id="comment-share-<?php $comments->theId(); ?>-button" class="round-btn mdui-m-r-2 mdui-btn mdui-ripple mdui-float-right mdui-btn-raised mdui-text-color-theme-accent" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
                 分享
             </button>
         <?php endif; ?>
@@ -230,22 +230,22 @@
                 <!-- Submit comment content button -->
 			    <?php if (__langis__ == '0') {
                     $comments->reply('
-                        <button id="comment-button" class="round-btn mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-m-t-2 mdui-ripple mdui-float-right">
+                        <button id="comment-button" class="round-btn mdui-btn mdui-btn-raised mdui-text-color-theme-accent mdui-m-t-2 mdui-ripple mdui-float-right">
                             Submit
                         </button>'); 
                 } elseif (__langis__ == '1') {
                     $comments->reply('
-                        <button id="comment-button" class="round-btn mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-m-t-2 mdui-ripple mdui-float-right">
+                        <button id="comment-button" class="round-btn mdui-btn mdui-btn-raised mdui-text-color-theme-accent mdui-m-t-2 mdui-ripple mdui-float-right">
                             提交评论
                         </button>'); 
                 } elseif (__langis__ == '2') {
                    $comments->reply('
-                        <button id="comment-button" class="round-btn mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-m-t-2 mdui-ripple mdui-float-right">
+                        <button id="comment-button" class="round-btn mdui-btn mdui-btn-raised mdui-text-color-theme-accent mdui-m-t-2 mdui-ripple mdui-float-right">
                             提交評論
                         </button>'); 
                 } else {
                     $comments->reply('
-                        <button id="comment-button" class="round-btn mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-m-t-2 mdui-ripple mdui-float-right">
+                        <button id="comment-button" class="round-btn mdui-btn mdui-btn-raised mdui-text-color-theme-accent mdui-m-t-2 mdui-ripple mdui-float-right">
                             Submit
                         </button>'); 
                 }?>
