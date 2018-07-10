@@ -30,7 +30,7 @@
 
         <!-- Comment avatar -->
         <div class="mdui-card-header-avatar mdui-icon mdui-btn-icon">
-            <?php $comments->gravatar(42); ?>
+            <?php $comments->gravatar(40); ?>
         </div>
         
         <!--Commenter name -->
