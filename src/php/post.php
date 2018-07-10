@@ -5,7 +5,7 @@
  *
  * @package New.Material
  * @author Viosey & Manyang901
- * @version 2.5.0
+ * @version 2.6.0
  * @link https://github.com/manyang901/material
  */
 
@@ -23,7 +23,7 @@ $this->need('inc/header.php'); ?>
 
 </head>
 
-<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>">
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?> mdui-theme-accent-<?php $this->options->AccentColor(); ?> <?php if (in_array('DarkTheme', $this->options->FunctionSwitch)) { echo 'mdui-theme-layout-dark'; }?>">
 
 		<main id="main">
 
@@ -63,7 +63,7 @@ $this->need('inc/header.php'); ?>
                             	<?php if (!empty($this->options->avatarURL)): ?>
                                 	<img class="mdui-card-header-avatar" src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                 <?php else: ?>
-                                    <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
+                                    <?php $this->author->gravatar(64,'X','https://i.loli.net/2018/06/10/5b1d11b5bed74.png',"mdui-card-header-avatar"); ?>
                                 <?php endif; ?>
 
                                 <!--Author Name-->
@@ -105,18 +105,20 @@ $this->need('inc/header.php'); ?>
 
 
 			<!-- theNext thePrev button -->
-			<div class="mdui-container mdui-m-b-2 pjax-load">
+			<div class="mdui-container mdui-m-b-4 pjax-load">
             <nav class="mdui-row">
 <?php $this->theNext('%s', null, array('title' => '
 <div class="mdui-col-xs-4">
-<button class="mdui-btn mdui-btn-icon mdui-ripple  mdui-text-color-black" role="presentation">
+<button class="mdui-btn mdui-btn-raised mdui-ripple round-btn mdui-color-white mdui-text-color-theme-accent" role="presentation">
 <i class="mdui-icon material-icons">arrow_back</i>
-</button>&nbsp;&nbsp;&nbsp;Newer
+&nbsp;Newer
+</button>
 </div> ', 'tagClass' => 'prev-content')); ?>
                 <div class="mdui-col-xs-4"></div>
 <?php $this->thePrev('%s', null, array('title' => '
-<div class="mdui-col-xs-4 mdui-text-right">Older&nbsp;&nbsp;&nbsp;
-<button class="mdui-btn mdui-btn-icon  mdui-ripple mdui-text-color-black" role="presentation">
+<div class="mdui-col-xs-4 mdui-text-right">
+<button class="mdui-btn mdui-btn-raised mdui-ripple round-btn mdui-color-white mdui-text-color-theme-accent" role="presentation">
+Older&nbsp;&nbsp;
 <i class="mdui-icon material-icons">arrow_forward</i>
 </button>
 </div>', 'tagClass' => 'prev-content')); ?>

@@ -2,7 +2,7 @@
 </main>
 <div class="mdui-container-fluid pjax-load bottom-mod">
 		<!--Footer-->
-        <footer class="mdui-row mdui-shadow-2 mdui-color-white" id="bottom">
+        <footer class="mdui-row mdui-shadow-2 mdui-color-white bottom">
 
             <!--Footer Left SNS Icons Begin-->
             <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center footer-sns">
@@ -71,7 +71,7 @@
             <!--Footer Left SNS END-->
 
             <!--copyright-->
-            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center mdui-typo" id="copyright">
+            <div class="mdui-col-xs-12 mdui-col-md-4 mdui-text-center mdui-typo copyright">
 
             	Copyright &copy;
 
@@ -100,6 +100,9 @@
 
 
 <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script >hljs.initHighlightingOnLoad();</script>
 
 <script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">

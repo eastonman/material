@@ -5,10 +5,12 @@
  *
  * @package New.Material
  * @author Viosey & Manyang901
- * @version 2.5.0
+ * @version 2.6.0
  * @link https://github.com/manyang901/material
+ *
  */
 
+//Include header.php
 $this->need('inc/header.php'); ?>
 
     <!-- Standalone CSS Calling For Index -->
@@ -17,114 +19,125 @@ $this->need('inc/header.php'); ?>
         <?php else: ?>
             <link class="pjax-load" rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/index.css'); ?>" />
         <?php endif; ?>
-    <!-- Standalone CSS END-->
+    <!-- Standalone CSS END -->
 
     <link rel="preload" href="<?php $this->options->themeUrl('css/post.css') ?>" as="style">
 
 </head>
 
-<!-- Html Head End-->
+<!-- Html Head END -->
 
 
 
 
 <!-- Html Body Start-->
 
-<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?>" >
-
-        <!-- Content Of Index Page Begin -->
+<body class="mdui-drawer-body-left mdui-theme-primary-<?php $this->options->ThemeColor(); ?> mdui-theme-accent-<?php $this->options->AccentColor(); ?> <?php if (in_array('DarkTheme', $this->options->FunctionSwitch)) { echo 'mdui-theme-layout-dark'; }?>" >
 
 		<main>
 
-			<!-- Header & Appbar & Title -->
+			<!-- Auto Hiding Header & Appbar & Title BEGIN -->
 			<header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide header-responsive" >
-
 				<div class="mdui-toolbar mdui-color-theme mdui-color-white" >
 
+                    <!-- menu icon -->
 					<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
 
+                    <!-- title in appbar header -->
                     <a href="<?php $this->options->siteUrl(); ?>" class="mdui-typo-headline mdui-center">
 						<?php $this->options->title(); ?>
 					</a>
 
 				</div>
-
 			</header>
 			<!-- Header & Appbar & Title End -->
 
 
-
-
-			<!-- Blog Header(picture&avatar&slogan) Began -->
+			<!-- Blog Header BEGIN -->
+            <!-- Contain Left Main-pic , Right main-logo and slogan -->
             <div class="mdui-container-fluid mdui-appbar-with-toolbar pjax-load" >
 
+                <!-- Provide a switch of showing first row of content -->
                 <?php if (in_array('ShowMainPic',$this->options->FunctionSwitch)): ?>
-                <!--First Row Of Content-->
-                <div class="mdui-row">
 
-                	<!-- Left Main Picture -->
-	                <div class="mdui-col-xs-12 mdui-col-md-7 mdui-col-offset-md-1">
-						<div class="mdui-card top-card">
-							<div class="mdui-card-media" >
-                                <a href="<?php $this->options->MainPicHref(); ?>">
-                                    <?php if (!empty($this->options->MainPic )): ?>
-                                        <img class="main-pic" alt="main-pic" data-src="<?php $this->options->MainPic(); ?>">
-                                    <?php else: ?>
-                                        <img class="main-pic" alt="main-pic" data-src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
-                                    <?php endif; ?>
-                                </a>
+                    <!-- First Row Of Content-->
+                    <div class="mdui-row">
 
-                                <!--Slogan BEGIN-->
-                                <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
-                                     <div class="mdui-card-primary">
+                        <!-- Left Main Picture Column-->
+                        <div class="mdui-col-xs-12 mdui-col-md-7 mdui-col-offset-md-1">
+                            <!-- Left Main-pic MD card BEGIN -->
+                            <div class="mdui-card top-card">
+                                <!-- Main-pic Picture -->
+                                <div class="mdui-card-media" >
+                                    <a href="<?php $this->options->MainPicHref(); ?>">
+                                        <?php if (!empty($this->options->MainPic )): ?>
+                                            <img class="main-pic" alt="main-pic" data-src="<?php $this->options->MainPic(); ?>">
+                                        <?php else: ?>
+                                            <img class="main-pic" alt="main-pic" data-src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
+                                        <?php endif; ?>
+                                    </a>
+
+                                    <!--Slogan BEGIN-->
+                                    <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+                                        <div class="mdui-card-primary">
                                             <div class="mdui-card-primary-title">
                                                 <?php $this->options->slogan(); ?>
                                             </div>
+                                        </div>
                                     </div>
+                                    <!-- Slogan END-->
                                 </div>
-                                <!-- Slogan END-->
-							</div>
-						</div>
-					</div>
-                	<!-- Main Picture End -->
+                                <!-- Main-pic Picture END -->
+                            </div>
+                            <!-- Left Main-pic MD card END -->
+                        </div>
+                        <!-- Left Main Picture Column END -->
 
-                	<!--Right Part(Blog Info) Begin-->
-                	<div class="mdui-col-xs-12 mdui-col-md-3" >
-                		<div class="mdui-card top-card" >
-                			<div class="mdui-card-media mdui-center" >
-                                <div style="display: inline;float: left;"></div>
-                                <a href="<?php $this->options->LogoHref(); ?>">
-                                    <?php if (!empty($this->options->Logo )): ?>
-                                        <img class="main-logo" alt=
+                        <!-- Right Part BEGIN -->
+                        <!-- Including main-logo and a title -->
+                        <div class="mdui-col-xs-12 mdui-col-md-3" >
+                            <!-- Right MD card -->
+                            <div class="mdui-card top-card" >
+
+                                <div class="mdui-card-media mdui-center" >
+                                    <!-- Main-logo with a href -->
+                                    <a href="<?php $this->options->LogoHref(); ?>">
+                                        <?php if (!empty($this->options->Logo )): ?>
+                                            <img class="main-logo" alt=
                                         "main-logo" data-src="<?php $this->options->Logo(); ?>">
-                                    <?php else: ?>
-                				        <img class="main-logo" alt="main-logo" data-src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
-                                    <?php endif; ?>
-                                </a>
-                			</div>
-                            <div class="mdui-divider"></div>
+                                        <?php else: ?>
+                				            <img class="main-logo" alt="main-logo" data-src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
+                                        <?php endif; ?>
+                                    </a>
+                                    <!-- Main-logo END -->
+                                </div>
 
-                            <div class="mdui-card-primary mdui-clearfix">
-                                <div class="mdui-card-primary-subtitle">
-                                    <?php $this->options->title(); ?>
+                                <!-- A small divider between Main-logo and title -->
+                                <div class="mdui-divider"></div>
+
+                                <!-- A Blog title -->
+                                <div class="mdui-card-primary mdui-clearfix">
+                                    <div class="mdui-card-primary-subtitle">
+                                        <?php $this->options->title(); ?>
+                                    </div>
                                 </div>
 
                             </div>
+                            <!-- Right MD card END -->
+                        </div>
+                        <!-- Right Part END -->
 
-                		</div>
-                	</div>
-                	<!--Blog Info End-->
+                    </div>
+                    <!-- First Row Of content END -->
 
-                </div>
-                <!--First Row Of content End-->
                 <?php endif; ?>
 
             </div>
-            <!--Blog Header End-->
+            <!-- Blog Header END -->
 
 
 
-            <!--Blog Posts Output Begin-->
+            <!-- Blog Posts Output BEGIN -->
             <div class="mdui-container-fluid pjax-load" >
 
                 <?php while ($this->next()): ?>
@@ -132,54 +145,61 @@ $this->need('inc/header.php'); ?>
                         <!-- Each Post Occupy One MD Row-->
 						<div class="mdui-row" >
 
-                            <!-- Article Location -->
+                            <!-- Post MD Card Wrap Location -->
                             <div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1" >
 
-                                <!--Md Card Used to Contain Post Info Begin-->
+                                <!-- MD Card Used to Contain Post Info Begin-->
 								<div class="mdui-card mdui-hoverable">
-                                    <!-- Article link & title -->
+
+                                    <!-- Show First Pic in post as thumbnail -->
                                 	<?php if ($this->options->ThumbnailOption == '1'): ?>
 
                                         <div class="mdui-card-media index-post-card-media" >
 
-                                            <!--Article ThumbNail-->
+                                            <!-- Post ThumbNail -->
                                             <picture>
 	    									    <img alt="ThumbNail" data-src="<?php showThumbnail($this); ?>" >
                                             </picture>
-                                            <!--Article ThumbNail END-->
+                                            <!-- Post ThumbNail END -->
 
-											<!--Article Title Displays Above ThumbNail-->
+											<!-- Post Title Displays Above Bottom in ThumbNail-->
                                         	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
                                         		<div class="mdui-card-primary mdui-typo" >
-				    								<a class="mdui-card-primary-title mdui-text-color-white" href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a>
+				    								<a class="mdui-card-primary-title mdui-text-color-white" href="<?php $this->permalink() ?>" target="_self">
+                                                        <?php $this->title() ?>
+                                                    </a>
 												</div>
                                             </div>
-                                            <!--Article Title End-->
+                                            <!-- Post Title End -->
 
 		    							</div>
 
+                                    <!-- Show A Blue SVG as thumbnail -->
                                     <?php elseif ($this->options->ThumbnailOption == '2'): ?>
 
                                         <div class="mdui-card-media index-post-card-media" >
 
-                                            <!--Article ThumbNail-->
+                                            <!-- Post ThumbNail -->
                                             <picture>
-	    									    <img alt="Article Thumbnail" data-src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz4NCg0KPHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiDQp4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KDQo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxMDAwIiBmaWxsPSIjNjRCNUY2Ij4NCjwvcmVjdD4NCjwvc3ZnPg==" >
+	    									    <img alt="Post Thumbnail" data-src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz4NCg0KPHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiDQp4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KDQo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxMDAwIiBmaWxsPSIjNjRCNUY2Ij4NCjwvcmVjdD4NCjwvc3ZnPg==" >
                                             </picture>
-											<!--Article Title Displays Above ThumbNail-->
+
+											<!-- Post Title Displays Above Bottom of ThumbNail -->
                                         	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
                                         		<div class="mdui-card-primary mdui-typo" >
 				    								<a class="mdui-card-primary-title mdui-text-color-white" href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a>
 												</div>
                                             </div>
-                                            <!--Article Title End-->
+                                            <!-- Post Title END -->
+
 		    							</div>
 
+                                    <!-- Directly Show Random ThumbNail -->
                                     <?php elseif ($this->options->ThumbnailOption == '3'): ?>
 
                                         <div class="mdui-card-media index-post-card-media" >
 
-                                            <!--Article ThumbNail-->
+                                            <!--Post ThumbNail-->
                                             <picture>
 
                                                 <source media="(min-width: 1024px)" data-srcset="<?php randomThumbnail($this); ?>" type="image/jpeg">
@@ -187,19 +207,20 @@ $this->need('inc/header.php'); ?>
 
                                             </picture>
 
-											<!--Article Title Displays Above ThumbNail-->
+											<!-- Post Title Displays Above ThumbNail -->
                                         	<div class="mdui-card-media-covered mdui-card-media-covered-gradient" >
                                         		<div class="mdui-card-primary mdui-typo" >
 				    								<a class="mdui-card-primary-title mdui-text-color-white" href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a>
 												</div>
                                             </div>
-                                            <!--Article Title End-->
+                                            <!-- Post Title END -->
+
 		    							</div>
 
                                     <?php endif; ?>
 
 
-                                    <!-- Article content -->
+                                    <!-- Post content BEGIN -->
                                     <div class="mdui-card-content mdui-clearfix">
                                         <!-- Control Output Length -->
                                         <?php $this->excerpt(80, '...'); ?> &nbsp;&nbsp;&nbsp;
@@ -218,20 +239,18 @@ $this->need('inc/header.php'); ?>
                                         </span>
 
                                     </div>
-                                    <!--Article Content End-->
+                                    <!--Post Content END-->
 
 	    							<div class="mdui-divider"></div>
 
-                                    <!-- Article info-->
+                                    <!-- Post info-->
 
                                     <!-- Author avatar -->
                                     <div class="mdui-card-header mdui-float-left" >
                                         <?php if (!empty($this->options->avatarURL)): ?>
                                             <img class="mdui-card-header-avatar" data-src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                         <?php else: ?>
-                                            <?php
-
-                                            $this->author->gravatar(64,'X','https://i.loli.net/2018/06/10/5b1d11b5bed74.png',"mdui-card-header-avatar"); ?>
+                                            <?php $this->author->gravatar(64,'X','https://i.loli.net/2018/06/10/5b1d11b5bed74.png',"mdui-card-header-avatar"); ?>
                                         <?php endif; ?>
 
                                         <!--Author Name-->
@@ -253,7 +272,7 @@ $this->need('inc/header.php'); ?>
 
 
                                     <!--Right Part Of Md Card Header(Under) -->
-                                    <div class="mdui-typo mdui-float-right index-post-card-header-rightinfo" id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
+                                    <div class="mdui-typo mdui-float-right index-post-card-header-rightinfo" id="Post-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
 
                                         <div class="mdui-text-color-pink-accent" >
                                             <?php $this->category(', '); ?>
@@ -271,13 +290,13 @@ $this->need('inc/header.php'); ?>
                                     <!--Right Part Of Md Card Header End-->
 
                                 </div>
-                                <!--Md Card Of Article End-->
+                                <!--Md Card Of Post End-->
 
 
                             </div>
 						</div>
                 <?php endwhile; ?>
-                <!--Article Md Cards Output End-->
+                <!--Post Md Cards Output End-->
 
 			</div>
 			<!-- Posts Output MD Container End-->
@@ -285,14 +304,16 @@ $this->need('inc/header.php'); ?>
             <!-- Echo Prev & After Page-->
                     <div class="mdui-container pjax-load" >
                             <nav class="">
-                                <div class="mdui-col-xs-2">
+                                <div class="mdui-col-xs-3 mdui-m-y-3">
                                     <?php $this->pageLink(
-                        '<div class=" mdui-float-left">
-                            <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple mdui-color-white" >arrow_back</i>
+                        '<div>
+                            <button class="mdui-btn mdui-shadow-1 mdui-color-white mdui-ripple round-btn">
+                                <i class="mdui-icon material-icons">arrow_back</i>
+                            </button>
                         </div>'); ?>
                                 </div>
 
-                                <div class="mdui-text-center mdui-col-xs-8 mdui-m-y-3">page
+                                <div style="line-height: 36px;" class="mdui-text-center mdui-col-xs-6 mdui-m-y-3">page
                                 <?php if ($this->_currentPage>1) {
                             echo $this->_currentPage;
                         } else {
@@ -301,10 +322,12 @@ $this->need('inc/header.php'); ?>
                                 <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
                                 </div>
 
-                                <div class="mdui-col-xs-2" >
+                                <div class="mdui-col-xs-3 mdui-m-y-3" >
                                 <?php $this->pageLink(
-                        '<div class="mdui-float-right ">
-                            <i class="mdui-icon mdui-btn-icon material-icons mdui-color-transparent mdui-text-color-black mdui-m-y-3 mdui-ripple" >arrow_forward</i>
+                        '<div>
+                            <button class="mdui-btn mdui-shadow-1 mdui-color-white mdui-ripple round-btn">
+                                <i class="mdui-icon material-icons">arrow_forward</i>
+                            </button>
                         </div>', 'next'); ?>
                                 </div>
                             </nav>
