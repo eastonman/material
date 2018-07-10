@@ -91,7 +91,7 @@ $this->need('inc/header.php'); ?>
 
                             </div>
 
-							<div class="mdui-card-content mdui-typo">
+							<div class="mdui-card-content">
 								<?php $this->content(); ?>
 							</div>
 

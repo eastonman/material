@@ -95,9 +95,10 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/shared.css'); ?>" />
 
         <!-- MDUI css-->
-        <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.1/css/mdui.min.css" />
 
-        <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/monokai.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.1/css/mdui.min.css" />
+        <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/gruvbox-dark.min.css" rel="stylesheet">
+
 		<!--EXTERNAL CSS END-->
 
 
@@ -108,6 +109,9 @@
                 font-family: <?php $this->options->CustomFonts(); ?>;
             }
 
+            pre,code {
+                font-family: Consolas, Source Code Pro, Roboto;
+            }
             a {
                 color: #000 ;
             }
@@ -147,17 +151,6 @@
                     <?php else: ?>
                         background-color: #F5F5F5;
                     <?php endif; ?>
-                }
-                .demo-blog .something-else .mdl-card__supporting-text{
-                    background-color: #fff;
-                }
-                .MD-burger-layer{
-                    background-color: #666;
-                }
-                .demo-blog .demo-blog__posts>.demo-nav,
-                .demo-nav a,
-                .demo-blog--blogpost .demo-back{
-                    color: #666;
                 }
             </style>
 

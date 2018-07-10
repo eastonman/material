@@ -105,6 +105,7 @@
 <script >hljs.initHighlightingOnLoad();</script>
 
 <script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
 <script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
 
@@ -137,15 +138,22 @@
 	document.addEventListener('pjax:send', function() { NProgress.start(); });
 	document.addEventListener('pjax:complete',
 		function() { 
-        
+        NProgress.set(0.6);
+        //close sidebar automatically in <1024px device
 		var inst = new mdui.Drawer('#sidebar');
             if (document.documentElement.clientWidth < 1024) {
                 inst.close();
             }
         mdui.mutation();
+
+        //recall lazyload
         myLazyLoad.update();
-        NProgress.done();
+        
+        //reinitialize highlight.js
+        hljs.initHighlighting.called = false;
+        hljs.initHighlighting();
 	});
+    document.addEventListener('pjax:success', function() {NProgress.done(); } );
 </script>
 
 
