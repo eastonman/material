@@ -63,7 +63,7 @@ $this->need('inc/header.php'); ?>
                             	<?php if (!empty($this->options->avatarURL)): ?>
                                 	<img class="mdui-card-header-avatar" src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                                 <?php else: ?>
-                                    <?php $this->author->gravatar(64,'X',NULL,"mdui-card-header-avatar"); ?>
+                                    <?php $this->author->gravatar(64,'X','https://i.loli.net/2018/06/10/5b1d11b5bed74.png',"mdui-card-header-avatar"); ?>
                                 <?php endif; ?>
 
                                 <!--Author Name-->
