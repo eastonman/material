@@ -11,7 +11,14 @@
  */
 
 //Include header.php
-$this->need('inc/header.php'); ?>
+$this->need('inc/header.php');
+if ($this->options->langis == '1') {
+    require(dirname(__FILE__) . '/inc/lang/zh-cn.php');
+} elseif ($this->options->langis == '2') {
+    require(dirname(__FILE__) . '/inc/lang/zh-tw.php');
+}
+
+?>
 
     <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
@@ -228,13 +235,7 @@ $this->need('inc/header.php'); ?>
                                         <!-- Show Additional parts -->
                                         <span class="mdui-typo mdui-float-right" >
                                     		<a  href="<?php $this->permalink(); ?>" target="_self">
-                                            	<?php if ($this->options->langis == '0'): ?>
-                                                	Continue Reading
-                                            	<?php elseif ($this->options->langis == '1'): ?>
-                                                    继续阅读
-                                            	<?php elseif ($this->options->langis == '2'): ?>
-                                                    繼續閱讀
-                                            	<?php endif; ?>
+                                            	<?php echo $MultiLang->get('Continue Reading'); ?>
                                     		</a>
                                         </span>
 
