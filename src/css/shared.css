@@ -327,7 +327,7 @@ main {
 
 /*Footer SNS herf no underline */
 .footer-sns {
-    padding-top: 1rem;
+    margin-top: 1rem;
 }
 
 .footer-sns > a {

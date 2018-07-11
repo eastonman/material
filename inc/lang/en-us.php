@@ -15,7 +15,7 @@ class LangDict
     }
 }
 
-$MultiLang = new LangDict();
+//$MultiLang = new LangDict();
 
 
 
