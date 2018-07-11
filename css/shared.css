@@ -1,6 +1,7 @@
 /*
 *Shared css for all pages
 *Including
+* 
 * SideBar General
 * Footer
 *
@@ -269,13 +270,20 @@
 /* Footer Sticky BEGIN */
 
 body {
+    display: -webkit-flex;
     display: flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     flex-direction: column;
     min-height: 100vh;  
 }
 
 main {
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
 }
 
 
@@ -319,7 +327,7 @@ main {
 
 /*Footer SNS herf no underline */
 .footer-sns {
-    padding-top: 1rem;
+    margin-top: 1rem;
 }
 
 .footer-sns > a {

@@ -23,7 +23,6 @@
 .mdui-row > [class*="mdui-col-"] {
 	padding-top: 4px;
 	padding-bottom: 4px;
-	
 
 }
 
@@ -37,4 +36,9 @@
 .index-post-card-header-rightinfo {
 	margin-top: 15px;
 	padding: 1em;
+}
+
+.bottom > [class*="mdui-col-"] {
+	padding-top: 0px;
+	padding-bottom: 30px;
 }

@@ -5,13 +5,22 @@
  *
  * @package New.Material
  * @author Viosey & Manyang901
- * @version 2.5.0
+ * @version 2.6.0
  * @link https://github.com/manyang901/material
  *
  */
 
-//Include header.php 
-$this->need('inc/header.php'); ?>
+//Include header.php
+$this->need('inc/header.php');
+if ($this->options->langis == '0') {
+    require_once(dirname(__FILE__) . '/inc/lang/en-us.php');
+} elseif ($this->options->langis == '1') {
+    require_once(dirname(__FILE__) . '/inc/lang/zh-cn.php');
+} elseif ($this->options->langis == '2') {
+    require_once(dirname(__FILE__) . '/inc/lang/zh-tw.php');
+}
+$MultiLang = new LangDict();
+?>
 
     <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
@@ -228,13 +237,7 @@ $this->need('inc/header.php'); ?>
                                         <!-- Show Additional parts -->
                                         <span class="mdui-typo mdui-float-right" >
                                     		<a  href="<?php $this->permalink(); ?>" target="_self">
-                                            	<?php if ($this->options->langis == '0'): ?>
-                                                	Continue Reading
-                                            	<?php elseif ($this->options->langis == '1'): ?>
-                                                    继续阅读
-                                            	<?php elseif ($this->options->langis == '2'): ?>
-                                                    繼續閱讀
-                                            	<?php endif; ?>
+                                            	<?php echo $MultiLang->get('Continue Reading'); ?>
                                     		</a>
                                         </span>
 

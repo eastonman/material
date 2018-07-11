@@ -5,7 +5,7 @@
  *
  * @package New.Material
  * @author Viosey & Manyang901
- * @version 2.5.0
+ * @version 2.6.0
  * @link https://github.com/manyang901/material
  */
 
@@ -91,7 +91,7 @@ $this->need('inc/header.php'); ?>
 
                             </div>
 
-							<div class="mdui-card-content mdui-typo">
+							<div class="mdui-card-content">
 								<?php $this->content(); ?>
 							</div>
 

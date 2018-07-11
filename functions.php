@@ -3,7 +3,7 @@
 * Typecho functions entry point
 */
 
-define('VERSION', '2.5.0');
+define('VERSION', '2.6.0');
 require_once('inc/functions/themeOptions.php');
 require_once('inc/functions/thumbNail.php');
 require_once('inc/functions/extra.php');

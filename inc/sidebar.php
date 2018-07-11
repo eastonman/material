@@ -1,3 +1,15 @@
+<?php 
+if ($this->options->langis == '0') {
+    require_once(dirname(__FILE__) . '/lang/en-us.php');
+} elseif ($this->options->langis == '1') {
+    require_once(dirname(__FILE__) . '/lang/zh-cn.php');
+} elseif ($this->options->langis == '2') {
+    require_once(dirname(__FILE__) . '/lang/zh-tw.php');
+}
+$MultiLang = new LangDict();
+?>
+
+
 <!-- SideBar Using MDUI Begin-->
 
 <div class="mdui-drawer mdui-drawer-full-height mdui-color-white drawer-mod sidebar" id="sidebar">
@@ -49,30 +61,21 @@
                         <li class="mdui-list-item mdui-ripple" >
                             <a href="<?php $this->options->adminUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
                                 <i class="mdui-icon material-icons">account_circle</i>
-                                <?php if ($this->options->langis == '0'): ?> Profile
-                                <?php elseif ($this->options->langis == '1'): ?> 用户概要
-                                <?php elseif ($this->options->langis == '2'): ?> 使用者概要
-                                <?php endif; ?>
+                                <?php echo $MultiLang->get('Profile'); ?>
                             </a>
                         </li>
 
                         <li class="mdui-list-item mdui-ripple" >
                             <a href="<?php $this->options->adminUrl('options-theme.php'); ?>" class="mdui-list-item-content" tabindex="-1">
                                 <i class="mdui-icon material-icons">settings</i>
-                                <?php if ($this->options->langis == '0'): ?> Settings
-                                <?php elseif ($this->options->langis == '1'): ?> 设置外观
-                                <?php elseif ($this->options->langis == '2'): ?> 設置外觀
-                                <?php endif; ?>
+                                <?php echo $MultiLang->get('Settings'); ?>
                             </a>
                         </li>
 
                         <li class="mdui-list-item mdui-ripple" >
                             <a href="<?php $this->options->logoutUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
                                 <i class="mdui-icon material-icons">exit_to_app</i>
-                                <?php if ($this->options->langis == '0'): ?> Exit
-                                <?php elseif ($this->options->langis == '1'): ?> 退出登录
-                                <?php elseif ($this->options->langis == '2'): ?> 退出登錄
-                                <?php endif; ?>
+                                <?php echo $MultiLang->get('Logout'); ?>
                             </a>
                         </li>
 
@@ -82,10 +85,7 @@
                             <a href="<?php $this->options->loginUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
                                 <i class="mdui-icon material-icons">fingerprint</i>
 
-                                <?php if ($this->options->langis == '0'): ?> Login
-                                <?php elseif ($this->options->langis == '1'): ?> 用户登录
-                                <?php elseif ($this->options->langis == '2'): ?> 使用者登錄
-                                <?php endif; ?>
+                                <?php echo $MultiLang->get('Login'); ?>
                             </a>
                         </li>
 
@@ -214,7 +214,8 @@
             </li>
         <?php endif; ?>
 
-
+        <li class="mdui-divider"></li>
+        
         <!-- Article Numebr  -->
             <li class="mdui-list-item">
                 <a href="#" class="mdui-list-item-content mdui-text-color-grey-800">
@@ -222,12 +223,13 @@
                     <?php elseif ($this->options->langis == '1'): ?> 文章总数
                     <?php elseif ($this->options->langis == '2'): ?> 文章總數
                     <?php endif; ?>
-                    <span class="sidebar-badge"><?php echo $stat->publishedPostsNum;?></span>
+                    
                 </a>
+                <span class="mdui-list-item-avatar mdui-color-theme"><?php echo $stat->publishedPostsNum;?></span>
             </li>
 
 
-		<li class="mdui-divider"></li>
+		
 
 	</ul>
 
