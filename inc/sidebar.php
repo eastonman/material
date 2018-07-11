@@ -1,3 +1,13 @@
+<?php 
+if ($this->options->langis == '1') {
+    require_once(dirname(__FILE__) . '/lang/zh-cn.php');
+} elseif ($this->options->langis == '2') {
+    require_once(dirname(__FILE__) . '/lang/zh-tw.php');
+}
+
+?>
+
+
 <!-- SideBar Using MDUI Begin-->
 
 <div class="mdui-drawer mdui-drawer-full-height mdui-color-white drawer-mod sidebar" id="sidebar">
@@ -49,10 +59,7 @@
                         <li class="mdui-list-item mdui-ripple" >
                             <a href="<?php $this->options->adminUrl(); ?>" class="mdui-list-item-content" tabindex="-1">
                                 <i class="mdui-icon material-icons">account_circle</i>
-                                <?php if ($this->options->langis == '0'): ?> Profile
-                                <?php elseif ($this->options->langis == '1'): ?> 用户概要
-                                <?php elseif ($this->options->langis == '2'): ?> 使用者概要
-                                <?php endif; ?>
+                                <?php echo $MultiLang->get('Profile'); ?>
                             </a>
                         </li>
 

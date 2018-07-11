@@ -13,9 +13,9 @@
 //Include header.php
 $this->need('inc/header.php');
 if ($this->options->langis == '1') {
-    require(dirname(__FILE__) . '/inc/lang/zh-cn.php');
+    require_once(dirname(__FILE__) . '/inc/lang/zh-cn.php');
 } elseif ($this->options->langis == '2') {
-    require(dirname(__FILE__) . '/inc/lang/zh-tw.php');
+    require_once(dirname(__FILE__) . '/inc/lang/zh-tw.php');
 }
 
 ?>
