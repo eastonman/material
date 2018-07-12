@@ -6,7 +6,7 @@ if ($this->options->langis == '0') {
 } elseif ($this->options->langis == '2') {
     require_once(dirname(__FILE__) . '/lang/zh-tw.php');
 }
-
+$MultiLang = new LangDict();
 ?>
 
 

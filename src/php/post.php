@@ -9,7 +9,16 @@
  * @link https://github.com/manyang901/material
  */
 
-$this->need('inc/header.php'); ?>
+$this->need('inc/header.php'); 
+if ($this->options->langis == '0') {
+    require_once(dirname(__FILE__) . '/inc/lang/en-us.php');
+} elseif ($this->options->langis == '1') {
+    require_once(dirname(__FILE__) . '/inc/lang/zh-cn.php');
+} elseif ($this->options->langis == '2') {
+    require_once(dirname(__FILE__) . '/inc/lang/zh-tw.php');
+}
+$MultiLang = new LangDict();
+?>
 
 <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
