@@ -18,8 +18,13 @@ class LangDict
         'Logged in as' => '登录用户',
         'Login' => '登录',
         'Logout' => '登出',
-        
-
+        'Register' => '注册',
+        'Homepage' => '主页',
+        'Archive' => '归档',
+        'Categories' => '分类',
+        'Status' => '状态',
+        'Article Number' => '文章总数',
+        'Theme' => '主题'
     );
     function get($key) {
         if (isset($this->dict[$key])) {

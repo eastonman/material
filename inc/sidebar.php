@@ -92,10 +92,7 @@ $MultiLang = new LangDict();
                         <li class="mdui-list-item mdui-ripple" >
                             <a href="<?php $this->options->adminUrl('register.php'); ?>" class="mdui-list-item-content" tabindex="-1">
                                 <i class="mdui-icon material-icons">person_add</i>
-                                <?php if ($this->options->langis == '0'): ?> Register
-                                <?php elseif ($this->options->langis == '1'): ?> 用户注册
-                                <?php elseif ($this->options->langis == '2'): ?> 使用者註冊
-                                <?php endif; ?>
+                                <?php echo $MultiLang->get('Register'); ?>
                             </a>
                         </li>
 
@@ -114,10 +111,7 @@ $MultiLang = new LangDict();
                 <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-text">home</i>
                 <div class="mdui-list-item-content" >
                 	<a href="<?php $this->options->siteUrl(); ?>" class="mdui-text-color-theme-text" >
-                    <?php if ($this->options->langis == '0'): ?> Homepage
-                    <?php elseif ($this->options->langis == '1'): ?> 主页
-                    <?php elseif ($this->options->langis == '2'): ?> 首頁
-                    <?php endif; ?>
+                    <?php  echo $MultiLang->get('Homepage'); ?>
                     </a>
                 </div>
         </li>
@@ -129,10 +123,7 @@ $MultiLang = new LangDict();
 
                         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-text">inbox</i>
                         <div class="mdui-list-item-content mdui-text-color-theme-text" >
-                        <?php if ($this->options->langis == '0'): ?> Archives
-                        <?php elseif ($this->options->langis == '1'): ?> 归档
-                        <?php elseif ($this->options->langis == '2'): ?> 過往
-                        <?php endif; ?>
+                        <?php  echo $MultiLang->get('Archive'); ?>
                         </div>
                         <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-ripple mdui-text-color-theme-text"  >keyboard_arrow_down</i>
 
@@ -162,9 +153,7 @@ $MultiLang = new LangDict();
 
                         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-text">apps</i>
                         <div class="mdui-list-item-content mdui-text-color-theme-text" >
-                            <?php if ($this->options->langis == '0'): ?> Categories
-                            <?php elseif ($this->options->langis == '1'): ?> 分类
-                            <?php endif; ?>
+                            <?php  echo $MultiLang->get('Categories'); ?>
                         </div>
                         <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-text mdui-ripple"  >keyboard_arrow_down</i>
 
@@ -206,40 +195,34 @@ $MultiLang = new LangDict();
         <?php if (!($this->options->Status == '')): ?>
             <li class="mdui-list-item">
                 <a href="<?php $this->options->Status(); ?>" class="mdui-list-item-content mdui-text-color-theme-text">
-                <?php if ($this->options->langis == '0'): ?>Status
-                <?php elseif ($this->options->langis == '1'): ?>状态
-                <?php elseif ($this->options->langis == '1'): ?>狀態
-                <?php endif; ?>
+                <?php  echo $MultiLang->get('Status'); ?>
                 </a>
             </li>
         <?php endif; ?>
 
         <li class="mdui-divider"></li>
+    </ul>
 
         <!-- Article Numebr  -->
-            <li class="mdui-list-item">
-                <a href="#" class="mdui-list-item-content mdui-text-color-theme-text">
-                    <?php if ($this->options->langis == '0'): ?> Article Number
-                    <?php elseif ($this->options->langis == '1'): ?> 文章总数
-                    <?php elseif ($this->options->langis == '2'): ?> 文章總數
-                    <?php endif; ?>
+            <div class="mdui-list-item">
+                <span class="mdui-list-item-content mdui-text-color-theme-text">
+                    <?php  echo $MultiLang->get('Article Number'); ?>
                     
-                </a>
+                </span>
                 <span class="mdui-list-item-avatar mdui-color-theme"><?php echo $stat->publishedPostsNum;?></span>
-            </li>
+            </div>
 
 
 		
 
-	</ul>
+	
 
 
 	<!-- Sidebar bottom text -->
     <a href="https://github.com/manyang901/material" target="_blank" rel="noopener" class="mdui-list mdui-list-item">
-        <div class="mdui-list-item-content mdui-text-color-indigo">
-            <?php if ($this->options->langis == '0'): ?> Theme - Material
-            <?php elseif ($this->options->langis == '1'): ?> 主题 - Material
-            <?php endif; ?>
+        <div class="mdui-list-item-content mdui-text-color-pink-accent">
+            <?php  echo $MultiLang->get('Theme'); ?>
+            - New Material
         </div>
     </a>
 
