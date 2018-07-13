@@ -24,7 +24,9 @@ class LangDict
         'Categories' => '分類',
         'Status' => '狀態',
         'Article Number' => '文章總數',
-        'Theme' => '主題'
+        'Theme' => '主題',
+        'Reply' => '回復',
+        'Share' => '分享'
     );
     function get($key) {
         if (isset($this->dict[$key])) {
