@@ -105,16 +105,15 @@ $MultiLang = new LangDict();
     <!--SideBar Dropdown Menu End-->
 
     <!--Sidebar Main Content Begin -->
-    <ul class="mdui-list mdui-list">
+    <div class="mdui-list">
+
         <!-- Homepage -->
-        <li class="mdui-list-item" >
-                <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-text">home</i>
-                <div class="mdui-list-item-content" >
-                	<a href="<?php $this->options->siteUrl(); ?>" class="mdui-text-color-theme-text" >
-                    <?php  echo $MultiLang->get('Homepage'); ?>
-                    </a>
-                </div>
-        </li>
+        <a href="<?php $this->options->siteUrl(); ?>" class="mdui-list-item mdui-ripple mdui-text-color-theme-text" >
+            <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-text">home</i>
+            <div class="mdui-list-item-content">
+                <?php  echo $MultiLang->get('Homepage'); ?>
+            </div>
+        </a>   
 
         <!--Archive Dropdown Begin-->
         <div class="mdui-collapse" mdui-collapse="{ accordion: true}">
@@ -133,8 +132,8 @@ $MultiLang = new LangDict();
                     <ul class="mdui-list mdui-list-dense">
                         <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
                         ->parse('
-                                    <li class="mdui-list-item" >
-                                        <a href="{permalink}" class="mdui-list-item-content mdui-text-color-theme-secondary" tabindex="-1">
+                                    <li class="mdui-list-item mdui-ripple" >
+                                        <a href="{permalink}" class="mdui-list-item-content mdui-text-color-theme-secondary">
                                                 {date}
                                         </a>
                                     </li>
@@ -163,7 +162,7 @@ $MultiLang = new LangDict();
                     <ul class="mdui-list mdui-list-dense" for="show-category-button">
                         <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
                         <?php while ($category->next()): ?>
-                            <li class="mdui-list-item">
+                            <li class="mdui-list-item mdui-ripple">
                                 <a href="<?php $category->permalink(); ?>" class="mdui-list-item-content mdui-text-color-theme-secondary" title="<?php $category->name(); ?>">
                                     <?php $category->name(); ?>
                                 </a>
@@ -180,11 +179,11 @@ $MultiLang = new LangDict();
 		<!-- Show Pages -->
         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
         <?php while ($pages->next()): ?>
-            <li class="mdui-list-item">
-                <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>" class="mdui-list-item-content mdui-text-color-theme-text" tabindex="-1">
+            <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>" class="mdui-list-item mdui-text-color-theme-text mdui-ripple">
+                <div class="mdui-list-item-content">
                     <?php $pages->title(); ?>
-                </a>
-            </li>
+                </div>
+            </a>
         <?php endwhile; ?>
 
         <?php if (!defined('__TYPECHO_ROOT_DIR__')) {exit;}
@@ -201,7 +200,7 @@ $MultiLang = new LangDict();
         <?php endif; ?>
 
         <li class="mdui-divider"></li>
-    </ul>
+    </div>
 
         <!-- Article Numebr  -->
             <div class="mdui-list-item">
