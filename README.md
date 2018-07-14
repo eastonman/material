@@ -1,6 +1,5 @@
 # New Material 
-
- > Embrace Material Design
+> Embrace Material Design
 
 New Material 是一款遵循 Material Design 的 Typecho 主题
 
@@ -8,6 +7,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 ![https://github.com/manyang901/material/releases](https://img.shields.io/github/downloads/manyang901/material/total.svg)
 ![](https://img.shields.io/github/license/manyang901/material.svg)
 ![](https://img.shields.io/badge/PR-welcome-blue.svg)
+
 
 ![](https://ww2.sinaimg.cn/large/a15b4afegy1fof5zmd07rj20uk0i20zl.jpg)
 
@@ -104,9 +104,9 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 ## Preview 预览
 
-<img style="float: left;" width="50%" src="https://i.loli.net/2018/05/16/5afbf7736c26f.png" alt="screenshot_1526462277.png" title="screenshot_1526462277.png" /><img style="float: right;" width="50%" src="https://i.loli.net/2018/05/16/5afbaa4204c6b.png">
+<img style="float: left;" width="50%" src="https://i.loli.net/2018/07/14/5b4a0e1e818c5.png" alt="screenshot_1526462277.png" title="screenshot_1526462277.png" /><img style="float: right;" width="50%" src="https://i.loli.net/2018/07/14/5b4a0e1ec030f.png">
 
-![](https://i.loli.net/2018/05/16/5afbaa439d35f.jpg)
+![](https://i.loli.net/2018/07/14/5b4a0e1e62b2e.png)
 
 ## Contributing 贡献
 
