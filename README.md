@@ -94,13 +94,13 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 注意！图标文件名必须与默认图标的文件名相同,否则不能加载。
 
 ### Template-Links 友链模板
-需要在管理->独立页面中设置自定义字段，分为links, avatar和name
-三者可以有共同后缀
+需要在管理->独立页面中设置自定义字段，分为link, avatar和name
+三者可以有任意共同后缀
 比如
-- links_hhh => https://php.net
-- avatar_hhh => somewhere
-- name_hhh => PHP is great
-必须有links和avatar, name可没有
+- 'link_foo' => 'https://php.net'
+- 'avatar_foo' => 'somewhere'
+- 'name_foo' => 'PHP'
+必须填写links和avatar, name可以空缺
 
 ## Preview 预览
 

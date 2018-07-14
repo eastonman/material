@@ -42,6 +42,20 @@ gulp.task('replace-post', function(){
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('replace-page', function(){
+    return gulp.src(['./src/php/page.php'])
+        .pipe(replace('page.css', 'page.min.css'))
+        .pipe(replace('index.css', 'index.min.css'))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('replace-template-links', function(){
+    return gulp.src(['./src/php/post.php'])
+        .pipe(replace('page.css', 'page.min.css'))
+        .pipe(replace('index.css', 'index.min.css'))
+        .pipe(gulp.dest('./'));
+});
+
 gulp.task('build-clean', function() {
     // Return the Promise from del()
     return del(['src']);
@@ -53,9 +67,10 @@ gulp.task('dev-clean', function() {
 });
 
 gulp.task('build', function() {
-    return runSequence('dev-clean',
+    return runSequence(
+        'dev-clean',
         'minifycss',
-        ['replace-header', 'replace-index','replace-post'],
+        ['replace-header', 'replace-index','replace-post', 'replace-page', 'replace-template-links'],
         'build-clean');
 });
 

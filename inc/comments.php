@@ -6,7 +6,7 @@ if ($this->options->langis == '0') {
 } elseif ($this->options->langis == '2') {
     require_once(dirname(__FILE__) . '/lang/zh-tw.php');
 }
-
+$MultiLang = new LangDict();
 ?>
 
 
@@ -15,8 +15,10 @@ if ($this->options->langis == '0') {
 <?php define('__langis__', $this->options->langis); ?>
 
 
-<?php function threadedComments($comments, $options)
-{
+<?php function threadedComments($comments, $options) {
+    if (!isset($MultiLang)) {
+        $MultiLang = new LangDict();
+    }
     $commentClass = '';
     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';  //评论层数大于0为子级，否则是父级
 ?>
@@ -59,75 +61,18 @@ if ($this->options->langis == '0') {
 
     <!-- Comment actions -->
     <div class="mdui-card-actions">
-
-        <!-- like 
-        <button id="comment-like-button" class="mdui-btn mdui-ripple mdui-btn-icon" >
-                <i class="mdui-icon material-icons mdui-text-color-black" role="presentation">thumb_up</i>
-                <span class="mdui-hidden">like comment</span>
-        </button>
-
-         dislike 
-        <button id="comment-dislike-button" class="mdui-btn mdui-ripple mdui-btn-icon">
-                <i class="mdui-icon material-icons mdui-text-color-black" role="presentation">thumb_down</i>
-                <span class="mdui-hidden">dislike comment</span>
-        </button>
-        -->
-        
         
         <!-- reply -->
-		<?php if (__langis__ == '0'): ?>
-                <?php $comments->reply('
-                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-text-color-theme-accent">
-				    Reply
-                    </button>'); ?>
-        <?php elseif (__langis__ == '1'): ?>
-                <?php $comments->reply('
-                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-text-color-theme-accent">
-                    回复
-                    </button>'); ?>
-        <?php elseif (__langis__ == '2'): ?>
-                <?php $comments->reply('
-                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-text-color-theme-accent">
-                    回復
-                    </button>'); ?>
-        <?php endif; ?>
+            <?php $comments->reply('
+                    <button id="comment-reply-button" class="round-btn mdui-m-l-2 mdui-btn mdui-ripple mdui-btn-raised mdui-text-color-theme-accent">' .
+				    $MultiLang->get('Reply') .
+                    '</button>'); ?>
         
 
         <!-- share -->
-        <?php if (__langis__ == '0'): ?>
             <button id="comment-share-<?php $comments->theId(); ?>-button" class="round-btn mdui-m-r-2 mdui-btn mdui-ripple mdui-float-right mdui-btn-raised mdui-text-color-theme-accent" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
-                Share
+                <?php echo $MultiLang->get('Share'); ?>
             </button>
-        <?php elseif (__langis__ == '1'): ?>
-            <button id="comment-share-<?php $comments->theId(); ?>-button" class="round-btn mdui-m-r-2 mdui-btn mdui-ripple mdui-float-right mdui-btn-raised mdui-text-color-theme-accent" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
-                分享
-            </button>
-        <?php elseif (__langis__ == '2'): ?>
-            <button id="comment-share-<?php $comments->theId(); ?>-button" class="round-btn mdui-m-r-2 mdui-btn mdui-ripple mdui-float-right mdui-btn-raised mdui-text-color-theme-accent" mdui-menu="{target: '#comment-share-list-<?php $comments->theId(); ?>'}">
-                分享
-            </button>
-        <?php endif; ?>
-        
-
-        <ul id="comment-share-list-<?php $comments->theId(); ?>" class="mdui-menu" for="comment-share-<?php $comments->theId(); ?>-button">
-        	<li class="mdui-menu-item">
-            	<a class="md-menu-list-a" target="view_window" href="<?php $comments->permalink(); ?>">
-                Open in New Tab
-            	</a>
-        	</li>
-
-        	<li class="mdui-menu-item">
-            	<a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $comments->content(); ?>+from&url=<?php $comments->permalink(); ?>">
-                Share to Twitter
-            	</a>
-            </li>
-
-            <li class="mdui-menu-item">
-            	<a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $comments->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                Share to Google+
-            	</a>
-            </li>
-        </ul>
         
     </div>
 

@@ -18,7 +18,15 @@ class LangDict
         'Logged in as' => '登錄用戶',
         'Login' => '登入',
         'Logout' => '登出',
-        
+        'Register' => '註冊',
+        'Homepage' => '首頁',
+        'Archive' => '過往',
+        'Categories' => '分類',
+        'Status' => '狀態',
+        'Article Number' => '文章總數',
+        'Theme' => '主題',
+        'Reply' => '回復',
+        'Share' => '分享'
     );
     function get($key) {
         if (isset($this->dict[$key])) {

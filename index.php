@@ -12,6 +12,7 @@
 
 //Include header.php
 $this->need('inc/header.php');
+//Include Language Dictionary
 if ($this->options->langis == '0') {
     require_once(dirname(__FILE__) . '/inc/lang/en-us.php');
 } elseif ($this->options->langis == '1') {
@@ -22,7 +23,7 @@ if ($this->options->langis == '0') {
 $MultiLang = new LangDict();
 ?>
 
-    <!-- Standalone CSS Calling For Index -->
+    <!-- Standalone CSS Calling For Page -->
         <?php if (!empty($this->options->CDNUrl)): ?>
             <link class="pjax-load " rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/index.css" />
         <?php else: ?>
@@ -30,7 +31,7 @@ $MultiLang = new LangDict();
         <?php endif; ?>
     <!-- Standalone CSS END -->
 
-    <link rel="preload" href="<?php $this->options->themeUrl('css/post.css') ?>" as="style">
+    <link rel="prefetch" href="<?php $this->options->themeUrl('css/post.css') ?>" as="style">
 
 </head>
 
@@ -125,12 +126,33 @@ $MultiLang = new LangDict();
                                 <div class="mdui-divider"></div>
 
                                 <!-- A Blog title -->
-                                <div class="mdui-card-primary mdui-clearfix">
-                                    <div class="mdui-card-primary-subtitle">
+                                <div class="mdui-card-actions mdui-valign">
+                                    <div class="main-logo-title mdui-float-left mdui-text-color-theme-secondary">
                                         <?php $this->options->title(); ?>
                                     </div>
-                                </div>
+                                
+                                    <div class="mdui-toolbar-spacer"></div>
 
+                                    <div id="main-search-container" class="main-search" >
+                                        <div class="main-search-form-wrapper">
+                                            <form method="post" action="" class="main-search-form">
+                                            
+                                                <input id="main-search-text" type="text" name="s" class="text" size="16" />
+                                                <input type="submit" class="submit mdui-btn mdui-btn-dense mdui-btn-raised mdui-color-white" value="Search" />
+                                            
+                                            </form>
+                                        
+                                        <button id="main-search-close" class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple">
+                                            <i class="mdui-icon material-icons">close</i>
+                                        </button>
+
+                                        </div>
+                                    </div>
+                                    
+                                    <button id="main-search-btn" class="mdui-float-right mdui-btn mdui-btn-icon">
+                                        <i class="mdui-icon material-icons">search</i>
+                                    </button>
+                                </div>
                             </div>
                             <!-- Right MD card END -->
                         </div>

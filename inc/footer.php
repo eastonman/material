@@ -79,6 +79,10 @@
                 <?php $this->options->title(); ?><br>
                 博客建立于
                 <?php echo timesince($this->options->FoundDate); ?>
+
+                <!--Analysis code-->
+                <br>
+                <?php $this->options->analysis(); ?>
             </div>
 
             <!--mdl-mini-footer-right-section-->
@@ -100,6 +104,16 @@
 
 
 <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
+<script type="text/javascript">
+    // Using MDUI JQ
+    var $$ = mdui.JQ;
+</script>
+
+<script src="<?php $this->options->themeUrl('js/search.js') ?>" type="text/javascript"></script>
+<script type="text/javascript">
+    //Search JS
+    searchJQ();
+</script>
 
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script >hljs.initHighlightingOnLoad();</script>
@@ -148,6 +162,9 @@
 
         //recall lazyload
         myLazyLoad.update();
+
+        //Search js event
+        searchJQ();
         
         //reinitialize highlight.js
         hljs.initHighlighting.called = false;
