@@ -50,7 +50,7 @@ gulp.task('replace-page', function(){
 });
 
 gulp.task('replace-template-links', function(){
-    return gulp.src(['./src/php/post.php'])
+    return gulp.src(['./src/php/template-links.php'])
         .pipe(replace('page.css', 'page.min.css'))
         .pipe(replace('index.css', 'index.min.css'))
         .pipe(gulp.dest('./'));
