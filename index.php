@@ -23,7 +23,7 @@ if ($this->options->langis == '0') {
 $MultiLang = new LangDict();
 ?>
 
-    <!-- Standalone CSS Calling For Index -->
+    <!-- Standalone CSS Calling For Page -->
         <?php if (!empty($this->options->CDNUrl)): ?>
             <link class="pjax-load " rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNUrl(); ?>/MaterialCDN/css/index.css" />
         <?php else: ?>
@@ -31,7 +31,7 @@ $MultiLang = new LangDict();
         <?php endif; ?>
     <!-- Standalone CSS END -->
 
-    <link rel="preload" href="<?php $this->options->themeUrl('css/post.css') ?>" as="style">
+    <link rel="prefetch" href="<?php $this->options->themeUrl('css/post.css') ?>" as="style">
 
 </head>
 

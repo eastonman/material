@@ -28,7 +28,7 @@ $MultiLang = new LangDict();
         <?php endif; ?>
 <!-- Standalone CSS END-->
 
-<link rel="preload" href="<?php $this->options->themeUrl('css/index.css') ?>" as="style">
+<link rel="prefetch" href="<?php $this->options->themeUrl('css/index.css') ?>" as="style">
 
 </head>
 

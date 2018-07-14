@@ -17,10 +17,8 @@
 }
 .top-card {
 	height: 360px;
-	background-color: #f5f5f5;
 }
 .top-card > .mdui-card-actions {
-	background-color: #fff;
 	height: 64px;
 }
 .top-card > .mdui-card-actions > .main-logo-title {
@@ -88,6 +86,12 @@
 	text-overflow: hidden;
 	font-size: 16px;
 }
+
+@media screen and (min-width: 1024px) {
+	.main-search .main-search-form-wrapper > .main-search-form > input.text {
+		width: 720px;
+	}
+}
 .main-search .main-search-form-wrapper {
 	display: inline-block;
 	padding: 8px 12px;
@@ -103,7 +107,7 @@
 .swashIn {
 	-webkit-animation-name: swashIn;
 	animation-name: swashIn;
-	animation-duration: 0.6s;
+	animation-duration: 0.5s;
 }
 
 @-webkit-keyframes swashIn {
@@ -145,7 +149,7 @@
 /*Expand*/
 .expand {
 	animation-name: expand;
-	animation-duration: 1s;
+	animation-duration: 0.75s;
 }
 
 @keyframes expand {
