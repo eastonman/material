@@ -126,21 +126,32 @@ $MultiLang = new LangDict();
                                 <div class="mdui-divider"></div>
 
                                 <!-- A Blog title -->
-                                <div class="mdui-card-primary mdui-clearfix">
-                                    <div class="mdui-card-primary-subtitle">
+                                <div class="mdui-card-actions mdui-valign">
+                                    <div class="main-logo-title mdui-float-left">
                                         <?php $this->options->title(); ?>
                                     </div>
                                 
-                                <!-- search
-                                <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
-                                    <button class="mdui-textfield-icon mdui-btn mdui-btn-icon">
+                                    <div class="mdui-toolbar-spacer"></div>
+
+                                    <div id="main-search-container" class="main-search" >
+                                        <div class="main-search-form-wrapper">
+                                            <form method="post" action="" class="main-search-form">
+                                            
+                                                <input id="main-search-text" type="text" name="s" class="text" size="16" />
+                                                <input type="submit" class="submit mdui-btn mdui-btn-dense mdui-btn-raised mdui-color-white" value="Search" />
+                                            
+                                            </form>
+                                        
+                                        <button id="main-search-close" class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple">
+                                            <i class="mdui-icon material-icons">close</i>
+                                        </button>
+
+                                        </div>
+                                    </div>
+                                    
+                                    <button id="main-search-btn" class="mdui-float-right mdui-btn mdui-btn-icon">
                                         <i class="mdui-icon material-icons">search</i>
                                     </button>
-                                    <input class="mdui-textfield-input" type="text" placeholder="Search"/>
-                                    <button class="mdui-textfield-close mdui-btn mdui-btn-icon">
-                                        <i class="mdui-icon material-icons">close</i>
-                                    </button>
-                                </div> -->
                                 </div>
                             </div>
                             <!-- Right MD card END -->

@@ -100,6 +100,14 @@
 
 
 <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
+<script type="text/javascript">
+    var $$ = mdui.JQ;
+</script>
+
+<script src="<?php $this->options->themeUrl('js/search.js') ?>" type="text/javascript"></script>
+<script type="text/javascript">
+    searchJQ();
+</script>
 
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script >hljs.initHighlightingOnLoad();</script>
@@ -148,6 +156,9 @@
 
         //recall lazyload
         myLazyLoad.update();
+
+        //Search js event
+        searchJQ();
         
         //reinitialize highlight.js
         hljs.initHighlighting.called = false;
