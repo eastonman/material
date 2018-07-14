@@ -24,6 +24,7 @@
 	height: 64px;
 }
 .top-card > .mdui-card-actions > .main-logo-title {
+	margin-left: 8px;
 	font-size: 16px;
 }
 .main-logo {
@@ -144,7 +145,7 @@
 /*Expand*/
 .expand {
 	animation-name: expand;
-	animation-duration: 1.2s;
+	animation-duration: 1s;
 }
 
 @keyframes expand {

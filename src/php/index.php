@@ -127,7 +127,7 @@ $MultiLang = new LangDict();
 
                                 <!-- A Blog title -->
                                 <div class="mdui-card-actions mdui-valign">
-                                    <div class="main-logo-title mdui-float-left">
+                                    <div class="main-logo-title mdui-float-left mdui-text-color-theme-secondary">
                                         <?php $this->options->title(); ?>
                                     </div>
                                 

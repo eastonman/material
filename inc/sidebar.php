@@ -12,7 +12,7 @@ $MultiLang = new LangDict();
 
 <!-- SideBar Using MDUI Begin-->
 
-<div class="mdui-drawer mdui-drawer-full-height mdui-shadow-6 drawer-mod sidebar" id="sidebar">
+<div class="mdui-drawer mdui-drawer-full-height mdui-shadow-6 drawer-mod sidebar <?php if (!in_array('DarkTheme', $this->options->FunctionSwitch)) { echo 'mdui-color-white'; }?>" id="sidebar">
 
     <!--SideBar Header Begin-->
     <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl() ?>img/sidebarheader.jpg );">
