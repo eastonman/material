@@ -5,11 +5,20 @@
  *
  * @package New.Material
  * @author Viosey & Manyang901
- * @version 2.6.0
+ * @version 2.7.0
  * @link https://github.com/manyang901/material
  */
 
-$this->need('inc/header.php'); ?>
+$this->need('inc/header.php'); 
+if ($this->options->langis == '0') {
+    require_once(dirname(__FILE__) . '/inc/lang/en-us.php');
+} elseif ($this->options->langis == '1') {
+    require_once(dirname(__FILE__) . '/inc/lang/zh-cn.php');
+} elseif ($this->options->langis == '2') {
+    require_once(dirname(__FILE__) . '/inc/lang/zh-tw.php');
+}
+$MultiLang = new LangDict();
+?>
 
 <!-- Standalone CSS Calling For Index -->
         <?php if (!empty($this->options->CDNUrl)): ?>
@@ -19,7 +28,7 @@ $this->need('inc/header.php'); ?>
         <?php endif; ?>
 <!-- Standalone CSS END-->
 
-<link rel="preload" href="<?php $this->options->themeUrl('css/index.css') ?>" as="style">
+<link rel="prefetch" href="<?php $this->options->themeUrl('css/index.css') ?>" as="style">
 
 </head>
 
@@ -91,7 +100,7 @@ $this->need('inc/header.php'); ?>
 
                             </div>
 
-							<div class="mdui-card-content mdui-typo">
+							<div class="mdui-card-content">
 								<?php $this->content(); ?>
 							</div>
 

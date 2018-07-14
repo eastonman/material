@@ -1,6 +1,5 @@
 # New Material 
-
- > Embrace Material Design
+> Embrace Material Design
 
 New Material 是一款遵循 Material Design 的 Typecho 主题
 
@@ -8,6 +7,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 ![https://github.com/manyang901/material/releases](https://img.shields.io/github/downloads/manyang901/material/total.svg)
 ![](https://img.shields.io/github/license/manyang901/material.svg)
 ![](https://img.shields.io/badge/PR-welcome-blue.svg)
+
 
 ![](https://ww2.sinaimg.cn/large/a15b4afegy1fof5zmd07rj20uk0i20zl.jpg)
 
@@ -35,7 +35,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - Author 作者：Manyang901
 - Original Author 原作者：Viosey
-- Version 版本：2.6.0
+- Version 版本：2.7.0
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ## Feature 特性
@@ -94,19 +94,19 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 注意！图标文件名必须与默认图标的文件名相同,否则不能加载。
 
 ### Template-Links 友链模板
-需要在管理->独立页面中设置自定义字段，分为links, avatar和name
-三者可以有共同后缀
+需要在管理->独立页面中设置自定义字段，分为link, avatar和name
+三者可以有任意共同后缀
 比如
-- links_hhh => https://php.net
-- avatar_hhh => somewhere
-- name_hhh => PHP is great
-必须有links和avatar, name可没有
+- 'link_foo' => 'https://php.net'
+- 'avatar_foo' => 'somewhere'
+- 'name_foo' => 'PHP'
+必须填写links和avatar, name可以空缺
 
 ## Preview 预览
 
-<img style="float: left;" width="50%" src="https://i.loli.net/2018/05/16/5afbf7736c26f.png" alt="screenshot_1526462277.png" title="screenshot_1526462277.png" /><img style="float: right;" width="50%" src="https://i.loli.net/2018/05/16/5afbaa4204c6b.png">
+<img style="float: left;" width="50%" src="https://i.loli.net/2018/07/14/5b4a0e1e818c5.png" alt="screenshot_1526462277.png" title="screenshot_1526462277.png" /><img style="float: right;" width="50%" src="https://i.loli.net/2018/07/14/5b4a0e1ec030f.png">
 
-![](https://i.loli.net/2018/05/16/5afbaa439d35f.jpg)
+![](https://i.loli.net/2018/07/14/5b4a0e1e62b2e.png)
 
 ## Contributing 贡献
 

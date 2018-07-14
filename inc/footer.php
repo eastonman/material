@@ -79,6 +79,10 @@
                 <?php $this->options->title(); ?><br>
                 博客建立于
                 <?php echo timesince($this->options->FoundDate); ?>
+
+                <!--Analysis code-->
+                <br>
+                <?php $this->options->analysis(); ?>
             </div>
 
             <!--mdl-mini-footer-right-section-->
@@ -100,11 +104,22 @@
 
 
 <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
+<script type="text/javascript">
+    // Using MDUI JQ
+    var $$ = mdui.JQ;
+</script>
+
+<script src="<?php $this->options->themeUrl('js/search.js') ?>" type="text/javascript"></script>
+<script type="text/javascript">
+    //Search JS
+    searchJQ();
+</script>
 
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script >hljs.initHighlightingOnLoad();</script>
 
 <script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
 <script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
 
@@ -137,15 +152,25 @@
 	document.addEventListener('pjax:send', function() { NProgress.start(); });
 	document.addEventListener('pjax:complete',
 		function() { 
-        
+        NProgress.set(0.6);
+        //close sidebar automatically in <1024px device
 		var inst = new mdui.Drawer('#sidebar');
             if (document.documentElement.clientWidth < 1024) {
                 inst.close();
             }
         mdui.mutation();
+
+        //recall lazyload
         myLazyLoad.update();
-        NProgress.done();
+
+        //Search js event
+        searchJQ();
+        
+        //reinitialize highlight.js
+        hljs.initHighlighting.called = false;
+        hljs.initHighlighting();
 	});
+    document.addEventListener('pjax:success', function() {NProgress.done(); } );
 </script>
 
 
