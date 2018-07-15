@@ -11,3 +11,7 @@
 .round-btn {
 	border-radius: 18px;
 }
+
+.mdui-card-content img {
+    max-width: 100%;
+}
