@@ -27,10 +27,10 @@ gulp.task('minifycss', function() {
 gulp.task('buildcss', function() {
     return gulp.src('./src/css/*.css')
         .pipe(minifycss())
-	.pipe(rev())
+        .pipe(rev())
         .pipe(gulp.dest('./css'))
-	.pipe(rev.manifest())
-	.pipe(gulp.dest('./css'));
+        .pipe(rev.manifest())
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('revReplace',function () {
@@ -40,41 +40,6 @@ gulp.task('revReplace',function () {
         }))
         .pipe(gulp.dest('./'));
 })
-
-
-gulp.task('replace-header', function(){
-    return gulp.src(['./src/php/header.php'])
-        .pipe(replace('shared.css', 'shared.min.css'))
-        .pipe(gulp.dest('./inc'));
-});
-
-gulp.task('replace-index', function(){
-    return gulp.src(['./src/php/index.php'])
-        .pipe(replace('index.css', 'index.min.css'))
-        .pipe(replace('post.css', 'post.min.css'))
-        .pipe(gulp.dest('./'));
-});
-
-gulp.task('replace-post', function(){
-    return gulp.src(['./src/php/post.php'])
-        .pipe(replace('post.css', 'post.min.css'))
-        .pipe(replace('index.css', 'index.min.css'))
-        .pipe(gulp.dest('./'));
-});
-
-gulp.task('replace-page', function(){
-    return gulp.src(['./src/php/page.php'])
-        .pipe(replace('page.css', 'page.min.css'))
-        .pipe(replace('index.css', 'index.min.css'))
-        .pipe(gulp.dest('./'));
-});
-
-gulp.task('replace-template-links', function(){
-    return gulp.src(['./src/php/template-links.php'])
-        .pipe(replace('page.css', 'page.min.css'))
-        .pipe(replace('index.css', 'index.min.css'))
-        .pipe(gulp.dest('./'));
-});
 
 gulp.task('build-clean', function() {
     // Return the Promise from del()
@@ -90,7 +55,7 @@ gulp.task('build', function() {
     return runSequence(
         'dev-clean',
         'buildcss',
-	'revReplace',
+        'revReplace',
         'build-clean');
 });
 
