@@ -5,7 +5,9 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     jshint = require('gulp-jshint'),
     runSequence = require('run-sequence'),
-    replace = require('gulp-replace');
+    replace = require('gulp-replace'),
+    rev = require("gulp-rev"),
+    revColletor = require('gulp-rev-collector');
 
 //check expression
 gulp.task('jshint', function() {
@@ -22,39 +24,22 @@ gulp.task('minifycss', function() {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('replace-header', function(){
-    return gulp.src(['./src/php/header.php'])
-        .pipe(replace('shared.css', 'shared.min.css'))
-        .pipe(gulp.dest('./inc'));
+gulp.task('buildcss', function() {
+    return gulp.src('./src/css/*.css')
+        .pipe(minifycss())
+        .pipe(rev())
+        .pipe(gulp.dest('./css'))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest('./css'));
 });
 
-gulp.task('replace-index', function(){
-    return gulp.src(['./src/php/index.php'])
-        .pipe(replace('index.css', 'index.min.css'))
-        .pipe(replace('post.css', 'post.min.css'))
+gulp.task('revReplace',function () {
+    return gulp.src(['css/rev-manifest.json','**/*.php'])
+        .pipe(revColletor({
+            replaceReved:true
+        }))
         .pipe(gulp.dest('./'));
-});
-
-gulp.task('replace-post', function(){
-    return gulp.src(['./src/php/post.php'])
-        .pipe(replace('post.css', 'post.min.css'))
-        .pipe(replace('index.css', 'index.min.css'))
-        .pipe(gulp.dest('./'));
-});
-
-gulp.task('replace-page', function(){
-    return gulp.src(['./src/php/page.php'])
-        .pipe(replace('page.css', 'page.min.css'))
-        .pipe(replace('index.css', 'index.min.css'))
-        .pipe(gulp.dest('./'));
-});
-
-gulp.task('replace-template-links', function(){
-    return gulp.src(['./src/php/template-links.php'])
-        .pipe(replace('page.css', 'page.min.css'))
-        .pipe(replace('index.css', 'index.min.css'))
-        .pipe(gulp.dest('./'));
-});
+})
 
 gulp.task('build-clean', function() {
     // Return the Promise from del()
@@ -69,8 +54,8 @@ gulp.task('dev-clean', function() {
 gulp.task('build', function() {
     return runSequence(
         'dev-clean',
-        'minifycss',
-        ['replace-header', 'replace-index','replace-post', 'replace-page', 'replace-template-links'],
+        'buildcss',
+        'revReplace',
         'build-clean');
 });
 
