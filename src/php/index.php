@@ -350,7 +350,7 @@ $MultiLang = new LangDict();
                                 <div class="mdui-col-xs-3 mdui-m-y-3" >
                                 <?php $this->pageLink(
                         '<div>
-                            <button class="mdui-btn mdui-shadow-1 mdui-color-white mdui-ripple round-btn">
+                            <button class="mdui-btn mdui-shadow-1 mdui-color-white mdui-ripple mdui-float-right round-btn">
                                 <i class="mdui-icon material-icons">arrow_forward</i>
                             </button>
                         </div>', 'next'); ?>
