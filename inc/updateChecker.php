@@ -71,7 +71,7 @@ function checkUpdate() {
     }
     $f = fopen($version_filename, 'r');
     $version = fgets($f);
-    if ($version < getLatestReleaseTime()) {
+    if (strtotime($version) < strtotime(getLatestReleaseTime())) {
         return true;
     } else {
         return false;
