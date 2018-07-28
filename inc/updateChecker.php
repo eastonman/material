@@ -23,7 +23,7 @@ function getFile () {
     } catch (Exception $e) {
         echo $e->getMessage();
     }
-    $output = fopen($theme_root . '/material.tar.gz', 'w+');
+    $output = fopen($theme_root . '/material.tar.gz', 'w');
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $fileurl);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -35,17 +35,17 @@ function getFile () {
     fclose($output);
 }
 
+//Process Update Entry Point ***************<<<<<<<=====
 function update() {
     getFile();
     global $theme_root;
-    if (!is_writable('material.tar.gz')) {
+    if (!is_readable('material.tar.gz')) {
         return false;
     }
     $phar = new PharData('material.tar.gz');
     $phar->extractTo($theme_root,null,true);
     unlink($theme_root . '/material.tar.gz');
     updateVersion();
-    echo 'Update Success!';
     return true;
 }
 
@@ -62,6 +62,7 @@ function getLatestReleaseTime() {
     return $result->published_at;
 }
 
+//Check Update Entry Point ********<<<<<<<=======
 function checkUpdate() {
     global $version_file_path;
     $version_filename = $version_file_path;
@@ -70,7 +71,7 @@ function checkUpdate() {
     }
     $f = fopen($version_filename, 'r');
     $version = fgets($f);
-    if ($version < getLatestReleaseTime()) {
+    if (strtotime($version) < strtotime(getLatestReleaseTime())) {
         return true;
     } else {
         return false;

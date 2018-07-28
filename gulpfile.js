@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     replace = require('gulp-replace'),
     rev = require("gulp-rev"),
-    revColletor = require('gulp-rev-collector');
+    revColletor = require('gulp-rev-collector'),
+    htmlmin = require('gulp-htmlmin');
 
 //check expression
 gulp.task('jshint', function() {
@@ -41,6 +42,23 @@ gulp.task('revReplace',function () {
         .pipe(gulp.dest('./'));
 })
 
+gulp.task('htmlminify',function () {
+    return gulp.src(['index.php','page.php', 'post.php', 'template-links.php'])
+        .pipe(htmlmin({
+             collapseWhitespace: true,
+             removeComments: true,
+        }))
+        .pipe(gulp.dest('./'));
+})
+
+gulp.task('htmlminify-inc',function () {
+    return gulp.src(['inc/header.php', 'inc/footer.php', 'inc/sidebar.php'])
+        .pipe(htmlmin({
+             collapseWhitespace: true,
+             removeComments: true,
+        }))
+        .pipe(gulp.dest('./inc'));
+})
 gulp.task('build-clean', function() {
     // Return the Promise from del()
     return del(['src']);
@@ -56,6 +74,7 @@ gulp.task('build', function() {
         'dev-clean',
         'buildcss',
         'revReplace',
+        ['htmlminify', 'htmlminify-inc'],
         'build-clean');
 });
 
