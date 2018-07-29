@@ -52,26 +52,31 @@ function getFieldLinks($widget) {
 
 
 //Maintain a version file when first run
-$version_filename = dirname(__FILE__).'/../../.version';
+$version_file_dir = dirname(__FILE__).'/../../';
 
-if (!file_exists($version_filename)) {
-    $file = fopen($version_filename, 'w+');
-    fwrite($file, date('c'));
-    fclose($file);
+if (!file_exists($version_file_dir . '.version')) {
+    if (is_writable($version_file_dir)) {
+        $file = fopen($version_file_dir . '.version', 'w+');
+        fwrite($file, date('c'));
+        fclose($file);
+    } else {
+        echo '<h4 style="color: #D50000">ERROR: Version File Not Writable! UpdateChecker Will NOT Work.</h4>';
+    }
 }
+ unset($version_file_dir);
 
 
 // Install Sentry SDK
 $include_path_append = dirname(__FILE__).'/../../lib';
 set_include_path(get_include_path() . PATH_SEPARATOR . $include_path_append);
 include_once('Raven/Autoloader.php');
-//require_once 'lib/Sentry/Autoloader.php';
+
     Raven_Autoloader::register();
     $client = new Raven_Client('https://9c54c7b6dcb14b41a4d2833f07b5d821:9345d22fdc7f427e8aea2c2d0810320b@sentry.io/1218923',
         array(
             'curl_method' => 'async',
             'release' => VERSION
-        ));
+    ));
+    $client->install();
 
-        $client->install();
-        $client->captureMessage('Success!');
+    $client->captureMessage('Success!');

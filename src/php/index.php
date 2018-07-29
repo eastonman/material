@@ -81,9 +81,9 @@ $MultiLang = new LangDict();
                                 <div class="mdui-card-media" >
                                     <a href="<?php $this->options->MainPicHref(); ?>">
                                         <?php if (!empty($this->options->MainPic )): ?>
-                                            <img class="main-pic" alt="main-pic" data-src="<?php $this->options->MainPic(); ?>">
+                                            <img class="main-pic" alt="main-pic" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8+vXrfwAJpgPg8gE+iwAAAABJRU5ErkJggg==" data-src="<?php $this->options->MainPic(); ?>">
                                         <?php else: ?>
-                                            <img class="main-pic" alt="main-pic" data-src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
+                                            <img class="main-pic" alt="main-pic" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8+vXrfwAJpgPg8gE+iwAAAABJRU5ErkJggg==" data-src="<?php $this->options->themeUrl('img/MainPic.jpg') ?>" />
                                         <?php endif; ?>
                                     </a>
 
@@ -114,9 +114,9 @@ $MultiLang = new LangDict();
                                     <a href="<?php $this->options->LogoHref(); ?>">
                                         <?php if (!empty($this->options->Logo )): ?>
                                             <img class="main-logo" alt=
-                                        "main-logo" data-src="<?php $this->options->Logo(); ?>">
+                                        "main-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8+vXrfwAJpgPg8gE+iwAAAABJRU5ErkJggg==" data-src="<?php $this->options->Logo(); ?>">
                                         <?php else: ?>
-                				            <img class="main-logo" alt="main-logo" data-src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
+                				            <img class="main-logo" alt="main-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8+vXrfwAJpgPg8gE+iwAAAABJRU5ErkJggg==" data-src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>" >
                                         <?php endif; ?>
                                     </a>
                                     <!-- Main-logo END -->
@@ -189,7 +189,7 @@ $MultiLang = new LangDict();
 
                                             <!-- Post ThumbNail -->
                                             <picture>
-	    									    <img alt="ThumbNail" data-src="<?php showThumbnail($this); ?>" >
+	    									    <img alt="ThumbNail" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8+vXrfwAJpgPg8gE+iwAAAABJRU5ErkJggg==" data-src="<?php showThumbnail($this); ?>" >
                                             </picture>
                                             <!-- Post ThumbNail END -->
 
@@ -212,7 +212,7 @@ $MultiLang = new LangDict();
 
                                             <!-- Post ThumbNail -->
                                             <picture>
-	    									    <img alt="Post Thumbnail" data-src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz4NCg0KPHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiDQp4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KDQo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxMDAwIiBmaWxsPSIjNjRCNUY2Ij4NCjwvcmVjdD4NCjwvc3ZnPg==" >
+	    									    <img alt="Post Thumbnail" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz4NCg0KPHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiDQp4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KDQo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxMDAwIiBmaWxsPSIjNjRCNUY2Ij4NCjwvcmVjdD4NCjwvc3ZnPg==" >
                                             </picture>
 
 											<!-- Post Title Displays Above Bottom of ThumbNail -->
@@ -233,8 +233,8 @@ $MultiLang = new LangDict();
                                             <!--Post ThumbNail-->
                                             <picture>
 
-                                                <source media="(min-width: 1024px)" data-srcset="<?php randomThumbnail($this); ?>" type="image/jpeg">
-                                                <img alt="ThumbNail" data-src="<?php randomThumbnail($this); ?>" >
+                                                <source media="(min-width: 1024px)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8+vXrfwAJpgPg8gE+iwAAAABJRU5ErkJggg==" data-src="<?php randomThumbnail($this); ?>" type="image/jpeg">
+                                                <img alt="ThumbNail" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8+vXrfwAJpgPg8gE+iwAAAABJRU5ErkJggg==" data-src="<?php randomThumbnail($this); ?>" >
 
                                             </picture>
 
@@ -350,7 +350,7 @@ $MultiLang = new LangDict();
                                 <div class="mdui-col-xs-3 mdui-m-y-3" >
                                 <?php $this->pageLink(
                         '<div>
-                            <button class="mdui-btn mdui-shadow-1 mdui-color-white mdui-ripple round-btn">
+                            <button class="mdui-btn mdui-shadow-1 mdui-color-white mdui-ripple mdui-float-right round-btn">
                                 <i class="mdui-icon material-icons">arrow_forward</i>
                             </button>
                         </div>', 'next'); ?>

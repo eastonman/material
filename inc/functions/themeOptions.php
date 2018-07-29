@@ -14,7 +14,7 @@ function themeConfig($form)
                 Github-Material
             </a>
             以获得
-            <span style="color:#df3827;font-weight:bold;">
+            <span style="color:#4CAF50;font-weight:bold;">
                 最新版本支持
             </span>
         </span>

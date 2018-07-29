@@ -1,0 +1,82 @@
+/*
+  Icon Font: fontcustom
+*/
+
+@font-face {
+  font-family: "fontcustom";
+  src: url("./fontcustom_64c4c0ae568da9afcb9e1be056ff0854.eot");
+  src: url("./fontcustom_64c4c0ae568da9afcb9e1be056ff0854.eot?#iefix") format("embedded-opentype"),
+       url("./fontcustom_64c4c0ae568da9afcb9e1be056ff0854.woff2") format("woff2"),
+       url("./fontcustom_64c4c0ae568da9afcb9e1be056ff0854.woff") format("woff"),
+       url("./fontcustom_64c4c0ae568da9afcb9e1be056ff0854.ttf") format("truetype"),
+       url("./fontcustom_64c4c0ae568da9afcb9e1be056ff0854.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontcustom";
+    src: url("./fontcustom_64c4c0ae568da9afcb9e1be056ff0854.svg#fontcustom") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-cn_bilibili_b:before,
+.icon-facebook:before,
+.icon-facebook_1:before,
+.icon-facebook_4:before,
+.icon-facebook_6:before,
+.icon-facebook_9:before,
+.icon-github:before,
+.icon-linkedin:before,
+.icon-linkedin_4:before,
+.icon-niconico:before,
+.icon-post_gplus:before,
+.icon-steam:before,
+.icon-steam_1:before,
+.icon-telegram:before,
+.icon-twitter:before,
+.icon-twitter_10:before,
+.icon-twitter_14:before,
+.icon-twitter_15:before,
+.icon-youtube:before,
+.icon-zhihu_c:before,
+.icon-zhihu_px:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-cn_bilibili_b:before { content: "\f100"; }
+.icon-facebook:before { content: "\f101"; }
+.icon-facebook_1:before { content: "\f102"; }
+.icon-facebook_4:before { content: "\f103"; }
+.icon-facebook_6:before { content: "\f10c"; }
+.icon-facebook_9:before { content: "\f10d"; }
+.icon-github:before { content: "\f104"; }
+.icon-linkedin:before { content: "\f10e"; }
+.icon-linkedin_4:before { content: "\f10f"; }
+.icon-niconico:before { content: "\f114"; }
+.icon-post_gplus:before { content: "\f105"; }
+.icon-steam:before { content: "\f110"; }
+.icon-steam_1:before { content: "\f111"; }
+.icon-telegram:before { content: "\f106"; }
+.icon-twitter:before { content: "\f107"; }
+.icon-twitter_10:before { content: "\f108"; }
+.icon-twitter_14:before { content: "\f112"; }
+.icon-twitter_15:before { content: "\f113"; }
+.icon-youtube:before { content: "\f109"; }
+.icon-zhihu_c:before { content: "\f10a"; }
+.icon-zhihu_px:before { content: "\f10b"; }

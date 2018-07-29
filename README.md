@@ -35,24 +35,23 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - Author 作者：Manyang901
 - Original Author 原作者：Viosey
-- Version 版本：2.7.0
+- Version 版本：2.8.0
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ## Feature 特性
 
 - 遵循Google Material Design标准
 - 响应式设计，根据访问设备分辨率的不同显示不同的样式
+- 无JQuery，全部采用MDUI内置方法
 - Vanilla-Lazyload 首页缩略图“懒加载”
 - 全站 PJAX 无刷新技术
+- 压缩HTML，CSS 高速加载
 - 非插件实现访客数量统计，使用cookies验证，使用自定义字段储存计数器，不修改数据库，高解耦。
-- Webp图片优化，根据访问设备是否支持Webp格式的图片返回自适应的图片，节省70%的流量(需要在网站根目录下放置serviceworker.js，详见Install-安装部分)
-- ServiceWorker 缓存控制
-- PWA 支持(需自行添加manifest.json到网站根目录)
-- Update Checker 更新检查(实验性功能，谨慎使用，使用前请慎重考虑！)
+- Update Checker 更新检查(实验性功能，谨慎使用！)
 - 友链模板
 
 ## Compatibility 兼容性
-- PHP: 5.2+ ,仅在5.6和7.2上测试，建议使用PHP7.2
+- PHP: 5.3+ ,仅在5.6和7.2上测试，建议使用PHP7.2
 - Database 数据库: MySQL, Sqlite3, Postgresql(只要有相应的pdo驱动)
 - Typecho: 1.0、1.1、1.1测试版(仅在typecho/master 分支上测试)
 - Browser Compatibility 浏览器兼容性: Chrome Desktop 49+ , Firefox 60+ , Safari 11.1+ , Chrome Android 67+ , Internet explorer 11(无lazyload无flexbox), Microsoft Edge 17+(无lazyload)
@@ -65,6 +64,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - 在[Github Release](https://github.com/manyang901/material/releases)页面，点击"material.tar.gz"下载，解压后将文件夹改名为 "Material"(或其他) 后上传到 `/usr/themes`，并启用主题。2.1.0版本引入Travis CI自动压缩css后，不建议直接clone项目，推荐在release界面下载。
 - 下载最新文件 然后覆盖原文件即可更新主题, 部分新增加的功能需要到后台开启才会生效 (建议更新后先切换为其他主题, 再切换回该主题)。否则会导致新增设置项空白。
+- 修改主题目录权限，使PHP-FPM在目录有写权限，若启用Openbase_dir也需配置允许写入主题目录
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符 `<!-- more -->` 控制输出。
 - 若要使用Webp自适应图片，需要将解压出文件中serviceworker.js复制到网站的根目录(这是由于serviceworker作用范围的限制和typecho主题结构的特殊性)，不使用则所有设备全部返回png格式的图片，注意，现有策略是全部替换请求中的.png为.webp，这意味着若png图没有对应的webp图像则会返回404
 - 若需使用PWA，请自行在网站根目录加入manifest.json文件，也可以在线生成
