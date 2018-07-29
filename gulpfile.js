@@ -56,6 +56,7 @@ gulp.task('htmlminify-inc',function () {
         .pipe(htmlmin({
              collapseWhitespace: true,
              removeComments: true,
+             ignoreCustomFragments: [/<main>/, /<\/main>/, /<\?[\s\S]*?(?:\?>|$)/]
         }))
         .pipe(gulp.dest('./inc'));
 })
