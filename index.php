@@ -5,7 +5,7 @@
  *
  * @package New.Material
  * @author Viosey & Manyang901
- * @version 2.7.0
+ * @version 2.8.0
  * @link https://github.com/manyang901/material
  *
  */
@@ -130,25 +130,25 @@ $MultiLang = new LangDict();
                                     <div class="main-logo-title mdui-float-left mdui-text-color-theme-secondary">
                                         <?php $this->options->title(); ?>
                                     </div>
-                                
+
                                     <div class="mdui-toolbar-spacer"></div>
 
                                     <div id="main-search-container" class="main-search" >
                                         <div class="main-search-form-wrapper">
                                             <form method="post" action="" class="main-search-form">
-                                            
+
                                                 <input id="main-search-text" type="text" name="s" class="text" size="16" />
                                                 <input type="submit" class="submit mdui-btn mdui-btn-dense mdui-btn-raised mdui-color-white" value="Search" />
-                                            
+
                                             </form>
-                                        
+
                                         <button id="main-search-close" class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple">
                                             <i class="mdui-icon material-icons">close</i>
                                         </button>
 
                                         </div>
                                     </div>
-                                    
+
                                     <button id="main-search-btn" class="mdui-float-right mdui-btn mdui-btn-icon">
                                         <i class="mdui-icon material-icons">search</i>
                                     </button>

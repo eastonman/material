@@ -5,11 +5,11 @@
  *
  * @package New.Material
  * @author Viosey & Manyang901
- * @version 2.7.0
+ * @version 2.8.0
  * @link https://github.com/manyang901/material
  */
 
-$this->need('inc/header.php'); 
+$this->need('inc/header.php');
 if ($this->options->langis == '0') {
     require_once(dirname(__FILE__) . '/inc/lang/en-us.php');
 } elseif ($this->options->langis == '1') {
