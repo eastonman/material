@@ -116,7 +116,7 @@
 </script>
 
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script >hljs.initHighlightingOnLoad();</script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 <script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
 
@@ -171,22 +171,6 @@
         hljs.initHighlighting();
 	});
     document.addEventListener('pjax:success', function() {NProgress.done(); } );
-</script>
-
-
-<!--Register Service Worker-->
-<script>
-        // Register the service worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('<?php $this->options->siteUrl('/serviceworker.js'); ?>', {scope: '<?php $this->options->siteUrl(''); ?>'} ).then(function(registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-
-            }).catch(function(err) {
-                // registration failed :(
-                 console.log('ServiceWorker registration failed: ', err);
-            });
-        }
 </script>
 
 
