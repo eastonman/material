@@ -103,7 +103,7 @@
 
 
 
-<script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/mdui@0.4.1/dist/js/mdui.min.js"></script>
 <script type="text/javascript">
     // Using MDUI JQ
     var $$ = mdui.JQ;
@@ -115,7 +115,7 @@
     searchJQ();
 </script>
 
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlight.js@9.12.0/lib/index.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
@@ -134,7 +134,7 @@
 </script>
 
 <?php if (in_array('LazyLoad' ,$this->options->FunctionSwitch)): ?>
-<script src="//cdn.bootcss.com/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vanilla-lazyload@10.19.0/dist/lazyload.min.js" > </script>
 
 <script>
     //lazyload

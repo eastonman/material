@@ -83,7 +83,6 @@
         <?php $this->header(); ?>
 
         <!-- DNS prefetch-->
-        <link rel="dns-prefetch" href="//cdn.bootcss.com" />
         <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
         <link rel="preconnect" href="//secure.gravatar.com" crossorigin="anonymous" />
 
@@ -96,8 +95,8 @@
 
         <!-- MDUI css-->
 
-        <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.1/css/mdui.min.css" />
-        <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/gruvbox-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.1/dist/css/mdui.min.css" />
+        <link href="//cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/gruvbox-dark.css" rel="stylesheet">
 
 		<!--EXTERNAL CSS END-->
 
