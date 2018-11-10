@@ -3,7 +3,6 @@
 * Typecho functions entry point
 */
 
-define('VERSION', '2.8.0');
 require_once('inc/functions/themeOptions.php');
 require_once('inc/functions/thumbNail.php');
 require_once('inc/functions/extra.php');
