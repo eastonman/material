@@ -115,7 +115,7 @@
     searchJQ();
 </script>
 
-<script src="//cdn.jsdelivr.net/npm/highlight.js@9.12.0/lib/index.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>

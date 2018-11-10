@@ -96,7 +96,7 @@
         <!-- MDUI css-->
 
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.1/dist/css/mdui.min.css" />
-        <link href="//cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/gruvbox-dark.css" rel="stylesheet">
+        <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/gruvbox-dark.min.css" rel="stylesheet">
 
 		<!--EXTERNAL CSS END-->
 
