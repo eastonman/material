@@ -15,21 +15,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="theme-color" content="<?php $this->options->ChromeThemeColor(); ?>" />
 
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes" />
-		<link rel="manifest" href="<?php $this->options->siteUrl('manifest.json'); ?>">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="application-name" content="PolyQY">
-        <meta name="apple-mobile-web-app-title" content="PolyQY">
-        <meta name="msapplication-starturl" content="/">
-
-        <!-- <link rel="icon" sizes="192x192" href="favicon-highres.png" /> -->
-
-		<!-- Add to homescreen for Safari on iOS -->
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="apple-mobile-web-app-title" content="Material Design Lite" />
-        <!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" /> -->
         <!-- All Icons On ios and browsers -->
         <?php if (!empty($this->options->IconUrl)): ?>
         	<link rel="apple-touch-icon" sizes="57x57" href="<?php $this->options->IconUrl(); ?>/img/icon/apple-icon-57x57.png ">
