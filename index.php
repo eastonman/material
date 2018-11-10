@@ -5,7 +5,7 @@
  *
  * @package New.Material
  * @author Viosey & Manyang901
- * @version 2.8.2
+ * @version 2.8.3
  * @link https://github.com/manyang901/material
  *
  */
