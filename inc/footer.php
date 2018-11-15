@@ -129,7 +129,9 @@
 <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="//cdn.jsdelivr.net/npm/pjax@0.2.5/pjax.min.js"></script>
+<?php if (in_array('PJAX', $this->options->FunctionSwitch)): ?>
+    <script src="//cdn.jsdelivr.net/npm/pjax@0.2.7/pjax.min.js"></script>
+<?php endif; ?>
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
 <script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
@@ -153,6 +155,7 @@
 </script>
 <?php endif; ?>
 
+<?php if (in_array('PJAX', $this->options->FunctionSwitch)): ?>
 <!--PJAX Js Event-->
 <script>
     var pjax = new Pjax({
@@ -183,6 +186,7 @@
 	});
     document.addEventListener('pjax:success', function() {NProgress.done(); } );
 </script>
+<?php endif; ?>
 
 
 </body>
