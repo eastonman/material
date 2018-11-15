@@ -1,6 +1,6 @@
 
 </main>
-<div class="mdui-container-fluid pjax-load bottom-mod">
+<div class="mdui-container-fluid pjax-load bottom-mod" id="bottom">
 		<!--Footer-->
         <footer class="mdui-row mdui-shadow-2 mdui-color-white bottom">
 
@@ -96,7 +96,9 @@
 
 </div>
 
-
+<a class="mdui-fab mdui-fab-mini mdui-fab-fixed mdui-color-theme-accent mdui-ripple mdui-fab-hide" id="scrolltop" href="#header" data-scroll>
+    <i class="mdui-icon material-icons">expand_less</i>
+</a>
 
 
 
@@ -110,9 +112,18 @@
 </script>
 
 <script src="<?php $this->options->themeUrl('js/search.js') ?>" type="text/javascript"></script>
+
 <script type="text/javascript">
     //Search JS
     searchJQ();
+</script>
+
+<script src="<?php $this->options->themeUrl('js/scrolltop.js') ?>" type="text/javascript"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+    var scroll = new SmoothScroll('[data-scroll]');
 </script>
 
 <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>

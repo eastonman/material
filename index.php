@@ -47,7 +47,7 @@ $MultiLang = new LangDict();
 		<main>
 
 			<!-- Auto Hiding Header & Appbar & Title BEGIN -->
-			<header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide header-responsive" >
+			<header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide header-responsive" id="header">
 				<div class="mdui-toolbar mdui-color-theme mdui-color-white" >
 
                     <!-- menu icon -->
