@@ -185,6 +185,11 @@ $MultiLang = new LangDict();
                 </div>
             </a>
         <?php endwhile; ?>
+        
+        <!-- Total posts count -->
+        <?php if (!defined('__TYPECHO_ROOT_DIR__')) {exit;}
+              Typecho_Widget::widget('Widget_Stat')->to($stat);
+            ?>
 
         <!-- Status Page -->
         <?php if (!($this->options->Status == '')): ?>
