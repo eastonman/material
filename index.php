@@ -47,7 +47,7 @@ $MultiLang = new LangDict();
 		<main>
 
 			<!-- Auto Hiding Header & Appbar & Title BEGIN -->
-			<header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide header-responsive" >
+			<header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide header-responsive" id="header">
 				<div class="mdui-toolbar mdui-color-theme mdui-color-white" >
 
                     <!-- menu icon -->
@@ -297,7 +297,7 @@ $MultiLang = new LangDict();
 
 
                                     <!--Right Part Of Md Card Header(Under) -->
-                                    <div class="mdui-typo mdui-float-right index-post-card-header-rightinfo" id="Post-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
+                                    <div class="mdui-typo mdui-float-right index-post-card-header-rightinfo" style="color:<?php $this->options->alinkcolor(); ?>">
 
                                         <div class="mdui-text-color-pink-accent" >
                                             <?php $this->category(', '); ?>
