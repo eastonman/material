@@ -297,7 +297,7 @@ $MultiLang = new LangDict();
 
 
                                     <!--Right Part Of Md Card Header(Under) -->
-                                    <div class="mdui-typo mdui-float-right index-post-card-header-rightinfo" id="Post-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
+                                    <div class="mdui-typo mdui-float-right index-post-card-header-rightinfo" style="color:<?php $this->options->alinkcolor(); ?>">
 
                                         <div class="mdui-text-color-pink-accent" >
                                             <?php $this->category(', '); ?>

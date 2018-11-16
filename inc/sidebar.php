@@ -20,15 +20,15 @@ $MultiLang = new LangDict();
         <!-- Sidebar brand image -->
         <div class="sidebar-image mdui-valign">
             <?php if (!empty($this->options->avatarURL)): ?>
-                    <img src="<?php $this->options->avatarURL() ?>">
+                    <img alt="Avatar" src="<?php $this->options->avatarURL() ?>">
             <?php else: ?>
                 <?php if (!empty($this->options->Logo)): ?>
-                    <img src="<?php $this->options->Logo() ?>">
+                    <img alt="Avatar" src="<?php $this->options->Logo() ?>">
                 <?php else: ?>
                     <?php if (!empty($this->options->CDNURL)): ?>
-                        <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/Avatar.jpg">
+                        <img alt="Avatar" src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/Avatar.jpg">
                     <?php else: ?>
-                        <img src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>">
+                        <img alt="Avatar" src="<?php $this->options->themeUrl('img/Avatar.jpg') ?>">
                         
                     <?php endif; ?>
                 <?php endif; ?>
@@ -118,7 +118,7 @@ $MultiLang = new LangDict();
         <!--Archive Dropdown Begin-->
         <div class="mdui-collapse" mdui-collapse="{ accordion: true}">
             <div class="mdui-collapse-item">
-                <li class="mdui-collapse-item-header mdui-list-item">
+                <div class="mdui-collapse-item-header mdui-list-item">
 
                         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-text">inbox</i>
                         <div class="mdui-list-item-content mdui-text-color-theme-text" >
@@ -126,7 +126,7 @@ $MultiLang = new LangDict();
                         </div>
                         <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-ripple mdui-text-color-theme-text"  >keyboard_arrow_down</i>
 
-                </li>
+                </div>
 
                 <div class="mdui-collapse-item-body">
                     <ul class="mdui-list mdui-list-dense">
@@ -148,7 +148,7 @@ $MultiLang = new LangDict();
         <!--Category Dropdown Begin-->
         <div class="mdui-collapse" mdui-collapse="{ accordion: true}">
             <div class="mdui-collapse-item">
-                <li class="mdui-collapse-item-header mdui-list-item">
+                <div class="mdui-collapse-item-header mdui-list-item">
 
                         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-text">apps</i>
                         <div class="mdui-list-item-content mdui-text-color-theme-text" >
@@ -156,7 +156,7 @@ $MultiLang = new LangDict();
                         </div>
                         <i class="mdui-collapse-item-arrow mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-text mdui-ripple"  >keyboard_arrow_down</i>
 
-                </li>
+                </div>
 
                 <div class="mdui-collapse-item-body">
                     <ul class="mdui-list mdui-list-dense" for="show-category-button">
@@ -174,7 +174,7 @@ $MultiLang = new LangDict();
         </div>
         <!--Category Dropdown End -->
 
-        <li class="mdui-divider"></li>
+        <div class="mdui-divider"></div>
 
 		<!-- Show Pages -->
         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
@@ -186,10 +186,6 @@ $MultiLang = new LangDict();
             </a>
         <?php endwhile; ?>
 
-        <?php if (!defined('__TYPECHO_ROOT_DIR__')) {exit;}
-              Typecho_Widget::widget('Widget_Stat')->to($stat);
-            ?>
-
         <!-- Status Page -->
         <?php if (!($this->options->Status == '')): ?>
             <li class="mdui-list-item">
@@ -199,7 +195,7 @@ $MultiLang = new LangDict();
             </li>
         <?php endif; ?>
 
-        <li class="mdui-divider"></li>
+        <div class="mdui-divider"></div>
     </div>
 
         <!-- Article Numebr  -->
