@@ -105,7 +105,7 @@
 
 
 
-<script src="//cdn.jsdelivr.net/npm/mdui@0.4.1/dist/js/mdui.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/mdui@0.4.2/dist/js/mdui.min.js"></script>
 <script type="text/javascript">
     // Using MDUI JQ
     var $$ = mdui.JQ;

@@ -24,9 +24,9 @@
 
         <!-- Favicon Settings -->
         <?php if (empty($this->options->IconUrl)): ?>
-            <link rel="icon" type="image/ico" href="<?php $this->options->themeUrl('img/favicon.ico'); ?>">
+            <link rel="icon" href="<?php $this->options->themeUrl('img/favicon.ico'); ?>">
         <?php else: ?>
-            <link rel="icon" type="image/ico" href="<?php $this->options->favicon(); ?>">
+            <link rel="icon" type="image/ico" href="<?php $this->options->IconUrl(); ?>">
         <?php endif; ?>
         <!--Favicon Settings End-->
 
@@ -46,7 +46,7 @@
 
         <!-- MDUI css-->
 
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.1/dist/css/mdui.min.css" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.2/dist/css/mdui.min.css" />
         <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/gruvbox-dark.min.css" rel="stylesheet">
 
 		<!--EXTERNAL CSS END-->
