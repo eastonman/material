@@ -5,7 +5,7 @@
  *
  * @package New.Material
  * @author Viosey & Manyang901
- * @version 2.7.0
+ * @version 2.8.0
  * @link https://github.com/manyang901/material
  *
  */
@@ -61,20 +61,16 @@ $MultiLang = new LangDict();
 			<div class="mdui-container-fluid mdui-appbar-with-toolbar pjax-load" >
 				<div class="mdui-row mdui-p-b-4" >
 					<div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1">
-						<!--Post Content Md Card Begin-->
 						<div class="mdui-card" >
-
-							<div class="mdui-card-primary" >
+							<div class="mdui-card-primary" style="padding-left:30px;">
 								<div clas="mdui-card-primary-title mdui-typo">
-									<h1><?php $this->title() ?></h1>
+									<h1>404 Page Not Found</h1>
 								</div>
-
 							</div>
-
-							<div class="mdui-card-content mdui-typo">
-								<?php $this->content(); ?>
-							</div>
-
+							<form method="post" action="search" class="main-search-form" style="padding-bottom:50px;">
+								<div class="mdui-col-xs-10" style="padding-left:30px;"><input class="mdui-textfield-input" type="text" placeholder="Search"/></div>
+								<button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+							</form>
 						</div>
 						<!--Post Content MD Card End -->
 					</div>
