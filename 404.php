@@ -1,14 +1,4 @@
 <?php
-/**
- * 这是由Viosey 基于 Google Material Design 开发的 Typecho 主题
- * 由Manyang901继续维护和更新
- *
- * @package New.Material
- * @author Viosey & Manyang901
- * @version 2.7.0
- * @link https://github.com/manyang901/material
- *
- */
 
 $this->need('inc/header.php');
 if ($this->options->langis == '0') {
@@ -61,20 +51,12 @@ $MultiLang = new LangDict();
 			<div class="mdui-container-fluid mdui-appbar-with-toolbar pjax-load" >
 				<div class="mdui-row mdui-p-b-4" >
 					<div class="mdui-col-xs-12 mdui-col-md-10 mdui-col-offset-md-1">
-						<!--Post Content Md Card Begin-->
 						<div class="mdui-card" >
-
-							<div class="mdui-card-primary" >
+							<div class="mdui-card-primary" style="padding-left:30px;">
 								<div clas="mdui-card-primary-title mdui-typo">
-									<h1><?php $this->title() ?></h1>
+									<h1>404 Page Not Found</h1>
 								</div>
-
 							</div>
-
-							<div class="mdui-card-content mdui-typo">
-								<?php $this->content(); ?>
-							</div>
-
 						</div>
 						<!--Post Content MD Card End -->
 					</div>

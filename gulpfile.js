@@ -12,34 +12,31 @@ var gulp = require('gulp'),
 
 //check expression
 gulp.task('jshint', function() {
-    return gulp.src('./src/js/*.js')
+    return gulp.src('js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
 
-//minifying css
-gulp.task('minifycss', function() {
-    return gulp.src('./src/css/*.css')
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(minifycss())
-        .pipe(gulp.dest('./css'));
+gulp.task('copy',  function() {
+    return gulp.src(['lib/**/*','fonts/**/*','img/**/*','js/**/*','inc/**/*.php','*.php'],{ base: '.' })
+      .pipe(gulp.dest('dist'))
 });
 
-gulp.task('buildcss', function() {
-    return gulp.src('./src/css/*.css')
+gulp.task('buildCSS', function() {
+    return gulp.src('css/*.css')
         .pipe(minifycss())
         .pipe(rev())
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('dist/css'))
         .pipe(rev.manifest())
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('.'));
 });
 
 gulp.task('revReplace',function () {
-    return gulp.src(['css/rev-manifest.json','**/*.php'])
+    return gulp.src(['rev-manifest.json','dist/**/*.php'],{base:'dist'})
         .pipe(revColletor({
             replaceReved:true
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('dist'));
 })
 
 gulp.task('htmlminify',function () {
@@ -48,7 +45,7 @@ gulp.task('htmlminify',function () {
              collapseWhitespace: true,
              removeComments: true,
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('dist'));
 })
 
 gulp.task('htmlminify-inc',function () {
@@ -58,27 +55,17 @@ gulp.task('htmlminify-inc',function () {
              removeComments: true,
              ignoreCustomFragments: [/<main>/, /<\/main>/, /<\?[\s\S]*?(?:\?>|$)/]
         }))
-        .pipe(gulp.dest('./inc'));
+        .pipe(gulp.dest('dist/inc'));
 })
-gulp.task('build-clean', function() {
-    // Return the Promise from del()
-    return del(['src']);
-});
 
-gulp.task('dev-clean', function() {
-    // Return the Promise from del()
-    return del(['./css/*.css']);
+gulp.task('clean', function() {
+    return del('dist/*');
 });
 
 gulp.task('build', function() {
+    // build into a new folder
     return runSequence(
-        'dev-clean',
-        'buildcss',
-        'revReplace',
-        ['htmlminify', 'htmlminify-inc'],
-        'build-clean');
-});
-
-gulp.task('dev', function() {
-    return runSequence('minifycss');
+        'clean',
+        ['copy','buildCSS','htmlminify', 'htmlminify-inc'],
+        'revReplace');
 });

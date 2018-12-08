@@ -22,8 +22,6 @@ class LangDict
         'Homepage' => '主页',
         'Archive' => '归档',
         'Categories' => '分类',
-        'Status' => '状态',
-        'Article Number' => '文章总数',
         'Theme' => '主题',
         'Reply' => '回复',
         'Share' => '分享'

@@ -85,8 +85,7 @@ function themeConfig($form)
             '1' => _t('简体中文 <br />'),
             '2' => _t('繁体中文 <br />')
         ),
-
-        '0', _t('界面语言设置'), _t("默认使用英文")
+        '1', _t('界面语言设置'), _t("默认使用简体中文")
     );
     $form->addInput($langis);
 
@@ -127,8 +126,8 @@ function themeConfig($form)
     $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', null, _t('Nice to meet you'), _t('首页顶部左边的标语'), _t('填入自定义文字, 显示于首页顶部左边的图片上'));
     $form->addInput($slogan);
 
-    $Status = new Typecho_Widget_Helper_Form_Element_Text('Status', null, null, _t('Status Page'), _t('insert status page'));
-    $form->addInput($Status);
+    $customUrl = new Typecho_Widget_Helper_Form_Element_Text('customUrl', null, _t('{"Status":"/status.php", "Baidu":"https://baidu.com"}'), _t('侧边栏链接列表(JSON)'), _t('填入自定义链接显示在侧边栏'));
+    $form->addInput($customUrl);
 
     $ThumbnailOption = new Typecho_Widget_Helper_Form_Element_Radio('ThumbnailOption',
         array(

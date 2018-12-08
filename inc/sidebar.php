@@ -185,59 +185,19 @@ $MultiLang = new LangDict();
                 </div>
             </a>
         <?php endwhile; ?>
-        
-        <!-- Total posts count -->
-        <?php if (!defined('__TYPECHO_ROOT_DIR__')) {exit;}
-              Typecho_Widget::widget('Widget_Stat')->to($stat);
-            ?>
-
-        <!-- Status Page -->
-        <?php if (!($this->options->Status == '')): ?>
-            <li class="mdui-list-item">
-                <a href="<?php $this->options->Status(); ?>" class="mdui-list-item-content mdui-text-color-theme-text">
-                <?php  echo $MultiLang->get('Status'); ?>
-                </a>
-            </li>
+        <!-- Show CustomUrl -->
+        <?php if (!empty($this->options->customUrl)): ?>
+            <div class="mdui-divider"></div>
         <?php endif; ?>
 
-        <div class="mdui-divider"></div>
-    </div>
-
-        <!-- Article Numebr  -->
-            <div class="mdui-list-item">
-                <span class="mdui-list-item-content mdui-text-color-theme-text">
-                    <?php  echo $MultiLang->get('Article Number'); ?>
-                    
-                </span>
-                <span class="mdui-list-item-avatar mdui-color-theme"><?php echo $stat->publishedPostsNum;?></span>
-            </div>
-
-
-		
-
-	
-
-
-	<!-- Sidebar bottom text -->
-    <a href="https://github.com/manyang901/material" target="_blank" rel="noopener" class="mdui-list mdui-list-item mdui-m-b-5">
-        <div class="mdui-list-item-content mdui-text-color-pink-accent">
-            <?php  echo $MultiLang->get('Theme'); ?>
-            - New Material
-        </div>
-    </a>
-
-
-    <?php if (!empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch)) : ?>
-        <div id="upyun-logo">
-            <a href="https://www.upyun.com/" target="_blank">
-                <?php if (!empty($this->options->CDNURL)): ?>
-                <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/upyun_logo.jpg" width="103px" height="45px" />
-                <?php else: ?>
-                <img src="<?php $this->options->themeUrl('img/upyun_logo.jpg'); ?>" width="103px" height="45px" />
-                <?php endif; ?>
+        <?php foreach (json_decode($this->options->customUrl,true) as $key=>$value){?>
+            <a href="<?php echo $value; ?>" title="<?php echo $key; ?>" class="mdui-list-item mdui-text-color-theme-text mdui-ripple">
+                <div class="mdui-list-item-content">
+                    <?php echo $key; ?>
+                </div>
             </a>
-        </div>
-    <?php endif; ?>
+        <?php } ?>
+    </div>
 
 
 </div>

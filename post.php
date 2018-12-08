@@ -1,13 +1,4 @@
 <?php
-/**
- * 这是由Viosey 基于 Google Material Design 开发的 Typecho 主题
- * 由Manyang901继续维护和更新
- *
- * @package New.Material
- * @author Viosey & Manyang901
- * @version 2.8.0
- * @link https://github.com/manyang901/material
- */
 
 $this->need('inc/header.php');
 if ($this->options->langis == '0') {
