@@ -67,10 +67,6 @@ $MultiLang = new LangDict();
 									<h1>404 Page Not Found</h1>
 								</div>
 							</div>
-							<form method="post" action="search" class="main-search-form" style="padding-bottom:50px;">
-								<div class="mdui-col-xs-10" style="padding-left:30px;"><input class="mdui-textfield-input" type="text" placeholder="Search"/></div>
-								<button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
-							</form>
 						</div>
 						<!--Post Content MD Card End -->
 					</div>

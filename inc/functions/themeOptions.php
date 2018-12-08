@@ -126,7 +126,7 @@ function themeConfig($form)
     $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', null, _t('Nice to meet you'), _t('首页顶部左边的标语'), _t('填入自定义文字, 显示于首页顶部左边的图片上'));
     $form->addInput($slogan);
 
-    $customUrl = new Typecho_Widget_Helper_Form_Element_Text('customUrl', null, _t('{"Status":"status.php", "Baidu":"https://baidu.com"}'), _t('侧边栏链接列表(JSON)'), _t('填入自定义链接显示在侧边栏'));
+    $customUrl = new Typecho_Widget_Helper_Form_Element_Text('customUrl', null, _t('{"Status":"/status.php", "Baidu":"https://baidu.com"}'), _t('侧边栏链接列表(JSON)'), _t('填入自定义链接显示在侧边栏'));
     $form->addInput($customUrl);
 
     $ThumbnailOption = new Typecho_Widget_Helper_Form_Element_Radio('ThumbnailOption',

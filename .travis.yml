@@ -11,7 +11,7 @@ script:
 deploy:
   provider: releases
   api_key: ${GH_TOKEN}
-  file: ./build/material.tar.gz
+  file: ./material.tar.gz
   skip_cleanup: true
   on:
     tags: true
