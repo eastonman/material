@@ -17,3 +17,5 @@ sftp-config.json
 # npm & gulp
 node_modules/
 package-lock.json
+rev-manifest.json
+dist/*

@@ -22,8 +22,6 @@ class LangDict
         'Homepage' => '首頁',
         'Archive' => '過往',
         'Categories' => '分類',
-        'Status' => '狀態',
-        'Article Number' => '文章總數',
         'Theme' => '主題',
         'Reply' => '回復',
         'Share' => '分享'
