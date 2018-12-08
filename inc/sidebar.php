@@ -185,7 +185,11 @@ $MultiLang = new LangDict();
                 </div>
             </a>
         <?php endwhile; ?>
-        <div class="mdui-divider"></div>
+        <!-- Show CustomUrl -->
+        <?php if (!empty($this->options->customUrl)): ?>
+            <div class="mdui-divider"></div>
+        <?php endif; ?>
+
         <?php foreach (json_decode($this->options->customUrl,true) as $key=>$value){?>
             <a href="<?php echo $value; ?>" title="<?php echo $key; ?>" class="mdui-list-item mdui-text-color-theme-text mdui-ripple">
                 <div class="mdui-list-item-content">
@@ -194,18 +198,6 @@ $MultiLang = new LangDict();
             </a>
         <?php } ?>
     </div>
-
-    <?php if (!empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch)) : ?>
-        <div id="upyun-logo">
-            <a href="https://www.upyun.com/" target="_blank">
-                <?php if (!empty($this->options->CDNURL)): ?>
-                <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/upyun_logo.jpg" width="103px" height="45px" />
-                <?php else: ?>
-                <img src="<?php $this->options->themeUrl('img/upyun_logo.jpg'); ?>" width="103px" height="45px" />
-                <?php endif; ?>
-            </a>
-        </div>
-    <?php endif; ?>
 
 
 </div>
