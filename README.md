@@ -36,7 +36,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - Author 作者：Manyang901
 - Original Author 原作者：Viosey
-- Version 版本：2.9.2
+- Version 版本：2.10.0
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ## Feature 特性
@@ -50,6 +50,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 - 非插件实现访客数量统计，使用cookies验证，使用自定义字段储存计数器，不修改数据库，高解耦。
 - Update Checker 更新检查(实验性功能，谨慎使用！)
 - 友链模板
+- 自定义侧栏链接
 
 ## Compatibility 兼容性
 - PHP: 5.3+ ,仅在5.6和7.2上测试，建议使用PHP7.2
