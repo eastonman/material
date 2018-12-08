@@ -36,7 +36,7 @@ New Material 是一款遵循 Material Design 的 Typecho 主题
 
 - Author 作者：Manyang901
 - Original Author 原作者：Viosey
-- Version 版本：2.10.0
+- Version 版本：2.10.1
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ## Feature 特性
